@@ -67,3 +67,11 @@
         width: 15px;
     }
 }
+
+@mixin btn_scroll{
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 7%;
+}

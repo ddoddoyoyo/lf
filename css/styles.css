@@ -39,7 +39,7 @@ h1 {
   h1 span:nth-child(3) {
     color: #351186; }
 
-h2 {
+h2, h3 {
   font-family: "HyundaiSansHeadMedium", Arial, sans-serif;
   font-size: 25px !important;
   color: #1e1e1e; }
@@ -99,6 +99,13 @@ ul {
     right: 5%;
     width: 15px; }
 
+.btn_scroll {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 7%; }
+
 a {
   color: #323232 !important;
   text-decoration: none;
@@ -141,6 +148,9 @@ img {
     margin-top: 64px;
     padding: 0;
     height: calc(100% - 64px); }
+    .ui-page-theme-a .ui-content article {
+      position: relative;
+      height: 100%; }
   .ui-page-theme-a .ui-btn {
     background: none !important;
     border: none;
@@ -165,6 +175,41 @@ img {
   .ui-page-theme-a .ui-btn.ui-btn-left {
     left: 0;
     padding-left: 4%; }
+
+article.sub_cover .imgwrap_top {
+  height: 56%;
+  overflow: hidden; }
+  article.sub_cover .imgwrap_top img {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%); }
+
+article.sub_cover .textwrap {
+  height: 44%;
+  background: url("../images/001_bg.png") no-repeat;
+  background-size: 100% auto;
+  text-align: center;
+  padding-top: 15%; }
+  article.sub_cover .textwrap p {
+    padding-top: 2%; }
+    article.sub_cover .textwrap p span {
+      display: block; }
+
+article.sub_cover2 {
+  background: url("../images/exterior/102_image_cover.png") no-repeat;
+  background-size: 100% auto; }
+  article.sub_cover2 .textwrap_top {
+    padding-top: 15%;
+    text-align: center; }
+    article.sub_cover2 .textwrap_top p {
+      padding-top: 2%; }
+      article.sub_cover2 .textwrap_top p span {
+        display: block; }
+  article.sub_cover2 h3 {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%); }
 
 @media screen and (orientation: portrait) {
   .ui-mobile .ui-page {
