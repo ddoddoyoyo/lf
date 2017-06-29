@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui">
+		<meta name="apple-touch-fullscreen" content="yes">
+		<meta name="mobile-web-app-capable" content="yes">
+		<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+		<link rel="stylesheet" href="../css/styles.css">
+		<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+		 <!-- <script>
+			 $(document).on("mobileinit", function () {
+				 $.mobile.hashListeningEnabled = false;
+				 $.mobile.pushStateEnabled = false;
+				 $.mobile.changePage.defaults.changeHash = false;
+			});
+		</script> -->
+		<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+		<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+		<script src="../js/device.js"></script>
+		<script src="../js/g_action.js"></script>
+		<script>
+			$(document).ready(function(){
+				$('#go_main').click(function(){
+					location.href="main.html";
+				});
+				$('#upload').change(function(){
+					readURL(this);
+				});
+				function readURL(input){
+					if(input.files && input.files[0]) {
+						var reader = new FileReader();
+						reader.onload = function(e){//파일 읽어들이기를 성공했을때 호출되는 이벤트 핸들러
+							$('#current-img').attr('src',e.target.result);
+
+							var img = new Image;
+							var imgW, imgH;
+							img.src = reader.result;
+							img.onload = function(){
+								imgW = img.width;
+								imgH = img.height;
+								if(imgH >= imgW){
+									$("#current-img").css({"width":"99%","height":"auto"});
+								}
+								else{
+									$("#current-img").css({"width":"auto", "height":"99%"});
+								}
+							}//img.onload
+						}//reader.onload
+					}//if
+					reader.readAsDataURL(input.files[0]);
+
+				}
+			});
+		</script>
+
+	</head>
+	<body>
+		<div id="wrap">
+			<div id="contBox" class="container">
+				<section data-role="page" id="page0" class="container">
+					<div data-role="header" class="header">
+						<!-- <a href="#" class="ui-btn ui-btn-inline ui-corner-all ui-shadow btn_sidePanel ui-btn-right"><img src="../images/button/btn_menu.png" alt=""></a> -->
+						<h1><span>Sonata</span> <span>New</span> <span>Rise</span></h1>
+					</div>
+					<div data-role="main" class="ui-content">
+						<div class="imgwrap">
+							<img src="../images/001_img.png" alt="sonata new rise car">
+						</div>
+						<div class="textwrap">
+							<h2>Hello</h2>
+							<p>Please enter your information</p>
+							<form action="">
+								<div class="selectbox">
+									<label for="country">Country</label>
+									<select name="LMS_CONTRY" id="country">
+										<option value="">USA</option>
+										<option value="">korea</option>
+										<option value="">china</option>
+									</select>
+								</div>
+								<div class="inputbox">
+									<input type="text" id="LMS_NAME" placeholder="Name">
+								</div>
+							</form>
+						</div>
+						<a href="#page1" class="ui-btn go-next"><img src="../images/button/001_btn_next.png" alt=""></a>
+					</div>
+				</section>
+
+				<section data-role="page" id="page1" class="container">
+					<div data-role="header" class="header">
+						<!-- <a href="#" class="ui-btn ui-btn-inline ui-corner-all ui-shadow btn_sidePanel ui-btn-right"><img src="../images/button/btn_menu.png" alt=""></a> -->
+						<h1>Sonata New Rise</h1>
+					</div>
+					<div data-role="main" class="ui-content">
+						<div class="imgwrap">
+							<img src="../images/001_img.png" alt="sonata new rise car">
+						</div>
+						<div class="textwrap">
+							<h2>Hello</h2>
+							<p>Please enter your information</p>
+							<form action="">
+								<div class="inputbox">
+									<!-- <a href="javascript:;"> -->
+										<img id="current-img" src="../images/002_profile_default.png" alt="user image">
+										<input type="file" id="upload" name="LMS_IMAGE" accept="image/*">
+									<!-- </a> -->
+								</div>
+							</form>
+						</div>
+						<a href="javascript:;" id="go_main" class="ui-btn go-next"><img src="../images/button/001_btn_next.png" alt=""></a>
+					</div>
+				</section>
+
+				
+			</div>
+		<!-- <a href="#page11">이동!!!!!!!!!</a> -->
+
+		</div>
+	</body>
+</html>

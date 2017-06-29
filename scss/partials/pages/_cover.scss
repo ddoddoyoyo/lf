@@ -1,0 +1,30 @@
+#cover{
+	background: url('../images/003_img.png') no-repeat;
+	background-size: 100% auto;
+	background-position: bottom;
+	background-color:$white;
+	.title{
+		position: absolute;
+    	left: 9%;
+    	top: 14%;
+    	div{
+    		color:$sub_text_50;
+    	}
+	}
+	#btn_start{
+		position: absolute;
+		bottom:6%;
+		left:50%;
+		transform:translateX(-50%);
+		text-align: center;
+		width:120px;
+		height:35px;
+		display: block;
+		font-family: $header_m;
+		font-size: $mid-font-smaller;
+		background-color: $white;
+		border-radius: 20px;
+		line-height: 2em;
+
+	}
+}
