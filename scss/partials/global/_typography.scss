@@ -57,13 +57,19 @@ h1{
 }
 h2,h3{
 	font-family: $header_m;
-	font-size: $big-font !important;
+	font-size: $big-font;
 	color:$main_text_30;
 }
 p,div,span{
 	font-family: $header_r;
 	font-size: $base-font;
 	color:$main_text_30;
+}
+.slidePage{
+	h2{
+		font-size: $mid-font;
+		color: $blue;
+	}
 }
 
 // h1 {

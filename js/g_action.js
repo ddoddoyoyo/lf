@@ -7,9 +7,9 @@ $(document).ready(function(){
         // $(this).siblings("label").css({"color":"#002c5f","background-image":"url('../images/button/icon_country_arrow_select.png')"});
     });
 	
-	$("#page0").on({
+	$("#contentPage .slidePage#exterior").on({
 		"pagebeforeshow" : function(){
-			//$("#mokup, #wrap.mobile").removeClass("landscape");
+			
 		}, 
 		"pageshow" : function(){
 			

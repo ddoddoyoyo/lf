@@ -41,13 +41,17 @@ h1 {
 
 h2, h3 {
   font-family: "HyundaiSansHeadMedium", Arial, sans-serif;
-  font-size: 25px !important;
+  font-size: 25px;
   color: #1e1e1e; }
 
 p, div, span {
   font-family: "HyundaiSansHeadRegular", Arial, sans-serif;
   font-size: 16px;
   color: #1e1e1e; }
+
+.slidePage h2 {
+  font-size: 21px;
+  color: #082e62; }
 
 * {
   -webkit-tap-highlight-color: transparent; }
@@ -210,6 +214,61 @@ article.sub_cover2 {
     bottom: 10%;
     left: 50%;
     transform: translateX(-50%); }
+
+article.slidePage h2 {
+  height: 35px;
+  text-align: center;
+  padding: 2%;
+  box-sizing: border-box; }
+
+article.slidePage .imgwrap_top {
+  height: 54%; }
+  article.slidePage .imgwrap_top .imgTitle {
+    height: 35px;
+    background: url("../images/exterior/103_bg_top.png") no-repeat;
+    background-size: 100% auto; }
+    article.slidePage .imgwrap_top .imgTitle p {
+      text-align: center;
+      color: #ffffff;
+      line-height: 1.5em;
+      padding: 2%;
+      box-sizing: border-box; }
+  article.slidePage .imgwrap_top .slideImg {
+    position: relative;
+    height: calc(100% - 35px); }
+    article.slidePage .imgwrap_top .slideImg img {
+      position: absolute;
+      top: 0;
+      height: 100%;
+      width: auto; }
+
+article.slidePage .textwrap {
+  height: calc(46% - 35px);
+  background: url("../images/exterior/103_bg_bottom.png") no-repeat;
+  background-size: 100% 100%; }
+  article.slidePage .textwrap .slideControler {
+    height: 14%;
+    position: relative; }
+    article.slidePage .textwrap .slideControler > img {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 2%; }
+      article.slidePage .textwrap .slideControler > img:nth-child(1) {
+        left: 5%; }
+      article.slidePage .textwrap .slideControler > img:nth-child(2) {
+        right: 5%; }
+    article.slidePage .textwrap .slideControler .indicator {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
+      article.slidePage .textwrap .slideControler .indicator img {
+        width: 10px;
+        margin: 0 2px; }
+  article.slidePage .textwrap p {
+    color: #ffffff;
+    margin: 3% 5%; }
 
 @media screen and (orientation: portrait) {
   .ui-mobile .ui-page {
