@@ -49,10 +49,6 @@ p, div, span {
   font-size: 16px;
   color: #1e1e1e; }
 
-.slidePage h2 {
-  font-size: 21px;
-  color: #082e62; }
-
 * {
   -webkit-tap-highlight-color: transparent; }
 
@@ -103,13 +99,6 @@ ul {
     right: 5%;
     width: 15px; }
 
-.btn_scroll {
-  position: absolute;
-  bottom: 5%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 7%; }
-
 a {
   color: #323232 !important;
   text-decoration: none;
@@ -133,27 +122,28 @@ img {
   overflow: hidden !important;
   height: 100%; }
   .ui-page-theme-a .ui-header {
+    background-color: #ffffff;
+    border: none;
+    width: 100%;
+    z-index: 1000;
+    height: 60px;
+    min-height: 60px; }
+  .ui-page-theme-a .header {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
     width: 94%;
-    height: 64px;
-    min-height: 64px;
-    border: none;
-    z-index: 1000;
-    background-color: #ffffff;
     border-bottom: 1px solid #000;
     box-sizing: border-box; }
-    .ui-page-theme-a .ui-header .ui-title {
+    .ui-page-theme-a .header h1 {
       margin: 32px 0 0 2%;
       padding: 0;
       text-align: left; }
   .ui-page-theme-a .ui-content {
-    margin-top: 64px;
     padding: 0;
-    height: calc(100% - 64px); }
+    height: 100%;
+    overflow: visible !important; }
     .ui-page-theme-a .ui-content article {
-      position: relative;
       height: 100%; }
   .ui-page-theme-a .ui-btn {
     background: none !important;
@@ -169,7 +159,8 @@ img {
       -moz-box-shadow: none; }
   .ui-page-theme-a .ui-btn.ui-btn-right, .ui-page-theme-a .ui-btn.ui-btn-left {
     width: 19px;
-    margin-top: 8%; }
+    margin-top: 32px;
+    padding: 0; }
     .ui-page-theme-a .ui-btn.ui-btn-right:hover, .ui-page-theme-a .ui-btn.ui-btn-left:hover {
       background: none;
       border: none; }
@@ -180,93 +171,71 @@ img {
     left: 0;
     padding-left: 4%; }
 
-article.sub_cover .imgwrap_top {
-  height: 56%;
-  overflow: hidden; }
-  article.sub_cover .imgwrap_top img {
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%); }
+.sub_cover .textwrap_top {
+  padding: 10% 5%; }
+  .sub_cover .textwrap_top p {
+    padding-top: 2%;
+    font-size: 18px;
+    color: #646464; }
+    .sub_cover .textwrap_top p span {
+      display: block;
+      font-size: 18px;
+      color: #646464; }
 
-article.sub_cover .textwrap {
-  height: 44%;
-  background: url("../images/001_bg.png") no-repeat;
-  background-size: 100% auto;
-  text-align: center;
-  padding-top: 15%; }
-  article.sub_cover .textwrap p {
-    padding-top: 2%; }
-    article.sub_cover .textwrap p span {
-      display: block; }
-
-article.sub_cover2 {
-  background: url("../images/exterior/102_image_cover.png") no-repeat;
-  background-size: 100% auto; }
-  article.sub_cover2 .textwrap_top {
-    padding-top: 15%;
-    text-align: center; }
-    article.sub_cover2 .textwrap_top p {
-      padding-top: 2%; }
-      article.sub_cover2 .textwrap_top p span {
-        display: block; }
-  article.sub_cover2 h3 {
-    position: absolute;
-    bottom: 10%;
-    left: 50%;
-    transform: translateX(-50%); }
-
-article.slidePage h2 {
+.slidePage h2 {
   height: 35px;
   text-align: center;
   padding: 2%;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  font-size: 21px;
+  color: #082e62; }
 
-article.slidePage .imgwrap_top {
+.slidePage .imgwrap_top {
   height: 54%; }
-  article.slidePage .imgwrap_top .imgTitle {
+  .slidePage .imgwrap_top .imgTitle {
     height: 35px;
     background: url("../images/exterior/103_bg_top.png") no-repeat;
     background-size: 100% auto; }
-    article.slidePage .imgwrap_top .imgTitle p {
+    .slidePage .imgwrap_top .imgTitle p {
       text-align: center;
       color: #ffffff;
       line-height: 1.5em;
       padding: 2%;
       box-sizing: border-box; }
-  article.slidePage .imgwrap_top .slideImg {
+  .slidePage .imgwrap_top .slideImg {
     position: relative;
     height: calc(100% - 35px); }
-    article.slidePage .imgwrap_top .slideImg img {
+    .slidePage .imgwrap_top .slideImg img {
       position: absolute;
       top: 0;
       height: 100%;
       width: auto; }
 
-article.slidePage .textwrap {
-  height: calc(46% - 35px);
+.slidePage .textwrap {
+  height: calc(46% - 34px);
   background: url("../images/exterior/103_bg_bottom.png") no-repeat;
-  background-size: 100% 100%; }
-  article.slidePage .textwrap .slideControler {
+  background-size: 100% auto; }
+  .slidePage .textwrap .slideControler {
     height: 14%;
     position: relative; }
-    article.slidePage .textwrap .slideControler > img {
+    .slidePage .textwrap .slideControler > img {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
       width: 2%; }
-      article.slidePage .textwrap .slideControler > img:nth-child(1) {
+      .slidePage .textwrap .slideControler > img:nth-child(1) {
         left: 5%; }
-      article.slidePage .textwrap .slideControler > img:nth-child(2) {
+      .slidePage .textwrap .slideControler > img:nth-child(2) {
         right: 5%; }
-    article.slidePage .textwrap .slideControler .indicator {
+    .slidePage .textwrap .slideControler .indicator {
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%); }
-      article.slidePage .textwrap .slideControler .indicator img {
+      .slidePage .textwrap .slideControler .indicator img {
         width: 10px;
         margin: 0 2px; }
-  article.slidePage .textwrap p {
+  .slidePage .textwrap p {
     color: #ffffff;
     margin: 3% 5%; }
 
@@ -300,6 +269,7 @@ article.slidePage .textwrap {
     transform: translate(-50%, -50%); } }
 
 #page0 .imgwrap {
+  margin-top: 60px;
   height: 45%;
   overflow: hidden; }
   #page0 .imgwrap img {
@@ -366,6 +336,7 @@ article.slidePage .textwrap {
         font-size: 18px; }
 
 #page1 .imgwrap {
+  margin-top: 60px;
   height: 45%;
   overflow: hidden; }
   #page1 .imgwrap img {
@@ -439,3 +410,21 @@ article.slidePage .textwrap {
     background-color: #ffffff;
     border-radius: 20px;
     line-height: 2em; }
+
+#exterior {
+  background: url("../images/exterior/101_image_cover.png") no-repeat;
+  background-size: cover;
+  background-position: center; }
+
+#frontstyle {
+  background: url("../images/exterior/102_image_cover.png") no-repeat;
+  background-size: 100% auto; }
+
+#sidestyle {
+  background: url("../images/exterior/109_image_cover.png") no-repeat;
+  background-size: 100% auto; }
+
+#rearstyle {
+  background: url("../images/exterior/112_image_cover.png") no-repeat;
+  background-size: cover;
+  background-position: center; }
