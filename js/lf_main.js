@@ -8,7 +8,10 @@ $(document).ready(function(){
     });
 	
 	$("#content").onepage_scroll({
-		sectionContainer: "article"
+		sectionContainer: "article",
+		loop: false,
+		//updateURL: false,
+		responsiveFallback: false
 	});
 	// $("#content").addClass('fullpage');
 	// $("#content article").addClass('section');
