@@ -18,9 +18,15 @@
 		<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 		<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
 		<script src="../js/device.js"></script>
-		<script src="../js/lf_main.js"></script>
 		<script>
 			$(document).ready(function(){
+
+				var select = $("select#country");
+			    select.change(function(){
+			        var select_name = $(this).children("option:selected").text();
+			        $(this).siblings("label").text(select_name);
+			        // $(this).siblings("label").css({"color":"#002c5f","background-image":"url('../images/button/icon_country_arrow_select.png')"});
+			    });
 				$('#go_main').click(function(){
 					location.href="main.html";
 				});
