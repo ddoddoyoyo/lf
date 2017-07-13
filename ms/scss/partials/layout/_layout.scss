@@ -135,6 +135,7 @@ body{
 			//position: relative;
 			height: 100%;
 			padding-top: $header_height;
+			box-sizing:border-box;
 		}
 	}
 
@@ -204,13 +205,16 @@ body{
 		color: $blue;
 	}
 	.imgwrap_top{
-		height:54%;
+		position: relative;
+		height:53%;
 		.imgTitle{
 			height: 35px;
 			background: url('../images/exterior/103_bg_top.png') no-repeat;
 			background-size: 100% auto; 
 			p{
-				text-align: center;
+				position: absolute;
+    			left: 50%;
+    			transform: translateX(-50%);
 				color:$white;
 				line-height: 1.5em;
 				padding:2%;
@@ -218,21 +222,20 @@ body{
 			}
 		}
 		.slideImg{
-			position: relative;
+			position: absolute;
 			height: calc(100% - 35px);
+			overflow: hidden;
 			img{
-				position: absolute;
-				top:0;
-				height: 100%;
-				width: auto;
-
+				//position: absolute;
+				//top:0;
+				float: left;
 			}
 		}
 	}
 	.textwrap{
-		height: calc(46% - 34px);
+		height: calc(47% - 35px);
 		background: url('../images/exterior/103_bg_bottom.png') no-repeat;
-		background-size: 100% auto;
+		background-size: 100% 100%;
 		.slideControler{
 			height: 14%;
 			position: relative;
@@ -241,6 +244,7 @@ body{
 				top:50%;
 				transform:translateY(-50%);
 				width: 2%;
+				cursor: pointer;
 				&:nth-child(1){
 					left:5%;
 				}
@@ -260,9 +264,14 @@ body{
 				}
 			}
 		}
-		p{
-			color:$white;
+		.textbox{
+			position: relative;
 			margin:3% 5%;
+			p{
+				position: absolute;
+				top:0;
+				color:$white;
+			}
 		}
 	}
 }

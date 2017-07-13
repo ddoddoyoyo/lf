@@ -146,7 +146,8 @@ img {
     overflow: visible !important; }
     .ui-page-theme-a .ui-content article {
       height: 100%;
-      padding-top: 60px; }
+      padding-top: 60px;
+      box-sizing: border-box; }
   .ui-page-theme-a .ui-btn {
     background: none !important;
     border: none;
@@ -193,30 +194,31 @@ img {
   color: #082e62; }
 
 .slidePage .imgwrap_top {
-  height: 54%; }
+  position: relative;
+  height: 53%; }
   .slidePage .imgwrap_top .imgTitle {
     height: 35px;
     background: url("../images/exterior/103_bg_top.png") no-repeat;
     background-size: 100% auto; }
     .slidePage .imgwrap_top .imgTitle p {
-      text-align: center;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
       color: #ffffff;
       line-height: 1.5em;
       padding: 2%;
       box-sizing: border-box; }
   .slidePage .imgwrap_top .slideImg {
-    position: relative;
-    height: calc(100% - 35px); }
+    position: absolute;
+    height: calc(100% - 35px);
+    overflow: hidden; }
     .slidePage .imgwrap_top .slideImg img {
-      position: absolute;
-      top: 0;
-      height: 100%;
-      width: auto; }
+      float: left; }
 
 .slidePage .textwrap {
-  height: calc(46% - 34px);
+  height: calc(47% - 35px);
   background: url("../images/exterior/103_bg_bottom.png") no-repeat;
-  background-size: 100% auto; }
+  background-size: 100% 100%; }
   .slidePage .textwrap .slideControler {
     height: 14%;
     position: relative; }
@@ -224,7 +226,8 @@ img {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      width: 2%; }
+      width: 2%;
+      cursor: pointer; }
       .slidePage .textwrap .slideControler > img:nth-child(1) {
         left: 5%; }
       .slidePage .textwrap .slideControler > img:nth-child(2) {
@@ -237,9 +240,13 @@ img {
       .slidePage .textwrap .slideControler .indicator img {
         width: 10px;
         margin: 0 2px; }
-  .slidePage .textwrap p {
-    color: #ffffff;
+  .slidePage .textwrap .textbox {
+    position: relative;
     margin: 3% 5%; }
+    .slidePage .textwrap .textbox p {
+      position: absolute;
+      top: 0;
+      color: #ffffff; }
 
 @media screen and (orientation: portrait) {
   .ui-mobile .ui-page {
