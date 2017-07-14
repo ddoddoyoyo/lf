@@ -49,28 +49,29 @@
             startX = touches[0].pageX;
             startY = touches[0].pageY;
             $this.bind('touchmove', touchmove);
+            //console.log(startY);
           }
         }
 
         function touchmove(event) {
           var touches = event.originalEvent.touches;
-          if (touches && touches.length) {
+          if (touches && touches.length) {//touches && touches.length
             var deltaX = startX - touches[0].pageX;
             var deltaY = startY - touches[0].pageY;
-
+            //console.log(deltaY);
             if (deltaX >= 50) {
               $this.trigger("swipeLeft");
             }
             if (deltaX <= -50) {
               $this.trigger("swipeRight");
             }
-            if (deltaY >= 50) {
+            if (deltaY >= 100) {//AS iphone
               $this.trigger("swipeUp");
             }
-            if (deltaY <= -50) {
+            if (deltaY <= -100) {
               $this.trigger("swipeDown");
             }
-            if (Math.abs(deltaX) >= 50 || Math.abs(deltaY) >= 50) {
+            if (Math.abs(deltaX) >= 50 || Math.abs(deltaY) >= 100) {
               $this.unbind('touchmove', touchmove);
             }
           }

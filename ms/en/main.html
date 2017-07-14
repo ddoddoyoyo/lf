@@ -43,27 +43,39 @@
 					</div>
 				</div>
 				<div data-role="main" id="content" class="ui-content">
+					<div class="popLayer" id="scroll"></div>
 					<!-- exterior -->
-					<!-- <a name="#ARTICLE1"></a> -->
 					<article class="sub_cover" id="exterior">
 						<div class="textwrap_top">
 							<h2>Exterior</h2>
 							<p>Introducing New Sonata <span>for lifestyle changes.</span></p>
 						</div>
+						<div class="btn_play">
+							<img src="../images/exterior/101_video_thumbnail.png" alt="">
+						</div>
+						<div class="popLayer" id="exteriorMov">
+							<div class="btn_close">	
+								<img src="../images/button/btn_close_video.png" alt="">
+							</div>
+								
+							<video controls="true">
+								<source src="http://of01-qb5150.ktics.co.kr/2018_New_Sonata.mp4" type="video/mp4" >
+									Your browser does not support HTML5 video.
+							</video>
+						</div>	
 					</article>
 					<!-- frontstyle -->
-					<!-- <a name="#ARTICLE2"></a> -->
 					<article class="sub_cover" id="frontstyle">
 						<div class="textwrap_top">
 							<h2>Front Style</h2>
 							<p>Introducing New Sonata <span>for lifestyle changes.</span></p>
 						</div>
 					</article>
-					<article class="slidePage" id="sExterior">
+					<article class="slidePage" id="sFront">
 						<h2>Front Style</h2>
 						<div class="imgwrap_top">
 							<div class="imgTitle">
-								<p>Cascading Grille</p>
+								<p>Cascading grille</p>
 								<p>Chrome garnish</p>
 								<p>Hood</p>
 								<p>Headlamp</p>
@@ -77,6 +89,14 @@
 								<img src="../images/exterior/106_image_default.png" alt="headlamp">
 								<img src="../images/exterior/107_image_default.png" alt="chrome molding">
 								<img src="../images/exterior/108_image_default.png" alt="vertical LED DRL">
+							</div>
+							<div class="slideImg" >
+								<img src="../images/exterior/103_image_overay.png" class="twinkle" alt="cascading grille">
+								<img src="../images/exterior/104_image_overay.png" class="twinkle" alt="chrome garnish">
+								<img src="../images/exterior/105_image_overay.png" class="twinkle" alt="hood">
+								<img src="../images/exterior/106_image_overay.png" class="twinkle" alt="headlamp">
+								<img src="../images/exterior/107_image_overay.png" class="twinkle" alt="chrome molding">
+								<img src="../images/exterior/108_image_overay.png" class="twinkle" alt="vertical LED DRL">
 							</div>
 						</div>
 						<div class="textwrap">
@@ -110,41 +130,52 @@
 						</div>
 					</article>
 					
-					<article class="slidePage">
+					<article class="slidePage" id="sSide">
 						<h2>Side Style</h2>
 						<div class="imgwrap_top">
 							<div class="imgTitle">
 								<p>DLO surround Chrome molding</p>
+								<p>Wheels &amp; Tires</p>
 							</div>
 							<div class="slideImg">
 								<img src="../images/exterior/110_image_default.png" alt="DLO surround Chrome molding">
-								<img src="../images/exterior/111_image.png" alt="">
+								<img src="../images/exterior/111_image.png" alt="Wheels & Tires">
+							</div>
+							<div class="slideImg">
+								<img src="../images/exterior/110_image_overay.png" class="twinkle" alt="DLO surround Chrome molding">
+								<img src="../images/exterior/111_image.png" class="twinkle" alt="Wheels & Tires">
 							</div>
 						</div>
 						<div class="textwrap">
 							<div class="slideControler">
-								<img src="../images/button/indicator_btn_left.png" alt="">
-								<img src="../images/button/indicator_btn_right.png" alt="">
+								<img src="../images/button/indicator_btn_left.png" class="prevImg" alt="">
+								<img src="../images/button/indicator_btn_right.png" class="nextImg" alt="">
 								<div class="indicator">
 									<img src="../images/button/indicator_active.png" alt="">
 									<img src="../images/button/indicator_non_active.png" alt="">
 								</div>									
 							</div>
-							<p>With DLO outer surround chrome application and C-pollar side effect change, we produced a porty side image.</p>
+							<div class="textbox">
+								<p>With DLO outer surround chrome application and C-pollar side effect change, we produced a porty side image.</p>
+								<p>18 inch alloy wheels &amp; tires</p>
+							</div>
 						</div>
 					</article>
 					<!-- rearstyle -->
 					<article class="sub_cover" id="rearstyle">
 						<div class="textwrap_top">
-							<h2>rear Style</h2>
+							<h2>Rear Style</h2>
 							<p>The emblem and the integrated trunk switch and the wide car name emblem are applied to maximize the image that looks cleaner and wider.</p>
 						</div>
 					</article>
-					<article class="slidePage">
-						<h2>rear Style</h2>
+					<article class="slidePage" id="sRear">
+						<h2>Rear Style</h2>
 						<div class="imgwrap_top">
 							<div class="imgTitle">
 								<p>Emblem Integrated Trunk Switch</p>
+								<p>Rear combination lamp</p>
+								<p>Rear Bumper</p>
+								<p>Rear reflector</p>
 							</div>
 							<div class="slideImg">
 								<img src="../images/exterior/113_image.png" alt="Emblem Integrated Trunk Switch">
@@ -152,11 +183,17 @@
 								<img src="../images/exterior/115_image.png" alt="Rear Bumper">
 								<img src="../images/exterior/116_image_default.png" alt="Rear reflector">
 							</div>
+							<div class="slideImg">
+								<img src="../images/exterior/113_image.png" class="twinkle" alt="Emblem Integrated Trunk Switch">
+								<img src="../images/exterior/114_image_overay.png" class="twinkle" alt="Rear combination lamp">
+								<img src="../images/exterior/115_image.png" class="twinkle" alt="Rear Bumper">
+								<img src="../images/exterior/116_image_overay.png" class="twinkle" alt="Rear reflector">
+							</div>
 						</div>
 						<div class="textwrap">
 							<div class="slideControler">
-								<img src="../images/button/indicator_btn_left.png" alt="">
-								<img src="../images/button/indicator_btn_right.png" alt="">
+								<img src="../images/button/indicator_btn_left.png" class="prevImg" alt="">
+								<img src="../images/button/indicator_btn_right.png" class="nextImg" alt="">
 								<div class="indicator">
 									<img src="../images/button/indicator_active.png" alt="">
 									<img src="../images/button/indicator_non_active.png" alt="">
@@ -164,7 +201,12 @@
 									<img src="../images/button/indicator_non_active.png" alt="">
 								</div>									
 							</div>
-							<p>The three-dimensionally designed cascading grille emphasizes the difference in chrome thickness between the middle and th outermost.</p>
+							<div class="textbox">
+								<p>Apply a hidden switch to the top of the emblem so that you can release the trunk conveniently while maintaining a clean rear image.</p>
+								<p>Horizontal slick and boldly designed rear lamps emphasize a sense of clean and modern sensibility.</p>
+								<p>By moving the license plate mounting position to the bottom of the bumper, we created a simple and differentiated atmosphere.</p>
+								<p>The vertical type rear reflector was applied to achieve stable stance and sporty image.</p>
+							</div>
 						</div>
 					</article>
 				</div>

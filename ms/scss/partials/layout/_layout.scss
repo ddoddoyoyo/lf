@@ -22,7 +22,7 @@ html, body {
 	//font: sans-serif; 
 	//line-height:130%; 
 	//background:url('../images/mokup_BG.png') 50% 0 no-repeat;
-	background-color: $black; 
+	background-color: $white; 
 	background-size:cover; 
 	background-attachment:fixed; 
 	overflow: hidden;
@@ -52,6 +52,9 @@ ul{
 
 .go-next{
 	@include go-next;
+}
+.twinkle{
+	animation: twinkle 2s infinite;
 }
 // .btn_scroll{
 // 	@include btn_scroll;
@@ -88,6 +91,7 @@ img {
 .pointColor{
 	// color:$point_color;
 }
+
 // ==========================================================
 // Content layout
 // ==========================================================
@@ -96,6 +100,40 @@ body{
 	//width:100%;
 	//height:120% !important;
 }
+.popLayer{
+	position: absolute;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+}
+.popLayer#scroll{
+	background: url(../images/101_overay.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.btn_play{
+	position: absolute;
+    bottom: 14%;
+    cursor: pointer;
+}
+video{
+	width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.btn_close{
+	position: absolute;
+    top: 31%;
+    transform: translateY(-50%);
+    right: 4%;
+    cursor:pointer;
+	img{
+		@include btn_close;
+	}
+}
+
 .ui-page-theme-a {
 	background-color: $white;
 	overflow:hidden !important;
@@ -114,13 +152,17 @@ body{
 		position:absolute; 
 		left:50%;
 		transform:translateX(-50%);
-		width:94%;
+		width:100%;
+		height: 60px;
 		//height: $header_height; 
     	//min-height: $header_height;	
 		border-bottom: 1px solid $black;
 		box-sizing:border-box;
 		h1 {
-			margin: 32px 0 0 2%;
+			position: absolute;
+			top:18px;
+			left:4%;
+			//margin: 32px 0 0 2%;
 			padding:0;
 			text-align: left;
 		}
@@ -156,7 +198,7 @@ body{
 	}
 	.ui-btn.ui-btn-right, .ui-btn.ui-btn-left{
 		width:19px;
-		margin-top:32px;
+		margin-top:18px;
 		padding:0;
     	//transform: translate(0,-50%);
 		&:hover{
@@ -213,8 +255,8 @@ body{
 			background-size: 100% auto; 
 			p{
 				position: absolute;
-    			left: 50%;
-    			transform: translateX(-50%);
+				width: 100%;
+				text-align: center;
 				color:$white;
 				line-height: 1.5em;
 				padding:2%;

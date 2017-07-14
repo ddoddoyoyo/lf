@@ -67,7 +67,9 @@
         width: 15px;
     }
 }
-
+@mixin btn_close{
+    width:19px;
+}
 // @mixin btn_scroll{
 //     position: absolute;
 //     bottom: 5%;

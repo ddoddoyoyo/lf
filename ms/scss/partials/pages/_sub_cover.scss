@@ -3,6 +3,20 @@
 	background: url('../images/exterior/101_image_cover.png') no-repeat;
 	background-size: cover;
 	background-position: center;
+	.textwrap_top{
+		h2,p,span{
+			color:#fff;
+		}	
+	}
+	.btn_play{
+		line-height: 0;
+		border: 2px solid #fff;
+		margin: 4%;
+	}
+	.popLayer#exteriorMov{
+		background:#000;
+	}
+
 }
 #frontstyle{
 	background: url('../images/exterior/102_image_cover.png') no-repeat;

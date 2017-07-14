@@ -49,6 +49,18 @@ p, div, span {
   font-size: 16px;
   color: #1e1e1e; }
 
+@-webkit-keyframes twinkle {
+  0%, 100% {
+    opacity: 1; }
+  50% {
+    opacity: 0; } }
+
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 1; }
+  50% {
+    opacity: 0; } }
+
 * {
   -webkit-tap-highlight-color: transparent; }
 
@@ -59,7 +71,7 @@ html, body {
   margin: 0;
   padding: 0;
   height: 100% !important;
-  background-color: #000;
+  background-color: #ffffff;
   background-size: cover;
   background-attachment: fixed;
   overflow: hidden; }
@@ -99,6 +111,9 @@ ul {
     right: 5%;
     width: 15px; }
 
+.twinkle {
+  animation: twinkle 2s infinite; }
+
 a {
   color: #323232 !important;
   text-decoration: none;
@@ -117,6 +132,38 @@ input:-ms-input-placeholder, input:-webkit-input-placeholder, input:-moz-placeho
 img {
   width: 100%; }
 
+.popLayer {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%; }
+
+.popLayer#scroll {
+  background: url(../images/101_overay.png) no-repeat;
+  background-size: cover;
+  background-position: center; }
+
+.btn_play {
+  position: absolute;
+  bottom: 14%;
+  cursor: pointer; }
+
+video {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%); }
+
+.btn_close {
+  position: absolute;
+  top: 31%;
+  transform: translateY(-50%);
+  right: 4%;
+  cursor: pointer; }
+  .btn_close img {
+    width: 19px; }
+
 .ui-page-theme-a {
   background-color: #ffffff;
   overflow: hidden !important;
@@ -133,11 +180,14 @@ img {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    width: 94%;
+    width: 100%;
+    height: 60px;
     border-bottom: 1px solid #000;
     box-sizing: border-box; }
     .ui-page-theme-a .header h1 {
-      margin: 32px 0 0 2%;
+      position: absolute;
+      top: 18px;
+      left: 4%;
       padding: 0;
       text-align: left; }
   .ui-page-theme-a .ui-content {
@@ -162,7 +212,7 @@ img {
       -moz-box-shadow: none; }
   .ui-page-theme-a .ui-btn.ui-btn-right, .ui-page-theme-a .ui-btn.ui-btn-left {
     width: 19px;
-    margin-top: 32px;
+    margin-top: 18px;
     padding: 0; }
     .ui-page-theme-a .ui-btn.ui-btn-right:hover, .ui-page-theme-a .ui-btn.ui-btn-left:hover {
       background: none;
@@ -202,8 +252,8 @@ img {
     background-size: 100% auto; }
     .slidePage .imgwrap_top .imgTitle p {
       position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
+      width: 100%;
+      text-align: center;
       color: #ffffff;
       line-height: 1.5em;
       padding: 2%;
@@ -424,6 +474,14 @@ img {
   background: url("../images/exterior/101_image_cover.png") no-repeat;
   background-size: cover;
   background-position: center; }
+  #exterior .textwrap_top h2, #exterior .textwrap_top p, #exterior .textwrap_top span {
+    color: #fff; }
+  #exterior .btn_play {
+    line-height: 0;
+    border: 2px solid #fff;
+    margin: 4%; }
+  #exterior .popLayer#exteriorMov {
+    background: #000; }
 
 #frontstyle {
   background: url("../images/exterior/102_image_cover.png") no-repeat;
