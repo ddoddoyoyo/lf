@@ -7,20 +7,20 @@
 		<meta name="mobile-web-app-capable" content="yes">
 		<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
 		<link rel="stylesheet" href="../css/styles.css">
-		<link rel="stylesheet" href="../css/onepage-scroll.css">
+		<link rel="stylesheet" href="../css/jquery.fullPage.css">
 		<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-		 <!-- <script>
+		 <script>
 			 $(document).on("mobileinit", function () {
 				 $.mobile.hashListeningEnabled = false;
 				 $.mobile.pushStateEnabled = false;
 				 $.mobile.changePage.defaults.changeHash = false;
 			});
-		</script> -->
+		</script>
 		<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 		<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+		<script src="../js/jquery.fullPage.js"></script>
 		<script src="../js/device.js"></script>
 		<script src="../js/lf_main.js"></script>
-		<script src="../js/jquery.onepage-scroll.js"></script>
 
 	</head>
 	<body>
@@ -29,7 +29,7 @@
 			<section data-role="page" id="cover" class="container">
 				<div data-role="main" class="ui-content">
 					<div class="title">
-						<div class="text">Dramatic changes</div> 
+						<div class="text">Dramatic changes</div>
 						<h1><span>Sonata</span> <span>New</span> <span>Rise</span></h1>
 					</div>
 				</div>
@@ -42,10 +42,10 @@
 						<h1>Sonata New Rise</h1>
 					</div>
 				</div>
-				<div data-role="main" id="content" class="ui-content">
+				<div data-role="main" id="fullpage" class="ui-content">
 					<div class="popLayer" id="scroll"></div>
 					<!-- exterior -->
-					<article class="sub_cover" id="exterior">
+					<article class="sub_cover section" id="exterior">
 						<div class="textwrap_top">
 							<h2>Exterior</h2>
 							<p>Introducing New Sonata <span>for lifestyle changes.</span></p>
@@ -54,24 +54,24 @@
 							<img src="../images/exterior/101_video_thumbnail.png" alt="">
 						</div>
 						<div class="popLayer" id="exteriorMov">
-							<div class="btn_close">	
+							<div class="btn_close">
 								<img src="../images/button/btn_close_video.png" alt="">
 							</div>
-								
+
 							<video controls="true">
 								<source src="http://of01-qb5150.ktics.co.kr/2018_New_Sonata.mp4" type="video/mp4" >
 									Your browser does not support HTML5 video.
 							</video>
-						</div>	
+						</div>
 					</article>
 					<!-- frontstyle -->
-					<article class="sub_cover" id="frontstyle">
+					<article class="sub_cover section" id="frontstyle">
 						<div class="textwrap_top">
 							<h2>Front Style</h2>
 							<p>Introducing New Sonata <span>for lifestyle changes.</span></p>
 						</div>
 					</article>
-					<article class="slidePage" id="sFront">
+					<article class="slidePage section" id="sFront">
 						<h2>Front Style</h2>
 						<div class="imgwrap_top">
 							<div class="imgTitle">
@@ -83,14 +83,14 @@
 								<p>Vertical LED DRL</p>
 							</div>
 							<div class="slideImg">
-								<img src="../images/exterior/103_image_default.png" alt="cascading grille">
-								<img src="../images/exterior/104_image_default.png" alt="chrome garnish">
-								<img src="../images/exterior/105_image_default.png" alt="hood">
-								<img src="../images/exterior/106_image_default.png" alt="headlamp">
-								<img src="../images/exterior/107_image_default.png" alt="chrome molding">
-								<img src="../images/exterior/108_image_default.png" alt="vertical LED DRL">
+								<img src="../images/exterior/103_image_default.png" class="slide" alt="cascading grille" id="sFront1">
+								<img src="../images/exterior/104_image_default.png" class="slide" alt="chrome garnish" id="sFront2">
+								<img src="../images/exterior/105_image_default.png" class="slide" alt="hood" id="sFront3">
+								<img src="../images/exterior/106_image_default.png" class="slide" alt="headlamp" id="sFront4">
+								<img src="../images/exterior/107_image_default.png" class="slide" alt="chrome molding" id="sFront5">
+								<img src="../images/exterior/108_image_default.png" class="slide" alt="vertical LED DRL" id="sFront6">
 							</div>
-							<div class="slideImg" >
+							<div class="slideImgOver">
 								<img src="../images/exterior/103_image_overay.png" class="twinkle" alt="cascading grille">
 								<img src="../images/exterior/104_image_overay.png" class="twinkle" alt="chrome garnish">
 								<img src="../images/exterior/105_image_overay.png" class="twinkle" alt="hood">
@@ -101,8 +101,8 @@
 						</div>
 						<div class="textwrap">
 							<div class="slideControler">
-								<img src="../images/button/indicator_btn_left.png" class="prevImg" alt="">
-								<img src="../images/button/indicator_btn_right.png" class="nextImg" alt="">
+								<img src="../images/button/indicator_btn_left.png" class="prevImg fp-controlArrow  fp-prev" alt="">
+								<img src="../images/button/indicator_btn_right.png" class="nextImg fp-controlArrow  fp-next" alt="">
 								<div class="indicator">
 									<img src="../images/button/indicator_active.png" alt="">
 									<img src="../images/button/indicator_non_active.png" alt="">
@@ -110,7 +110,7 @@
 									<img src="../images/button/indicator_non_active.png" alt="">
 									<img src="../images/button/indicator_non_active.png" alt="">
 									<img src="../images/button/indicator_non_active.png" alt="">
-								</div>									
+								</div>
 							</div>
 							<div class="textbox">
 								<p>The three-dimensionally designed cascading grille emphasizes the difference in chrome thickness between the middle and th outermost.</p>
@@ -123,14 +123,14 @@
 						</div>
 					</article>
 					<!-- sidestyle -->
-					<article class="sub_cover" id="sidestyle">
+					<article class="sub_cover section" id="sidestyle">
 						<div class="textwrap_top">
 							<h2>Side Style</h2>
 							<p>Side hood that <span>emphasizes crisp images.</span> The rear tailgate is raised to <span>emphasize the sharp image.</span></p>
 						</div>
 					</article>
-					
-					<article class="slidePage" id="sSide">
+
+					<article class="slidePage section" id="sSide">
 						<h2>Side Style</h2>
 						<div class="imgwrap_top">
 							<div class="imgTitle">
@@ -138,22 +138,22 @@
 								<p>Wheels &amp; Tires</p>
 							</div>
 							<div class="slideImg">
-								<img src="../images/exterior/110_image_default.png" alt="DLO surround Chrome molding">
-								<img src="../images/exterior/111_image.png" alt="Wheels & Tires">
+								<img src="../images/exterior/110_image_default.png" class="slide" alt="DLO surround Chrome molding">
+								<img src="../images/exterior/111_image.png" class="slide" alt="Wheels & Tires">
 							</div>
-							<div class="slideImg">
+							<div class="slideImgOver">
 								<img src="../images/exterior/110_image_overay.png" class="twinkle" alt="DLO surround Chrome molding">
 								<img src="../images/exterior/111_image.png" class="twinkle" alt="Wheels & Tires">
 							</div>
 						</div>
 						<div class="textwrap">
 							<div class="slideControler">
-								<img src="../images/button/indicator_btn_left.png" class="prevImg" alt="">
-								<img src="../images/button/indicator_btn_right.png" class="nextImg" alt="">
+								<img src="../images/button/indicator_btn_left.png" class="prevImg fp-controlArrow  fp-prev" alt="">
+								<img src="../images/button/indicator_btn_right.png" class="nextImg fp-controlArrow  fp-next" alt="">
 								<div class="indicator">
 									<img src="../images/button/indicator_active.png" alt="">
 									<img src="../images/button/indicator_non_active.png" alt="">
-								</div>									
+								</div>
 							</div>
 							<div class="textbox">
 								<p>With DLO outer surround chrome application and C-pollar side effect change, we produced a porty side image.</p>
@@ -162,13 +162,13 @@
 						</div>
 					</article>
 					<!-- rearstyle -->
-					<article class="sub_cover" id="rearstyle">
+					<article class="sub_cover section" id="rearstyle">
 						<div class="textwrap_top">
 							<h2>Rear Style</h2>
 							<p>The emblem and the integrated trunk switch and the wide car name emblem are applied to maximize the image that looks cleaner and wider.</p>
 						</div>
 					</article>
-					<article class="slidePage" id="sRear">
+					<article class="slidePage section" id="sRear">
 						<h2>Rear Style</h2>
 						<div class="imgwrap_top">
 							<div class="imgTitle">
@@ -178,12 +178,12 @@
 								<p>Rear reflector</p>
 							</div>
 							<div class="slideImg">
-								<img src="../images/exterior/113_image.png" alt="Emblem Integrated Trunk Switch">
-								<img src="../images/exterior/114_image_default.png" alt="Rear combination lamp">
-								<img src="../images/exterior/115_image.png" alt="Rear Bumper">
-								<img src="../images/exterior/116_image_default.png" alt="Rear reflector">
+								<img src="../images/exterior/113_image.png" class="slide" alt="Emblem Integrated Trunk Switch">
+								<img src="../images/exterior/114_image_default.png" class="slide" alt="Rear combination lamp">
+								<img src="../images/exterior/115_image.png" class="slide" alt="Rear Bumper">
+								<img src="../images/exterior/116_image_default.png" class="slide" alt="Rear reflector">
 							</div>
-							<div class="slideImg">
+							<div class=" slideImgOver">
 								<img src="../images/exterior/113_image.png" class="twinkle" alt="Emblem Integrated Trunk Switch">
 								<img src="../images/exterior/114_image_overay.png" class="twinkle" alt="Rear combination lamp">
 								<img src="../images/exterior/115_image.png" class="twinkle" alt="Rear Bumper">
@@ -192,14 +192,14 @@
 						</div>
 						<div class="textwrap">
 							<div class="slideControler">
-								<img src="../images/button/indicator_btn_left.png" class="prevImg" alt="">
-								<img src="../images/button/indicator_btn_right.png" class="nextImg" alt="">
+								<img src="../images/button/indicator_btn_left.png" class="prevImg fp-controlArrow  fp-prev" alt="">
+								<img src="../images/button/indicator_btn_right.png" class="nextImg fp-controlArrow  fp-next" alt="">
 								<div class="indicator">
 									<img src="../images/button/indicator_active.png" alt="">
 									<img src="../images/button/indicator_non_active.png" alt="">
 									<img src="../images/button/indicator_non_active.png" alt="">
 									<img src="../images/button/indicator_non_active.png" alt="">
-								</div>									
+								</div>
 							</div>
 							<div class="textbox">
 								<p>Apply a hidden switch to the top of the emblem so that you can release the trunk conveniently while maintaining a clean rear image.</p>

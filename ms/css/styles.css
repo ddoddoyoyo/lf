@@ -261,8 +261,19 @@ video {
   .slidePage .imgwrap_top .slideImg {
     position: absolute;
     height: calc(100% - 35px);
-    overflow: hidden; }
+    overflow: hidden;
+    display: flex;
+    align-items: center; }
     .slidePage .imgwrap_top .slideImg img {
+      float: left; }
+  .slidePage .imgwrap_top .slideImgOver {
+    position: absolute;
+    height: calc(100% - 35px);
+    overflow: hidden;
+    z-index: 1;
+    display: flex;
+    align-items: center; }
+    .slidePage .imgwrap_top .slideImgOver img {
       float: left; }
 
 .slidePage .textwrap {
@@ -472,8 +483,8 @@ video {
 
 #exterior {
   background: url("../images/exterior/101_image_cover.png") no-repeat;
-  background-size: cover;
-  background-position: center; }
+  background-size: 100% auto;
+  background-position: bottom; }
   #exterior .textwrap_top h2, #exterior .textwrap_top p, #exterior .textwrap_top span {
     color: #fff; }
   #exterior .btn_play {
@@ -486,14 +497,14 @@ video {
 #frontstyle {
   background: url("../images/exterior/102_image_cover.png") no-repeat;
   background-size: 100% auto;
-  background-position: center; }
+  background-position: bottom; }
 
 #sidestyle {
   background: url("../images/exterior/109_image_cover.png") no-repeat;
   background-size: 100% auto;
-  background-position: center; }
+  background-position: bottom; }
 
 #rearstyle {
   background: url("../images/exterior/112_image_cover.png") no-repeat;
-  background-size: cover;
-  background-position: center; }
+  background-size: 100% auto;
+  background-position: bottom; }

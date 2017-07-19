@@ -234,6 +234,9 @@ video{
 	}
 }
 
+// #fullpage{
+// 	-webkit-overflow-scrolling: touch;//iphone scroll issue(momentum scrolling)
+// }
 
 //slidePage
 .slidePage{
@@ -267,9 +270,21 @@ video{
 			position: absolute;
 			height: calc(100% - 35px);
 			overflow: hidden;
+			display: flex;
+			align-items:center;
+			
 			img{
-				//position: absolute;
-				//top:0;
+				float: left;
+			}
+		}
+		.slideImgOver{
+			position: absolute;
+	    	height: calc(100% - 35px);
+	    	overflow: hidden;
+	    	z-index: 1;
+	    	display: flex;
+	    	align-items:center;
+	    	img{
 				float: left;
 			}
 		}
