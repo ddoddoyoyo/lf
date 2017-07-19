@@ -8,17 +8,17 @@ $(document).ready(function(){
 		$("body").append("<div id='mokup'></div>");
 	} 
 	else {
-		$("body").css({"background":"none"});
+		$("body").css({"background":"#fff"});
 		// layout
-		if(ios && navigator.userAgent.indexOf("KAKAOTALK") < 0){
-			function vh(){
-				$("html, body").css({"min-height":$(window).height() + 1});
-			}
-			$(window).on("orientationchange", function(){
-				if(window.orientation != 0){
-					vh();
-				}
-			});
-		}
+		// if(ios && navigator.userAgent.indexOf("KAKAOTALK") < 0){
+		// 	function vh(){
+		// 		$("html, body").css({"min-height":$(window).height() + 1});
+		// 	}
+		// 	$(window).on("orientationchange", function(){
+		// 		if(window.orientation != 0){
+		// 			vh();
+		// 		}
+		// 	});
+		// }
 	}
 });

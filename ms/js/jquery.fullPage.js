@@ -201,7 +201,6 @@
 		var windowsHeight = 569;//$window.height();
 		if(mobile){
 			var windowsHeight = $window.height();
-			//console.log(1);
 		}
 		//console.log(windowsHeight);
 		var isResizing = false;
@@ -425,6 +424,7 @@
 			var destiny = getSectionByAnchor(sectionAnchor);
 
 			if (typeof slideAnchor !== 'undefined'){
+				 _tmpIndex = slideAnchor;
 				scrollPageAndSlide(sectionAnchor, slideAnchor);
 			}else if(destiny.length > 0){
 				scrollPage(destiny);
@@ -2047,17 +2047,21 @@
 
 				playMedia(v.destiny);
 			}
-
-			console.log(_slide);
-			console.log(_index);
-			if (v.direction == 'right') {
-				_index[_slide] = _index[_slide] + 1;
-				slideNextImg(_slide, totalSlides, slideWidth, _index[_slide]);
-			}
-			if (v.direction == 'left') {
-				_index[_slide] = _index[_slide] - 1;
-				slidePrevImg(_slide, totalSlides, slideWidth, _index[_slide]);
-			}
+			//console.log(v);
+			fnAfterSlideLoad(v.direction);
+			// console.log(_slide);
+			// console.log(_index);
+			// //if (v.direction == 'right') {
+			// 	//_index[_slide] = _index[_slide] + 1;
+			// if (v.direction == 'right' || (typeof v.direction === 'undefined' && _tmpIndex != 0)) {
+			// 	_index[_slide] = (_tmpIndex) ? _tmpIndex + 1 : _index[_slide] + 1;
+			// 	_tmpIndex = 0;
+			// 	slideNextImg(_slide, totalSlides, slideWidth, _index[_slide]);
+			// }
+			// if (v.direction == 'left') {
+			// 	_index[_slide] = _index[_slide] - 1;
+			// 	slidePrevImg(_slide, totalSlides, slideWidth, _index[_slide]);
+			// }
 
 
 			//letting them slide again

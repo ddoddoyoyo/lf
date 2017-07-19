@@ -1,4 +1,3 @@
-
 #exterior{
 	background: url('../images/exterior/101_image_cover.png') no-repeat;
 	background-size: 100% auto;
@@ -16,22 +15,33 @@
 	.popLayer#exteriorMov{
 		background:#000;
 	}
-
 }
 #frontstyle{
 	background: url('../images/exterior/102_image_cover.png') no-repeat;
 	background-size: 100% auto;
 	background-position: bottom;
 }
-
 #sidestyle{
 	background: url('../images/exterior/109_image_cover.png') no-repeat;
 	background-size: 100% auto;
 	background-position: bottom;
 }
-
 #rearstyle{
 	background: url('../images/exterior/112_image_cover.png') no-repeat;
 	background-size: 100% auto;
 	background-position: bottom;
 }
+
+
+#interior{
+	background: url('../images/interior/201_image_cover.png') no-repeat;
+	background-size: 100% auto;
+	background-position: bottom;
+	background-color: #000;
+	.textwrap_top{
+		h2,p,span{
+			color:#fff;
+		}	
+	}
+}
+

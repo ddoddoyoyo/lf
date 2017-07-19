@@ -21,6 +21,7 @@ $(document).ready(function(){
 		$('video').each(function(){
 			this.pause();
 		});
+		$.fn.fullpage.moveTo(3, 2);//moveTo(PageIndex,slideIndex) : slideIndex 0부터 시작
 	});
 
 	$('#fullpage').fullpage({
@@ -38,20 +39,24 @@ $(document).ready(function(){
 				_slide = 'sRear';
 				beforePage('sRear');
 			}
+			else if(index == 9){
+				_slide = 'sInterior';
+				beforePage('sInterior');
+			}
 			//$('#fullpage .slidePage#'+ _slide +' .slideImgOver img').css('height', $('#fullpage .slidePage#'+ _slide +' .slideImg img').height());
 		},
 		'afterLoad': function(anchorLink, index){
 			if(index ==3){
-				//_index = 1;
 				afterPage('sFront');
 			}
 			else if(index == 5){
-				//_index = 1;
 				afterPage('sSide');
 			}
 			else if(index == 7){
-				//_index = 1;
 				afterPage('sRear');
+			}
+			else if(index == 9){
+				afterPage('sInterior');
 			}
 		},
 		// 'afterSlideLoad': function(direction,anchorLink,slideAnchor,slideIndex){
@@ -77,7 +82,8 @@ $(document).ready(function(){
 });//ready
 
 var _slide;
-var _index = {'sFront':1, 'sSide':1, 'sRear':1};//fullpage.js
+var _index = {'sFront':1, 'sSide':1, 'sRear':1,'sInterior':1};//fullpage.js
+var _tmpIndex = 0; //slide link temp value
 function beforePage(pageId){
 	$('#fullpage .slidePage#'+pageId+' .slideImg').css({"width":slideWidth});
 }
@@ -113,4 +119,16 @@ function slidePrevImg(pageId,totalSlides,slideWidth,pos){//fullpage.js
 	$('#fullpage .slidePage#'+pageId+' .imgTitle p:nth-child('+pos+')').show();
 	$('#fullpage .slidePage#'+pageId+' .textbox p').hide();
 	$('#fullpage .slidePage#'+pageId+' .textbox p:nth-child('+pos+')').show();
+}
+
+function fnAfterSlideLoad (direction) { //fullpage.js : afterSlideLoads에서 call
+	if (direction == 'right' || typeof direction === 'undefined') {
+		_index[_slide] = (_tmpIndex) ? _tmpIndex + 1 : _index[_slide] + 1;
+		_tmpIndex = 0;
+		slideNextImg(_slide, totalSlides, slideWidth, _index[_slide]);
+	}
+	if (direction == 'left') {
+		_index[_slide] = _index[_slide] - 1;
+		slidePrevImg(_slide, totalSlides, slideWidth, _index[_slide]);
+	}
 }

@@ -1,0 +1,55 @@
+//extrior
+#sFront , #sSide, #sRear{
+	.imgwrap_top{
+		.imgTitle{
+			background: url('../images/exterior/103_bg_top.png') no-repeat;
+			background-size: 100% auto;
+		}
+	}
+	.textwrap{
+		background: url('../images/exterior/103_bg_bottom.png') no-repeat;
+		background-size: 100% 100%;
+	}
+}
+
+//interior
+#sInterior{
+	.imgwrap_top{
+		.imgTitle{
+			background: url('../images/interior/203_bg_top.png') no-repeat;
+			background-size: 100% auto;
+		}
+	}
+	.textwrap{
+		background: url('../images/interior/203_bg_bottom.png') no-repeat;
+		background-size: 100% 100%;
+	}
+}
+
+//smartSense
+#sSmartSense{
+	.imgwrap_top{
+		.imgTitle{
+			background: url('../images/smartSense/503_bg_top.png') no-repeat;
+			background-size: 100% auto;
+		}
+	}
+	.textwrap{
+		background: url('../images/smartSense/503_bg_bottom.png') no-repeat;
+		background-size: 100% 100%;
+	}
+}
+
+//convenience
+#sConvenience{
+	.imgwrap_top{
+		.imgTitle{
+			background: url('../images/convenience/603_bg_top.png') no-repeat;
+			background-size: 100% auto;
+		}
+	}
+	.textwrap{
+		background: url('../images/convenience/603_bg_bottom.png') no-repeat;
+		background-size: 100% 100%;
+	}
+}

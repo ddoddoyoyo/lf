@@ -254,8 +254,8 @@ video{
 		height:53%;
 		.imgTitle{
 			height: 35px;
-			background: url('../images/exterior/103_bg_top.png') no-repeat;
-			background-size: 100% auto; 
+			//background: url('../images/exterior/103_bg_top.png') no-repeat;
+			//background-size: 100% auto; 
 			p{
 				position: absolute;
 				width: 100%;
@@ -291,8 +291,8 @@ video{
 	}
 	.textwrap{
 		height: calc(47% - 35px);
-		background: url('../images/exterior/103_bg_bottom.png') no-repeat;
-		background-size: 100% 100%;
+		//background: url('../images/exterior/103_bg_bottom.png') no-repeat;
+		//background-size: 100% 100%;
 		.slideControler{
 			height: 14%;
 			position: relative;
