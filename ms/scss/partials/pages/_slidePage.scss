@@ -1,5 +1,8 @@
 //extrior
 #sFront , #sSide, #sRear{
+	h2{
+		color: $blue;
+	}
 	.imgwrap_top{
 		.imgTitle{
 			background: url('../images/exterior/103_bg_top.png') no-repeat;
@@ -14,6 +17,9 @@
 
 //interior
 #sInterior{
+	h2{
+		color:$wine;
+	}
 	.imgwrap_top{
 		.imgTitle{
 			background: url('../images/interior/203_bg_top.png') no-repeat;
@@ -28,6 +34,9 @@
 
 //smartSense
 #sSmartSense{
+	h2{
+		color:$darkTeal;
+	}
 	.imgwrap_top{
 		.imgTitle{
 			background: url('../images/smartSense/503_bg_top.png') no-repeat;
@@ -42,6 +51,9 @@
 
 //convenience
 #sConvenience{
+	h2{
+		color:$vividGreen;
+	}
 	.imgwrap_top{
 		.imgTitle{
 			background: url('../images/convenience/603_bg_top.png') no-repeat;

@@ -49,6 +49,11 @@ p, div, span {
   font-size: 16px;
   color: #1e1e1e; }
 
+.menu_list {
+  font-family: "HyundaiSansHeadRegular", Arial, sans-serif;
+  font-size: 21px;
+  color: #1e1e1e; }
+
 @-webkit-keyframes twinkle {
   0%, 100% {
     opacity: 1; }
@@ -71,6 +76,7 @@ html, body {
   margin: 0;
   padding: 0;
   height: 100% !important;
+  background: url("../images/web_bg.jpg") 50% 0 no-repeat;
   background-color: #ffffff;
   background-size: cover;
   background-attachment: fixed;
@@ -173,7 +179,7 @@ video {
     background-color: #ffffff;
     border: none;
     width: 100%;
-    z-index: 1000;
+    z-index: 10;
     height: 60px;
     min-height: 60px; }
   .ui-page-theme-a .header {
@@ -240,8 +246,7 @@ video {
   text-align: center;
   padding: 2%;
   box-sizing: border-box;
-  font-size: 21px;
-  color: #082e62; }
+  font-size: 21px; }
 
 .slidePage .imgwrap_top {
   position: relative;
@@ -513,6 +518,24 @@ video {
   #interior .textwrap_top h2, #interior .textwrap_top p, #interior .textwrap_top span {
     color: #fff; }
 
+#performance {
+  background: url("../images/performance/401_image_cover.png") no-repeat;
+  background-size: 100% auto;
+  background-position: bottom; }
+
+#smartSense {
+  background: url("../images/smartSense/501_image_cover.png") no-repeat;
+  background-size: 100% auto;
+  background-position: bottom; }
+
+#convenience {
+  background: url("../images/convenience/601_image_cover.png") no-repeat;
+  background-size: 100% auto;
+  background-position: bottom; }
+
+#sFront h2, #sSide h2, #sRear h2 {
+  color: #082e62; }
+
 #sFront .imgwrap_top .imgTitle, #sSide .imgwrap_top .imgTitle, #sRear .imgwrap_top .imgTitle {
   background: url("../images/exterior/103_bg_top.png") no-repeat;
   background-size: 100% auto; }
@@ -520,6 +543,9 @@ video {
 #sFront .textwrap, #sSide .textwrap, #sRear .textwrap {
   background: url("../images/exterior/103_bg_bottom.png") no-repeat;
   background-size: 100% 100%; }
+
+#sInterior h2 {
+  color: #53142c; }
 
 #sInterior .imgwrap_top .imgTitle {
   background: url("../images/interior/203_bg_top.png") no-repeat;
@@ -529,6 +555,9 @@ video {
   background: url("../images/interior/203_bg_bottom.png") no-repeat;
   background-size: 100% 100%; }
 
+#sSmartSense h2 {
+  color: #045758; }
+
 #sSmartSense .imgwrap_top .imgTitle {
   background: url("../images/smartSense/503_bg_top.png") no-repeat;
   background-size: 100% auto; }
@@ -537,6 +566,9 @@ video {
   background: url("../images/smartSense/503_bg_bottom.png") no-repeat;
   background-size: 100% 100%; }
 
+#sConvenience h2 {
+  color: #086a2f; }
+
 #sConvenience .imgwrap_top .imgTitle {
   background: url("../images/convenience/603_bg_top.png") no-repeat;
   background-size: 100% auto; }
@@ -544,3 +576,26 @@ video {
 #sConvenience .textwrap {
   background: url("../images/convenience/603_bg_bottom.png") no-repeat;
   background-size: 100% 100%; }
+
+.sidePanel_wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 999; }
+  .sidePanel_wrap .sidePanel {
+    position: absolute;
+    top: 0;
+    left: 105%;
+    width: 100%;
+    height: 100%;
+    background-color: #fff; }
+    .sidePanel_wrap .sidePanel .btn_close {
+      top: 9%;
+      left: 10%; }
+    .sidePanel_wrap .sidePanel ul.menu_list {
+      margin-top: 30%; }
+      .sidePanel_wrap .sidePanel ul.menu_list li {
+        margin: 4% 10%; }

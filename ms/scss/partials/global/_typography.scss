@@ -66,44 +66,8 @@ p,div,span{
 	color:$main_text_30;
 }
 
-// h1 {
-// 	font-family: $header_r;
-// 	font-size: 3.5em;
-//     margin: 0;
-//     color: $point_color;
-//     line-height: 1;
-// }
-
-// h2 {
-// 	font-family: $header_m;
-// 	font-size: 33px;
-// 	margin: 0;
-// }
-
-// h3 {
-// 	font-family: $header_l;
-// 	font-size: 1.2em;
-//     margin: 0;
-// }
-// h4{
-// 	font-family: $base_font;
-// 	font-size:$mid-font-size;
-// }
-
-// p {
-// 	font-family: $base-font;
-// 	font-size: $base-font-size;
-// 	font-weight: normal;
-// 	color: $white;
-// }
-
-// div {
-// 	font-family: $base-font;
-// }
-
-// span{
-// 	font-family: $base-font;
-// 	font-size: $base-font-size;
-// 	font-weight: normal;
-// 	color: $white;
-// }
+.menu_list{
+	font-family: $header_r;
+	font-size: $mid-font;
+	color:$main_text_30;
+}

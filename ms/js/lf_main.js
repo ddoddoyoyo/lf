@@ -21,7 +21,7 @@ $(document).ready(function(){
 		$('video').each(function(){
 			this.pause();
 		});
-		$.fn.fullpage.moveTo(3, 2);//moveTo(PageIndex,slideIndex) : slideIndex 0부터 시작
+		//$.fn.fullpage.moveTo(3, 2);//moveTo(PageIndex,slideIndex) : slideIndex 0부터 시작
 	});
 
 	$('#fullpage').fullpage({
@@ -43,6 +43,14 @@ $(document).ready(function(){
 				_slide = 'sInterior';
 				beforePage('sInterior');
 			}
+			else if(index == 18){
+				_slide = 'sSmartSense';
+				beforePage('sSmartSense');
+			}
+			else if(index == 20){
+				_slide = 'sConvenience';
+				beforePage('sConvenience');
+			}
 			//$('#fullpage .slidePage#'+ _slide +' .slideImgOver img').css('height', $('#fullpage .slidePage#'+ _slide +' .slideImg img').height());
 		},
 		'afterLoad': function(anchorLink, index){
@@ -57,6 +65,12 @@ $(document).ready(function(){
 			}
 			else if(index == 9){
 				afterPage('sInterior');
+			}
+			else if(index == 18){
+				afterPage('sSmartSense');
+			}
+			else if(index == 20){
+				afterPage('sConvenience');
 			}
 		},
 		// 'afterSlideLoad': function(direction,anchorLink,slideAnchor,slideIndex){
@@ -82,7 +96,7 @@ $(document).ready(function(){
 });//ready
 
 var _slide;
-var _index = {'sFront':1, 'sSide':1, 'sRear':1,'sInterior':1};//fullpage.js
+var _index = {'sFront':1, 'sSide':1, 'sRear':1,'sInterior':1,'sSmartSense':1,'sConvenience':1};
 var _tmpIndex = 0; //slide link temp value
 function beforePage(pageId){
 	$('#fullpage .slidePage#'+pageId+' .slideImg').css({"width":slideWidth});

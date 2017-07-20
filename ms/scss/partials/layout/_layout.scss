@@ -21,7 +21,7 @@ html, body {
 	//min-height:558px;
 	//font: sans-serif; 
 	//line-height:130%; 
-	//background:url('../images/mokup_BG.png') 50% 0 no-repeat;
+	background:url('../images/web_bg.jpg') 50% 0 no-repeat;
 	background-color: $white; 
 	background-size:cover; 
 	background-attachment:fixed; 
@@ -143,7 +143,7 @@ video{
 		background-color: $white;
 		border:none;
 		width: 100%;
-		z-index:1000;
+		z-index:10;
 		height: $header_height;
 		min-height: $header_height;
 	}
@@ -247,7 +247,7 @@ video{
 		padding:2%;
 		box-sizing: border-box;
 		font-size: $mid-font;
-		color: $blue;
+		//color: $blue;
 	}
 	.imgwrap_top{
 		position: relative;
