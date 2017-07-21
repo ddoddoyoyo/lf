@@ -63,5 +63,9 @@
 	.textwrap{
 		background: url('../images/convenience/603_bg_bottom.png') no-repeat;
 		background-size: 100% 100%;
+		.table#trunkSpace{
+			position: absolute;
+			bottom:0;
+		}
 	}
 }

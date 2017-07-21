@@ -163,8 +163,7 @@ video {
 
 .btn_close {
   position: absolute;
-  top: 31%;
-  transform: translateY(-50%);
+  top: 14%;
   right: 4%;
   cursor: pointer; }
   .btn_close img {
@@ -304,7 +303,8 @@ video {
         margin: 0 2px; }
   .slidePage .textwrap .textbox {
     position: relative;
-    margin: 3% 5%; }
+    margin: 3% 5%;
+    height: 76%; }
     .slidePage .textwrap .textbox p {
       position: absolute;
       top: 0;
@@ -338,6 +338,29 @@ video {
     z-index: 0;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%); } }
+
+.sidePanel_wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 999; }
+  .sidePanel_wrap .sidePanel {
+    position: absolute;
+    top: 0;
+    left: 105%;
+    width: 100%;
+    height: 100%;
+    background-color: #fff; }
+    .sidePanel_wrap .sidePanel .btn_close {
+      top: 9%;
+      left: 10%; }
+    .sidePanel_wrap .sidePanel ul.menu_list {
+      margin-top: 30%; }
+      .sidePanel_wrap .sidePanel ul.menu_list li {
+        margin: 4% 10%; }
 
 #page0 .imgwrap {
   margin-top: 60px;
@@ -494,6 +517,9 @@ video {
     margin: 4%; }
   #exterior .popLayer#exteriorMov {
     background: #000; }
+    #exterior .popLayer#exteriorMov .btn_close {
+      top: 31%;
+      transform: translateY(-50%); }
 
 #frontstyle {
   background: url("../images/exterior/102_image_cover.png") no-repeat;
@@ -518,8 +544,23 @@ video {
   #interior .textwrap_top h2, #interior .textwrap_top p, #interior .textwrap_top span {
     color: #fff; }
 
+#safety {
+  background: url("../images/safety/001_bg.png") no-repeat;
+  background-size: 100% auto;
+  background-position: bottom; }
+
+#airbag {
+  background: url("../images/safety/001_airbag_bg.png") no-repeat;
+  background-size: 100% auto;
+  background-position: bottom; }
+
 #performance {
   background: url("../images/performance/401_image_cover.png") no-repeat;
+  background-size: 100% auto;
+  background-position: bottom; }
+
+#suspension {
+  background: url("../images/performance/001_bg.png") no-repeat;
   background-size: 100% auto;
   background-position: bottom; }
 
@@ -576,26 +617,163 @@ video {
 #sConvenience .textwrap {
   background: url("../images/convenience/603_bg_bottom.png") no-repeat;
   background-size: 100% 100%; }
-
-.sidePanel_wrap {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
-  z-index: 999; }
-  .sidePanel_wrap .sidePanel {
+  #sConvenience .textwrap .table#trunkSpace {
     position: absolute;
-    top: 0;
-    left: 105%;
+    bottom: 0; }
+
+#safetyDetail {
+  background: url("../images/safety/002_bg.png") no-repeat;
+  background-size: 100% auto;
+  background-position: bottom; }
+  #safetyDetail .textwrap {
+    position: relative;
+    top: 59%;
+    padding: 5%;
+    text-align: center; }
+    #safetyDetail .textwrap p {
+      font-size: 18px;
+      color: #646464; }
+  #safetyDetail .btn_more {
+    position: absolute;
+    top: 60px;
     width: 100%;
-    height: 100%;
-    background-color: #fff; }
-    .sidePanel_wrap .sidePanel .btn_close {
-      top: 9%;
-      left: 10%; }
-    .sidePanel_wrap .sidePanel ul.menu_list {
-      margin-top: 30%; }
-      .sidePanel_wrap .sidePanel ul.menu_list li {
-        margin: 4% 10%; }
+    height: calc(100% - 60px); }
+    #safetyDetail .btn_more img {
+      position: absolute;
+      width: 11%;
+      cursor: pointer; }
+    #safetyDetail .btn_more img#rigidity {
+      top: 22%;
+      left: 17%; }
+    #safetyDetail .btn_more img#adhesive {
+      top: 16%;
+      right: 25%; }
+    #safetyDetail .btn_more img#structure {
+      top: 33%;
+      right: 5%; }
+    #safetyDetail .btn_more img#collision {
+      top: 48%;
+      left: 5%; }
+
+#fuelDetail {
+  background: url("../images/performance/402_bg.png") no-repeat;
+  background-size: 100% auto; }
+  #fuelDetail .title {
+    padding: 10% 5% 5% 5%; }
+    #fuelDetail .title p:nth-child(1) {
+      font-family: "HyundaiSansHeadRegular", Arial, sans-serif;
+      font-size: 21px;
+      color: #323232; }
+    #fuelDetail .title p:nth-child(2) {
+      font-family: "HyundaiSansHeadMedium", Arial, sans-serif;
+      font-size: 60px;
+      color: #1e1e1e; }
+      #fuelDetail .title p:nth-child(2) span {
+        font-family: "HyundaiSansHeadMedium", Arial, sans-serif;
+        font-size: 45px;
+        color: #1e1e1e; }
+    #fuelDetail .title p:nth-child(3) {
+      font-family: "HyundaiSansHeadRegular", Arial, sans-serif;
+      font-size: 11px;
+      color: #323232;
+      margin-top: -3%; }
+  #fuelDetail .imgwrap {
+    margin: 0 3%; }
+  #fuelDetail .textwrap {
+    padding: 5%; }
+    #fuelDetail .textwrap p {
+      font-size: 11px;
+      color: #323232; }
+
+#transmissionDetail {
+  background-color: #000; }
+  #transmissionDetail .imgwrap {
+    margin: 4% auto;
+    padding: 0 8%; }
+    #transmissionDetail .imgwrap p {
+      text-align: center;
+      color: #ffffff; }
+
+#suspensionDetail > .imgwrap {
+  width: 68%;
+  margin: 6% auto;
+  line-height: 0;
+  cursor: pointer; }
+
+#suspensionDetail .popLayer {
+  background-color: #191919; }
+  #suspensionDetail .popLayer .imgwrap {
+    position: relative;
+    top: 60px; }
+    #suspensionDetail .popLayer .imgwrap p {
+      position: absolute;
+      bottom: 10%;
+      width: 100%;
+      color: #ffffff;
+      font-family: "HyundaiSansHeadMedium", Arial, sans-serif;
+      font-size: 18px;
+      text-align: center; }
+      #suspensionDetail .popLayer .imgwrap p span {
+        display: block;
+        font-size: 18px;
+        color: #ffffff; }
+  #suspensionDetail .popLayer .btn_arrow {
+    width: 19px;
+    margin: 1% auto; }
+  #suspensionDetail .popLayer .textwrap {
+    position: relative;
+    top: 11%; }
+    #suspensionDetail .popLayer .textwrap .textbox {
+      margin: 0 5%;
+      padding: 3%;
+      border: 1px solid #555555;
+      border-radius: 5px;
+      background-color: #252525; }
+      #suspensionDetail .popLayer .textwrap .textbox p {
+        color: #969696;
+        font-size: 13px; }
+
+#uploadPage .inputbox {
+  position: relative;
+  margin: 10% 5% 7% 5%;
+  border: 1px solid #252525;
+  border-radius: 12px;
+  overflow: hidden; }
+  #uploadPage .inputbox .imgwrap {
+    position: relative;
+    width: 100%;
+    height: 162px;
+    overflow: hidden;
+    line-height: 0; }
+    #uploadPage .inputbox .imgwrap img#current-img {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%); }
+    #uploadPage .inputbox .imgwrap .ui-input-text {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      border: none;
+      background: none;
+      box-shadow: none; }
+      #uploadPage .inputbox .imgwrap .ui-input-text input#upload {
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        opacity: 0; }
+  #uploadPage .inputbox .textwrap textarea {
+    height: 220px !important;
+    margin: 0;
+    padding: 3%;
+    resize: none;
+    border: none;
+    background: none;
+    box-shadow: none;
+    color: #323232; }
+
+#uploadPage .btn_upload {
+  text-align: center; }
+  #uploadPage .btn_upload img {
+    width: 55%; }

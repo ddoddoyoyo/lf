@@ -10,11 +10,11 @@
 		<link rel="stylesheet" href="../css/jquery.fullPage.css">
 		<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 		 <script>
-			 $(document).on("mobileinit", function () {
-				 $.mobile.hashListeningEnabled = false;
-				 $.mobile.pushStateEnabled = false;
-				 $.mobile.changePage.defaults.changeHash = false;
-			});
+			//  $(document).on("mobileinit", function () {
+			// 	 $.mobile.hashListeningEnabled = false;
+			// 	 $.mobile.pushStateEnabled = false;
+			// 	 $.mobile.changePage.defaults.changeHash = false;
+			// });
 		</script>
 		<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 		<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
@@ -22,6 +22,36 @@
 		<script src="../js/device.js"></script>
 		<script src="../js/lf_main.js"></script>
 		<script src="../js/menu.js"></script>
+		<script>
+			$(document).ready(function(){
+				$('#upload').change(function(){
+					readURL(this);
+				});
+				function readURL(input){
+					if(input.files && input.files[0]) {
+						var reader = new FileReader();
+						reader.onload = function(e){//파일 읽어들이기를 성공했을때 호출되는 이벤트 핸들러
+							$('#current-img').attr('src',e.target.result);
+
+							var img = new Image;
+							var imgW, imgH;
+							img.src = reader.result;
+							img.onload = function(){
+								imgW = img.width;
+								imgH = img.height;
+								if(imgH >= imgW){
+									$("#current-img").css({"width":"100%","height":"auto"});
+								}
+								else{
+									$("#current-img").css({"width":"auto", "height":"100%"});
+								}
+							}//img.onload
+						}//reader.onload
+					}//if
+					reader.readAsDataURL(input.files[0]);
+				}
+			});
+		</script>
 
 	</head>
 	<body>
@@ -56,7 +86,7 @@
 						</div>
 						<div class="popLayer" id="exteriorMov">
 							<div class="btn_close">
-								<img src="../images/button/btn_close_video.png" alt="">
+								<img src="../images/button/btn_close.png" alt="">
 							</div>
 
 							<video controls="true">
@@ -136,14 +166,17 @@
 						<div class="imgwrap_top">
 							<div class="imgTitle">
 								<p>DLO surround Chrome molding</p>
+								<p>Side Sill Molding</p>
 								<p>Wheels &amp; Tires</p>
 							</div>
 							<div class="slideImg">
 								<img src="../images/exterior/110_image_default.png" class="slide" alt="DLO surround Chrome molding">
+								<img src="../images/exterior/111_image_default.png" class="slide" alt="Side Sill Molding">
 								<img src="../images/exterior/111_image.png" class="slide" alt="Wheels & Tires">
 							</div>
 							<div class="slideImgOver">
 								<img src="../images/exterior/110_image_overay.png" class="twinkle" alt="DLO surround Chrome molding">
+								<img src="../images/exterior/111_image_overay.png" class="twinkle" alt="Side Sill Molding">
 								<img src="../images/exterior/111_image.png" class="twinkle" alt="Wheels & Tires">
 							</div>
 						</div>
@@ -154,11 +187,13 @@
 								<div class="indicator">
 									<img src="../images/button/indicator_active.png" alt="">
 									<img src="../images/button/indicator_non_active.png" alt="">
+									<img src="../images/button/indicator_non_active.png" alt="">
 								</div>
 							</div>
 							<div class="textbox">
 								<p>With DLO outer surround chrome application and C-pollar side effect change, we produced a porty side image.</p>
-								<p>18 inch alloy wheels &amp; tires</p>
+								<p>Applying engraved side seal molding expressing speed to make differentiated side style.</p>
+								<p>18 inch alloy wheels &amp; tires.</p>
 							</div>
 						</div>
 					</article>
@@ -173,22 +208,22 @@
 						<h2>Rear Style</h2>
 						<div class="imgwrap_top">
 							<div class="imgTitle">
-								<p>Emblem Integrated Trunk Switch</p>
 								<p>Rear combination lamp</p>
 								<p>Rear Bumper</p>
 								<p>Rear reflector</p>
+								<p>Twin Muffler</p>
 							</div>
 							<div class="slideImg">
-								<img src="../images/exterior/113_image.png" class="slide" alt="Emblem Integrated Trunk Switch">
 								<img src="../images/exterior/114_image_default.png" class="slide" alt="Rear combination lamp">
 								<img src="../images/exterior/115_image.png" class="slide" alt="Rear Bumper">
 								<img src="../images/exterior/116_image_default.png" class="slide" alt="Rear reflector">
+								<img src="../images/exterior/118_image_default.png" class="slide" alt="Twin Muffler">
 							</div>
 							<div class=" slideImgOver">
-								<img src="../images/exterior/113_image.png" class="twinkle" alt="Emblem Integrated Trunk Switch">
 								<img src="../images/exterior/114_image_overay.png" class="twinkle" alt="Rear combination lamp">
 								<img src="../images/exterior/115_image.png" class="twinkle" alt="Rear Bumper">
 								<img src="../images/exterior/116_image_overay.png" class="twinkle" alt="Rear reflector">
+								<img src="../images/exterior/118_image_overay.png" class="twinkle" alt="Twin Muffler">
 							</div>
 						</div>
 						<div class="textwrap">
@@ -203,10 +238,10 @@
 								</div>
 							</div>
 							<div class="textbox">
-								<p>Apply a hidden switch to the top of the emblem so that you can release the trunk conveniently while maintaining a clean rear image.</p>
 								<p>Horizontal slick and boldly designed rear lamps emphasize a sense of clean and modern sensibility.</p>
 								<p>By moving the license plate mounting position to the bottom of the bumper, we created a simple and differentiated atmosphere.</p>
 								<p>The vertical type rear reflector was applied to achieve stable stance and sporty image.</p>
+								<p>Expressing dynamic rear image by dual twin-tip muffler composed of each 2 tale trim left &amp; right. <br><br>(Twin Muffler : 2.0 turbo only)</p>
 							</div>
 						</div>
 					</article>
@@ -282,8 +317,22 @@
 							<p>51% of steel in SONATA NEW Rise's chassis is made from Advanced High Strength Steel (AHSS), which is 10% lighter and 2 times stronger at withstanding force compared to ordinary steel.</p>
 						</div>
 					</article>
-					<article class="section">
-						<p>Through improved chassis structure and strengthened materials,LF chassis is now stronger and safer.</p>
+					<article class="section" id="safetyDetail">
+						<div class="textwrap">
+							<p>Through improved chassis structure and strengthened materials,LF chassis is now stronger and safer.</p>
+						</div>
+						<div class="btn_more">
+							<img src="../images/button/002_btn_default.png" id="rigidity" alt="btn more">
+							<img src="../images/button/002_btn_default.png" id="adhesive" alt="btn more">
+							<img src="../images/button/002_btn_default.png" id="structure" alt="btn more">
+							<img src="../images/button/002_btn_default.png" id="collision" alt="btn more">
+						</div>
+					</article>
+					<article class="sub_cover section" id="airbag">
+						<div class="textwrap_top">
+							<h2>Advanced 7-airbag</h2>
+							<p>2 advanced frontal airbags for the driver’s seat and front passenger seat, 1 knee airbag for the driver’s seat, 2 side airbags for the driver’s seat and front passenger seat, and 2 curtain shield airbags.</p>
+						</div>
 					</article>
 
 					<!-- Performance -->
@@ -293,12 +342,28 @@
 							<p>You can enjoy more optimized driving with more efficiency for dynamic driving performance and higher fuel efficiency.</p>
 						</div>
 					</article>
-					<article class="section">
-						<p>engine fuel efficiency page</p>
+					<article class="section" id="fuelDetail">
+						<div class="title">
+							<p>Improved Fuel Efficiency</p>
+							<p>12.3 <span>km/&#8467;</span></p>
+							<p>(based on Gasoline-Fueled 2.0 with 205/65 R16 tires)</p>
+						</div>
+						<div class="imgwrap">
+							<img src="../images/performance/402_graph.png" alt="fuel efficiency table">
+						</div>
+						<div class="textwrap">
+							<p>The combined fuel efficiency is calculated based on the application of 205/65 R16 tires (235/45 R18 tires for Gasoline-Fueled 2.0 turbo)</p>
+						</div>
 					</article>
-					<article class="section">
-						<p>8-speed automatic transmission (2.0 T-Gdi)</p>
-						<p>6-speed automatic transmission</p>
+					<article class="section" id="transmissionDetail">
+						<div class="imgwrap">
+							<img src="../images/performance/403_img_01.png" alt="">
+							<p>8-speed automatic transmission<br>(2.0 T-Gdi)</p>
+						</div>
+						<div class="imgwrap">
+							<img src="../images/performance/403_img_02.png" alt="">
+							<p>6-speed automatic transmission</p>
+						</div>						
 					</article>
 					<!-- Suspension -->
 					<article class="sub_cover section" id="suspension">
@@ -307,9 +372,55 @@
 							<p>Achieving the highest level of driving performance and steering stability among competitors through suspension structure innovation.</p>
 						</div>
 					</article>
-					<article class="section">
-						<p>Front Suspension (McPherson strut)</p>
-						<p>Rear Suspension (Multi-link)</p>
+					<article class="section" id="suspensionDetail">
+						<div class="imgwrap">
+							<img src="../images/performance/002_btn_01.png" id="frontSuspnImg" alt="Front Suspension (McPherson strut)">
+						</div>
+						<div class="imgwrap">
+							<img src="../images/performance/002_btn_02.png" id="rearSuspnImg" alt="Rear Suspension (Multi-link)">
+						</div>
+						<div class="popLayer" id="frontSuspn">
+							<div class="imgwrap">
+								<img src="../images/performance/popup_01.png" alt="">
+								<p>Front Suspension <span>(McPherson strut)</span></p>
+							</div>
+							<div class="textwrap">
+								<div class="textbox">
+									<p>Newly designed front wheel geometry <br>Strengthened front bearing Brake tow-in minimized.</p>
+								</div>
+								<div class="btn_arrow">
+									<img src="../images/button/popup_arrow.png" alt="">
+								</div>
+								<div class="textbox">
+									<p>1. Steering responsiveness enhanced</p>
+									<p>2. Linearity in vehicle responsiveness enhanced during increase in steering angle</p>
+									<p>3. Enhanced stability through decrease in steering angle during braking</p>
+								</div>
+							</div>
+							<div class="btn_close">
+								<img src="../images/button/btn_close.png" alt="">
+							</div>
+						</div>
+						<div class="popLayer" id="rearSuspn">
+							<div class="imgwrap">
+								<img src="../images/performance/popup_02.png" alt="">
+								<p>Rear Suspension <span>(Multi-link)</span></p>
+							</div>
+							<div class="textwrap">
+								<div class="textbox">
+									<p>Newly designed rear wheel geometry <br>Dual low arm used Upper and lower arm span expanded.</p>
+								</div>
+								<div class="btn_arrow">
+									<img src="../images/button/popup_arrow.png" alt="">
+								</div>
+								<div class="textbox">
+									<p>Enhanced stability during high speed driving and turning.</p>
+								</div>
+							</div>
+							<div class="btn_close">
+								<img src="../images/button/btn_close.png" alt="">
+							</div>
+						</div>
 					</article>
 
 					<!-- Smart Sense -->
@@ -389,12 +500,14 @@
 							<div class="imgTitle">
 								<p>Wireless charging system for smartpones</p>
 								<p>Air clean mode</p>
+								<p>Emblem Integrated Trunk Switch</p>
 								<p>Trunk space</p>
 							</div>
 							<div class="slideImg">
 								<img src="../images/convenience/603_image_01.png" class="slide" alt="Wireless charging system for smartpones">
-								<img src="../images/convenience/603_image_01.png" class="slide" alt="Air clean mode">
-								<img src="../images/convenience/603_image_01.png" class="slide" alt="WTrunk space">
+								<img src="../images/convenience/603_image_02.png" class="slide" alt="Air clean mode">
+								<img src="../images/convenience/113_image.png" class="slide" alt="Emblem Integrated Trunk Switch">
+								<img src="../images/convenience/603_image_03.png" class="slide" alt="Trunk space">
 							</div>
 						</div>
 						<div class="textwrap">
@@ -405,17 +518,35 @@
 									<img src="../images/button/indicator_active.png" alt="">
 									<img src="../images/button/indicator_non_active.png" alt="">
 									<img src="../images/button/indicator_non_active.png" alt="">
+									<img src="../images/button/indicator_non_active.png" alt="">
 								</div>
 							</div>
 							<div class="textbox">
 								<p>Increased convenience with a wireless charging pad for smartphones, which also alerts the passengers when a smartphone is left unattended</p>
 								<p>We applied air purifying mode which filters fine dust by forced air circulation in vehicle interior by applying high performance air conditioner filter capable of adsorbing to basic gas.</p>
-								<p>Created more trunk space, the most among all competing brands and can load up to 4 golf bags and 4 Boston bags. Luggage capacity (462ℓ)</p>
+								<p>Apply a hidden switch to the top of the emblem so that you can release the trunk conveniently while maintaining a clean rear image.</p>
+								<p>Created more trunk space, the most among all competing brands and can load up to 4 golf bags and 4 Boston bags.</p>
+								<div class="table" id="trunkSpace">
+									<img src="../images/convenience/603_graph.png" alt="trunkSpace">
+								</div>
 							</div>
 						</div>
 					</article>
-					<article class="section">
-						upload page
+					<article class="section" id="uploadPage">
+						<form action="">
+							<div class="inputbox">
+								<div class="imgwrap">
+									<img id="current-img" src="../images/btn_picture.png" alt="upload img">
+									<input type="file" id="upload" name="LMS_IMAGE" accept="image/*">
+								</div>
+								<div class="textwrap">
+									<textarea name="" id="" placeholder="PLEASE ENTER TEXT"></textarea>
+								</div>
+							</div>
+							<div class="btn_upload">
+								<a href="#"><img src="../images/btn_upload.png" alt=""></a>
+							</div>
+						</form>
 					</article>
 
 				</div>

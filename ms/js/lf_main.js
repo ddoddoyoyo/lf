@@ -5,6 +5,9 @@ $(document).ready(function(){
 		"pagebeforeshow": function(){
 			$('.popLayer#scroll').show();
 			$('.popLayer#exteriorMov').hide();
+			$('#safetyDetail .btn_more img').addClass('activate');
+			$('.popLayer#frontSuspn, .popLayer#rearSuspn').hide();
+			$('.slidePage#sConvenience .table#trunkSpace').hide();
 		},
 		"pageshow" : function(){
 			$('.popLayer#scroll').delay(1000).fadeOut(500);
@@ -23,6 +26,50 @@ $(document).ready(function(){
 		});
 		//$.fn.fullpage.moveTo(3, 2);//moveTo(PageIndex,slideIndex) : slideIndex 0부터 시작
 	});
+
+	$('#safetyDetail .btn_more img').each(function(){
+		var btn_moreID = $(this).attr('id');
+		$(this).click(function(){
+			if($(this).hasClass('activate')){
+				$(this).addClass('deactivate');
+				$(this).attr('src','../images/button/002_btn_action.png');
+				if(btn_moreID =='rigidity'){
+					//console.log(btn_moreID);
+					$(this).css({'cursor':'default'});
+					//popLayer
+				}
+				else if(btn_moreID =='adhesive'){
+					//console.log(btn_moreID);
+					$(this).css({'cursor':'default'});
+				}
+				else if(btn_moreID =='structure'){
+					//console.log(btn_moreID);
+					$(this).css({'cursor':'default'});
+				}
+				else if(btn_moreID =='collision'){
+					//console.log(btn_moreID);
+					$(this).css({'cursor':'default'});
+				}
+
+			}			
+		});
+	});
+
+	$('#suspensionDetail>.imgwrap img').each(function(){
+		var suspnImg_ID = $(this).attr('id');
+		$(this).click(function(){
+			if(suspnImg_ID =='frontSuspnImg'){
+				$('.popLayer#frontSuspn').fadeIn(500);
+			}
+			else if(suspnImg_ID =='rearSuspnImg'){
+				$('.popLayer#rearSuspn').fadeIn(500);
+			}
+		});
+	});
+
+	$('#suspensionDetail .popLayer .btn_close').click(function(){
+		$('.popLayer#frontSuspn, .popLayer#rearSuspn').fadeOut(500);
+	})
 
 	$('#fullpage').fullpage({
 		verticalCentered: false,
@@ -43,11 +90,11 @@ $(document).ready(function(){
 				_slide = 'sInterior';
 				beforePage('sInterior');
 			}
-			else if(index == 18){
+			else if(index == 19){
 				_slide = 'sSmartSense';
 				beforePage('sSmartSense');
 			}
-			else if(index == 20){
+			else if(index == 21){
 				_slide = 'sConvenience';
 				beforePage('sConvenience');
 			}
@@ -66,27 +113,13 @@ $(document).ready(function(){
 			else if(index == 9){
 				afterPage('sInterior');
 			}
-			else if(index == 18){
+			else if(index == 19){
 				afterPage('sSmartSense');
 			}
-			else if(index == 20){
+			else if(index == 21){
 				afterPage('sConvenience');
 			}
 		},
-		// 'afterSlideLoad': function(direction,anchorLink,slideAnchor,slideIndex){
-		// 	console.log(_slide);
-		// 	console.log(_index);
-		// 	console.log(direction +'    ' +anchorLink+'    ' +slideAnchor+'    ' +slideIndex);
-		// 	if (direction == 'right') {
-		// 		//_index[_slide] = _index[_slide] + 1;
-		// 		console.log(1);
-		// 		slideNextImg(_slide, totalSlides, slideWidth, slideIndex);
-		// 	}
-		// 	if (direction == 'left') {
-		// 		//_index[_slide] = _index[_slide] - 1;
-		// 		slidePrevImg(_slide, totalSlides, slideWidth, slideIndex);
-		// 	}
-		// }
 	});//fullpage
 
 	$('#fullpage .slidePage .imgTitle p').hide();
@@ -144,5 +177,8 @@ function fnAfterSlideLoad (direction) { //fullpage.js : afterSlideLoads에서 ca
 	if (direction == 'left') {
 		_index[_slide] = _index[_slide] - 1;
 		slidePrevImg(_slide, totalSlides, slideWidth, _index[_slide]);
+	}
+	if(_slide == 'sConvenience' && _index[_slide] == 4){
+		$('.slidePage#sConvenience .table#trunkSpace').show();
 	}
 }

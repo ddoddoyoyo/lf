@@ -35,14 +35,14 @@ $(document).ready(function(){
 	});
 
 	$('a#m_performane').click(function(){
-		$.fn.fullpage.moveTo(12);//moveTo(PageIndex,slideIndex) : slideIndex 0부터 시작
+		$.fn.fullpage.moveTo(13);//moveTo(PageIndex,slideIndex) : slideIndex 0부터 시작
 	});
 
 	$('a#m_sense').click(function(){
-		$.fn.fullpage.moveTo(17);//moveTo(PageIndex,slideIndex) : slideIndex 0부터 시작
+		$.fn.fullpage.moveTo(18);//moveTo(PageIndex,slideIndex) : slideIndex 0부터 시작
 	});
 
 	$('a#m_convenience').click(function(){
-		$.fn.fullpage.moveTo(19);//moveTo(PageIndex,slideIndex) : slideIndex 0부터 시작
+		$.fn.fullpage.moveTo(20);//moveTo(PageIndex,slideIndex) : slideIndex 0부터 시작
 	});
 })

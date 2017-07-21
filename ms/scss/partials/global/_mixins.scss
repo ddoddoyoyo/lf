@@ -70,10 +70,10 @@
 @mixin btn_close{
     width:19px;
 }
-// @mixin btn_scroll{
-//     position: absolute;
-//     bottom: 5%;
-//     left: 50%;
-//     transform: translateX(-50%);
-//     width: 7%;
-// }
+@mixin btn_more{
+    width: 11%;
+}
+
+@mixin btn_arrow{
+    width: 19px;
+}

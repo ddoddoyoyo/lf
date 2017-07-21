@@ -14,6 +14,10 @@
 	}
 	.popLayer#exteriorMov{
 		background:#000;
+		.btn_close{
+			top: 31%;
+    		transform: translateY(-50%);
+		}
 	}
 }
 #frontstyle{
@@ -45,8 +49,26 @@
 	}
 }
 
+#safety{
+	background: url('../images/safety/001_bg.png') no-repeat;
+	background-size: 100% auto;
+	background-position: bottom;
+}
+
+#airbag{
+	background: url('../images/safety/001_airbag_bg.png') no-repeat;
+	background-size: 100% auto;
+	background-position: bottom;
+}
+
 #performance{
 	background: url('../images/performance/401_image_cover.png') no-repeat;
+	background-size: 100% auto;
+	background-position: bottom;
+}
+
+#suspension{
+	background: url('../images/performance/001_bg.png') no-repeat;
 	background-size: 100% auto;
 	background-position: bottom;
 }

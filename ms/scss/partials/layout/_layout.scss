@@ -125,8 +125,7 @@ video{
 }
 .btn_close{
 	position: absolute;
-    top: 31%;
-    transform: translateY(-50%);
+	top:14%;
     right: 4%;
     cursor:pointer;
 	img{
@@ -324,6 +323,7 @@ video{
 		.textbox{
 			position: relative;
 			margin:3% 5%;
+			height: 76%;
 			p{
 				position: absolute;
 				top:0;

@@ -17,9 +17,11 @@
 ////////////////////////
 // Import Design
 ////////////////////////
-@import 'partials/pages/page0';
-@import 'partials/pages/page1';
+@import 'partials/pages/menu';
+@import 'partials/pages/page0';//login
+@import 'partials/pages/page1';//login
 @import 'partials/pages/cover';
 @import 'partials/pages/sub_cover';
 @import 'partials/pages/slidePage';
-@import 'partials/pages/menu';
+@import 'partials/pages/detailPage';
+@import 'partials/pages/uploadPage';
