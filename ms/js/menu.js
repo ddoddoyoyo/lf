@@ -23,28 +23,40 @@ $(document).ready(function(){
 	});
 
 	$('a#m_exterior').click(function(){
-		$.fn.fullpage.moveTo(1);
-		//$.fn.fullpage.moveTo(3,1);
+		pageMapNav(1);
 		//moveTo(PageIndex,slideIndex) : slideIndex 0부터 시작
 	});
 
 	$('a#m_interior').click(function(){
-		$.fn.fullpage.moveTo(8);//moveTo(PageIndex,slideIndex) : slideIndex 0부터 시작
+		pageMapNav(8);
 	});
 
 	$('a#m_safety').click(function(){
-		$.fn.fullpage.moveTo(10);//moveTo(PageIndex,slideIndex) : slideIndex 0부터 시작
+		pageMapNav(10);
 	});
 
 	$('a#m_performane').click(function(){
-		$.fn.fullpage.moveTo(13);//moveTo(PageIndex,slideIndex) : slideIndex 0부터 시작
+		pageMapNav(13);
 	});
 
 	$('a#m_sense').click(function(){
-		$.fn.fullpage.moveTo(18);//moveTo(PageIndex,slideIndex) : slideIndex 0부터 시작
+		pageMapNav(18);
 	});
 
 	$('a#m_convenience').click(function(){
-		$.fn.fullpage.moveTo(20);//moveTo(PageIndex,slideIndex) : slideIndex 0부터 시작
+		pageMapNav(20);
 	});
 })
+
+function pageMapNav(pageN){
+	console.log(window.location.href.search('#pageMap'));
+	if(window.location.href.search('#pageMap') > -1){
+		location.href = "#contentPage";
+		setTimeout(function(){
+			$.fn.fullpage.moveTo(pageN);
+		},500);
+	}
+	else{
+		$.fn.fullpage.moveTo(pageN);
+	}
+}
