@@ -40,6 +40,78 @@
 			left: 5%;
 		}
 	}
+	.popLayer{
+		background-color:$popup_bg;
+		.textwrap_top{
+			position: relative;
+			top:$header_height;
+			padding: 10% 5%;
+			h3{
+				font-size: $mid-font-smaller;
+				color:$white;
+			}
+			p{
+				color:$popupText;
+				margin: 5% 0;
+			}
+		}
+		.imgwrap{
+			position: relative;
+			background-color: $popupText_bg;
+			border:1px solid rgba(255,255,255,0.5);
+			margin: 9% 5%;
+			padding:3%;
+			border-radius: 5px;
+			.textbox{	
+				p{
+					color:$white;
+					font-size: 13.5px;
+				}
+			}
+			.textStyle{
+				padding:3%;
+				p{
+					font-size: $base-font-smaller;
+					margin-bottom:3%;	
+					span{
+						display: block;
+						font-size: $base-font-smaller;
+						font-family: $header_m;
+						color:$white;
+					}
+				}
+			}
+			.imgStyle{
+				margin-top: 4%;
+			}
+			.imgSize{
+				width: 90%;
+				margin: 0 auto;
+			}
+			// .pos_mov{
+			// 	position: relative;
+			// 	top:45px;
+			// }
+			.imgText{
+				width: 200px;
+				position: relative;
+				p{
+					font-size: $base-font-smaller;
+					color: rgb(74,159,242);
+					span{
+						font-size: $big-font;
+						color: rgb(74,159,242);
+						display: block;
+					}
+				}
+				
+			}
+		}
+		.imgwrap2{
+			padding:0;
+			line-height: 0;
+		}
+	}
 }
 
 #fuelDetail{
@@ -107,7 +179,7 @@
 		background-color:$popup_bg;
 		.imgwrap{
 			position: relative;
-			top:60px;
+			top:$header_height;
 			p{
 				position: absolute;
 				bottom:10%;

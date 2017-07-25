@@ -23,7 +23,9 @@ $(document).ready(function(){
 	});
 
 	$('a#m_exterior').click(function(){
-		$.fn.fullpage.moveTo(1);//moveTo(PageIndex,slideIndex) : slideIndex 0부터 시작
+		$.fn.fullpage.moveTo(1);
+		//$.fn.fullpage.moveTo(3,1);
+		//moveTo(PageIndex,slideIndex) : slideIndex 0부터 시작
 	});
 
 	$('a#m_interior').click(function(){

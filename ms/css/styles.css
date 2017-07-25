@@ -654,6 +654,56 @@ video {
     #safetyDetail .btn_more img#collision {
       top: 48%;
       left: 5%; }
+  #safetyDetail .popLayer {
+    background-color: #191919; }
+    #safetyDetail .popLayer .textwrap_top {
+      position: relative;
+      top: 60px;
+      padding: 10% 5%; }
+      #safetyDetail .popLayer .textwrap_top h3 {
+        font-size: 18px;
+        color: #ffffff; }
+      #safetyDetail .popLayer .textwrap_top p {
+        color: #969696;
+        margin: 5% 0; }
+    #safetyDetail .popLayer .imgwrap {
+      position: relative;
+      background-color: #252525;
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      margin: 9% 5%;
+      padding: 3%;
+      border-radius: 5px; }
+      #safetyDetail .popLayer .imgwrap .textbox p {
+        color: #ffffff;
+        font-size: 13.5px; }
+      #safetyDetail .popLayer .imgwrap .textStyle {
+        padding: 3%; }
+        #safetyDetail .popLayer .imgwrap .textStyle p {
+          font-size: 13px;
+          margin-bottom: 3%; }
+          #safetyDetail .popLayer .imgwrap .textStyle p span {
+            display: block;
+            font-size: 13px;
+            font-family: "HyundaiSansHeadMedium", Arial, sans-serif;
+            color: #ffffff; }
+      #safetyDetail .popLayer .imgwrap .imgStyle {
+        margin-top: 4%; }
+      #safetyDetail .popLayer .imgwrap .imgSize {
+        width: 90%;
+        margin: 0 auto; }
+      #safetyDetail .popLayer .imgwrap .imgText {
+        width: 200px;
+        position: relative; }
+        #safetyDetail .popLayer .imgwrap .imgText p {
+          font-size: 13px;
+          color: #4a9ff2; }
+          #safetyDetail .popLayer .imgwrap .imgText p span {
+            font-size: 25px;
+            color: #4a9ff2;
+            display: block; }
+    #safetyDetail .popLayer .imgwrap2 {
+      padding: 0;
+      line-height: 0; }
 
 #fuelDetail {
   background: url("../images/performance/402_bg.png") no-repeat;
@@ -777,3 +827,7 @@ video {
   text-align: center; }
   #uploadPage .btn_upload img {
     width: 55%; }
+
+#pageMap .wrap {
+  position: relative;
+  top: 60px; }
