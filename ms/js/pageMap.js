@@ -190,11 +190,18 @@ $(document).ready(function(){
 	$('#pageMap .map_pop .close').click(function(){
 		$('#pageMap .map_pop').fadeOut(500);
 	});
+
+
+	$('#pageMap .words_wrap:nth-child(1) .word:nth-child(3)').click(function(){
+		$('#pageMap .pop_btn_wrap').addClass('pop_btn_wrap2');
+	});
+	
 })
 
 
 function map_pop(wwNum,wNum) {
 	$('#pageMap .words_wrap:nth-child('+wwNum+') .word:nth-child('+wNum+')').click(function(){
+		$('#pageMap .pop_btn_wrap').removeClass('pop_btn_wrap2');
 		$('#pageMap .map_pop').fadeIn(500);
 		$('#pageMap .pop_title').empty();
 		$('#pageMap .pop_title').append('<span>'+words_wrap[wwNum-1]

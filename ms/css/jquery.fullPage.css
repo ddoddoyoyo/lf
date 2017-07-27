@@ -32,6 +32,7 @@ html.fp-enabled,
 }
 .fp-slide {
     float: left;
+    height:100%
 }
 .fp-slide, .fp-slidesContainer {
     height: 100%;

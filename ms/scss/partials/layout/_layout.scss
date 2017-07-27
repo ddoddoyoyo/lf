@@ -137,6 +137,7 @@ video{
 	background-color: $white;
 	overflow:hidden !important;
 	height: 100%;
+
 	.ui-header{
 		position: fixed;
 		background-color: $white;
@@ -165,6 +166,10 @@ video{
 			padding:0;
 			text-align: left;
 		}
+	}
+
+	.contentPageHeader {
+	  	position: absolute !important;
 	}
 	.ui-content {
 		//margin-top: $header_height;
@@ -251,6 +256,8 @@ video{
 	.imgwrap_top{
 		position: relative;
 		height:53%;
+		overflow: hidden;
+		
 		.imgTitle{
 			height: 35px;
 			//background: url('../images/exterior/103_bg_top.png') no-repeat;
@@ -269,7 +276,7 @@ video{
 			position: absolute;
 			height: calc(100% - 35px);
 			overflow: hidden;
-			display: flex;
+			// display: flex;
 			align-items:center;
 			
 			img{
@@ -281,8 +288,10 @@ video{
 	    	height: calc(100% - 35px);
 	    	overflow: hidden;
 	    	z-index: 1;
-	    	display: flex;
+	    	// display: flex;
 	    	align-items:center;
+	    	height:100%;
+
 	    	img{
 				float: left;
 			}

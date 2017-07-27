@@ -195,6 +195,8 @@ video {
       left: 4%;
       padding: 0;
       text-align: left; }
+  .ui-page-theme-a .contentPageHeader {
+    position: absolute !important; }
   .ui-page-theme-a .ui-content {
     padding: 0;
     height: 100%;
@@ -249,7 +251,8 @@ video {
 
 .slidePage .imgwrap_top {
   position: relative;
-  height: 53%; }
+  height: 53%;
+  overflow: hidden; }
   .slidePage .imgwrap_top .imgTitle {
     height: 35px; }
     .slidePage .imgwrap_top .imgTitle p {
@@ -264,7 +267,6 @@ video {
     position: absolute;
     height: calc(100% - 35px);
     overflow: hidden;
-    display: flex;
     align-items: center; }
     .slidePage .imgwrap_top .slideImg img {
       float: left; }
@@ -273,8 +275,8 @@ video {
     height: calc(100% - 35px);
     overflow: hidden;
     z-index: 1;
-    display: flex;
-    align-items: center; }
+    align-items: center;
+    height: 100%; }
     .slidePage .imgwrap_top .slideImgOver img {
       float: left; }
 
@@ -918,3 +920,8 @@ video {
         margin-bottom: 10px; }
         #pageMap .wrap .map_pop .pop_btn_wrap .pop_btn:hover {
           cursor: pointer; }
+    #pageMap .wrap .map_pop .pop_btn_wrap2 .pop_btn {
+      width: 48%;
+      float: left; }
+      #pageMap .wrap .map_pop .pop_btn_wrap2 .pop_btn:nth-child(odd) {
+        margin-right: 2%; }

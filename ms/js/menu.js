@@ -68,7 +68,8 @@ function pageMapNav1(pageN, nbhnn){
 	console.log(window.location.href.search('#pageMap'));
 	$('#pageMap .close').click();
 	if(window.location.href.search('#pageMap') > -1){
-		location.href = "#contentPage";
+		$('#btnPageMove').click();
+		//location.href = "#contentPage";
 		setTimeout(function(){
 			$.fn.fullpage.moveTo(pageN, nbhnn);
 		},500);
