@@ -1,6 +1,6 @@
 $(document).ready(function(){
 	var sidePanel ='<div class="sidePanel_wrap"><div class="sidePanel"><a href="#" class="btn_close"><img src="../images/button/btn_close.png" alt=""></a><ul class="menu_list">';
-	sidePanel +='<li><a id="m_return" href="#">Return</a></li>';
+	sidePanel +='<li><a id="m_return" href="#pageMap">Return</a></li>';
 	sidePanel +='<li><a id="m_exterior" href="#">Exterior</a></li>';
 	sidePanel +='<li><a id="m_interior" href="#">Interior</a></li>';
 	sidePanel +='<li><a id="m_safety" href="#">Safety</a></li>';
@@ -48,6 +48,8 @@ $(document).ready(function(){
 	});
 })
 
+
+
 function pageMapNav(pageN){
 	console.log(window.location.href.search('#pageMap'));
 	if(window.location.href.search('#pageMap') > -1){
@@ -58,5 +60,20 @@ function pageMapNav(pageN){
 	}
 	else{
 		$.fn.fullpage.moveTo(pageN);
+	}
+}
+
+
+function pageMapNav1(pageN, nbhnn){
+	console.log(window.location.href.search('#pageMap'));
+	$('#pageMap .close').click();
+	if(window.location.href.search('#pageMap') > -1){
+		location.href = "#contentPage";
+		setTimeout(function(){
+			$.fn.fullpage.moveTo(pageN, nbhnn);
+		},500);
+	}
+	else{
+		$.fn.fullpage.moveTo(pageN, nbhnn);
 	}
 }
