@@ -41,7 +41,7 @@
 			        // $(this).siblings("label").css({"color":"#002c5f","background-image":"url('../images/button/icon_country_arrow_select.png')"});
 			    });
 				$('#go_main').click(function(){
-					location.href="main.html";
+					//location.href="main.html";
 				});
 				$('#upload').change(function(){
 					readURL(this);
@@ -101,6 +101,7 @@
 									<div class="selectbox">
 										<label for="country">Country</label>
 										<select name="LMS_CONTRY" id="country">
+										<option value="">Country</option>
 											<?php
 												$sql = "SELECT ENG,CCODE FROM SPK_COUNTRY ORDER BY ENG ASC";
 												$stmt = $dbh->prepare($sql);
@@ -144,7 +145,7 @@
 								</div>
 							</div>
 						</div>
-						<a href="javascript:;" id="go_main" class="ui-btn go-next"><img src="../images/button/001_btn_next.png" alt=""></a>
+						<a href="javascript:;" id="Join_Action" class="ui-btn go-next"><img src="../images/button/001_btn_next.png" alt=""></a>
 					</div>
 				</section>
 				</form>

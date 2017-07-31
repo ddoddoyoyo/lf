@@ -146,6 +146,9 @@ video{
 		height: $header_height;
 		min-height: $header_height;
 	}
+	.contentPageHeader {
+	  position: absolute !important;
+	}
 	.header {
 		//background-color:transparent !important;
 		position:absolute; 

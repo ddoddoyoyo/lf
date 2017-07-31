@@ -28,11 +28,13 @@ $(document).ready(function(){
 							document.location.href="../../common/login_action.php"+params+"";
 						} else { //no 
 							//stop
+							
 						}	
 
 					}else{
 						//정보가 없으면 다음단계(사진등록)
-						document.Frm.submit();
+						$.mobile.changePage("#page1");
+						//document.Frm.submit();
 					}
 				},
 			   error : function(xhr, status, error) {
@@ -41,6 +43,10 @@ $(document).ready(function(){
 			});
 
 		
+	});
+
+	$("#Join_Action").click(function(){
+		document.Frm.submit();
 	});
 
 	$('#input_country').change(function(){

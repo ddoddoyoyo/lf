@@ -11,7 +11,7 @@
 
 	$LMS_GB = "hyundai";
 
-	$SR_SUBJECT_CODE = "IG";
+	$SR_SUBJECT_CODE = "LF";
 
 	$RETURN = urldecode($_REQUEST["RETURN"]);
 
@@ -37,7 +37,7 @@
 	$HY_LMS_SEQ = $LMS_SEQ;
 
 	
-	include_once ($_SERVER[DOCUMENT_ROOT]."/ig/common/connection_insert.php");
+	include_once ($_SERVER[DOCUMENT_ROOT]."/lf/common/connection_insert.php");
 	
 	
 	$HY_APP_GB = $APP_GB;

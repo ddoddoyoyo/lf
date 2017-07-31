@@ -181,6 +181,8 @@ video {
     z-index: 10;
     height: 60px;
     min-height: 60px; }
+  .ui-page-theme-a .contentPageHeader {
+    position: absolute !important; }
   .ui-page-theme-a .header {
     position: absolute;
     left: 50%;
