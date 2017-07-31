@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	var sidePanel ='<div class="sidePanel_wrap"><div class="sidePanel"><a href="#" class="btn_close"><img src="../images/button/btn_close.png" alt=""></a><ul class="menu_list">';
+	var sidePanel ='<div class="sidePanel_wrap"><div class="sidePanel"><a href="#" class="btn_close"><img src="../images/button/003_btn_close.png" alt=""></a><ul class="menu_list">';
 	sidePanel +='<li><a id="m_return" href="#pageMap">Return</a></li>';
 	sidePanel +='<li><a id="m_exterior" href="#">Exterior</a></li>';
 	sidePanel +='<li><a id="m_interior" href="#">Interior</a></li>';

@@ -355,7 +355,11 @@ video {
     left: 105%;
     width: 100%;
     height: 100%;
-    background-color: #fff; }
+    background-color: #fff;
+    background-image: url("../images/003_bg.png");
+    background-size: 65% auto;
+    background-position: left bottom;
+    background-repeat: no-repeat; }
     .sidePanel_wrap .sidePanel .btn_close {
       top: 9%;
       left: 10%; }
