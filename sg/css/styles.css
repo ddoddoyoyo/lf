@@ -252,7 +252,8 @@ video {
 
 .slidePage .imgwrap_top {
   position: relative;
-  height: 53%; }
+  height: 53%;
+  overflow: hidden; }
   .slidePage .imgwrap_top .imgTitle {
     height: 35px; }
     .slidePage .imgwrap_top .imgTitle p {
@@ -267,7 +268,6 @@ video {
     position: absolute;
     height: calc(100% - 35px);
     overflow: hidden;
-    display: flex;
     align-items: center; }
     .slidePage .imgwrap_top .slideImg img {
       float: left; }
@@ -276,7 +276,6 @@ video {
     height: calc(100% - 35px);
     overflow: hidden;
     z-index: 1;
-    display: flex;
     align-items: center; }
     .slidePage .imgwrap_top .slideImgOver img {
       float: left; }

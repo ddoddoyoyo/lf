@@ -255,6 +255,8 @@ video{
 	.imgwrap_top{
 		position: relative;
 		height:53%;
+		overflow: hidden;
+		
 		.imgTitle{
 			height: 35px;
 			//background: url('../images/exterior/103_bg_top.png') no-repeat;
@@ -273,7 +275,7 @@ video{
 			position: absolute;
 			height: calc(100% - 35px);
 			overflow: hidden;
-			display: flex;
+			// display: flex;
 			align-items:center;
 			
 			img{
@@ -285,10 +287,12 @@ video{
 	    	height: calc(100% - 35px);
 	    	overflow: hidden;
 	    	z-index: 1;
-	    	display: flex;
+	    	// display: flex;
 	    	align-items:center;
+
 	    	img{
 				float: left;
+				// height: 100%;
 			}
 		}
 	}
