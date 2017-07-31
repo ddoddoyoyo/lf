@@ -1,9 +1,6 @@
 var totalSlides,slideWidth;
 var pos;
 $(document).ready(function(){
-	$('#pageMap').on({
-
-	});
 	$('#pageMap p').click(function(){
 		location.href = "#contentPage";
 		setTimeout(function(){

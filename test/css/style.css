@@ -1,0 +1,74 @@
+html,body{
+	height:100%;
+	margin:0;
+}
+
+.scrollWrap {
+	height:10000px;
+	width:100%;
+	overflow:hidden;
+}
+.roadwrap{
+	height:100%;
+	width:100%;
+	overflow:hidden;
+	position:fixed;
+	top:0;
+	left:0;
+}
+.roadBgWrap {
+	height:100%;
+	width:100%;
+	position: absolute;
+}
+.roadBg {
+	background-image: url('../images/road_test_img_2.jpg');
+	/* background-position:0 570px;
+	background-size: 100%; */
+	height:10000px;
+	width:1778px;
+	position: absolute;
+	top: 0;
+	/* transform: translateX(-50%) translateY(-50%);
+	transform-origin: 50% 50%; */
+}
+
+/*.rocketspace {
+	position: absolute;
+	width:1778px;
+	height:10000px;
+		 top: 10%;
+	left: 20%; */
+	/* background: lightgreen; 
+}*/
+/* .rocketspace:after {
+	content: "";
+	padding-top: 133.3333333%;
+	display: block;
+} */
+#rocket {
+	/* width:100%;
+	height:100%; */
+	position: absolute;
+	left: 28%;
+	top: 0%;
+	transform-origin: 50% 50%;
+	/* transform: translateX(-50%) translateY(-50%); */
+}
+
+#rocket .car {
+	/* left: 45%;
+	top: 45%;
+	position: absolute; */
+	/* transform-origin: 50% 100%; */
+}
+
+/*.svgwrapper {
+	width: 1778px;
+	height: 10000px;
+	position: absolute;
+}
+.svgwrapper svg {
+	height: 100%;
+	width: auto;
+}*/
