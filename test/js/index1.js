@@ -19,7 +19,7 @@ updatePosition = function(element, path, value){
 	var oldpoint = path.getPointAtLength((pathLength * value) - 50);
 
 	var bbox = path.getBBox();
-	console.log(bbox);
+	//console.log(bbox);
 	var newYPercent = ((newpoint.y - bbox.y) / (bbox.height)) * 100;
 	var newXPercent = ((newpoint.x - bbox.x) / bbox.width) * 100;
 
@@ -76,6 +76,7 @@ var _bodyHeight = $('.body').height();
 var _height = $('.roadBg').height();
 var _left;
 var _top;
+var n = 0;
 $(window).on('scroll',function() {
 	if (scroll < $(this).scrollTop())
 		_scrollTo = 1;
@@ -84,10 +85,31 @@ $(window).on('scroll',function() {
 
 	scroll = $(this).scrollTop();
 
-	var _tmp = scroll / _height;
+	var _tmp = (scroll+600) / _height;
+
 	updatePosition($('#rocket'), document.getElementById("mycurve"), _tmp);
-	/*console.log("스크롤 : "+ scroll);
-	console.log("높이 : "+ _height);
-	console.log("스크롤 비율 : "+ _tmp);*/
-	/*console.log(scroll);*/
+
+	var st = $(this).scrollTop();
+	console.log(st);
+
+	if (st >= 3000 && n ==0) {
+		$("#popup1").fadeIn(500);
+		$(this).scrollTop(3000);
+		$('body').css({'overflow':'hidden'});
+	}
+	else if(st >= 6000 && n==1) {
+		$("#popup2").fadeIn(500);
+		$(this).scrollTop(6000);
+		$('body').css({'overflow':'hidden'});
+	}
+});
+
+
+
+$(document).ready(function(){
+	$("#popup1, #popup2").click(function(){
+		$('body').css({'overflow':'auto'});
+		$("#popup1, #popup2").fadeOut(500);
+		n++;
+	});
 });
