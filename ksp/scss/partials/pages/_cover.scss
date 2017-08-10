@@ -1,0 +1,13 @@
+
+#cover{
+	background:url("../images/bg.jpg") no-repeat;
+	background-size:100% auto;
+	background-position: bottom;
+	.text_box{
+		@include text_box;
+		bottom:5%;
+		.btn_start{
+			@include btn_start;
+		}
+	}
+}

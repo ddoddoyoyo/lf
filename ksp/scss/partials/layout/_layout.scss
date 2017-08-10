@@ -21,7 +21,7 @@ html, body {
 	//min-height:558px;
 	//font: sans-serif; 
 	//line-height:130%; 
-	background:url('../images/web_bg.jpg') 50% 0 no-repeat;
+	//background:url('../images/web_bg.jpg') 50% 0 no-repeat;
 	background-color: $white; 
 	background-size:cover; 
 	background-attachment:fixed; 
@@ -69,7 +69,7 @@ ul{
 a {
 	//position:absolute;
 	//z-index:10;
-	color:$sub_text_50 !important; 
+	color:$text_50 !important; 
 	text-decoration:none; 
 	display:block; 
 	-webkit-text-shadow:none; 
@@ -107,11 +107,6 @@ body{
     width: 100%;
     height: 100%;
 }
-.popLayer#scroll{
-	background: url(../images/101_overay.png) no-repeat;
-    background-size: cover;
-    background-position: center;
-}
 .btn_play{
 	position: absolute;
     bottom: 14%;
@@ -134,53 +129,41 @@ video{
 }
 
 .ui-page-theme-a {
-	background-color: $white;
+	background: none;
 	overflow:hidden !important;
 	height: 100%;
+	width: 100%;
 	.ui-header{
-		position: fixed;
-		background-color: $white;
-		border:none;
-		width: 100%;
-		z-index:10;
-		height: $header_height;
-		min-height: $header_height;
-	}
-	.contentPageHeader {
-	  position: absolute !important;
-	}
-	.header {
-		//background-color:transparent !important;
 		position:absolute; 
 		left:50%;
 		transform:translateX(-50%);
 		width:100%;
 		height: $header_height; 
-    	//min-height: $header_height;	
+    	min-height: $header_height;
+    	border:none;	
 		border-bottom: 1px solid $black;
 		box-sizing:border-box;
+		background-color: $white;
 		h1 {
 			position: absolute;
-			top:18px;
-			left:4%;
+			top:13px;
+			left:5%;
 			//margin: 32px 0 0 2%;
 			padding:0;
 			text-align: left;
 			margin: 0;
 		}
 	}
+	.header {
+		//background-color:transparent !important;
+		
+	}
 	.ui-content {
-		//margin-top: $header_height;
+		position: relative;
 		padding:0;
+		padding-top: $header_height;
 		height: 100%;
-		//height: calc(100% - 64px);
-		overflow: visible !important;//for onepage scroll
-		article{
-			//position: relative;
-			height: 100%;
-			padding-top: $header_height;
-			box-sizing:border-box;
-		}
+		box-sizing:border-box;
 	}
 
 	.ui-btn{
@@ -200,7 +183,7 @@ video{
 	}
 	.ui-btn.ui-btn-right, .ui-btn.ui-btn-left{
 		width:19px;
-		margin-top:18px;
+		margin-top:15px;
 		padding:0;
     	//transform: translate(0,-50%);
 		&:hover{
@@ -210,137 +193,13 @@ video{
 	}
 	.ui-btn.ui-btn-right{
 		right:0;
-		padding-right:4%;
+		padding-right:5%;
 	}
 	.ui-btn.ui-btn-left{
 		left:0;
-		padding-left:4%;
+		padding-left:5%;
 	}
 }
-
-//sub-cover
-.sub_cover{
-	.textwrap_top{
-		//margin-top: $header_height;
-		padding:10% 5%;
-		p{
-			padding-top:2%;
-			font-size: $mid-font-smaller;
-			color:$sub_text_100;
-			span{
-				display: block;
-				font-size: $mid-font-smaller;
-				color:$sub_text_100;
-			}
-		}
-	}
-}
-
-// #fullpage{
-// 	-webkit-overflow-scrolling: touch;//iphone scroll issue(momentum scrolling)
-// }
-
-//slidePage
-.slidePage{
-	h2{
-		//margin-top: $header_height;
-		height: 35px;
-		text-align: center;
-		padding:2%;
-		box-sizing: border-box;
-		font-size: $mid-font;
-		//color: $blue;
-	}
-	.imgwrap_top{
-		position: relative;
-		height:53%;
-		overflow: hidden;
-		
-		.imgTitle{
-			height: 35px;
-			//background: url('../images/exterior/103_bg_top.png') no-repeat;
-			//background-size: 100% auto; 
-			p{
-				position: absolute;
-				width: 100%;
-				text-align: center;
-				color:$white;
-				line-height: 1.5em;
-				padding:2%;
-				box-sizing: border-box;
-			}
-		}
-		.slideImg{
-			position: absolute;
-			height: calc(100% - 35px);
-			overflow: hidden;
-			// display: flex;
-			align-items:center;
-			
-			img{
-				float: left;
-			}
-		}
-		.slideImgOver{
-			position: absolute;
-	    	height: calc(100% - 35px);
-	    	overflow: hidden;
-	    	z-index: 1;
-	    	// display: flex;
-	    	align-items:center;
-
-	    	img{
-				float: left;
-				// height: 100%;
-			}
-		}
-	}
-	.textwrap{
-		height: calc(47% - 35px);
-		//background: url('../images/exterior/103_bg_bottom.png') no-repeat;
-		//background-size: 100% 100%;
-		.slideControler{
-			height: 14%;
-			position: relative;
-			>img{
-				position: absolute;
-				top:50%;
-				transform:translateY(-50%);
-				width: 2%;
-				cursor: pointer;
-				&:nth-child(1){
-					left:5%;
-				}
-				&:nth-child(2){
-					right:5%;
-				}
-			}
-			.indicator{
-				position: absolute;
-				top:50%;
-				left:50%;
-				transform:translate(-50%,-50%);
-				
-				img{
-					width: 10px;
-					margin:0 2px;
-				}
-			}
-		}
-		.textbox{
-			position: relative;
-			margin:3% 5%;
-			height: 76%;
-			p{
-				position: absolute;
-				top:0;
-				color:$white;
-			}
-		}
-	}
-}
-
-
 
 // ==========================================================
 // media query
