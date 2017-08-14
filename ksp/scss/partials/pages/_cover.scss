@@ -6,8 +6,49 @@
 	.text_box{
 		@include text_box;
 		bottom:5%;
-		.btn_start{
-			@include btn_start;
+		.btn_box{
+			@include btn_box;
 		}
 	}
 }
+
+#ADAScover{
+	background:url("../images/adas/bg_00_intro.jpg") no-repeat;
+	background-size:100% auto;
+	background-position: bottom;
+	.text_box{
+		@include text_box;
+		top:15%;
+		.btn_box{
+			@include btn_box;
+		}
+	}
+}
+
+#ADAScover2{
+	background:url("../images/adas/bg_01_intro.jpg") no-repeat;
+	background-size:100% auto;
+	background-position: bottom;
+	.text_box{
+		@include text_box;
+		top:20%;
+		cursor:pointer;
+		.btn_box{
+			@include btn_box;
+			width: 100%;
+		}
+	}
+	.btn_nextPage{
+		bottom:8%;
+		left:50%;
+		transform: translateX(-50%);
+		width: 80%;
+		background: $black;
+    	border-radius: 5px;
+    	text-align: center;
+    	padding: 4% 0 3% 0;
+    	color:$white !important;
+    	font-family: $header_m;
+	}
+}
+
