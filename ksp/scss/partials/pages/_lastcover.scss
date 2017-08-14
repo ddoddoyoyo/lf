@@ -1,0 +1,36 @@
+.lastcover{
+	.textwrap{
+		position: absolute;
+		top:80%;
+		left:50%;
+		transform:translateX(-50%);
+		width: 84%;
+		text-align:center;
+	}
+}
+#exFrontLast{
+	background:url('../images/exterior/front/bg_02.jpg') no-repeat;
+	background-size: 100% auto;
+	background-position: bottom;
+}
+
+#exSideLast{
+	background:url('../images/exterior/side/bg_02.jpg') no-repeat;
+	background-size: 100% auto;
+	background-position: bottom;
+	p{
+		color:$white;
+	}
+}
+
+#exRearLast{
+	background:url('../images/exterior/rear/bg_02.jpg') no-repeat;
+	background-size: 100% auto;
+	background-position: bottom;
+}
+
+#interiorLast{
+	background:url('../images/interior/bg_01.jpg') no-repeat;
+	background-size: 100% auto;
+	background-position: bottom;
+}

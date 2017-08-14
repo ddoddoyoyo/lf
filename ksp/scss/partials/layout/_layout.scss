@@ -28,8 +28,6 @@ html, body {
 	overflow: hidden;
 }
 div, p, span, input {
-	color:$black; 
-	//line-height:130%; 
 	-webkit-text-shadow:none; 
 	text-shadow:none;
 }
@@ -55,6 +53,9 @@ ul{
 }
 .twinkle{
 	animation: twinkle 2s infinite;
+}
+.btn_nextPage{
+	@include btn_nextPage;
 }
 // .btn_scroll{
 // 	@include btn_scroll;
@@ -102,10 +103,11 @@ body{
 }
 .popLayer{
 	position: absolute;
-    top: 0;
+    top: $header_height;
     z-index: 1;
     width: 100%;
-    height: 100%;
+    height: calc(100% - 51px);
+    background-color: $black;
 }
 .btn_play{
 	position: absolute;
@@ -120,11 +122,22 @@ video{
 }
 .btn_close{
 	position: absolute;
-	top:14%;
+	top:4%;
     right: 4%;
     cursor:pointer;
 	img{
 		@include btn_close;
+	}
+}
+.btn_arrow{
+	position: absolute;
+	img{
+		float: left;
+	}
+}
+.btn_more{
+	img{
+		@include btn_more;
 	}
 }
 
@@ -144,6 +157,7 @@ video{
 		border-bottom: 1px solid $black;
 		box-sizing:border-box;
 		background-color: $white;
+		z-index: 10;
 		h1 {
 			position: absolute;
 			top:13px;

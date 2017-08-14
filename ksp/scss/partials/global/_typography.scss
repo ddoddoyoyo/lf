@@ -9,7 +9,7 @@ $header_l: 'HyundaiSansHeadLight', Arial, sans-serif;
 $small-font:11px;//20pt
 $base-font-smaller:13px;//25pt 
 $base-font: 16px;//guide: 30pt
-$mid-font-smaller: 18px;//35pt
+$mid-font-smaller: 18px;//36pt
 $mid-font: 21px;//40pt
 $big-font:25px;//50pt
 $big-font-bigger:33px;//65pt
@@ -40,27 +40,9 @@ h1, h2, h3, h4{
 		}
 	}
 }
-h1{
-	font-family: $header_m;
-	font-size: $big-font-bigger;
-	span{
-		font-family: $header_m;
-		font-size: $big-font-bigger;
-	}
-	span:nth-child(1){
-		color:$text_30;
-	}
-	span:nth-child(2){
-		color:$green;
-	}
-	span:nth-child(3){
-		color:$purple;
-	}
-}
+
 h2,h3{
 	font-family: $header_m;
-	font-size: $big-font;
-	color:$text_30;
 }
 p,div,span{
 	font-family: $header_r;

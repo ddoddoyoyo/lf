@@ -75,7 +75,7 @@
 }
 
 @mixin btn_arrow{
-    width: 19px;
+    width: 35px;
 }
 @mixin text_box{
     position: absolute;
@@ -88,17 +88,35 @@
     background-color: $white;
     text-align: center;
     font-family: $header_l;
+    box-shadow: 0 0 10px;
 }
-@mixin btn_start{
+@mixin btn_box{
     position: relative;
     left: 50%;
     transform:translateX(-50%);
     width: 70%;
-    padding:6px 0 3px 0;
+    padding: 6px 10px 3px 10px;
+    box-sizing: border-box;
     margin-top:5%;
     background:url('../images/button/btn_gradient.png') no-repeat;
     background-size: 100% 100%;
     color:$white !important;
     font-family: $header_m;
     font-size:$mid-font-smaller;
+}
+@mixin btn_turbo{
+    width: 34%;
+    margin:3%;
+    cursor: pointer;
+}
+@mixin btn_more{
+    position: absolute;
+    width: 11%;
+    cursor: pointer;
+}
+@mixin btn_nextPage{
+    position: absolute;
+    right:5%;
+    bottom:1%;
+    width: 4%;
 }
