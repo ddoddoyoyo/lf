@@ -57,6 +57,9 @@ ul{
 .btn_nextPage{
 	@include btn_nextPage;
 }
+.btn_back{
+	@include btn_back;
+}
 // .btn_scroll{
 // 	@include btn_scroll;
 // }

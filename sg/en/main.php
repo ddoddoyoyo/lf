@@ -284,7 +284,7 @@
 								<p>The chrome garnish on the lower bumper lowers the visual attention and makes the nose look lower.</p>
 								<p>Tense, extruded engine hood volume.</p>
 								<p>Slim LED headlamps with horizontal lines (Bi-function)</p>
-								<p>Chrome molding surrounds the upper outline of headlamp connected with the beltline to create a unique and luxurious look </p>
+								<p>Chrome molding surrounds the upper outline of headlamp connected with the beltline to create a unique and luxurious look.</p>
 								<p>Vertically designed DRL is integrated with the air-curtain to create a wider look.</p>
 							</div>
 						</div>
@@ -455,7 +455,7 @@
 					</article>
 					<article class="section" id="safetyDetail">
 						<div class="textwrap">
-							<p>Through improved structure and use of stronger materials, the chassis of Sonata New Rise is now more rigid.</p>
+							<p>Through improved structure and use of more rigid materials, the chassis of Sonata New Rise is now stronger and safer.</p>
 						</div>
 						<div class="btn_more">
 							<img src="../images/button/002_btn_default.png" id="rigidity" alt="btn more">

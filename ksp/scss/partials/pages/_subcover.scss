@@ -35,6 +35,9 @@
 				font-size:$mid-font-smaller;
 				color:$white;
 				margin-bottom:4%;
+				span{
+					color:$white;
+				}
 			}
 			p{
 				font-family: $header_l;
@@ -179,6 +182,7 @@
 	background-size:100% auto;
 	background-position: bottom;
 	.btn_ADAS{
+		cursor: pointer;
 		img{
 			width:26%;
 			position: absolute;
@@ -205,3 +209,28 @@
 		}
 	}
 }
+
+#convenience{
+	background:url("../images/convenience/bg_01.jpg") no-repeat;
+	background-size:100% auto;
+	background-position: bottom;
+	.btn_more{
+		img.SmartphoneNeglectAlert{
+			top:72%;
+			left: 49%;
+		}
+		img.WirelessCharging{
+			top:64%;
+			left: 43%;
+		}
+		img.AirClean{
+			top:57%;
+			left: 58%;
+		}
+		img.carplay{
+			top:31%;
+			left: 44%;
+		}
+	}
+}
+

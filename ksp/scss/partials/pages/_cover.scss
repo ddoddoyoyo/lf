@@ -31,7 +31,8 @@
 	background-position: bottom;
 	.text_box{
 		@include text_box;
-		top:20%;
+		top:50%;
+		transform:translate(-50%,-50%);
 		cursor:pointer;
 		.btn_box{
 			@include btn_box;
@@ -39,16 +40,74 @@
 		}
 	}
 	.btn_nextPage{
-		bottom:8%;
+		bottom:9%;
 		left:50%;
 		transform: translateX(-50%);
 		width: 80%;
 		background: $black;
     	border-radius: 5px;
     	text-align: center;
-    	padding: 4% 0 3% 0;
+    	padding: 6% 0 5% 0;
     	color:$white !important;
     	font-family: $header_m;
 	}
 }
 
+#engineCover{
+	background:url("../images/engine/bg_01.jpg") no-repeat;
+	background-size:100% auto;
+	background-position: bottom;
+	.title{
+		padding:10% 5% 5% 5%;
+		p{
+			&:nth-child(1){
+				font-family: $header_r;
+				font-size: $mid-font;
+				color:$text_50;
+			}
+			&:nth-child(2){
+				font-family: $header_m;
+				font-size: 60px;
+				color:$text_30;
+				span{
+					font-family: $header_m;
+					font-size: 45px;
+					color:$text_30;
+				}
+			}
+			&:nth-child(3){
+				font-family: $header_r;
+				font-size: $small-font;
+				color:$text_50;
+				margin-top:-3%;
+			}
+		}
+	}
+	.imgwrap{
+		margin:0 3%;
+	}
+	.textwrap{
+		padding:5%;
+		p{
+			font-size: $small-font;
+			color:$text_50;
+		}
+	}
+}
+
+#convenienceCover{
+	background:url("../images/convenience/bg_00.jpg") no-repeat;
+	background-size:100% auto;
+	background-position: bottom;
+	.textwrap{
+		position: relative;
+		top:6%;
+		left:50%;
+		transform:translateX(-50%);
+		width: 84%;
+		text-align:center;
+		p{
+			color:$white;
+		}
+	}
+}

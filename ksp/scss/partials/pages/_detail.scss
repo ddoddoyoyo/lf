@@ -1,0 +1,22 @@
+.detail{
+	background-color: $black;
+	.textwrap{
+		position: absolute;
+		top:64%;
+		left:50%;
+		transform:translateX(-50%);
+		width: 84%;
+		text-align: left;
+		h2{
+			font-size:$mid-font-smaller;
+			color:$white;
+			margin-bottom:4%;
+		}
+		p{
+			font-family: $header_l;
+			color:$white;
+			position: absolute;
+		}
+	}
+}
+

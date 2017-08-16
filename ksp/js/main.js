@@ -248,7 +248,7 @@ $(document).ready(function(){
 	$('#ADAS').on({
 		"pagebeforeshow" : function(){
 			cnt=0;
-			$('#ADAS .btn_nextPage').hide();
+			$('#ADAS .btn_nextPage, #ADAS .popLayer').hide();
 		},
 		"pageshow" :function(){
 
@@ -260,23 +260,35 @@ $(document).ready(function(){
 			cnt++;
 			getClassName = $(this).attr('class');
 			//console.log(getId);
-			if(getClassName == 'AEB'){
-				
-			}
-			else if(getClassName == 'HBA'){
-				
-			}
-			else if(getClassName == 'ASCC'){
-				
-			}
-			else if(getClassName == 'BSD'){
-				
-			}
-			else if(getClassName == 'LDWS'){
-				
-			}
+			$('#ADAS .popLayer#pop_'+getClassName).delay(500).fadeIn(500);
 			if(cnt == 5){
-				$('#ADAScover3 .btn_nextPage').delay(500).fadeIn(500);
+				$('#ADAS .btn_nextPage').delay(500).fadeIn(500);
+			}
+		});
+	});
+
+
+	$('#convenience').on({
+		"pagebeforeshow" : function(){
+			cnt=0;
+			$('#convenience .btn_nextPage, #convenience .popLayer').hide();
+			$('#convenience .btn_more img').show();
+		},
+		"pageshow" :function(){
+
+		}
+	});
+
+	$('#convenience .btn_more img').each(function(){
+		$(this).click(function(){
+			cnt++;
+			getClassName = $(this).attr('class');
+			console.log(getClassName);
+			$(this).hide();
+			$('#convenience .img_overlay img.'+getClassName).hide();
+			$('#convenience .popLayer#pop_'+getClassName).delay(500).fadeIn(500);
+			if(cnt == 4){
+				$('#convenience .btn_nextPage').delay(500).fadeIn(500);
 			}
 		});
 	});
