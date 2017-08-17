@@ -75,6 +75,28 @@ $(document).ready(function(){
 		});
 	});
 
+	$('#exFrontLast').on({
+		"pagebeforeshow" : function(){
+			$('#exFrontLast .carChange .newCar').css({"width":"50%"});
+			$('#exFrontLast .dragbar .dragline').css({"width":"50%"});
+			$('#exFrontLast .dragbar .ui-slider-handle').css({"left":"50%"});
+		},
+		"pageshow" :function(){
+			$("#exFrontLast .drawSlider").slider({ //붓 움직이기
+				range:"max",
+				min: 0,
+				max: 100,
+				value:50,
+				slide: function( event, ui ){
+					//console.log(ui.value);
+					$(this).find(".ui-slider-handle").css({"left": - ui.value + "%"}); //붓
+					$('#exFrontLast .carChange .newCar').css({"width": ui.value + "%"});
+				}				
+			});
+
+		}
+	});
+
 
 	$('#exSide').on({
 		"pagebeforeshow" : function(){
@@ -160,6 +182,28 @@ $(document).ready(function(){
 	$('#exRear .btn_turbo').click(function(){
 		$(this).removeClass('twinkle');
 		$('#exRear .popLayer#pop_rearTurbo').delay(500).fadeIn(500);
+	});
+
+	$('#exRearLast').on({
+		"pagebeforeshow" : function(){
+			$('#exRearLast .carChange .newCar').css({"width":"50%"});
+			$('#exRearLast .dragbar .dragline').css({"width":"50%"});
+			$('#exRearLast .dragbar .ui-slider-handle').css({"left":"50%"});
+		},
+		"pageshow" :function(){
+			$("#exRearLast .drawSlider").slider({ //붓 움직이기
+				range:"max",
+				min: 0,
+				max: 100,
+				value:50,
+				slide: function( event, ui ){
+					//console.log(ui.value);
+					$(this).find(".ui-slider-handle").css({"left": - ui.value + "%"}); //붓
+					$('#exRearLast .carChange .newCar').css({"width": ui.value + "%"});
+				}				
+			});
+
+		}
 	});
 
 
@@ -272,7 +316,13 @@ $(document).ready(function(){
 		"pagebeforeshow" : function(){
 			cnt=0;
 			$('#convenience .btn_nextPage, #convenience .popLayer').hide();
-			$('#convenience .btn_more img').show();
+			$('#convenience .btn_more img,#convenience .img_overlay img').show();
+			$('#convenience .popLayer .btn_arrow img:nth-child(1)').attr('src','../images/button/btn_turbo_previous_nonactive.png');
+			$('#convenience .popLayer .btn_arrow img:nth-child(2)').attr('src','../images/button/btn_turbo_next.png');
+			$('#convenience .popLayer#pop_WirelessCharging .textwrap.text1').show();
+			$('#convenience .popLayer#pop_WirelessCharging .textwrap.text2').hide();
+			$('#convenience .popLayer#pop_WirelessCharging .imgwrap img:nth-child(1)').show();
+			$('#convenience .popLayer#pop_WirelessCharging .imgwrap img:nth-child(2)').hide();
 		},
 		"pageshow" :function(){
 
@@ -287,8 +337,26 @@ $(document).ready(function(){
 			$(this).hide();
 			$('#convenience .img_overlay img.'+getClassName).hide();
 			$('#convenience .popLayer#pop_'+getClassName).delay(500).fadeIn(500);
-			if(cnt == 4){
+			if(cnt == 3){
 				$('#convenience .btn_nextPage').delay(500).fadeIn(500);
+			}
+			if(getClassName == 'WirelessCharging'){
+				$('#convenience .popLayer#pop_WirelessCharging .btn_arrow img:nth-child(1)').click(function(){//pre
+					$(this).attr('src','../images/button/btn_turbo_previous_nonactive.png');
+					$('#convenience .popLayer#pop_WirelessCharging .btn_arrow img:nth-child(2)').attr('src','../images/button/btn_turbo_next.png');
+					$('#convenience .popLayer#pop_WirelessCharging .imgwrap img:nth-child(1)').show();
+					$('#convenience .popLayer#pop_WirelessCharging .imgwrap img:nth-child(2)').hide();
+					$('#convenience .popLayer#pop_WirelessCharging .textwrap.text1').show();
+					$('#convenience .popLayer#pop_WirelessCharging .textwrap.text2').hide();
+				});
+				$('#convenience .popLayer#pop_WirelessCharging .btn_arrow img:nth-child(2)').click(function(){//next
+					$('#convenience .popLayer#pop_WirelessCharging .btn_arrow img:nth-child(1)').attr('src','../images/button/btn_turbo_previous.png');
+					$(this).attr('src','../images/button/btn_turbo_next_nonactive.png');
+					$('#convenience .popLayer#pop_WirelessCharging .imgwrap img:nth-child(1)').hide();
+					$('#convenience .popLayer#pop_WirelessCharging .imgwrap img:nth-child(2)').show();
+					$('#convenience .popLayer#pop_WirelessCharging .textwrap.text1').hide();
+					$('#convenience .popLayer#pop_WirelessCharging .textwrap.text2').show();
+				});
 			}
 		});
 	});

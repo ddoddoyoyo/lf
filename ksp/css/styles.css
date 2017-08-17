@@ -512,6 +512,17 @@ video {
   #exFront .btn_more img.chromeGarnish {
     top: 59%;
     right: 26%; }
+  #exFront .imgwrap .img_text {
+    position: absolute;
+    left: 40%;
+    top: 10%; }
+    #exFront .imgwrap .img_text p {
+      color: #ffffff; }
+    #exFront .imgwrap .img_text p:nth-child(1) {
+      font-family: "HyundaiSansHeadMedium", Arial, sans-serif; }
+    #exFront .imgwrap .img_text p:nth-child(2) {
+      font-family: "HyundaiSansHeadLight", Arial, sans-serif;
+      font-size: 13px; }
 
 #exSide {
   background: url("../images/exterior/side/bg_01.jpg") no-repeat;
@@ -588,14 +599,14 @@ video {
       top: 53%;
       left: 3%; }
     #ADAS .btn_ADAS img.DBL {
-      top: 22%;
-      left: 5%; }
+      top: 20%;
+      left: 3%; }
     #ADAS .btn_ADAS img.DAA {
-      top: 18%;
+      top: 11%;
       left: 37%; }
     #ADAS .btn_ADAS img.AVM {
-      top: 22%;
-      right: 5%; }
+      top: 20%;
+      right: 3%; }
     #ADAS .btn_ADAS img.DRM {
       top: 83%;
       left: 37%; }
@@ -604,12 +615,9 @@ video {
   background: url("../images/convenience/bg_01.jpg") no-repeat;
   background-size: 100% auto;
   background-position: bottom; }
-  #convenience .btn_more img.SmartphoneNeglectAlert {
+  #convenience .btn_more img.WirelessCharging {
     top: 72%;
     left: 49%; }
-  #convenience .btn_more img.WirelessCharging {
-    top: 64%;
-    left: 43%; }
   #convenience .btn_more img.AirClean {
     top: 57%;
     left: 58%; }
@@ -625,58 +633,67 @@ video {
   width: 84%;
   text-align: center; }
 
-#exFrontLast {
-  background: url("../images/exterior/front/bg_02.jpg") no-repeat;
-  background-size: 100% auto;
-  background-position: bottom; }
-  #exFrontLast .carChange {
-    width: 320px;
+.lastcover .carChange {
+  width: 320px;
+  height: 367px;
+  position: absolute;
+  left: 50%;
+  top: 39%;
+  transform: translate(-50%, -50%); }
+  .lastcover .carChange > img {
+    width: 100%;
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%); }
-    #exFrontLast .carChange > img {
-      width: 100%;
+    bottom: 0; }
+  .lastcover .carChange .newCar {
+    height: 100%;
+    position: absolute;
+    overflow: hidden; }
+    .lastcover .carChange .newCar img {
+      width: 320px;
       position: absolute;
       bottom: 0; }
-    #exFrontLast .carChange .newCar {
-      height: 500px;
-      position: absolute;
-      overflow: hidden; }
-      #exFrontLast .carChange .newCar img {
-        width: 320px; }
-  #exFrontLast .dragbar {
+
+.lastcover .dragbar {
+  position: absolute;
+  top: 70%;
+  width: 100%; }
+  .lastcover .dragbar > img {
+    height: 33px; }
+  .lastcover .dragbar .dragpoint {
     position: absolute;
-    top: 71%;
-    width: 100%; }
-    #exFrontLast .dragbar > img {
+    left: 8%;
+    width: 81%;
+    top: -32px;
+    z-index: 10; }
+  .lastcover .dragbar .ui-slider .ui-slider-range {
+    border: none;
+    background: none;
+    width: 100%;
+    height: 100%; }
+  .lastcover .dragbar .ui-slider .ui-slider-handle {
+    width: 20px;
+    height: 20px;
+    border: transparent;
+    background: url("../images/button/slider_controller.png") no-repeat;
+    background-size: 100% auto;
+    display: block;
+    position: relative; }
+    .lastcover .dragbar .ui-slider .ui-slider-handle:focus {
+      outline: none; }
+  .lastcover .dragbar .dragline {
+    height: 33px;
+    left: 0%;
+    overflow: hidden; }
+    .lastcover .dragbar .dragline img {
+      width: 270px;
       height: 33px; }
-    #exFrontLast .dragbar .dragpoint {
-      left: 6%;
-      width: 218px;
-      top: -5px;
-      z-index: 10; }
-    #exFrontLast .dragbar .ui-slider .ui-slider-range {
-      border: none;
-      background: none;
-      width: 100%;
-      height: 100%; }
-    #exFrontLast .dragbar .ui-slider .ui-slider-handle {
-      width: 18px;
-      height: 30px;
-      border: transparent;
-      background: url("../images/exterior/front/slider_controller.png") no-repeat;
-      background-size: 100% auto;
-      display: block;
-      position: relative; }
-      #exFrontLast .dragbar .ui-slider .ui-slider-handle:focus {
-        outline: none; }
-    #exFrontLast .dragbar .dragline {
-      height: 33px;
-      left: 0%;
-      overflow: hidden; }
-      #exFrontLast .dragbar .dragline img {
-        width: 270px;
-        height: 33px; }
+
+#exFrontLast {
+  background-image: url("../images/exterior/front/bg_02.jpg");
+  background-repeat: no-repeat;
+  background-color: #ffffff;
+  background-size: 100% auto;
+  background-position: 0 51px; }
 
 #exSideLast {
   background: url("../images/exterior/side/bg_02.jpg") no-repeat;
@@ -686,9 +703,11 @@ video {
     color: #ffffff; }
 
 #exRearLast {
-  background: url("../images/exterior/rear/bg_02.jpg") no-repeat;
+  background-image: url("../images/exterior/rear/bg_02.jpg");
+  background-repeat: no-repeat;
+  background-color: #ffffff;
   background-size: 100% auto;
-  background-position: bottom; }
+  background-position: 0 51px; }
 
 #interiorLast {
   background: url("../images/interior/bg_01.jpg") no-repeat;

@@ -17,10 +17,11 @@
 		</script>
 		<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 		<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+		<script src="../js/jquery.ui.touch-punch.min.js"></script>
 		<script src="../js/device.js"></script>
 		<script src="../js/main.js"></script>
 		<script src="../js/menu.js"></script>
-		<script src="../js/jquery.ui.touch-punch.min.js"></script>
+		
 		<script>
 			$(document).ready(function(){
 				$('#upload').change(function(){
@@ -73,7 +74,7 @@
 				</div>
 				<div data-role="main" class="ui-content">
 					<div class="text_box">
-						<p>Sonata New Rise has made a lot of difference compared to existing LF. <br>Shall we get together?</p>
+						<p>The Sonata New Rise has been made more excellent in many respects than the previous LF Sonata. Let’s check them out.</p>
 						<a href="#exFront" class="btn_box">START</a>
 					</div>
 				</div>	
@@ -105,7 +106,7 @@
 						<img src="../images/button/btn_turbo.png" alt="">
 					</div>
 					<div class="textwrap">
-						<p>FRONT has changed six places. Take a closer look at each one.</p>
+						<p>There are six areas of change on the front part. Let’s take a close look at each of them.</p>
 					</div>
 					<a href="#" class="btn_back" data-rel="back"><img src="../images/button/next btn_default.png" alt=""></a>
 					<a href="#exFrontLast" class="btn_nextPage">
@@ -118,8 +119,8 @@
 						</div>
 						<div class="textwrap">
 							<h2>Cascading Grille</h2>
-							<p class="text1">The front part of SONATA NEW RISE versus LF is the biggest change point of the three-dimensional designed cascading grill.</p>
-							<p class="text2">The cascading grilles emphasize dynamic and sporty with the difference in chrome thickness between the middle and the outside.</p>
+							<p class="text1">The front of the Sonata New Rise features a three-dimensional cascading grille, a major change from the LF.</p>
+							<p class="text2">The cascading grille features a difference in thickness of its chrome outline between the middle and outer sections, highlighting its dynamic and sporty look.</p>
 						</div>
 						<div class="btn_close">
 							<img src="../images/button/btn_close.png" alt="">
@@ -136,7 +137,7 @@
 						</div>
 						<div class="textwrap">
 							<h2>Chrome Garnish</h2>
-							<p>The chrome garnish at the bottom of the bumper pulled down the visual concentration and emphasized the effect of the body being lower.</p>
+							<p>The chrome garnish on the lower section of the bumper shifts the visual focus downwards, making the body look lower.</p>
 						</div>
 						<div class="btn_close">
 							<img src="../images/button/btn_close.png" alt="">
@@ -148,8 +149,8 @@
 							<img src="../images/exterior/front/popup_03.png" alt="">
 						</div>
 						<div class="textwrap">
-							<h2>Front hood</h2>
-							<p>The protruding engine volume and lowered hood make the overall silhouette look slicker.</p>
+							<h2>Front Hood</h2>
+							<p>Due to the protruding engine and the lower hood, the entire silhouette creates a sharp–looking design.</p>
 						</div>
 						<div class="btn_close">
 							<img src="../images/button/btn_close.png" alt="">
@@ -162,7 +163,7 @@
 						</div>
 						<div class="textwrap">
 							<h2>Chrome Molding</h2>
-							<p>The chrome surround molding that connects the upper part of the head lamp and the belt line produces a unique sense of quality.</p>
+							<p>The chrome surround molding connects the upper part of the headlamp and the belt line, thus providing a luxurious and unique look.</p>
 						</div>
 						<div class="btn_close">
 							<img src="../images/button/btn_close.png" alt="">
@@ -172,10 +173,14 @@
 					<div class="popLayer" id="pop_headLamp">
 						<div class="imgwrap">
 							<img src="../images/exterior/front/popup_05.png" alt="">
+							<div class="img_text">
+								<p>Before</p>
+								<p>HID Head Lamp(LF)</p>
+							</div>
 						</div>
 						<div class="textwrap">
 							<h2>Slim LED Head Lamp</h2>
-							<p>'LED by function head lamp' is applied to head lamp and down light in one head lamp. Simplicity and sophistication are implemented simultaneously in design.</p>
+							<p>The high beam and the low beam are integrated into a single “bifunctional headlamp” module, presenting a simple yet stylish design.</p>
 						</div>
 						<div class="btn_close">
 							<img src="../images/button/btn_close.png" alt="">
@@ -188,7 +193,7 @@
 						</div>
 						<div class="textwrap">
 							<h2>Vertical LED DRL</h2>
-							<p>Vertical DRL (daytime driving, etc.) is applied to give a more sporty and wide feeling, resulting in a wide-looking effect.</p>
+							<p>A vertical DRL (Daytime Running Light) type is applied to make the car look sporty and wide.</p>
 						</div>
 						<div class="btn_close">
 							<img src="../images/button/btn_close.png" alt="">
@@ -202,11 +207,11 @@
 						</div>
 						<div class="textwrap text1">
 							<h2>Air Curtain Intake Housing</h2>
-							<p>Air curtain-linked vertical type LED DRL further emphasizes the sporty frontal appearance. (1.6 2.0 turbo only)</p>
+							<p>The vertical LED DRL type integrated with the air curtain emphasizes the sporty feature of the front part.</p>
 						</div>
 						<div class="textwrap text2">
 							<h2>Mesh Type Radiator Grille</h2>
-							<p>Black mesh type (net type) The large cascading grill has completed the differentiated face of New Rise Turbo.</p>
+							<p>The large, black, mesh-type cascading grille completes the differentiated face of the New Rise Turbo.</p>
 						</div>
 
 						<div class="btn_close">
@@ -237,7 +242,7 @@
 						<div class="dragpoint drawSlider"></div>
 					</div>
 					<div class="textwrap">
-						<p>From the front, New Rise has achieved a more robust and dynamic style compared to the existing LF.</p>
+						<p>When viewed from the front, the Sonata New Rise shows a stronger and more dynamic style compared to the previous LF Sonata.</p>
 					</div>
 					<a href="#" class="btn_back" data-rel="back"><img src="../images/button/next btn_default.png" alt=""></a>
 					<a href="#exSide" class="btn_nextPage">
@@ -264,7 +269,7 @@
 						<img src="../images/button/btn_turbo.png" alt="">
 					</div>
 					<div class="textwrap">
-						<p>There are three armies in SIDE. Take a closer look at each one.</p>
+						<p>There are three areas of change on the side. Let’s take a close look at each of them.</p>
 					</div>
 					<a href="#" class="btn_back" data-rel="back"><img src="../images/button/next btn_alt.png" alt=""></a>
 					<a href="#exSideLast" class="btn_nextPage">
@@ -277,7 +282,7 @@
 						</div>
 						<div class="textwrap">
 							<h2>DLO Chrome Molding</h2>
-							<p>DLO Outside Surround We applied sporty side image by applying glossy chrome and changing C-pillar side effect.</p>
+							<p> A sporty side profile was realized by applying glossy chrome to the DLO outline and adding a 3D effect to the c-pillar.</p>
 						</div>
 						<div class="btn_close">
 							<img src="../images/button/btn_close.png" alt="">
@@ -290,7 +295,7 @@
 						</div>
 						<div class="textwrap">
 							<h2>Side Sill Molding</h2>
-							<p>A carved side seal is used to express speed to create a differentiated side style.</p>
+							<p>In order to present a differentiated style on the side, were applied were molded with chrome.</p>
 						</div>
 						<div class="btn_close">
 							<img src="../images/button/btn_close.png" alt="">
@@ -304,11 +309,11 @@
 						</div>
 						<div class="textwrap text1">
 							<h2>Side Sill Molding</h2>
-							<p>Turbo-exclusive exterior colors and front end design details(1.6 2.0 turbo only)</p>
+							<p>Turbo-exclusive exterior colors and dark glossy chrome side sill(1.6 and 2.0 turbo only)</p>
 						</div>
 						<div class="textwrap text2">
 							<h2>Dark Hyper Silver Wheel</h2>
-							<p>The 18-inch Dark Hyper Silver wheel was used to express toughness.</p>
+							<p>18-inch dark hyper silver wheels are applied to express the power of Turbo model.</p>
 						</div>
 
 						<div class="btn_close">
@@ -329,7 +334,7 @@
 				</div>
 				<div data-role="main" class="ui-content">
 					<div class="textwrap">
-						<p>From the side, the hood end is lowered and the tailgate end is raised, so it is fast and slim.</p>
+						<p>When viewed from the sides, the end of the hood is lowered and the end of the trunk lid is lifted, making the car look speedy and sleek.</p>
 					</div>
 					<a href="#" class="btn_back" data-rel="back"><img src="../images/button/next btn_alt.png" alt=""></a>
 					<a href="#exRear" class="btn_nextPage">
@@ -360,7 +365,7 @@
 						<img src="../images/button/btn_turbo.png" alt="">
 					</div>
 					<div class="textwrap">
-						<p>There are three troops in REAR. Take a closer look at each one.</p>
+						<p>There are three areas of change on the rear section. Let’s take a close look at each of them.</p>
 					</div>
 					<a href="#" class="btn_back" data-rel="back"><img src="../images/button/next btn_default.png" alt=""></a>
 					<a href="#exRearLast" class="btn_nextPage">
@@ -373,7 +378,7 @@
 						</div>
 						<div class="textwrap">
 							<h2>Rear Combination Lamp</h2>
-							<p>Horizontal slick and bold design with rear lamps emphasizes a sense of clean and modern sensibility.</p>
+							<p>Horizontal rear lamps that feature sleek and bold design.</p>
 						</div>
 						<div class="btn_close">
 							<img src="../images/button/btn_close.png" alt="">
@@ -386,7 +391,7 @@
 						</div>
 						<div class="textwrap">
 							<h2>Rear Bumper</h2>
-							<p>We moved the license plate mounting position to the bottom of the bumper, creating a simple and differentiated atmosphere.</p>
+							<p>The license plate was moved to the lower section of the bumper,  for a simple and differentiated look.</p>
 						</div>
 						<div class="btn_close">
 							<img src="../images/button/btn_close.png" alt="">
@@ -399,7 +404,7 @@
 						</div>
 						<div class="textwrap">
 							<h2>Trunk open switch in Hyundai logo</h2>
-							<p>A hidden switch is applied to the upper part of the emblem so that the trunk can be released conveniently while maintaining a clean rear image.</p>
+							<p>In order to keep the rear section simple and clean and to make it easier to open the trunk, a hidden switch is place on the upper section of the logo.</p>
 						</div>
 						<div class="btn_close">
 							<img src="../images/button/btn_close.png" alt="">
@@ -411,8 +416,8 @@
 							<img src="../images/exterior/rear/popup_04.png" alt="">
 						</div>
 						<div class="textwrap">
-							<h2>Rear reflector</h2>
-							<p>The vertical type rear reflector was applied to achieve stable stance and sporty image.</p>
+							<h2>Rear Reflector</h2>
+							<p>Vertical rear reflectors are applied to realize a stable stance and a sporty image.</p>
 						</div>
 						<div class="btn_close">
 							<img src="../images/button/btn_close.png" alt="">
@@ -425,7 +430,7 @@
 						</div>
 						<div class="textwrap">
 							<h2>Rear Muffler</h2>
-							<p>Dual mufflers, including the rear diffuser with aeropin to reduce air resistance, make the rear view more attractive.</p>
+							<p> The rear diffuser with aero fins to reduce air resistance and the dual mufflers make the rear side stand out more when the car is running.</p>
 						</div>
 
 						<div class="btn_close">
@@ -441,8 +446,18 @@
 					<h1>Sonata New Rise</h1>
 				</div>
 				<div data-role="main" class="ui-content">
+					<div class="carChange">
+						<img src="../images/exterior/rear/bg_02_02.png" alt="">
+						<div class="newCar">
+							<img src="../images/exterior/rear/bg_02_01.png" alt="">
+						</div>
+					</div>
+					<div class="dragbar">
+						<img src="../images/button/slider_bar.png" alt="">
+						<div class="dragpoint drawSlider"></div>
+					</div>
 					<div class="textwrap">
-						<p>The rear part has a wide stance compared to the LF with a three-dimensional volume sense.</p>
+						<p>Compared to the previous LF Sonata, the rear part of Sonata New Rise has wide stance with three-dimensional and glamorous characters.</p>
 					</div>
 					<a href="#" class="btn_back" data-rel="back"><img src="../images/button/next btn_default.png" alt=""></a>
 					<a href="#interior" class="btn_nextPage">
@@ -468,7 +483,7 @@
 						<img src='../images/button/btn_more.png' class="SupervisionCluster">
 					</div>
 					<div class="textwrap">
-						<p>INTERIOR has three troops in place. Take a closer look at each one.</p>
+						<p>There are three areas of change in the interior. Let’s take a close look at each of them.</p>
 					</div>
 					<a href="#" class="btn_back" data-rel="back"><img src="../images/button/next btn_default.png" alt=""></a>
 					<a href="#interiorLast" class="btn_nextPage">
@@ -485,7 +500,7 @@
 						</div>
 						<div class="textwrap">
 							<h2>Steering Wheel</h2>
-							<p>The steering wheel design is applied in a sporty style circular three-spoke type.</p>
+							<p>A sporty three-spoke round steering wheel is applied.</p>
 						</div>
 						<div class="btn_close">
 							<img src="../images/button/btn_close.png" alt="">
@@ -498,7 +513,7 @@
 						</div>
 						<div class="textwrap">
 							<h2>Center Fascia</h2>
-							<p>The three-dimensional design emphasizes sportiness and luxury, and the high-tech and balanced image is realized by the silver button application of the audio switch part.</p>
+							<p>Sporty and high-end features are emphasized through the three-dimensional design overall, and silver buttons for the audio switch component, embodying a high-tech and balanced image.</p>
 						</div>
 						<div class="btn_close">
 							<img src="../images/button/btn_close.png" alt="">
@@ -510,8 +525,8 @@
 							<img src="../images/interior/popup_03.png" alt="">
 						</div>
 						<div class="textwrap">
-							<h2>4.2 inch Supervision Cluster</h2>
-							<p>Considering ease of use, the system is uniquely designed considering the user-oriented intuitive operation convenience by optimally arranging the operating system in a coherent and harmonious manner.</p>
+							<h2>4.2 Inch Supervision Cluster</h2>
+							<p>With simple and refined graphic, information on the cluster is easy to catch.</p>
 						</div>
 						<div class="btn_close">
 							<img src="../images/button/btn_close.png" alt="">
@@ -527,7 +542,7 @@
 				</div>
 				<div data-role="main" class="ui-content">
 					<div class="textwrap">
-						<p>Comfortable ergonomic design allows you to enjoy pleasant driving by applying specifications that are easy to use in the interior space.</p>
+						<p>The ergonomic design allows you to have a pleasant driving experience by applying convenient features to the interior space.</p>
 					</div>
 					<a href="#" class="btn_back" data-rel="back"><img src="../images/button/next btn_default.png" alt=""></a>
 					<a href="#ADAScover" class="btn_nextPage">
@@ -543,7 +558,7 @@
 				</div>
 				<div data-role="main" class="ui-content">
 					<div class="text_box">
-						<p>Five safety systems have been added to the SONATA NEW RISE, which takes into consideration the safety of the driver. What are the five new safety systems?</p>
+						<p>The Sonata New Rise, which takes into consideration driver safety and convenience, has five newly added safety systems. Let’s find out what those are.</p>
 						<a href="#ADAScover2" class="btn_box">ABOUT</a>
 					</div>
 					<a href="#" class="btn_back" data-rel="back"><img src="../images/button/next btn_alt.png" alt=""></a>
@@ -557,7 +572,7 @@
 				</div>
 				<div data-role="main" class="ui-content">
 					<div class="text_box">
-						<p>It is safety specification applied to existing LF SONATA.</p>
+						<p>These are the features available on to the previous LF Sonata.</p>
 						<div class="btn_box AEB">AEB</div>
 						<div class="btn_box HBA">HBA</div>
 						<div class="btn_box ASCC">ASCC</div>
@@ -565,7 +580,7 @@
 						<div class="btn_box LDWS">LDWS</div>
 					</div>
 					<a href="#" class="btn_back" data-rel="back"><img src="../images/button/next btn_alt.png" alt=""></a>
-					<a href="#ADAS" class="btn_nextPage">New 5 Systems &nbsp;&nbsp;&gt;</a>
+					<a href="#ADAS" class="btn_nextPage">Check the New 5 Systems &nbsp;&nbsp;&gt;</a>
 				</div>	
 			</section>
 
@@ -593,7 +608,7 @@
 						</div>
 						<div class="textwrap">
 							<h2>LKAS <span>(Lane Keeping Assist System)</span></h2>
-							<p>It detects the road lanes through the front camera and controls the steering wheel to stay in that line.</p>
+							<p>LDWS from the previous LF Sonata only sounded an alert for a lane departure. However, the new LKAS detects the road lanes through the front camera and assists in controlling the steering wheel to ensure that the car stays within lanes.</p>
 						</div>
 						<div class="btn_close">
 							<img src="../images/button/btn_close.png" alt="">
@@ -606,7 +621,7 @@
 						</div>
 						<div class="textwrap">
 							<h2>DBL <span>(Dynamic Bending Light)</span></h2>
-							<p>Moving headlight beams that follow the curve of the road when cornering. For the best possible visibility when driving at night on twisting roads.</p>
+							<p>With this feature, headlight beams move in the direction of the steering wheel to provide the best possible visibility at night, especially when cornering.</p>
 						</div>
 						<div class="btn_close">
 							<img src="../images/button/btn_close.png" alt="">
@@ -619,7 +634,7 @@
 						</div>
 						<div class="textwrap">
 							<h2>DAA <span>(Driver Attention Alert)</span></h2>
-							<p>It detects driver’s unusual driving pattern from fatigue or carelessness and suggest the driver's to take a rest.</p>
+							<p>It detects unusual driving pattern due to fatigue or carelessness, and suggests that the driver rest first.</p>
 						</div>
 						<div class="btn_close">
 							<img src="../images/button/btn_close.png" alt="">
@@ -632,7 +647,7 @@
 						</div>
 						<div class="textwrap">
 							<h2>AVM <span>(Around View Monitor)</span></h2>
-							<p>It shows the surroundings of the car for safe parking.</p>
+							<p>It shows the surroundings of the car to ensure safe parking.</p>
 						</div>
 						<div class="btn_close">
 							<img src="../images/button/btn_close.png" alt="">
@@ -645,7 +660,7 @@
 						</div>
 						<div class="textwrap">
 							<h2>DRM <span>(Driving Rear view Monitoring)</span></h2>
-							<p>The driver's seat monitor shows the rear position so that you can recognize the distance to the following vehicle.</p>
+							<p>In order to help recognize the distance from the vehicle behind, the rear status view can be monitored through the floating type display while driving.</p>
 						</div>
 						<div class="btn_close">
 							<img src="../images/button/btn_close.png" alt="">
@@ -661,7 +676,7 @@
 				</div>
 				<div data-role="main" class="ui-content">
 					<div class="text_box">
-						<p>We have added five new safety systems in order to prevent unexpected situations by considering the importance of safe driving.</p>
+						<p>In order to prevent things from abruptly getting out of control , as well as to further assist safe driving, five new safety systems have been newly applied.</p>
 						<div class="btn_box">DBL</div>
 						<div class="btn_box">DAA</div>
 						<div class="btn_box">AVM</div>
@@ -690,7 +705,7 @@
 						<img src="../images/engine/graph.png" alt="fuel efficiency table">
 					</div>
 					<div class="textwrap">
-						<p>The combined fuel efficiency is calculated based on the application of 205/65 R16 tires (235/45 R18 tires for Gasoline-Fueled 2.0 turbo)</p>
+						<p>The 2.0 L Turbocharged GDI engine delivers satisfying 180-kW power (at 6,000 RPM) and 350-Nm torque (at 1,400–4,000 RPM).</p>
 					</div>
 					<a href="#" class="btn_back" data-rel="back"><img src="../images/button/next btn_default.png" alt=""></a>
 					<a href="#engine01" class="btn_nextPage">
@@ -730,7 +745,7 @@
 					</div>
 					<div class="textwrap">
 						<h2>Turbo unique TGS knob</h2>
-						<p>For the first time in Korea, we applied the front-wheel drive 8-speed automatic transmission to improve fuel efficiency and driving performance.</p>
+						<p>The turbo-exclusive gear knob has a sophisticated and sporty design.</p>
 					</div>
 					<a href="#" class="btn_back" data-rel="back"><img src="../images/button/next btn_alt.png" alt=""></a>
 					<a href="#convenienceCover" class="btn_nextPage">
@@ -746,7 +761,7 @@
 				</div>
 				<div data-role="main" class="ui-content">
 					<div class="textwrap">
-						<p>SONATA NEW RISE has been specially designed for the convenience of the driver.</p>
+						<p>New features for driver’s convenience have been applied to the Sonata New Rise.</p>
 					</div>
 					<a href="#" class="btn_back" data-rel="back"><img src="../images/button/next btn_alt.png" alt=""></a>
 					<a href="#convenience" class="btn_nextPage">
@@ -762,13 +777,12 @@
 				</div>
 				<div data-role="main" class="ui-content">
 					<div class="img_overlay">
-						<img src="../images/convenience/overlay_01.png" class="SmartphoneNeglectAlert" alt="">
+						<img src="../images/convenience/overlay_01.png" class="WirelessCharging" alt="">
 						<img src="../images/convenience/overlay_02.png" class="WirelessCharging" alt="">
 						<img src="../images/convenience/overlay_03.png" class="AirClean" alt="">
 						<img src="../images/convenience/overlay_04.png" class="carplay" alt="">
 					</div>
 					<div class="btn_more">
-						<img src='../images/button/btn_more.png' class="SmartphoneNeglectAlert">
 						<img src='../images/button/btn_more.png' class="WirelessCharging">
 						<img src='../images/button/btn_more.png' class="AirClean">
 						<img src='../images/button/btn_more.png' class="carplay">
@@ -778,7 +792,7 @@
 						<img src="../images/button/next btn_alt.png" alt="">
 					</a>
 
-					<div class="popLayer" id="pop_SmartphoneNeglectAlert">
+					<!-- <div class="popLayer" id="pop_SmartphoneNeglectAlert">
 						<div class="imgwrap">
 							<img src="../images/convenience/popup_01.png" alt="">
 						</div>
@@ -789,18 +803,27 @@
 						<div class="btn_close">
 							<img src="../images/button/btn_close.png" alt="">
 						</div>
-					</div>
+					</div> -->
 
 					<div class="popLayer" id="pop_WirelessCharging">
 						<div class="imgwrap">
+							<img src="../images/convenience/popup_01.png" alt="">
 							<img src="../images/convenience/popup_02.png" alt="">
 						</div>
-						<div class="textwrap">
-							<h2>Wireless charging</h2>
-							<p>Available on smart phones that provide wireless charging function.</p>
+						<div class="textwrap text1">
+							<h2>Wireless Smartphone Charging</h2>
+							<p>User convenience is improved through the wireless charging pad for smartphones that alerts the passenger when it has been left unattended.</p>
+						</div>
+						<div class="textwrap text2">
+							<h2>Wireless Smartphone Charging</h2>
+							<p>The Sonata New Rise has wireless charging function for smartphone and an alert system for smartphone left unattended when the driver leaves the car.</p>
 						</div>
 						<div class="btn_close">
 							<img src="../images/button/btn_close.png" alt="">
+						</div>
+						<div class="btn_arrow">
+							<img src="../images/button/btn_turbo_previous_nonactive.png" alt="">
+							<img src="../images/button/btn_turbo_next.png" alt="">
 						</div>
 					</div>
 
@@ -809,8 +832,8 @@
 							<img src="../images/convenience/popup_03.png" alt="">
 						</div>
 						<div class="textwrap text1">
-							<h2>Air clean mode</h2>
-							<p>We applied air purifying mode which filters fine dust by forced circulation of indoor air by one-touch by applying high performance air conditioner filter that can adsorb to basic gas.</p>
+							<h2>Air Clean Mode</h2>
+							<p>The air cleaning mode uses a high-performance air-conditioner filter capable of absorbing basic gas and filtering micro dusts by forcing air circulation inside the vehicle.</p>
 						</div>
 						<div class="btn_close">
 							<img src="../images/button/btn_close.png" alt="">
@@ -823,7 +846,7 @@
 						</div>
 						<div class="textwrap text1">
 							<h2>Apple CarPlay / Android Auto</h2>
-							<p>Installing a car operating system allows you to use two-way internet, mobile services, remote control, voice map search, and dialing.</p>
+							<p>Installing smartphone applications for the car makes it possible to use the smartphone functions such as interactive internet, mobile service, remote control, navigation through voice, and phone calls on the car display.</p>
 						</div>
 						<div class="btn_close">
 							<img src="../images/button/btn_close.png" alt="">

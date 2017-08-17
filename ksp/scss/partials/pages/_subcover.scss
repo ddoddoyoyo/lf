@@ -84,6 +84,23 @@
 			right: 26%;
 		}
 	}
+	.imgwrap{
+		.img_text{
+			position: absolute;
+    		left: 40%;
+    		top: 10%;
+			p{
+				color:$white;
+			}
+			p:nth-child(1){
+				font-family: $header_m;
+			}
+			p:nth-child(2){
+				font-family: $header_l;
+				font-size: $base-font-smaller;
+			}
+		}
+	}
 }
 
 #exSide{
@@ -192,16 +209,16 @@
     		left: 3%;
 		}
 		img.DBL{
-			top: 22%;
-    		left: 5%;
+			top: 20%;
+    		left: 3%;
 		}
 		img.DAA{
-			top: 18%;
+			top: 11%;
     		left: 37%;
 		}
 		img.AVM{
-			top: 22%;
-    		right: 5%;
+			top: 20%;
+    		right: 3%;
 		}
 		img.DRM{
 			top: 83%;
@@ -215,14 +232,14 @@
 	background-size:100% auto;
 	background-position: bottom;
 	.btn_more{
-		img.SmartphoneNeglectAlert{
+		img.WirelessCharging{
 			top:72%;
 			left: 49%;
 		}
-		img.WirelessCharging{
-			top:64%;
-			left: 43%;
-		}
+		// img.WirelessCharging{
+		// 	top:64%;
+		// 	left: 43%;
+		// }
 		img.AirClean{
 			top:57%;
 			left: 58%;
