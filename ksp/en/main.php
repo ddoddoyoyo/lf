@@ -57,15 +57,15 @@
 	<body>
 		<div id="wrap">
 			<div id="contBox">
-			<!-- <section data-role="page" id="" class="container">
-				<div data-role="main" class="ui-content">
+			<section data-role="page" id="intro" class="container">
+				<div data-role="main" class="ui-content" >
 					<div class="title">
-						<div class="text">Dramatic changes</div>
-						<h1><span>Sonata</span> <span>New</span> <span>Rise</span></h1>
+						<p class="text">Dramatic changes</p>
+						<h1>Sonata New Rise</h1>
 					</div>
 				</div>
-				<a href="#pageMap" id="btn_start">START</a>
-			</section> -->
+				<a href="#cover" id="btn_start">START</a><!--data-transition="none"-->
+			</section>
 
 			<section data-role="page" id="cover" class="container cover">
 				<div data-role="header" class="header">

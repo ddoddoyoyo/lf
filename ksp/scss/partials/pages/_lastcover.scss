@@ -36,6 +36,7 @@
 		width: 100%;
 		>img{
 			height: 33px;
+			transform: rotate(180deg);
 		}
 		.dragpoint{//drawSlider
 			position: absolute;

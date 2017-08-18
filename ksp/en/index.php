@@ -28,7 +28,7 @@
 			        // $(this).siblings("label").css({"color":"#002c5f","background-image":"url('../images/button/icon_country_arrow_select.png')"});
 			    });
 				$('#go_main').click(function(){
-					//location.href="main.html";
+					location.href="main.php";
 				});
 				$('#upload').change(function(){
 					readURL(this);
@@ -69,31 +69,30 @@
 					<div data-role="header" class="header">
 						<!-- <a href="#" class="ui-btn ui-btn-inline ui-corner-all ui-shadow btn_sidePanel ui-btn-right"><img src="../images/button/btn_menu.png" alt=""></a> -->
 						<div>
-							<h1><span>Sonata</span> <span>New</span> <span>Rise</span></h1>
+							<h1>Sonata New Rise</h1>
 						</div>
 						
 					</div>
 					<div data-role="main" class="ui-content">
 						<div class="imgwrap">
-							<img src="../images/001_img.png" alt="sonata new rise car">
+							<img src="../images/001_img.jpg" alt="sonata new rise car">
 						</div>
 						<div class="textwrap">
 							<h2>Hello</h2>
 							<p>Please enter your information</p>
-								<div class="form">
-									<div class="selectbox">
-										<label for="country">Country</label>
-										<select name="LMS_CONTRY" id="country">
-										<option value="">Country</option>
-											<option value="<?=$row[$i]["ENG"]?>"><?=$row[$i]["ENG"]?></option>
-										</select>
-									</div>
-									<div class="inputbox">
-										<input type="text" id="LMS_NAME" name="LMS_NAME" placeholder="Name">
-									</div>
-								</div>
+							<div class="selectbox">
+								<label for="country">Country</label>
+								<select name="LMS_CONTRY" id="country">
+									<option value="">USA</option>
+									<option value="">korea</option>
+									<option value="">china</option>
+								</select>
+							</div>
+							<div class="inputbox">
+								<input type="text" id="LMS_NAME" placeholder="Name">
+							</div>
 						</div>
-						<a href="javascript:;" class="ui-btn go-next" id="Login_Action"><img src="../images/button/001_btn_next.png" alt=""></a>
+						<a href="#page1" class="ui-btn go-next"><img src="../images/button/next btn_default.png" alt=""></a>
 					</div>
 				</section>
 
@@ -104,21 +103,19 @@
 					</div>
 					<div data-role="main" class="ui-content">
 						<div class="imgwrap">
-							<img src="../images/001_img.png" alt="sonata new rise car">
+							<img src="../images/001_img.jpg" alt="sonata new rise car">
 						</div>
 						<div class="textwrap">
 							<h2>Hello</h2>
 							<p>Please enter your information</p>
-								<div class="form">
-								<div class="inputbox">
-									<!-- <a href="javascript:;"> -->
-										<img id="current-img" src="../images/002_profile_default.png" alt="user image">
-										<input type="file" id="upload" name="LMS_IMAGE" accept="image/*">
-									<!-- </a> -->
-								</div>
+							<div class="inputbox">
+								<!-- <a href="javascript:;"> -->
+									<img id="current-img" src="../images/002_profile_default.png" alt="user image">
+									<input type="file" id="upload" name="LMS_IMAGE" accept="image/*">
+								<!-- </a> -->
 							</div>
 						</div>
-						<a href="javascript:;" id="Join_Action" class="ui-btn go-next"><img src="../images/button/001_btn_next.png" alt=""></a>
+						<a href="javascript:;" id="go_main" class="ui-btn go-next"><img src="../images/button/next btn_default.png" alt=""></a>
 					</div>
 				</section>
 				</form>
