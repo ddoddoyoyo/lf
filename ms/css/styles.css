@@ -1,0 +1,975 @@
+@font-face {
+  font-family: "HyundaiSansHeadRegular";
+  text-transform: normal;
+  font-weight: normal;
+  src: url("../../fonts/HyundaiSansHead.eot") format("eot"), url("../../fonts/HyundaiSansHead.woff2") format("woff2"), url("../../fonts/HyundaiSansHead.woff") format("woff"), url("../../fonts/HyundaiSansHead.ttf") format("truetype"), url("../../fonts/HyundaiSansHead.otf") format("opentype"); }
+
+@font-face {
+  font-family: "HyundaiSansHeadMedium";
+  text-transform: normal;
+  font-weight: normal;
+  src: url("../../fonts/HyundaiSansHeadMedium.eot") format("eot"), url("../../fonts/HyundaiSansHeadMedium.woff2") format("woff2"), url("../../fonts/HyundaiSansHeadMedium.woff") format("woff"), url("../../fonts/HyundaiSansHeadMedium.ttf") format("truetype"), url("../../fonts/HyundaiSansHeadMedium.otf") format("opentype"); }
+
+@font-face {
+  font-family: "HyundaiSansHeadLight";
+  text-transform: normal;
+  font-weight: normal;
+  src: url("../../fonts/HyundaiSansHead-Light.eot") format("eot"), url("../../fonts/HyundaiSansHead-Light.woff2") format("woff2"), url("../../fonts/HyundaiSansHead-Light.woff") format("woff"), url("../../fonts/HyundaiSansHead-Light.ttf") format("truetype"), url("../../fonts/HyundaiSansHead-Light.otf") format("opentype"); }
+
+h1, h2, h3, h4 {
+  font-weight: normal; }
+
+.header h1 {
+  font-family: "HyundaiSansHeadMedium", Arial, sans-serif;
+  font-size: 21px !important; }
+  .header h1 span {
+    font-family: "HyundaiSansHeadMedium", Arial, sans-serif;
+    font-size: 21px !important; }
+
+h2, h3 {
+  font-family: "HyundaiSansHeadMedium", Arial, sans-serif; }
+
+p, div, span {
+  font-family: "HyundaiSansHeadRegular", Arial, sans-serif;
+  font-size: 16px;
+  color: #323232; }
+
+.menu_list {
+  font-family: "HyundaiSansHeadMedium", Arial, sans-serif;
+  font-size: 16px;
+  color: #000;
+  text-transform: uppercase; }
+
+@-webkit-keyframes twinkle {
+  0%, 100% {
+    opacity: 1; }
+  50% {
+    opacity: 0; } }
+
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 1; }
+  50% {
+    opacity: 0; } }
+
+* {
+  -webkit-tap-highlight-color: transparent; }
+
+* {
+  -webkit-text-size-adjust: none; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100% !important;
+  background-color: #ffffff;
+  background-size: cover;
+  background-attachment: fixed;
+  overflow: hidden; }
+
+div, p, span, input {
+  -webkit-text-shadow: none;
+  text-shadow: none; }
+
+h1, h2, h3, h4, h5, h6, p, span, div {
+  margin: 0;
+  padding: 0; }
+
+.ui-btn {
+  border: none; }
+
+ul {
+  margin: 0;
+  padding: 0; }
+  ul li {
+    list-style: none; }
+
+.word-wrap {
+  display: block; }
+
+.go-next {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  bottom: 1%;
+  right: 0;
+  width: 100%;
+  text-align: right;
+  z-index: 10; }
+  .go-next img {
+    position: relative;
+    right: 5%;
+    width: 15px; }
+
+.twinkle {
+  animation: twinkle 2s infinite; }
+
+.btn_nextPage {
+  position: absolute;
+  right: 5%;
+  bottom: 2%;
+  width: 4%;
+  line-height: 0; }
+
+.btn_back {
+  position: absolute;
+  left: 5%;
+  bottom: 2%;
+  width: 4%;
+  transform: rotate(-180deg);
+  line-height: 0; }
+
+a {
+  color: #323232 !important;
+  text-decoration: none;
+  display: block;
+  -webkit-text-shadow: none;
+  text-shadow: none;
+  font-weight: normal !important; }
+
+form {
+  width: 100%;
+  display: block; }
+
+input:-ms-input-placeholder, input:-webkit-input-placeholder, input:-moz-placeholder {
+  color: #ffffff; }
+
+img {
+  width: 100%; }
+
+.popLayer {
+  position: absolute;
+  top: 51px;
+  z-index: 1;
+  width: 100%;
+  height: calc(100% - 51px);
+  background-color: #000; }
+
+.btn_play {
+  position: absolute;
+  bottom: 14%;
+  cursor: pointer; }
+
+video {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%); }
+
+.btn_close {
+  position: absolute;
+  top: 4%;
+  right: 4%;
+  cursor: pointer; }
+  .btn_close img {
+    width: 19px; }
+
+.btn_arrow {
+  position: absolute; }
+  .btn_arrow img {
+    float: left; }
+
+.btn_more img {
+  position: absolute;
+  width: 11%;
+  cursor: pointer; }
+
+.ui-page-theme-a {
+  background: none;
+  overflow: hidden !important;
+  height: 100%;
+  width: 100%; }
+  .ui-page-theme-a .ui-header {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 51px;
+    min-height: 51px;
+    border: none;
+    border-bottom: 1px solid #000;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    z-index: 10; }
+    .ui-page-theme-a .ui-header h1 {
+      position: absolute;
+      top: 13px;
+      left: 5%;
+      padding: 0;
+      text-align: left;
+      margin: 0; }
+  .ui-page-theme-a .ui-content {
+    position: relative;
+    padding: 0;
+    padding-top: 51px;
+    height: 100%;
+    box-sizing: border-box; }
+  .ui-page-theme-a .ui-btn {
+    background: none !important;
+    border: none;
+    box-shadow: none; }
+    .ui-page-theme-a .ui-btn:hover {
+      background: none;
+      border: none; }
+    .ui-page-theme-a .ui-btn:focus {
+      outline: none;
+      box-shadow: none;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none; }
+  .ui-page-theme-a .ui-btn.ui-btn-right, .ui-page-theme-a .ui-btn.ui-btn-left {
+    width: 19px;
+    margin-top: 15px;
+    padding: 0; }
+    .ui-page-theme-a .ui-btn.ui-btn-right:hover, .ui-page-theme-a .ui-btn.ui-btn-left:hover {
+      background: none;
+      border: none; }
+  .ui-page-theme-a .ui-btn.ui-btn-right {
+    right: 0;
+    padding-right: 5%; }
+  .ui-page-theme-a .ui-btn.ui-btn-left {
+    left: 0;
+    padding-left: 5%; }
+
+@media screen and (orientation: portrait) {
+  .ui-mobile .ui-page {
+    min-height: 568px; } }
+
+@media only screen and (min-width: 768px) {
+  .pc .ui-page {
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    margin: 0 !important;
+    padding: 0px;
+    width: 320px !important;
+    min-height: 568px !important;
+    height: 568px !important;
+    z-index: 1;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); }
+  #mokup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 366px;
+    height: 752px;
+    background: url("../images/mokup.png") 0 0 no-repeat;
+    background-size: 100%;
+    z-index: 0;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); } }
+
+#page0 .header {
+  border: none; }
+  #page0 .header h1 {
+    top: 64%; }
+
+#page0 .imgwrap {
+  height: 45%;
+  overflow: hidden; }
+  #page0 .imgwrap img {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%); }
+
+#page0 .textwrap {
+  height: 55%;
+  box-sizing: border-box;
+  padding: 6% 5%;
+  background: url("../images/001_bg.jpg") no-repeat;
+  background-size: 100% auto;
+  background-position: bottom; }
+  #page0 .textwrap h2 {
+    font-size: 25px;
+    margin-bottom: 1%; }
+  #page0 .textwrap p {
+    font-size: 21px;
+    margin-bottom: 8%; }
+  #page0 .textwrap .selectbox {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    background: url("../images/button/001_text_box.png") no-repeat;
+    background-size: 100% 40px; }
+    #page0 .textwrap .selectbox label {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      line-height: 1.4em;
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0.4em;
+      font-family: "HyundaiSansHeadLight", Arial, sans-serif;
+      font-size: 18px;
+      background: url("../images/button/001_btn_country_dropdown.png") no-repeat;
+      background-size: 20px;
+      background-position: 95%;
+      color: #323232; }
+    #page0 .textwrap .selectbox select {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      display: block !important;
+      opacity: 0; }
+    #page0 .textwrap .selectbox .ui-selectmenu-button {
+      outline: none; }
+      #page0 .textwrap .selectbox .ui-selectmenu-button .ui-selectmenu-text {
+        opacity: 0; }
+  #page0 .textwrap .inputbox {
+    width: 100%;
+    height: 40px;
+    background: url("../images/button/001_text_box.png") no-repeat;
+    background-size: 100% 40px; }
+    #page0 .textwrap .inputbox .ui-input-text {
+      border: none;
+      box-shadow: none;
+      background: none; }
+    #page0 .textwrap .inputbox input {
+      font-family: "HyundaiSansHeadLight", Arial, sans-serif;
+      color: #323232;
+      font-size: 18px; }
+
+#page1 .header {
+  border: none; }
+  #page1 .header h1 {
+    top: 64%; }
+
+#page1 .imgwrap {
+  height: 45%;
+  overflow: hidden; }
+  #page1 .imgwrap img {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%); }
+
+#page1 .textwrap {
+  height: 55%;
+  box-sizing: border-box;
+  padding: 6% 5%;
+  background: url("../images/001_bg.jpg") no-repeat;
+  background-size: 100% auto;
+  background-position: bottom; }
+  #page1 .textwrap h2 {
+    font-size: 25px;
+    margin-bottom: 1%; }
+  #page1 .textwrap p {
+    font-size: 21px;
+    margin-bottom: 8%; }
+  #page1 .textwrap .inputbox {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 150px;
+    background: url("../images/button/002_profile_frame.png") no-repeat;
+    background-size: 100%;
+    border-radius: 50%;
+    overflow: hidden; }
+    #page1 .textwrap .inputbox img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 99%;
+      border-radius: 75px; }
+    #page1 .textwrap .inputbox .ui-input-text {
+      border: none; }
+      #page1 .textwrap .inputbox .ui-input-text input#upload {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        cursor: pointer;
+        opacity: 0; }
+
+#intro {
+  background-image: url("../images/003_img.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: bottom;
+  background-color: #ffffff; }
+  #intro .title {
+    position: absolute;
+    left: 9%;
+    top: 14%; }
+    #intro .title div {
+      color: #323232; }
+    #intro .title h1 {
+      font-size: 33px;
+      font-family: "HyundaiSansHeadMedium", Arial, sans-serif; }
+  #intro #btn_start {
+    position: absolute;
+    bottom: 6%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    width: 120px;
+    height: 35px;
+    display: block;
+    font-family: "HyundaiSansHeadMedium", Arial, sans-serif;
+    font-size: 18px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    line-height: 2em; }
+
+.sidePanel_wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999; }
+  .sidePanel_wrap .sidePanel {
+    position: absolute;
+    top: 0;
+    left: 105%;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    background-image: url("../images/menu/bg.jpg");
+    background-size: 100% auto;
+    background-position: left bottom;
+    background-repeat: no-repeat; }
+    .sidePanel_wrap .sidePanel .btn_close {
+      top: 5%;
+      right: 8%; }
+    .sidePanel_wrap .sidePanel ul.menu_list {
+      margin-top: 30%; }
+      .sidePanel_wrap .sidePanel ul.menu_list li {
+        width: 86%;
+        padding: 4% 8%;
+        margin: 2% auto;
+        background: url("../images/menu/btn_gradient.png") no-repeat;
+        background-size: 100% 100%;
+        box-sizing: border-box; }
+
+#cover {
+  background: url("../images/bg.jpg") no-repeat;
+  background-size: 100% auto;
+  background-position: bottom; }
+  #cover .text_box {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 86%;
+    padding: 6% 4%;
+    box-sizing: border-box;
+    border-radius: 6px;
+    background-color: #ffffff;
+    text-align: center;
+    font-family: "HyundaiSansHeadLight", Arial, sans-serif;
+    box-shadow: 0 0 10px;
+    bottom: 5%; }
+    #cover .text_box .btn_box {
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 70%;
+      padding: 6px 10px 3px 10px;
+      box-sizing: border-box;
+      margin-top: 5%;
+      background: url("../images/button/btn_gradient.png") no-repeat;
+      background-size: 100% 100%;
+      color: #ffffff !important;
+      font-family: "HyundaiSansHeadMedium", Arial, sans-serif;
+      font-size: 18px; }
+
+#ADAScover {
+  background: url("../images/adas/bg_00_intro.jpg") no-repeat;
+  background-size: 100% auto;
+  background-position: bottom; }
+  #ADAScover .text_box {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 86%;
+    padding: 6% 4%;
+    box-sizing: border-box;
+    border-radius: 6px;
+    background-color: #ffffff;
+    text-align: center;
+    font-family: "HyundaiSansHeadLight", Arial, sans-serif;
+    box-shadow: 0 0 10px;
+    top: 15%; }
+    #ADAScover .text_box .btn_box {
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 70%;
+      padding: 6px 10px 3px 10px;
+      box-sizing: border-box;
+      margin-top: 5%;
+      background: url("../images/button/btn_gradient.png") no-repeat;
+      background-size: 100% 100%;
+      color: #ffffff !important;
+      font-family: "HyundaiSansHeadMedium", Arial, sans-serif;
+      font-size: 18px; }
+
+#ADAScover2 {
+  background: url("../images/adas/bg_01_intro.jpg") no-repeat;
+  background-size: 100% auto;
+  background-position: bottom; }
+  #ADAScover2 .text_box {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 86%;
+    padding: 6% 4%;
+    box-sizing: border-box;
+    border-radius: 6px;
+    background-color: #ffffff;
+    text-align: center;
+    font-family: "HyundaiSansHeadLight", Arial, sans-serif;
+    box-shadow: 0 0 10px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer; }
+    #ADAScover2 .text_box .btn_box {
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 70%;
+      padding: 6px 10px 3px 10px;
+      box-sizing: border-box;
+      margin-top: 5%;
+      background: url("../images/button/btn_gradient.png") no-repeat;
+      background-size: 100% 100%;
+      color: #ffffff !important;
+      font-family: "HyundaiSansHeadMedium", Arial, sans-serif;
+      font-size: 18px;
+      width: 100%; }
+  #ADAScover2 .btn_nextPage {
+    bottom: 9%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    background: #000;
+    border-radius: 5px;
+    text-align: center;
+    padding: 6% 0 5% 0;
+    color: #ffffff !important;
+    font-family: "HyundaiSansHeadMedium", Arial, sans-serif; }
+
+#engineCover {
+  background: url("../images/engine/bg_01.jpg") no-repeat;
+  background-size: 100% auto;
+  background-position: bottom; }
+  #engineCover .title {
+    padding: 10% 5% 5% 5%; }
+    #engineCover .title p:nth-child(1) {
+      font-family: "HyundaiSansHeadRegular", Arial, sans-serif;
+      font-size: 21px;
+      color: #323232; }
+    #engineCover .title p:nth-child(2) {
+      font-family: "HyundaiSansHeadMedium", Arial, sans-serif;
+      font-size: 60px;
+      color: #1e1e1e; }
+      #engineCover .title p:nth-child(2) span {
+        font-family: "HyundaiSansHeadMedium", Arial, sans-serif;
+        font-size: 45px;
+        color: #1e1e1e; }
+    #engineCover .title p:nth-child(3) {
+      font-family: "HyundaiSansHeadRegular", Arial, sans-serif;
+      font-size: 11px;
+      color: #323232;
+      margin-top: -3%; }
+  #engineCover .imgwrap {
+    margin: 0 3%; }
+  #engineCover .textwrap {
+    padding: 5%; }
+    #engineCover .textwrap p {
+      font-size: 11px;
+      color: #323232; }
+
+#convenienceCover {
+  background: url("../images/convenience/bg_00.jpg") no-repeat;
+  background-size: 100% auto;
+  background-position: bottom; }
+  #convenienceCover .textwrap {
+    position: relative;
+    top: 6%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 84%;
+    text-align: center; }
+    #convenienceCover .textwrap p {
+      color: #ffffff; }
+
+.subcover .btn_turbo {
+  width: 34%;
+  margin: 3%;
+  cursor: pointer;
+  position: relative; }
+
+.subcover .btn_more img {
+  position: absolute;
+  width: 11%;
+  cursor: pointer; }
+
+.subcover .img_overlay {
+  position: absolute;
+  top: 51px;
+  width: 100%;
+  height: calc(100% - 51px); }
+  .subcover .img_overlay img {
+    position: absolute;
+    bottom: 0; }
+
+.subcover .textwrap {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 84%;
+  text-align: center; }
+
+.subcover .popLayer .imgwrap {
+  position: relative; }
+  .subcover .popLayer .imgwrap img {
+    position: absolute;
+    top: 0; }
+
+.subcover .popLayer .textwrap {
+  top: 64%;
+  text-align: left; }
+  .subcover .popLayer .textwrap h2 {
+    font-size: 18px;
+    color: #ffffff;
+    margin-bottom: 4%; }
+    .subcover .popLayer .textwrap h2 span {
+      color: #ffffff; }
+  .subcover .popLayer .textwrap p {
+    font-family: "HyundaiSansHeadLight", Arial, sans-serif;
+    color: #ffffff;
+    position: absolute; }
+
+.subcover .popLayer .btn_arrow {
+  top: 2.5%;
+  right: 14%; }
+  .subcover .popLayer .btn_arrow img {
+    width: 35px; }
+
+#exFront {
+  background: url("../images/exterior/front/bg_01.jpg") no-repeat;
+  background-size: 100% auto;
+  background-position: bottom; }
+  #exFront .btn_more img.cascadingGrille {
+    top: 53%;
+    left: 45%; }
+  #exFront .btn_more img.chromeMoling {
+    top: 48%;
+    left: 11%; }
+  #exFront .btn_more img.frontHood {
+    top: 40%;
+    left: 45%; }
+  #exFront .btn_more img.headLamp {
+    top: 43%;
+    right: 5%; }
+  #exFront .btn_more img.LEDDRL {
+    top: 51%;
+    right: 5%; }
+  #exFront .btn_more img.chromeGarnish {
+    top: 59%;
+    right: 26%; }
+  #exFront .imgwrap .img_text {
+    position: absolute;
+    left: 40%;
+    top: 10%; }
+    #exFront .imgwrap .img_text p {
+      color: #ffffff; }
+    #exFront .imgwrap .img_text p:nth-child(1) {
+      font-family: "HyundaiSansHeadMedium", Arial, sans-serif; }
+    #exFront .imgwrap .img_text p:nth-child(2) {
+      font-family: "HyundaiSansHeadLight", Arial, sans-serif;
+      font-size: 13px; }
+
+#exSide {
+  background: url("../images/exterior/side/bg_01.jpg") no-repeat;
+  background-size: 100% auto;
+  background-position: bottom; }
+  #exSide .btn_more img.DLOChromeMolding {
+    top: 39%;
+    right: 10%; }
+  #exSide .btn_more img.SideSillMolding {
+    top: 48%;
+    right: 20%; }
+  #exSide .textwrap p {
+    color: #ffffff; }
+
+#exRear {
+  background: url("../images/exterior/rear/bg_01.jpg") no-repeat;
+  background-size: 100% auto;
+  background-position: bottom; }
+  #exRear .btn_more img.RearCombinationLamp {
+    top: 45%;
+    left: 65%; }
+  #exRear .btn_more img.RearBumper {
+    top: 55%;
+    left: 11%; }
+  #exRear .btn_more img.TrunkOpenSwitch {
+    top: 43%;
+    left: 27%; }
+  #exRear .btn_more img.RearReflector {
+    top: 55%;
+    right: 25%; }
+
+#interior {
+  background: url("../images/interior/bg_01.jpg") no-repeat;
+  background-size: 100% auto;
+  background-position: bottom; }
+  #interior .btn_more img.SteeringWheel {
+    top: 43%;
+    left: 6%; }
+  #interior .btn_more img.CenterFascia {
+    top: 49%;
+    left: 62%; }
+  #interior .btn_more img.SupervisionCluster {
+    top: 35%;
+    left: 42%; }
+  #interior .popLayer .btn_wheel {
+    position: relative;
+    left: 6%; }
+    #interior .popLayer .btn_wheel p {
+      float: left;
+      width: 43%;
+      text-align: center;
+      padding: 3% 0 2% 0;
+      box-sizing: border-box;
+      margin-right: 3%;
+      border-radius: 5px;
+      font-size: 13px;
+      cursor: pointer; }
+    #interior .popLayer .btn_wheel p:nth-child(1) {
+      background-color: #ffffff; }
+    #interior .popLayer .btn_wheel p:nth-child(2) {
+      color: #000;
+      background-color: #323232; }
+
+#ADAS {
+  background: url("../images/adas/bg_02.jpg") no-repeat;
+  background-size: 100% auto;
+  background-position: bottom; }
+  #ADAS .btn_ADAS {
+    cursor: pointer; }
+    #ADAS .btn_ADAS img {
+      width: 26%;
+      position: absolute; }
+    #ADAS .btn_ADAS img.LKAS {
+      top: 53%;
+      left: 3%; }
+    #ADAS .btn_ADAS img.DBL {
+      top: 20%;
+      left: 3%; }
+    #ADAS .btn_ADAS img.DAA {
+      top: 11%;
+      left: 37%; }
+    #ADAS .btn_ADAS img.AVM {
+      top: 20%;
+      right: 3%; }
+    #ADAS .btn_ADAS img.DRM {
+      top: 83%;
+      left: 37%; }
+
+#convenience {
+  background: url("../images/convenience/bg_01.jpg") no-repeat;
+  background-size: 100% auto;
+  background-position: bottom; }
+  #convenience .btn_more img.WirelessCharging {
+    top: 72%;
+    left: 49%; }
+  #convenience .btn_more img.AirClean {
+    top: 57%;
+    left: 58%; }
+  #convenience .btn_more img.carplay {
+    top: 31%;
+    left: 44%; }
+
+.lastcover .textwrap {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 84%;
+  text-align: center; }
+
+.lastcover .carChange {
+  width: 320px;
+  height: 367px;
+  position: absolute;
+  left: 50%;
+  top: 39%;
+  transform: translate(-50%, -50%); }
+  .lastcover .carChange > img {
+    width: 100%;
+    position: absolute;
+    bottom: 0; }
+  .lastcover .carChange .newCar {
+    height: 100%;
+    position: absolute;
+    overflow: hidden; }
+    .lastcover .carChange .newCar img {
+      width: 320px;
+      position: absolute;
+      bottom: 0; }
+
+.lastcover .dragbar {
+  position: absolute;
+  top: 70%;
+  width: 100%; }
+  .lastcover .dragbar > img {
+    height: 33px;
+    transform: rotate(180deg); }
+  .lastcover .dragbar .dragpoint {
+    position: absolute;
+    left: 8%;
+    width: 81%;
+    top: -32px;
+    z-index: 10; }
+  .lastcover .dragbar .ui-slider .ui-slider-range {
+    border: none;
+    background: none;
+    width: 100%;
+    height: 100%; }
+  .lastcover .dragbar .ui-slider .ui-slider-handle {
+    width: 20px;
+    height: 20px;
+    border: transparent;
+    background: url("../images/button/slider_controller.png") no-repeat;
+    background-size: 100% auto;
+    display: block;
+    position: relative; }
+    .lastcover .dragbar .ui-slider .ui-slider-handle:focus {
+      outline: none; }
+  .lastcover .dragbar .dragline {
+    height: 33px;
+    left: 0%;
+    overflow: hidden; }
+    .lastcover .dragbar .dragline img {
+      width: 270px;
+      height: 33px; }
+
+#exFrontLast {
+  background-image: url("../images/exterior/front/bg_02.jpg");
+  background-repeat: no-repeat;
+  background-color: #ffffff;
+  background-size: 100% auto;
+  background-position: 0 51px; }
+
+#exSideLast {
+  background: url("../images/exterior/side/bg_02.jpg") no-repeat;
+  background-size: 100% auto;
+  background-position: bottom; }
+  #exSideLast p {
+    color: #ffffff; }
+
+#exRearLast {
+  background-image: url("../images/exterior/rear/bg_02.jpg");
+  background-repeat: no-repeat;
+  background-color: #ffffff;
+  background-size: 100% auto;
+  background-position: 0 51px; }
+
+#interiorLast {
+  background: url("../images/interior/bg_01.jpg") no-repeat;
+  background-size: 100% auto;
+  background-position: bottom; }
+
+#ADASLast {
+  background: url("../images/adas/bg_01_intro.jpg") no-repeat;
+  background-size: 100% auto;
+  background-position: bottom; }
+  #ADASLast .text_box {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 86%;
+    padding: 6% 4%;
+    box-sizing: border-box;
+    border-radius: 6px;
+    background-color: #ffffff;
+    text-align: center;
+    font-family: "HyundaiSansHeadLight", Arial, sans-serif;
+    box-shadow: 0 0 10px;
+    top: 50%;
+    transform: translate(-50%, -50%); }
+    #ADASLast .text_box .btn_box {
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 70%;
+      padding: 6px 10px 3px 10px;
+      box-sizing: border-box;
+      margin-top: 5%;
+      background: url("../images/button/btn_gradient.png") no-repeat;
+      background-size: 100% 100%;
+      color: #ffffff !important;
+      font-family: "HyundaiSansHeadMedium", Arial, sans-serif;
+      font-size: 18px;
+      width: 100%; }
+
+.detail {
+  background-color: #000; }
+  .detail .textwrap {
+    position: absolute;
+    top: 64%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 84%;
+    text-align: left; }
+    .detail .textwrap h2 {
+      font-size: 18px;
+      color: #ffffff;
+      margin-bottom: 4%; }
+    .detail .textwrap p {
+      font-family: "HyundaiSansHeadLight", Arial, sans-serif;
+      color: #ffffff;
+      position: absolute; }
+
+#uploadPage {
+  background-color: #ffffff; }
+  #uploadPage .inputbox {
+    position: relative;
+    margin: 10% 5% 7% 5%;
+    border: 1px solid #252525;
+    border-radius: 12px;
+    overflow: hidden; }
+    #uploadPage .inputbox .imgwrap {
+      position: relative;
+      width: 100%;
+      height: 162px;
+      overflow: hidden;
+      line-height: 0; }
+      #uploadPage .inputbox .imgwrap img#current-img {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%); }
+      #uploadPage .inputbox .imgwrap .ui-input-text {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        border: none;
+        background: none;
+        box-shadow: none; }
+        #uploadPage .inputbox .imgwrap .ui-input-text input#upload {
+          width: 100%;
+          height: 100%;
+          cursor: pointer;
+          opacity: 0; }
+    #uploadPage .inputbox .textwrap textarea {
+      height: 220px !important;
+      margin: 0;
+      padding: 3%;
+      resize: none;
+      border: none;
+      background: none;
+      box-shadow: none;
+      color: #323232; }
+  #uploadPage .btn_upload {
+    text-align: center; }
+    #uploadPage .btn_upload img {
+      width: 55%; }
