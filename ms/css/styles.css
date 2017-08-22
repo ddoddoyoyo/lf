@@ -772,6 +772,8 @@ video {
     #ADAS .btn_ADAS img.DRM {
       top: 83%;
       left: 37%; }
+  #ADAS .popLayer .textwrap {
+    top: 53%; }
 
 #convenience {
   background: url("../images/convenience/bg_01.jpg") no-repeat;
