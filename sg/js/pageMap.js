@@ -203,10 +203,10 @@ function map_pop(wwNum,wNum) {
 	$('#pageMap .words_wrap:nth-child('+wwNum+') .word:nth-child('+wNum+')').click(function(){
 		$('#pageMap .pop_btn_wrap').removeClass('pop_btn_wrap2');
 		$('#pageMap .map_pop').fadeIn(500);
-		$('#pageMap .pop_title').empty();
+		$('#pageMap .pop_title').empty(); //pop_title의 내용을 지움
 		$('#pageMap .pop_title').append('<span>'+words_wrap[wwNum-1]
 				+'</span>_ '+word[wNum-1]);
-		$('#pageMap .pop_btn').remove();
+		$('#pageMap .pop_btn').remove(); //pop_btn를 없애버림
 		for(var i=0; i<arr3[wwNum-1][wNum-1][0].length;i++){
 			$('#pageMap .pop_btn_wrap').append('<div class="pop_btn" onclick="pageMapNav1('+arr3[wwNum-1][wNum-1][1][i]+');">'+arr3[wwNum-1][wNum-1][0][i]+'</div>');
 		}
