@@ -1,3 +1,15 @@
+<?php
+	include_once ($_SERVER[DOCUMENT_ROOT]."/common/commonFunction.php");
+	header("Content-Type: text/html; charset=UTF-8");
+
+
+	if($_SESSION["HY_LMS_SEQ"] > 0 ){
+		$tools->JavaGo("/lf/ms/en/main.php");
+	}
+
+	
+
+?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -18,6 +30,7 @@
 		<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 		<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
 		<script src="../js/device.js"></script>
+		<script src="../common/js/common.js"></script>
 		<script>
 			$(document).ready(function(){
 
@@ -28,7 +41,7 @@
 			        // $(this).siblings("label").css({"color":"#002c5f","background-image":"url('../images/button/icon_country_arrow_select.png')"});
 			    });
 				$('#go_main').click(function(){
-					location.href="main.php";
+					//location.href="main.php";
 				});
 				$('#upload').change(function(){
 					readURL(this);
@@ -65,6 +78,10 @@
 		<div id="wrap">
 			<div id="contBox" class="container">
 				<form id="Frm" name="Frm" method="post" action="../../common/join_action.php" enctype="multipart/form-data">
+				<input type="hidden" name="RETURN" value="../ms/en/main.php"/>
+				<input type="hidden" name="LANGUAGE" value="en"/>
+				<input type="hidden" name="LMS_GB" value="hyundai"/>
+				<input type="hidden" name="TYPE" value="ms"/>
 				<section data-role="page" id="page0" class="container">
 					<div data-role="header" class="header">
 						<!-- <a href="#" class="ui-btn ui-btn-inline ui-corner-all ui-shadow btn_sidePanel ui-btn-right"><img src="../images/button/btn_menu.png" alt=""></a> -->
@@ -83,16 +100,25 @@
 							<div class="selectbox">
 								<label for="country">Country</label>
 								<select name="LMS_CONTRY" id="country">
-									<option value="">USA</option>
-									<option value="">korea</option>
-									<option value="">china</option>
+									<option value="">Country</option>
+										<?php
+											$sql = "SELECT ENG,CCODE FROM SPK_COUNTRY ORDER BY ENG ASC";
+											$stmt = $dbh->prepare($sql);
+											$stmt->execute();
+											$row = $stmt->fetchAll(PDO::FETCH_ASSOC);
+											for($i = 0; $i < count($row); $i++) {
+										?>
+											<option value="<?=$row[$i]["ENG"]?>"><?=$row[$i]["ENG"]?></option>
+										<? 
+											} 
+										?>
 								</select>
 							</div>
 							<div class="inputbox">
-								<input type="text" id="LMS_NAME" placeholder="Name">
+								<input type="text" id="LMS_NAME" name="LMS_NAME" placeholder="Name">
 							</div>
 						</div>
-						<a href="#page1" class="ui-btn go-next"><img src="../images/button/next btn_default.png" alt=""></a>
+						<a href="javascript:;" class="ui-btn go-next" id="Login_Action"><img src="../images/button/next btn_default.png" alt=""></a>
 					</div>
 				</section>
 
@@ -115,7 +141,7 @@
 								<!-- </a> -->
 							</div>
 						</div>
-						<a href="javascript:;" id="go_main" class="ui-btn go-next"><img src="../images/button/next btn_default.png" alt=""></a>
+						<a href="javascript:;" id="Join_Action" class="ui-btn go-next"><img src="../images/button/next btn_default.png" alt=""></a>
 					</div>
 				</section>
 				</form>

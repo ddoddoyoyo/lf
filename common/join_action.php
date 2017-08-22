@@ -100,7 +100,7 @@
 
 			$dbh->commit();
 			$param = "?LMS_CONTRY=".urlencode($LMS_CONTRY)."&LMS_NAME=".urlencode($LMS_NAME)."&RETURN=".urlencode($RETURN)."&LANGUAGE=".$LANGUAGE."&TYPE=".$LMS_LEC_TYPE."";
-			$tools->metaGo("/ig/common/login_action.php".$param."");
+			$tools->metaGo("/lf/common/login_action.php".$param."");
 		}else{
 			$dbh->rollBack();
 		}

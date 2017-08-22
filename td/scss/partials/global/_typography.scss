@@ -1,0 +1,58 @@
+// Font Type
+$header_r: 'HyundaiSansHeadRegular', Arial, sans-serif;
+$header_m: 'HyundaiSansHeadMedium', Arial, sans-serif;
+$header_l: 'HyundaiSansHeadLight', Arial, sans-serif;
+//$base_font:  'HyundaiSansText', Arial, sans-serif;
+
+
+// Font Size
+$small-font:11px;//20pt
+$base-font-smaller:13px;//25pt 
+$base-font: 16px;//guide: 30pt
+$mid-font-smaller: 18px;//36pt
+$mid-font: 21px;//40pt
+$big-font:25px;//50pt
+$big-font-bigger:33px;//65pt
+// ==========================================================
+// Font type
+// ==========================================================
+@include font-face("HyundaiSansHeadRegular", fonts/HyundaiSansHead, normal, normal);
+@include font-face("HyundaiSansHeadMedium", fonts/HyundaiSansHeadMedium, normal, normal);
+@include font-face("HyundaiSansHeadLight", fonts/HyundaiSansHead-Light, normal, normal);
+//@include font-face("HyundaiSansText", fonts/HyundaiSansText, normal, normal);
+//@include font-face("DIGI", fonts/DS-DIGI, normal, normal);
+// ==========================================================
+// Font 
+// ==========================================================
+
+h1, h2, h3, h4{
+	font-weight: normal;
+	//line-height: 120%;
+}
+
+.header{
+	h1{
+		font-family: $header_m;
+		font-size: $mid-font !important;
+		span{
+			font-family: $header_m;
+			font-size: $mid-font !important;
+		}
+	}
+}
+
+h2,h3{
+	font-family: $header_m;
+}
+p,div,span{
+	font-family: $header_r;
+	font-size: $base-font;
+	color:$text_50;
+}
+
+.menu_list{
+	font-family: $header_m;
+	font-size: $base-font;
+	color:$black;
+	text-transform: uppercase;
+}
