@@ -181,6 +181,7 @@ video{
 		padding-top: $header_height;
 		height: 100%;
 		box-sizing:border-box;
+		overflow: hidden;
 	}
 
 	.ui-btn{

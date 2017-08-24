@@ -203,7 +203,8 @@ video {
     padding: 0;
     padding-top: 51px;
     height: 100%;
-    box-sizing: border-box; }
+    box-sizing: border-box;
+    overflow: hidden; }
   .ui-page-theme-a .ui-btn {
     background: none !important;
     border: none;
@@ -674,17 +675,19 @@ video {
   #exFront .btn_more img.chromeGarnish {
     top: 59%;
     right: 26%; }
-  #exFront .imgwrap .img_text {
-    position: absolute;
-    left: 40%;
-    top: 10%; }
-    #exFront .imgwrap .img_text p {
-      color: #ffffff; }
-    #exFront .imgwrap .img_text p:nth-child(1) {
-      font-family: "HyundaiSansHeadMedium", Arial, sans-serif; }
-    #exFront .imgwrap .img_text p:nth-child(2) {
-      font-family: "HyundaiSansHeadLight", Arial, sans-serif;
-      font-size: 13px; }
+  #exFront .imgwrap {
+    height: 100%; }
+    #exFront .imgwrap .img_text {
+      position: absolute;
+      left: 40%;
+      top: 10%; }
+      #exFront .imgwrap .img_text p {
+        color: #ffffff; }
+      #exFront .imgwrap .img_text p:nth-child(1) {
+        font-family: "HyundaiSansHeadMedium", Arial, sans-serif; }
+      #exFront .imgwrap .img_text p:nth-child(2) {
+        font-family: "HyundaiSansHeadLight", Arial, sans-serif;
+        font-size: 13px; }
 
 #exSide {
   background: url("../images/exterior/side/bg_01.jpg") no-repeat;
@@ -731,7 +734,8 @@ video {
     left: 42%; }
   #interior .popLayer .btn_wheel {
     position: relative;
-    left: 6%; }
+    left: 6%;
+    top: 53%; }
     #interior .popLayer .btn_wheel p {
       float: left;
       width: 43%;
