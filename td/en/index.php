@@ -22,12 +22,31 @@
 		<script src="../js/main.js"></script>
 		<!-- <script src="../js/menu.js"></script> -->
 		<script src="../js/jquery.reel.js"></script>
-		
+		<script>
+			$(document).ready(function(){
+				$("#intro #btn_showroom").click(function(){
+					location.href="showroom.php";
+				});
+				$("#intro #btn_testdrive").click(function(){
+					location.href="driving_intro.php";
+				});
+			})
+		</script>
 	</head>
 	<body>
 		<div id="wrap">
 			<div id="contBox">
-			<section data-role="page" id="intro" class="container">
+			<section data-role="page" id="intro" class="container cover">
+				<div data-role="main" class="ui-content">
+					<div class="titlewrap">
+						<div class="title"><h1>Sonata New Rise</h1></div>
+						<p>VIRTUAL EXPERIENCE</p>
+					</div>
+					<div class="button">
+						<a class="btn_box btn_showroom" href="javascript:;">SHOW ROOM</a>
+						<a class="btn_box btn_testdrive" href="javascript:;">TEST DRIVE</a>
+					</div>
+				</div>
 			</section>					
 			</div>
 		<!-- <a href="#page11">이동!!!!!!!!!</a> -->

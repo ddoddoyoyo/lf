@@ -6,6 +6,9 @@
 			height: 100%;
 			padding:5%;
 			box-sizing:border-box;
+			h1{
+				font-size: $mid-font-smaller;
+			}
 			.tab{
 				@include clearfix;
 				float:left;

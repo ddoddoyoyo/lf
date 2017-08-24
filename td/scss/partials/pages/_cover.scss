@@ -1,0 +1,45 @@
+.cover{
+	.titlewrap{
+		position: relative;
+		top:8%;
+		text-align: center;
+		.title{
+			width: auto;
+			display: inline-block;
+			border-bottom: 1px solid #ccc;
+			margin-bottom:2%;
+			padding:0 2%;
+		}
+		p{
+			color:$text_100;
+		}
+	}
+	.button{
+		position: absolute;
+    	bottom: 5%;
+    	width: 100%;
+	}
+}
+
+#intro{
+	background-image: url('../images/bg.jpg');
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	.button{
+    	.btn_showroom{
+    		margin-bottom: 4%;
+    	}
+	}
+}
+
+#showroom{
+	background-image: url('../images/bg.jpg');
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+}
+
+#testdrive{
+	background-image: url('../images/bg.jpg');
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+}

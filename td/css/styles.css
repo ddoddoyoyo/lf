@@ -19,12 +19,10 @@
 h1, h2, h3, h4 {
   font-weight: normal; }
 
-.header h1 {
+h1 {
   font-family: "HyundaiSansHeadMedium", Arial, sans-serif;
-  font-size: 21px !important; }
-  .header h1 span {
-    font-family: "HyundaiSansHeadMedium", Arial, sans-serif;
-    font-size: 21px !important; }
+  font-size: 25px;
+  color: #323232; }
 
 h2, h3 {
   font-family: "HyundaiSansHeadMedium", Arial, sans-serif; }
@@ -111,6 +109,16 @@ ul {
   width: 4%;
   line-height: 0; }
 
+.btn_box {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  text-align: center;
+  border: 1px solid #fff;
+  padding: 2% 5%;
+  background-color: rgba(0, 0, 0, 0.5); }
+
 a {
   color: #ffffff !important;
   text-decoration: none;
@@ -177,7 +185,8 @@ video {
     border-bottom: 1px solid #000;
     box-sizing: border-box;
     background-color: #ffffff;
-    z-index: 10; }
+    z-index: 10;
+    box-shadow: 0px 1px 7px; }
     .ui-page-theme-a .ui-header h1 {
       position: absolute;
       top: 13px;
@@ -246,6 +255,41 @@ video {
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%); } }
 
+.cover .titlewrap {
+  position: relative;
+  top: 8%;
+  text-align: center; }
+  .cover .titlewrap .title {
+    width: auto;
+    display: inline-block;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 2%;
+    padding: 0 2%; }
+  .cover .titlewrap p {
+    color: #646464; }
+
+.cover .button {
+  position: absolute;
+  bottom: 5%;
+  width: 100%; }
+
+#intro {
+  background-image: url("../images/bg.jpg");
+  background-size: 100% auto;
+  background-repeat: no-repeat; }
+  #intro .button .btn_showroom {
+    margin-bottom: 4%; }
+
+#showroom {
+  background-image: url("../images/bg.jpg");
+  background-size: 100% auto;
+  background-repeat: no-repeat; }
+
+#testdrive {
+  background-image: url("../images/bg.jpg");
+  background-size: 100% auto;
+  background-repeat: no-repeat; }
+
 #application .ui-content {
   background-color: #000; }
   #application .ui-content .formwrap {
@@ -253,6 +297,8 @@ video {
     height: 100%;
     padding: 5%;
     box-sizing: border-box; }
+    #application .ui-content .formwrap h1 {
+      font-size: 18px; }
     #application .ui-content .formwrap .tab {
       float: left;
       font-size: 16px;

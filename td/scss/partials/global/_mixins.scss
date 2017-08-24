@@ -93,16 +93,12 @@
 @mixin btn_box{
     position: relative;
     left: 50%;
-    transform:translateX(-50%);
-    width: 70%;
-    padding: 6px 10px 3px 10px;
-    box-sizing: border-box;
-    margin-top:5%;
-    background:url('../images/button/btn_gradient.png') no-repeat;
-    background-size: 100% 100%;
-    color:$white !important;
-    font-family: $header_m;
-    font-size:$mid-font-smaller;
+    transform: translateX(-50%);
+    width: 50%;
+    text-align: center;
+    border: 1px solid #fff;
+    padding: 2% 5%;
+    background-color: rgba(000,000,000,0.5);
 }
 @mixin btn_more{
     position: absolute;

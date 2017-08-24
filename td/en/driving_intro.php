@@ -26,9 +26,20 @@
 	<body>
 		<div id="wrap">
 			<div id="contBox">
-			<section data-role="page" id="intro" class="container">
-				
-			</section>					
+			<section data-role="page" id="testdrive" class="container cover">
+				<div data-role="header" class="header">
+					<a href="#" class="ui-btn btn_sidePanel ui-btn-right"><img src="../images/common/btn_menu.png" alt=""></a>
+				</div>
+				<div data-role="main" class="ui-content">
+					<div class="titlewrap">
+						<div class="title"><h1>Sonata New Rise</h1></div>
+						<p>TEST DRIVE</p>
+					</div>
+					<div class="button">
+						<a class="btn_box" href="#">VISIT</a>
+					</div>
+				</div>
+			</section>				
 			</div>
 		<!-- <a href="#page11">이동!!!!!!!!!</a> -->
 		</div>
