@@ -1,0 +1,69 @@
+#application{
+	.ui-content{
+		background-color: $black;
+		.formwrap{
+			position: relative;
+			height: 100%;
+			padding:5%;
+			box-sizing:border-box;
+			.tab{
+				@include clearfix;
+				float:left;
+				font-size: 16px;
+				border: 1px solid #f8c9aa;
+				padding:2%;
+				//background-color: #faccfa;
+				position: relative;
+				top:5%;
+			}
+			.tab#questionTab{
+				margin-right: 2%;
+			}
+			.tab#testDriveTab{
+				background-color: #f8c9aa;
+			}
+			.form{
+				position: absolute;
+				top:22%;
+				padding:2%;
+				//background-color: #fabcdf;
+				div{
+					label{
+						color:#f8c9aa;
+					}
+					.ui-input-text{
+						display: inline-block;
+						border-radius: initial;
+						background:none;
+						border:none;
+						border-bottom:1px solid #fff;
+						box-shadow: none;
+						font-size: 14px;
+						color:$white;
+					}
+				}				
+
+			}
+			.form#questionForm{
+				display:none;
+			}
+			
+			.btnwrap{
+				position: absolute;
+				bottom:5%;
+				width: 100%;
+				.button{
+					@include clearfix;
+					float: left;
+					border: 1px solid #f8c9aa;
+					padding: 2%;
+				}
+			}
+			.button#btn_send{
+				margin-right: 4%;
+				margin-left:28%;
+			}
+		}
+	}
+}
+

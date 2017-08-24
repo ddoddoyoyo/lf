@@ -5,9 +5,10 @@ $(document).ready(function(){
 		$('.popLayer').hide();
 	});
 
-	$('#exFront').on({
+	$('#application').on({
 		"pagebeforeshow" : function(){
-			
+			$('#application .ui-content .formwrap .form').hide();
+						$('#application #btn_send').hide();
 		},
 		"pageshow" :function(){
 

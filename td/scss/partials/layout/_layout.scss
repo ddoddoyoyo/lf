@@ -57,9 +57,6 @@ ul{
 .btn_nextPage{
 	@include btn_nextPage;
 }
-.btn_back{
-	@include btn_back;
-}
 // .btn_scroll{
 // 	@include btn_scroll;
 // }
@@ -71,9 +68,8 @@ ul{
 // a, form, input, img, color
 // ==========================================================
 a {
-	//position:absolute;
-	//z-index:10;
-	color:$text_50 !important; 
+	//color:$text_50 !important; 
+	color:$white !important;
 	text-decoration:none; 
 	display:block; 
 	-webkit-text-shadow:none; 
@@ -130,12 +126,6 @@ video{
     cursor:pointer;
 	img{
 		@include btn_close;
-	}
-}
-.btn_arrow{
-	position: absolute;
-	img{
-		float: left;
 	}
 }
 .btn_more{
@@ -200,7 +190,7 @@ video{
 	}
 	.ui-btn.ui-btn-right, .ui-btn.ui-btn-left{
 		width:19px;
-		margin-top:15px;
+		margin-top:12px;
 		padding:0;
     	//transform: translate(0,-50%);
 		&:hover{

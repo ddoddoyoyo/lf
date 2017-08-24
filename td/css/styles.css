@@ -32,7 +32,7 @@ h2, h3 {
 p, div, span {
   font-family: "HyundaiSansHeadRegular", Arial, sans-serif;
   font-size: 16px;
-  color: #323232; }
+  color: #ffffff; }
 
 .menu_list {
   font-family: "HyundaiSansHeadMedium", Arial, sans-serif;
@@ -111,16 +111,8 @@ ul {
   width: 4%;
   line-height: 0; }
 
-.btn_back {
-  position: absolute;
-  left: 5%;
-  bottom: 2%;
-  width: 4%;
-  transform: rotate(-180deg);
-  line-height: 0; }
-
 a {
-  color: #323232 !important;
+  color: #ffffff !important;
   text-decoration: none;
   display: block;
   -webkit-text-shadow: none;
@@ -139,7 +131,7 @@ img {
 
 .popLayer {
   position: absolute;
-  top: 51px;
+  top: 45px;
   z-index: 1;
   width: 100%;
   height: calc(100% - 51px);
@@ -164,11 +156,6 @@ video {
   .btn_close img {
     width: 19px; }
 
-.btn_arrow {
-  position: absolute; }
-  .btn_arrow img {
-    float: left; }
-
 .btn_more img {
   position: absolute;
   width: 11%;
@@ -184,8 +171,8 @@ video {
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
-    height: 51px;
-    min-height: 51px;
+    height: 45px;
+    min-height: 45px;
     border: none;
     border-bottom: 1px solid #000;
     box-sizing: border-box;
@@ -201,7 +188,7 @@ video {
   .ui-page-theme-a .ui-content {
     position: relative;
     padding: 0;
-    padding-top: 51px;
+    padding-top: 45px;
     height: 100%;
     box-sizing: border-box; }
   .ui-page-theme-a .ui-btn {
@@ -218,7 +205,7 @@ video {
       -moz-box-shadow: none; }
   .ui-page-theme-a .ui-btn.ui-btn-right, .ui-page-theme-a .ui-btn.ui-btn-left {
     width: 19px;
-    margin-top: 15px;
+    margin-top: 12px;
     padding: 0; }
     .ui-page-theme-a .ui-btn.ui-btn-right:hover, .ui-page-theme-a .ui-btn.ui-btn-left:hover {
       background: none;
@@ -258,3 +245,60 @@ video {
     z-index: 0;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%); } }
+
+#application .ui-content {
+  background-color: #000; }
+  #application .ui-content .formwrap {
+    position: relative;
+    height: 100%;
+    padding: 5%;
+    box-sizing: border-box; }
+    #application .ui-content .formwrap .tab {
+      float: left;
+      font-size: 16px;
+      border: 1px solid #f8c9aa;
+      padding: 2%;
+      position: relative;
+      top: 5%; }
+      #application .ui-content .formwrap .tab:before, #application .ui-content .formwrap .tab:after {
+        content: "";
+        display: table; }
+      #application .ui-content .formwrap .tab:after {
+        clear: both; }
+    #application .ui-content .formwrap .tab#questionTab {
+      margin-right: 2%; }
+    #application .ui-content .formwrap .tab#testDriveTab {
+      background-color: #f8c9aa; }
+    #application .ui-content .formwrap .form {
+      position: absolute;
+      top: 22%;
+      padding: 2%; }
+      #application .ui-content .formwrap .form div label {
+        color: #f8c9aa; }
+      #application .ui-content .formwrap .form div .ui-input-text {
+        display: inline-block;
+        border-radius: initial;
+        background: none;
+        border: none;
+        border-bottom: 1px solid #fff;
+        box-shadow: none;
+        font-size: 14px;
+        color: #ffffff; }
+    #application .ui-content .formwrap .form#questionForm {
+      display: none; }
+    #application .ui-content .formwrap .btnwrap {
+      position: absolute;
+      bottom: 5%;
+      width: 100%; }
+      #application .ui-content .formwrap .btnwrap .button {
+        float: left;
+        border: 1px solid #f8c9aa;
+        padding: 2%; }
+        #application .ui-content .formwrap .btnwrap .button:before, #application .ui-content .formwrap .btnwrap .button:after {
+          content: "";
+          display: table; }
+        #application .ui-content .formwrap .btnwrap .button:after {
+          clear: both; }
+    #application .ui-content .formwrap .button#btn_send {
+      margin-right: 4%;
+      margin-left: 28%; }

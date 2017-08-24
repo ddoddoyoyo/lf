@@ -104,11 +104,6 @@
     font-family: $header_m;
     font-size:$mid-font-smaller;
 }
-@mixin btn_turbo{
-    width: 34%;
-    margin:3%;
-    cursor: pointer;
-}
 @mixin btn_more{
     position: absolute;
     width: 11%;
@@ -119,13 +114,5 @@
     right:5%;
     bottom:2%;
     width: 4%;
-    line-height: 0;
-}
-@mixin btn_back{
-    position: absolute;
-    left:5%;
-    bottom:2%;
-    width: 4%;
-    transform: rotate(-180deg);
     line-height: 0;
 }

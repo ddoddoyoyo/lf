@@ -20,14 +20,14 @@
 		<script src="../js/jquery.ui.touch-punch.min.js"></script>
 		<script src="../js/device.js"></script>
 		<script src="../js/main.js"></script>
-		<!-- <script src="../js/menu.js"></script> -->
-		<script src="../js/jquery.reel.js"></script>
+		<script src="../js/menu.js"></script>
 		
 	</head>
 	<body>
 		<div id="wrap">
 			<div id="contBox">
 			<section data-role="page" id="intro" class="container">
+				
 			</section>					
 			</div>
 		<!-- <a href="#page11">이동!!!!!!!!!</a> -->
