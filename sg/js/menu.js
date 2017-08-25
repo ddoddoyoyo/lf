@@ -51,9 +51,12 @@ $(document).ready(function(){
 
 
 function pageMapNav(pageN){
-	console.log(window.location.href.search('#pageMap'));
-	if(window.location.href.search('#pageMap') > -1){
-		location.href = "#contentPage";
+	//console.log(window.location.href.search('#pageMap'));
+	console.log(loc);
+	//if(window.location.href.search('#pageMap') > -1){
+	if(loc == 0) {
+		//location.href = "#contentPage";
+		$.mobile.changePage('#contentPage');
 		setTimeout(function(){
 			$.fn.fullpage.moveTo(pageN);
 		},500);
@@ -65,9 +68,11 @@ function pageMapNav(pageN){
 
 
 function pageMapNav1(pageN, nbhnn){
-	console.log(window.location.href.search('#pageMap'));
+	//console.log(window.location.href.search('#pageMap'));
+	console.log(loc);
 	$('#pageMap .close').click();
-	if(window.location.href.search('#pageMap') > -1){
+	//if(window.location.href.search('#pageMap') > -1){
+	if(loc == 0) {
 		$('#btnPageMove').click();
 		//location.href = "#contentPage";
 		setTimeout(function(){

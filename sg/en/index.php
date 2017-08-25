@@ -20,13 +20,13 @@
 		<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
 		<link rel="stylesheet" href="../css/styles.css">
 		<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-		 <!-- <script>
+		 <script>
 			 $(document).on("mobileinit", function () {
 				 $.mobile.hashListeningEnabled = false;
 				 $.mobile.pushStateEnabled = false;
 				 $.mobile.changePage.defaults.changeHash = false;
 			});
-		</script> -->
+		</script>
 		<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 		<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
 		<script src="../js/device.js"></script>

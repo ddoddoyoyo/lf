@@ -112,3 +112,11 @@
     width: 4%;
     line-height: 0;
 }
+@mixin btn_back{
+    position: absolute;
+    left:5%;
+    bottom:2%;
+    width: 4%;
+    transform: rotate(-180deg);
+    line-height: 0;
+}

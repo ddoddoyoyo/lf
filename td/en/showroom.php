@@ -39,6 +39,29 @@
 						<a class="btn_box" href="#exterior01">VISIT</a>
 					</div>
 				</div>
+			</section>
+
+			<section data-role="page" id="exterior01" class="container content">
+				<div data-role="header" class="header">
+					<a href="#" class="ui-btn btn_sidePanel ui-btn-right"><img src="../images/common/btn_menu.png" alt=""></a>
+					<h1>Exterior</h1>
+				</div>
+				<div data-role="main" class="ui-content">
+					<div class="textbox">
+						<div class="profilewrap">
+							<div class="profileImg" ></div>
+							<p><span class="dName">Jack</span>'s <span class="comt">Comments</span></p>
+						</div>
+						<div class="textwrap">
+							<p>Check out the LF New Rise that has a new style when compared with the existing LF.</p>
+						</div>
+					</div>
+					<div>
+						<a href="#" class="btn_back" data-rel="back"><img src="../images/common/next btn_alt.png" alt=""></a>
+						<a href="#exFrontLast" class="btn_nextPage"><img src="../images/common/next btn_alt.png" alt=""></a>
+					</div>
+					
+				</div>
 			</section>					
 			</div>
 		<!-- <a href="#page11">이동!!!!!!!!!</a> -->

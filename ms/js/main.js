@@ -293,6 +293,11 @@ $(document).ready(function(){
 		"pagebeforeshow" : function(){
 			cnt=0;
 			$('#ADAS .btn_nextPage, #ADAS .popLayer,#ADAS .popLayer .imgwrap img').hide();
+			$('#ADAS .btn_ADAS img.LKAS').attr('src','../images/adas/btn_LKAS.png');
+			$('#ADAS .btn_ADAS img.DBL').attr('src','../images/adas/btn_DBL.png');
+			$('#ADAS .btn_ADAS img.DAA').attr('src','../images/adas/btn_DAA.png');
+			$('#ADAS .btn_ADAS img.AVM').attr('src','../images/adas/btn_AVM.png');
+			$('#ADAS .btn_ADAS img.DRM').attr('src','../images/adas/btn_DRM.png');
 		},
 		"pageshow" :function(){
 
@@ -306,6 +311,7 @@ $(document).ready(function(){
 			//console.log(getId);
 			$('#ADAS .popLayer#pop_'+getClassName+' .imgwrap img').hide();
 			$('#ADAS .popLayer#pop_'+getClassName).delay(500).fadeIn(500);
+			$('#ADAS .btn_ADAS img.'+getClassName).attr('src','../images/adas/btn_'+getClassName+'_02.png');
 			if(cnt == 5){
 				$('#ADAS .btn_nextPage').delay(500).fadeIn(500);
 			}

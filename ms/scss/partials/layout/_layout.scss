@@ -125,9 +125,10 @@ video{
 }
 .btn_close{
 	position: absolute;
-	top:4%;
-    right: 4%;
+	top:3%;
+    right: 3%;
     cursor:pointer;
+    padding:1%;
 	img{
 		@include btn_close;
 	}

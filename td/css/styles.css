@@ -24,6 +24,10 @@ h1 {
   font-size: 25px;
   color: #323232; }
 
+.header h1 {
+  color: #59a9d4;
+  font-size: 18px !important; }
+
 h2, h3 {
   font-family: "HyundaiSansHeadMedium", Arial, sans-serif; }
 
@@ -109,6 +113,14 @@ ul {
   width: 4%;
   line-height: 0; }
 
+.btn_back {
+  position: absolute;
+  left: 5%;
+  bottom: 2%;
+  width: 4%;
+  transform: rotate(-180deg);
+  line-height: 0; }
+
 .btn_box {
   position: relative;
   left: 50%;
@@ -190,7 +202,8 @@ video {
     .ui-page-theme-a .ui-header h1 {
       position: absolute;
       top: 13px;
-      left: 5%;
+      left: 50%;
+      transform: translateX(-50%);
       padding: 0;
       text-align: left;
       margin: 0; }
@@ -358,3 +371,37 @@ video {
     #application .ui-content .formwrap .button#btn_send {
       margin-right: 4%;
       margin-left: 28%; }
+
+.content .textbox {
+  position: absolute;
+  top: 17%;
+  border: 1px solid #fff;
+  border-radius: 7px;
+  box-shadow: 0 0 1px 0px;
+  padding: 4%;
+  width: 84%;
+  left: 50%;
+  transform: translateX(-50%); }
+  .content .textbox .profilewrap {
+    margin-bottom: 5%; }
+    .content .textbox .profilewrap .profileImg {
+      border-radius: 25px;
+      width: 50px;
+      height: 50px;
+      border: 1px solid;
+      background-image: url(../images/common/profile_defalt.png);
+      background-size: cover;
+      background-position: center;
+      margin-right: 4%;
+      display: inline-block; }
+    .content .textbox .profilewrap p {
+      display: inline-block;
+      color: #59a9d4;
+      position: absolute;
+      top: 12%;
+      font-size: 18px; }
+      .content .textbox .profilewrap p span {
+        color: #59a9d4;
+        font-size: 18px; }
+      .content .textbox .profilewrap p .comt {
+        display: block; }

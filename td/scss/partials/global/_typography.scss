@@ -34,16 +34,12 @@ h1{
 	font-size: $big-font;
 	color:$text_50;
 }
-// .header{
-// 	h1{
-// 		font-family: $header_m;
-// 		font-size: $mid-font !important;
-// 		span{
-// 			font-family: $header_m;
-// 			font-size: $mid-font !important;
-// 		}
-// 	}
-// }
+.header{
+	h1{
+		color:$point_color;
+		font-size: $mid-font-smaller !important;
+	}
+}
 
 h2,h3{
 	font-family: $header_m;

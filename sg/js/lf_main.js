@@ -1,12 +1,21 @@
 var totalSlides,slideWidth;
-var pos;
+var pos,loc=0;
+
 $(document).ready(function(){
-	$('#pageMap p').click(function(){
-		location.href = "#contentPage";
-		setTimeout(function(){
-				$.fn.fullpage.moveTo(3,1);
-		},500);
-	});
+	// $('#pageMap p').click(function(){
+	// 	location.href = "#contentPage";
+	// 	setTimeout(function(){
+	// 		$.fn.fullpage.moveTo(3,1);
+	// 	},500);
+	// });
+
+	$('#pageMap').on({
+		"pagebeforeshow": function(){
+			loc=0;
+			console.log(loc);
+		}
+	})
+
 	$('#contentPage').on({
 		"pagebeforeshow": function(){
 			$('.popLayer#scroll').show();
@@ -15,6 +24,8 @@ $(document).ready(function(){
 			$('.popLayer#frontSuspn, .popLayer#rearSuspn').hide();
 			$('.slidePage#sConvenience .table#trunkSpace').hide();
 			$('.popLayer#popRigidity, .popLayer#popAdhesive,  .popLayer#popStructure, .popLayer#popCollision').hide();
+			loc= 1;
+			console.log(loc);
 		},
 		"pageshow" : function(){
 			$('.popLayer#scroll').delay(1000).fadeOut(500);

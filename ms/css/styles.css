@@ -158,9 +158,10 @@ video {
 
 .btn_close {
   position: absolute;
-  top: 4%;
-  right: 4%;
-  cursor: pointer; }
+  top: 3%;
+  right: 3%;
+  cursor: pointer;
+  padding: 1%; }
   .btn_close img {
     width: 19px; }
 

@@ -20,11 +20,11 @@
 		<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 		<script src="../common/js/common.js"></script>
 		 <script>
-			//  $(document).on("mobileinit", function () {
-			// 	 $.mobile.hashListeningEnabled = false;
-			// 	 $.mobile.pushStateEnabled = false;
-			// 	 $.mobile.changePage.defaults.changeHash = false;
-			// });
+			 $(document).on("mobileinit", function () {
+				 $.mobile.hashListeningEnabled = false;
+				 $.mobile.pushStateEnabled = false;
+				 $.mobile.changePage.defaults.changeHash = false;
+			});
 		</script>
 		<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 		<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
@@ -79,124 +79,122 @@
 			</section>
 
 			<section data-role="page" id="pageMap" class="container">
-				<div data-role="main" class="ui-content">
-					<div data-role="header" class="contentPageHeader">
-						<div class="header">
-							<a href="#" class="ui-btn btn_sidePanel ui-btn-right"><img src="../images/button/btn_menu.png" alt=""></a>
-							<h1>Sonata New Rise</h1>
-						</div>
+				<div data-role="header" class="contentPageHeader">
+					<div class="header">
+						<a href="#" class="ui-btn btn_sidePanel ui-btn-right"><img src="../images/button/btn_menu.png" alt=""></a>
+						<h1>Sonata New Rise</h1>
 					</div>
-					<div data-role="main" class="ui-content">
-						<div class="wrap">
-							<h3>Section Key Selling Points</h3>
-							<div class="top_box">
-								<div><strong>P</strong> : Performance</div>
-								<div><strong>D</strong> : Design</div>
-								<div><strong>S</strong> : Safety</div>
-								<div><strong>C</strong> : Convenience</div>
+				</div>
+				<div data-role="main" class="ui-content">
+					<div class="wrap">
+						<h3>Section Key Selling Points</h3>
+						<div class="top_box">
+							<div><strong>P</strong> : Performance</div>
+							<div><strong>D</strong> : Design</div>
+							<div><strong>S</strong> : Safety</div>
+							<div><strong>C</strong> : Convenience</div>
+						</div>
+						<div class="main_box">
+							<div class="words_wrap">
+								<div class="word">
+									<img src="../images/map/001_btn_05_NA.png" alt="">
+								</div>
+								<div class="word">
+									<img src="../images/map/001_btn_02_D.png" alt="">
+								</div>
+								<div class="word">
+									<img src="../images/map/001_btn_03_S.png" alt="">
+								</div>
+								<div class="word">
+									<img src="../images/map/001_btn_05_NA.png" alt="">
+								</div>
+								<div class="word_front">Front</div>
 							</div>
-							<div class="main_box">
-								<div class="words_wrap">
-									<div class="word">
-										<img src="../images/map/001_btn_05_NA.png" alt="">
-									</div>
-									<div class="word">
-										<img src="../images/map/001_btn_02_D.png" alt="">
-									</div>
-									<div class="word">
-										<img src="../images/map/001_btn_03_S.png" alt="">
-									</div>
-									<div class="word">
-										<img src="../images/map/001_btn_05_NA.png" alt="">
-									</div>
-									<div class="word_front">Front</div>
+							<div class="words_wrap">
+								<div class="word">
+									<img src="../images/map/001_btn_01_P.png" alt="">
 								</div>
-								<div class="words_wrap">
-									<div class="word">
-										<img src="../images/map/001_btn_01_P.png" alt="">
-									</div>
-									<div class="word">
-										<img src="../images/map/001_btn_02_D.png" alt="">
-									</div>
-									<div class="word">
-										<img src="../images/map/001_btn_05_NA.png" alt="">
-									</div>
-									<div class="word">
-										<img src="../images/map/001_btn_05_NA.png" alt="">
-									</div>
-									<div class="word_front">Front 3/4</div>
+								<div class="word">
+									<img src="../images/map/001_btn_02_D.png" alt="">
 								</div>
-								<div class="words_wrap">
-									<div class="word">
-										<img src="../images/map/001_btn_05_NA.png" alt="">
-									</div>
-									<div class="word">
-										<img src="../images/map/001_btn_02_D.png" alt="">
-									</div>
-									<div class="word">
-										<img src="../images/map/001_btn_05_NA.png" alt="">
-									</div>
-									<div class="word">
-										<img src="../images/map/001_btn_04_C.png" alt="">
-									</div>
-									<div class="word_front">Driver's seat</div>
+								<div class="word">
+									<img src="../images/map/001_btn_05_NA.png" alt="">
 								</div>
-								<div class="words_wrap">
-									<div class="word">
-										<img src="../images/map/001_btn_01_P.png" alt="">
-									</div>
-									<div class="word">
-										<img src="../images/map/001_btn_02_D.png" alt="">
-									</div>
-									<div class="word">
-										<img src="../images/map/001_btn_03_S.png" alt="">
-									</div>
-									<div class="word">
-										<img src="../images/map/001_btn_05_NA.png" alt="">
-									</div>
-									<div class="word_front">Passenger<br>Side exterior</div>
+								<div class="word">
+									<img src="../images/map/001_btn_05_NA.png" alt="">
 								</div>
-								<div class="words_wrap">
-									<div class="word">
-										<img src="../images/map/001_btn_05_NA.png" alt="">
-									</div>
-									<div class="word">
-										<img src="../images/map/001_btn_05_NA.png" alt="">
-									</div>
-									<div class="word">
-										<img src="../images/map/001_btn_03_S.png" alt="">
-									</div>
-									<div class="word">
-										<img src="../images/map/001_btn_04_C.png" alt="">
-									</div>
-									<div class="word_front">Rear interior</div>
-								</div>
-								<div class="words_wrap">
-									<div class="word">
-										<img src="../images/map/001_btn_01_P.png" alt="">
-									</div>
-									<div class="word">
-										<img src="../images/map/001_btn_02_D.png" alt="">
-									</div>
-									<div class="word">
-										<img src="../images/map/001_btn_03_S.png" alt="">
-									</div>
-									<div class="word">
-										<img src="../images/map/001_btn_04_C.png" alt="">
-									</div>
-									<div class="word_front">Rear exterior</div>
-								</div>
-								<a id="btnPageMove" href="#contentPage" class="ui-btn go-next" style="width:1px; height:1px; overflow:hidden;">page move</a>
+								<div class="word_front">Front 3/4</div>
 							</div>
-							<div class="map_pop">
-								<div class="close">
-									<img src="../images/map/002_btn_close.png" alt="">
+							<div class="words_wrap">
+								<div class="word">
+									<img src="../images/map/001_btn_05_NA.png" alt="">
 								</div>
-								<div class="pop_title_wrap">
-									<div class="pop_title"></div>
+								<div class="word">
+									<img src="../images/map/001_btn_02_D.png" alt="">
 								</div>
-								<div class="pop_btn_wrap"></div>
+								<div class="word">
+									<img src="../images/map/001_btn_05_NA.png" alt="">
+								</div>
+								<div class="word">
+									<img src="../images/map/001_btn_04_C.png" alt="">
+								</div>
+								<div class="word_front">Driver's seat</div>
 							</div>
+							<div class="words_wrap">
+								<div class="word">
+									<img src="../images/map/001_btn_01_P.png" alt="">
+								</div>
+								<div class="word">
+									<img src="../images/map/001_btn_02_D.png" alt="">
+								</div>
+								<div class="word">
+									<img src="../images/map/001_btn_03_S.png" alt="">
+								</div>
+								<div class="word">
+									<img src="../images/map/001_btn_05_NA.png" alt="">
+								</div>
+								<div class="word_front">Passenger<br>Side exterior</div>
+							</div>
+							<div class="words_wrap">
+								<div class="word">
+									<img src="../images/map/001_btn_05_NA.png" alt="">
+								</div>
+								<div class="word">
+									<img src="../images/map/001_btn_05_NA.png" alt="">
+								</div>
+								<div class="word">
+									<img src="../images/map/001_btn_03_S.png" alt="">
+								</div>
+								<div class="word">
+									<img src="../images/map/001_btn_04_C.png" alt="">
+								</div>
+								<div class="word_front">Rear interior</div>
+							</div>
+							<div class="words_wrap">
+								<div class="word">
+									<img src="../images/map/001_btn_01_P.png" alt="">
+								</div>
+								<div class="word">
+									<img src="../images/map/001_btn_02_D.png" alt="">
+								</div>
+								<div class="word">
+									<img src="../images/map/001_btn_03_S.png" alt="">
+								</div>
+								<div class="word">
+									<img src="../images/map/001_btn_04_C.png" alt="">
+								</div>
+								<div class="word_front">Rear exterior</div>
+							</div>
+							<a id="btnPageMove" href="#contentPage" class="ui-btn go-next" style="width:1px; height:1px; overflow:hidden;">page move</a>
+						</div>
+						<div class="map_pop">
+							<div class="close">
+								<img src="../images/map/002_btn_close.png" alt="">
+							</div>
+							<div class="pop_title_wrap">
+								<div class="pop_title"></div>
+							</div>
+							<div class="pop_btn_wrap"></div>
 						</div>
 					</div>
 				</div>

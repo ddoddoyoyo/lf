@@ -5,6 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui">
 		<meta name="apple-touch-fullscreen" content="yes">
 		<meta name="mobile-web-app-capable" content="yes">
+		<title>Sonata New Rise</title>
 		<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
 		<link rel="stylesheet" href="../css/styles.css">
 		<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
@@ -26,11 +27,12 @@
 							$.mobile.changePage('#intro1');
 						},1500);						
 					}
-				})
-				$("#intro2 #btn_showroom").click(function(){
+				});
+				$("#intro2 .btn_showroom").click(function(){
+					console.log(11);
 					location.href="showroom.php";
 				});
-				$("#intro2 #btn_testdrive").click(function(){
+				$("#intro2 .btn_testdrive").click(function(){
 					location.href="driving_intro.php";
 				});
 			})
@@ -39,10 +41,6 @@
 		<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
 		<script src="../js/jquery.ui.touch-punch.min.js"></script>
 		<script src="../js/device.js"></script>
-		<script src="../js/main.js"></script>
-		<!-- <script src="../js/menu.js"></script> -->
-		<!-- <script src="../js/jquery.reel.js"></script> -->
-		
 	</head>
 	<body>
 		<div id="wrap">
