@@ -41,7 +41,7 @@
 		<script src="../js/device.js"></script>
 		<script src="../js/main.js"></script>
 		<!-- <script src="../js/menu.js"></script> -->
-		<script src="../js/jquery.reel.js"></script>
+		<!-- <script src="../js/jquery.reel.js"></script> -->
 		
 	</head>
 	<body>
@@ -80,9 +80,9 @@
 					</div>
 					<div class="textwrap">	
 						<p>Nice meet to you!</p>
-						<p>Thankyou for visiging<br></p>
-						<p>Through the virtual experience,</p>
-						<p>After it is finished, an</p>
+						<p>Thank you for visiting KONA’s virtual driving experience service.</p>
+						<p>Through the virtual experience, you can enjoy the attractive features of KONA.</p>
+						<p>After it is finished, an actual driving session will be arranged for you.</p>
 					</div>
 					<div class="button">
 						<a class="btn_box btn_showroom" href="#intro2">VISIT</a>

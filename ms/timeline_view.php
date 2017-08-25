@@ -23,15 +23,16 @@
 		<link rel="stylesheet" href="css/timeline.css">
 		<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 		<script src="js/timeline.js"></script>
+		<script src="js/device.js"></script>
+		
+
 	</head>
 	<body>
 	    <div id="wrap">
 			<input type='hidden' class='Cnt' id='TOT_LIST_COUNT' value="<?=$row_cnt[0]['CNT'];?>" />
 			<div id="view_contBox">
 				<header>
-					<div class="logo"><a href="/upload/hyundai/pd/PD_DATA.jpg" target="_blank"><img src="images/timeline/emblem_2.jpg" alt=""></a></div>
-					<!-- <h1>3DAYS EURO TRIP</h1> -->
-					<!-- <a class="share" href="#"><img src="/genesis/part1/images/button/btn_share.png" alt=""></a> -->
+					<h1>Sonate <span>New Rise</span></h1>
 				</header>
 				<div class="list">
 					
@@ -75,7 +76,7 @@
 								<?php if($ls["LMS_IMAGE"]) { ?>
 									<div class="userPix"><img src="<?=$IMG_URL?>/hyundai/member/<?=$ls["LMS_IMAGE"]?>" alt=""></div>
 								<?php } else { ?>
-									<div class="userPix"><img src="images/profile_basic_@3x.png" alt=""></div>
+									<div class="userPix"><img src="images/timeline/profile_basic_@3x.png" alt=""></div>
 								<?php } ?>
 							</div>
 							<div class="userProfile">
@@ -85,8 +86,6 @@
 						</div>
 						<div class="txt_wrap">
 							<div class="comment_wrap">
-								<p class="headColor">Trip Feedback</p>
-								<!-- <p>Love Europe! Love trip! THanks you~</p>  -->
 								<p><?=$ls["LMS_CON_TEXT"]?></p>
 							</div>
 						</div>
@@ -95,7 +94,7 @@
 
 					<?php if(count($ROW) >= 5){ ?>
 						<div class="moreView">
-							<a href="javascript:void(0)" onclick="view_search();"><i class="icon"></i>View More</a>
+							<a href="javascript:void(0)" onclick="view_search();"><i class="icon"></i>VIEW MORE</a>
 						</div>
 					<?php } ?>
 				</div>

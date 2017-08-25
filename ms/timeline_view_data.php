@@ -54,7 +54,7 @@
 		$dataList = $dataList."	   </div>";
 		$dataList = $dataList."	</div></div>";
 		$dataList = $dataList."	<div class='txt_wrap'>";
-		$dataList = $dataList."    <div class='comment_wrap'><p class='headColor'>Trip Feedback</p><p>".$ROW[$a]['LMS_CON_TEXT']."</p></div>";
+		$dataList = $dataList."    <div class='comment_wrap'><p>".$ROW[$a]['LMS_CON_TEXT']."</p></div>";
 		$dataList = $dataList."</div></article>";
 	}
 	
