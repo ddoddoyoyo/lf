@@ -886,18 +886,18 @@
 					<h1>Sonata New Rise</h1>
 				</div>
 				<div data-role="main" class="ui-content">
-					<form action="">
+					<form id="Frm" name="Frm" method="post" enctype="multipart/form-data">
 						<div class="inputbox">
 							<div class="imgwrap">
 								<img id="current-img" src="../images/btn_picture.png" alt="upload img">
 								<input type="file" id="upload" name="LMS_IMAGE" accept="image/*">
 							</div>
 							<div class="textwrap">
-								<textarea name="" id="" placeholder="PLEASE ENTER TEXT"></textarea>
+								<textarea placeholder="PLEASE ENTER TEXT" class="con_text"></textarea>
 							</div>
 						</div>
 						<div class="btn_upload">
-							<a href="#"><img src="../images/btn_upload.png" alt=""></a>
+							<a href="#" id="form_sumit"><img src="../images/btn_upload.png" alt=""></a>
 						</div>
 					</form>
 					<a href="#" class="btn_back" data-rel="back"><img src="../images/button/next btn_alt.png" alt=""></a>

@@ -273,11 +273,21 @@ video {
   bottom: 5%;
   width: 100%; }
 
-#intro {
+#intro0 {
   background-image: url("../images/bg.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat; }
-  #intro .button .btn_showroom {
+
+#intro1 {
+  background-image: url("../images/bg.jpg");
+  background-size: 100% auto;
+  background-repeat: no-repeat; }
+
+#intro2 {
+  background-image: url("../images/bg.jpg");
+  background-size: 100% auto;
+  background-repeat: no-repeat; }
+  #intro2 .button .btn_showroom {
     margin-bottom: 4%; }
 
 #showroom {

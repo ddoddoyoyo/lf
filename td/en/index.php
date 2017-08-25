@@ -15,6 +15,26 @@
 			// 	 $.mobile.changePage.defaults.changeHash = false;
 			// });
 		</script>
+		<script>
+			$(document).ready(function(){
+				$("#intro0").on({
+					"pagebeforeshow":function(){
+
+					},
+					"pageshow":function(){
+						setTimeout(function(){
+							$.mobile.changePage('#intro1');
+						},1500);						
+					}
+				})
+				$("#intro2 #btn_showroom").click(function(){
+					location.href="showroom.php";
+				});
+				$("#intro2 #btn_testdrive").click(function(){
+					location.href="driving_intro.php";
+				});
+			})
+		</script>
 		<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 		<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
 		<script src="../js/jquery.ui.touch-punch.min.js"></script>
@@ -22,21 +42,58 @@
 		<script src="../js/main.js"></script>
 		<!-- <script src="../js/menu.js"></script> -->
 		<script src="../js/jquery.reel.js"></script>
-		<script>
-			$(document).ready(function(){
-				$("#intro #btn_showroom").click(function(){
-					location.href="showroom.php";
-				});
-				$("#intro #btn_testdrive").click(function(){
-					location.href="driving_intro.php";
-				});
-			})
-		</script>
+		
 	</head>
 	<body>
 		<div id="wrap">
 			<div id="contBox">
-			<section data-role="page" id="intro" class="container cover">
+			<section data-role="page" id="intro0" class="container cover">
+				<div data-role="main" class="ui-content">
+					<div class="titlewrap">
+						<div class="title"><h1>Sonata New Rise</h1></div>
+						<p>VIRTUAL EXPERIENCE</p>
+					</div>
+				</div>
+			</section>
+
+			<section data-role="page" id="intro1" class="container cover">
+				<div data-role="header" class="header">
+					<a href="#" class="ui-btn btn_sidePanel ui-btn-right"><img src="../images/common/btn_menu.png" alt=""></a>
+				</div>
+				<div data-role="main" class="ui-content">
+					<div class="titlewrap">
+						<h1>How to Test Driving</h1>
+					</div>
+					<div class="imgwrap">
+						<div class="imgbox" id="showroomBox">
+							<img src="" alt="">
+							<p>SHOW <span>ROOM</span></p>
+						</div>
+						<div class="imgbox" id="driveBox">
+							<img src="" alt="">
+							<p>TEST <span>DRIVE</span></p>
+						</div>
+						<div class="imgbox" id="requestBox">
+							<img src="" alt="">
+							<p>REQUEST <span>FOR DRIVE</span></p>
+						</div>
+					</div>
+					<div class="textwrap">	
+						<p>Nice meet to you!</p>
+						<p>Thankyou for visiging<br></p>
+						<p>Through the virtual experience,</p>
+						<p>After it is finished, an</p>
+					</div>
+					<div class="button">
+						<a class="btn_box btn_showroom" href="#intro2">VISIT</a>
+					</div>
+				</div>
+			</section>
+
+			<section data-role="page" id="intro2" class="container cover">
+				<div data-role="header" class="header">
+					<a href="#" class="ui-btn btn_sidePanel ui-btn-right"><img src="../images/common/btn_menu.png" alt=""></a>
+				</div>
 				<div data-role="main" class="ui-content">
 					<div class="titlewrap">
 						<div class="title"><h1>Sonata New Rise</h1></div>
