@@ -94,10 +94,10 @@
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-    width: 50%;
+    width: 58%;
     text-align: center;
     border: 1px solid #fff;
-    padding: 2% 5%;
+    padding: 2.5% 5% 2% 5%;
     background-color: rgba(000,000,000,0.5);
 }
 @mixin btn_more{
@@ -108,15 +108,12 @@
 @mixin btn_nextPage{
     position: absolute;
     right:5%;
-    bottom:2%;
+    bottom:1%;
     width: 4%;
-    line-height: 0;
 }
 @mixin btn_back{
     position: absolute;
     left:5%;
-    bottom:2%;
+    bottom:1%;
     width: 4%;
-    transform: rotate(-180deg);
-    line-height: 0;
 }

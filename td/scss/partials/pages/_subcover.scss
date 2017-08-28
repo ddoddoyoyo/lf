@@ -1,0 +1,112 @@
+.subcover{
+	//background-image: url('../images/intro/000_02_bg.jpg');
+	background-size: cover;
+	background-position: bottom;
+	background-repeat: no-repeat;
+	.wrap{
+		position: absolute;
+		bottom:0;
+		left:50%;
+		transform:translateX(-50%);
+		height: calc(100% - 61px);
+		width: 90%;
+		background-color: $white;
+		border:1px solid $point_color;
+		border-bottom: none;
+		.titlewrap{
+			text-align: center;
+			margin-bottom: 10%;
+    		margin-top: 6%;
+			h1{
+				color:$point_color_bright;
+				font-size: $mid-font;
+			}
+		}
+		.imgwrap{
+			text-align: center;
+			.imgbox{
+				position: relative;
+				background-size:50% auto;
+				background-repeat: no-repeat;
+				background-position: center top;
+				width: 30%;
+				text-align: center;
+				display: inline-block;
+				p{	
+					color:$point_color_bright;
+					padding-top:68%;
+					font-size: $base-font-smaller;
+					span{
+						display: block;
+						color:$point_color_bright;
+						font-size: $base-font-smaller;
+					}
+				}
+			}
+			.showroomBox:after,.driveBox:after{
+				content: "";
+				background-image: url('../images/intro/000_01_icon_00_linkedline.png');
+				background-repeat: no-repeat;
+				background-size: 100% auto;
+				position: absolute;
+				top: 48%;
+    			right: -24%;
+    			width: 31px;
+    			height: 10px;
+
+			}
+			
+		}
+		.textwrap{
+			margin-top: 10%;
+    		padding: 0 10%;
+			p{
+				color:$text_50;
+				margin-bottom: 5%;
+			}
+		}
+	}
+	
+}
+#intro1{
+	.wrap{
+		.imgwrap{
+			.showroomBox{
+				background-image: url('../images/intro/000_01_icon_01_showroom.png');
+				margin-right: 2%;
+			}
+			.driveBox{
+				background-image: url('../images/intro/000_01_icon_02_testdrive.png');
+				margin-right: 2%;
+			}
+			.requestBox{
+				background-image: url('../images/intro/000_01_icon_03_requestfordrive.png');
+			}
+
+		}
+	}
+}
+
+#tdIntro{
+	.wrap{
+		.imgwrap{
+			.showroomBox{
+				background-image: url('../images/testdrive/002_01_icon_01_showroom.png');
+				margin-right: 2%;
+				p{
+					opacity: 0.5;
+				}
+			}
+			.driveBox{
+				background-image: url('../images/testdrive/002_01_icon_02_testdrive.png');
+				margin-right: 2%;
+			}
+			.requestBox{
+				background-image: url('../images/testdrive/002_01_icon_03_requestfordrive.png');
+				p{
+					opacity: 0.5;
+				}
+			}
+		}
+	}
+}

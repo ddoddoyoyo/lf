@@ -1,0 +1,91 @@
+.popPage{
+	background-color: $white;
+	h2{
+		text-align: center;
+		margin-top:6.5%;
+		font-size:$mid-font;
+		color:$text_50;
+	}
+	.imgbox{
+		position: absolute;
+	    top: calc(10% + 45px);
+	    border-radius: 7px;
+	    width: 96%;
+	    left: 50%;
+	    transform: translateX(-50%);
+	    height: 72%;
+	    background-repeat: no-repeat;
+		background-size: 100% auto;
+	}
+	.imgbox.map{
+		background-image:url('../images/testdrive/002_02_00_img.png');		
+		img.mapIcon{
+			position: absolute;
+			width: 32%;
+			cursor: pointer;
+		}
+		img.mapIcon.showroom{
+			left:13%;
+			bottom:5%;
+		}
+		img.mapIcon.beforeDriving{
+			left:2%;
+			bottom:26%;
+		}
+		img.mapIcon.straight{
+			left:10%;
+			top:5%;
+		}
+		img.mapIcon.cornering{
+			right:10%;
+			top:4%;
+		}
+		img.mapIcon.lakeChange{
+			right:0%;
+			top:31%;
+		}
+		img.mapIcon.parking{
+			right:24%;
+			bottom:18%;
+		}
+	}
+	.imgText{
+		position: absolute;
+		bottom:3.5%;
+		width:100%;
+		text-align: center;
+		p{
+			color:$text_50;
+			font-size:14px;
+		}
+	}
+
+	.popLayer.imgbox{
+		.textwrap{
+			padding:10% 5%;
+			h3{
+				font-size: $mid-font;
+				margin-bottom: 5%;
+			}
+		}
+	}
+	.popLayer.imgbox#pop_showroom{
+		background-image:url('../images/testdrive/002_02_01_01.png');
+	}
+	.popLayer.imgbox#pop_beforeDriving{
+		background-image:url('../images/testdrive/002_02_01_02.png');
+	}
+	.popLayer.imgbox#pop_straight{
+		background-image:url('../images/testdrive/002_02_01_03.png');
+	}
+	.popLayer.imgbox#pop_cornering{
+		background-image:url('../images/testdrive/002_02_01_04.png');
+	}
+	.popLayer.imgbox#pop_lakeChange{
+		background-image:url('../images/testdrive/002_02_01_05.png');
+	}
+	.popLayer.imgbox#pop_parking{
+		background-image:url('../images/testdrive/002_02_01_06.png');
+	}
+
+}

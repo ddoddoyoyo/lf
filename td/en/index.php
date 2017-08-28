@@ -29,17 +29,15 @@
 					}
 				});
 				$("#intro2 .btn_showroom").click(function(){
-					console.log(11);
 					location.href="showroom.php";
 				});
 				$("#intro2 .btn_testdrive").click(function(){
-					location.href="driving_intro.php";
+					location.href="testdrive.php";
 				});
 			})
 		</script>
 		<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 		<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
-		<script src="../js/jquery.ui.touch-punch.min.js"></script>
 		<script src="../js/device.js"></script>
 	</head>
 	<body>
@@ -54,37 +52,37 @@
 				</div>
 			</section>
 
-			<section data-role="page" id="intro1" class="container cover">
+			<section data-role="page" id="intro1" class="container subcover">
 				<div data-role="header" class="header">
 					<a href="#" class="ui-btn btn_sidePanel ui-btn-right"><img src="../images/common/btn_menu.png" alt=""></a>
 				</div>
 				<div data-role="main" class="ui-content">
-					<div class="titlewrap">
-						<h1>How to Test Driving</h1>
-					</div>
-					<div class="imgwrap">
-						<div class="imgbox" id="showroomBox">
-							<img src="" alt="">
-							<p>SHOW <span>ROOM</span></p>
+					<div class="wrap">
+						<div class="titlewrap">
+							<h1>How to Test Driving</h1>
 						</div>
-						<div class="imgbox" id="driveBox">
-							<img src="" alt="">
-							<p>TEST <span>DRIVE</span></p>
+						<div class="imgwrap">
+							<div class="imgbox showroomBox">
+								<p>SHOW <span>ROOM</span></p>
+							</div>
+							<div class="imgbox driveBox">
+								<p>TEST <span>DRIVE</span></p>
+							</div>
+							<div class="imgbox requestBox">
+								<p>REQUEST <span>FOR DRIVE</span></p>
+							</div>
 						</div>
-						<div class="imgbox" id="requestBox">
-							<img src="" alt="">
-							<p>REQUEST <span>FOR DRIVE</span></p>
+						<div class="textwrap">	
+							<p>Nice meet to you!</p>
+							<p>Thank you for visiting KONA’s virtual driving experience service.</p>
+							<p>Through the virtual experience, you can enjoy the attractive features of KONA.</p>
+							<p>After it is finished, an actual driving session will be arranged for you.</p>
+						</div>
+						<div class="button">
+							<a class="btn_box btn_showroom" href="#intro2">VISIT</a>
 						</div>
 					</div>
-					<div class="textwrap">	
-						<p>Nice meet to you!</p>
-						<p>Thank you for visiting KONA’s virtual driving experience service.</p>
-						<p>Through the virtual experience, you can enjoy the attractive features of KONA.</p>
-						<p>After it is finished, an actual driving session will be arranged for you.</p>
-					</div>
-					<div class="button">
-						<a class="btn_box btn_showroom" href="#intro2">VISIT</a>
-					</div>
+					
 				</div>
 			</section>
 

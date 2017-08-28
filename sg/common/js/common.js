@@ -444,12 +444,12 @@ $("#s3Page35").on({
 
 
 function main_go(language){
-	alert($("input[name=APP_GB]").val());
+	//alert($("input[name=APP_GB]").val());
 	if($("input[name=APP_GB]").val() == "APP"){
-		$("input[name=RETURN]").val("/ig/ms/"+language+"/main.php");
+		$("input[name=RETURN]").val("/lf/sg/"+language+"/main.php");
 		$("input[name=LANGUAGE]").val(language);
 		Frm.submit();
 	}else{
-		document.location.href="/ig/ms/"+language+"/";
+		document.location.href="/lf/sg/"+language+"/";
 	}
 }

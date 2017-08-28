@@ -5,19 +5,21 @@ $(document).ready(function(){
 		$('.popLayer').hide();
 	});
 
-	$('#application').on({
+	$('#drivingMap').on({
 		"pagebeforeshow" : function(){
-			$('#application .ui-content .formwrap .form').hide();
-						$('#application #btn_send').hide();
+			$('#drivingMap .popLayer.imgbox').hide();
+			$('#drivingMap .imgbox.map img:first-child').addClass('twinkle');
 		},
 		"pageshow" :function(){
-
 		}
 	});
 
-	$('#exFront .btn_more img').each(function(){
+	$('#drivingMap .imgbox.map img').each(function(){
 		$(this).click(function(){
-					
+			getClassName = $(this).attr('class').split(' ');
+			$(this).removeClass('twinkle');
+			$(this).next().addClass('twinkle');
+			$('#drivingMap .popLayer.imgbox#pop_'+getClassName[1]).fadeIn(500);	
 		});
 	});
 	$('#exFront .btn_turbo').click(function(){

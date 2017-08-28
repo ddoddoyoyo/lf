@@ -22,7 +22,7 @@ html, body {
 	//font: sans-serif; 
 	//line-height:130%; 
 	//background:url('../images/web_bg.jpg') 50% 0 no-repeat;
-	background-color: $white; 
+	background-color: $black !important; 
 	background-size:cover; 
 	background-attachment:fixed; 
 	overflow: hidden;
@@ -60,9 +60,15 @@ ul{
 .btn_back{
 	@include btn_back;
 }
-.btn_box{
+.button{
+	position: absolute;
+	bottom: 5%;
+	width: 100%;
+	.btn_box{
 	@include btn_box;
 }
+}
+
 // .btn_scroll{
 // 	@include btn_scroll;
 // }
@@ -149,11 +155,11 @@ video{
 		position:absolute; 
 		left:50%;
 		transform:translateX(-50%);
-		width:100%;
+		width:101%;
 		height: $header_height; 
     	min-height: $header_height;
     	border:none;	
-		border-bottom: 1px solid $black;
+		//border-bottom: 1px solid $black;
 		box-sizing:border-box;
 		background-color: $white;
 		z-index: 10;
