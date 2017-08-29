@@ -611,6 +611,9 @@ video {
   top: 0;
   height: 73%;
   overflow: hidden; }
+  .colorPage .imgwrap img {
+    position: absolute;
+    top: 0; }
   .colorPage .imgwrap .imgText {
     position: absolute;
     bottom: 0;
@@ -628,24 +631,57 @@ video {
   position: relative;
   margin: 3% auto;
   border-radius: 7px;
-  background-color: #555;
   width: 96%;
   height: 13%; }
-  .colorPage .colorBox img {
-    width: 17%;
+  .colorPage .colorBox .btn {
     position: absolute;
-    top: 50%;
+    width: 8%;
+    height: 100%;
+    cursor: pointer; }
+  .colorPage .colorBox .btn_prev {
+    left: 0; }
+  .colorPage .colorBox .btn_next {
+    right: 0; }
+  .colorPage .colorBox .colorLayout {
+    width: 81%;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    overflow: hidden; }
+    .colorPage .colorBox .colorLayout .colorPick {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      height: 38px; }
+      .colorPage .colorBox .colorLayout .colorPick img {
+        width: 38px;
+        box-shadow: 2px 2px 6px 0px #000;
+        border-radius: 50%;
+        float: left;
+        margin-right: 14px;
+        cursor: pointer; }
+        .colorPage .colorBox .colorLayout .colorPick img:before, .colorPage .colorBox .colorLayout .colorPick img:after {
+          content: "";
+          display: table; }
+        .colorPage .colorBox .colorLayout .colorPick img:after {
+          clear: both; }
+      .colorPage .colorBox .colorLayout .colorPick img:hover, .colorPage .colorBox .colorLayout .colorPick .active {
+        border: 4px solid #fff;
+        box-shadow: none;
+        margin-top: -4px; }
+
+#exColor .colorBox {
+  background-image: url("../images/showroom/001_03_01_field.png");
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+#inColor .colorBox {
+  background-color: #252525; }
+  #inColor .colorBox .colorLayout .colorPick {
+    left: 53%;
     transform: translate(-50%, -50%); }
-  .colorPage .colorBox img:nth-child(1) {
-    left: 10%; }
-  .colorPage .colorBox img:nth-child(2) {
-    left: 30%; }
-  .colorPage .colorBox img:nth-child(3) {
-    left: 50%; }
-  .colorPage .colorBox img:nth-child(4) {
-    left: 70%; }
-  .colorPage .colorBox img:nth-child(5) {
-    left: 90%; }
 
 .popPage {
   background-color: #ffffff; }
