@@ -3,63 +3,51 @@
 <head>
 <meta charset="UTF-8">
 <title>test</title>
-<link rel="stylesheet" href="css/style1.css"><!--
-<link rel="stylesheet" href="road.css"> -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui">
+		<meta name="apple-touch-fullscreen" content="yes">
+		<meta name="mobile-web-app-capable" content="yes">
+<link rel="stylesheet" href="css/style1.css?v=5">
+
+<!--<link rel="stylesheet" href="road.css"> -->
 </head>
 
 <body>
-		<div style="position:absolute; z-index:9; top:2500px; width:100%;">
+		<!-- <div style="position:absolute; z-index:9; top:2500px; width:100%;">
 			<img src="./images/cloud_4pieces.png" style="width:100%;">
 		</div>
 		<div style="position:absolute; z-index:9; top:5500px; width:100%; left:10%;">
 			<img src="./images/cloud_4pieces.png" style="width:100%;">
-		</div>
+		</div> -->
 	<div class="scrollWrap">
-		<div id="popup1" style="position:fixed; z-index:10; top:0; left:0; width:100%; height:100%; background:#000; opacity:0.5; display:none; color:#FFF;">
-			<img src="./images/1.gif" alt="">
-		</div>
-		<div id="popup2" style="position:fixed; z-index:10; top:0; left:0; width:100%; height:100%; background:#000; opacity:0.5; display:none; color:#FFF;">
-			<img src="./images/2.gif" alt="">
-		</div>
+		<div class="popup"></div>
 	</div>
-	<div class="roadwrap">
-		<div class="roadBgWrap">
-			<div class="roadBg"></div>
+		<div class="roadBg">
+			<div id="roadBg1"></div>
+			<div id="roadBg2"></div>
+			<div id="roadBg3"></div>
+			<div id="roadBg4"></div>
+			<div id="roadBg5"></div>
+			<div id="roadBg6"></div>
+			<div id="roadBg7"></div>
+			<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="109.714px" height="6000px" viewBox="0 0 109.714 6000" enable-background="new 0 0 109.714 6000" xml:space="preserve" style="position:absolute;">
+				<path id="mycurve" fill="none" d="M54.148,0.027c0,0,0,839.791,0,910.44
+				c0,49.958-23.765,102.36-23.765,151.364c0,35.758,6.744,58.988,20.61,81.22c10.254,16.44,30.46,44.277,30.46,97.172
+				c0,40.492-38.303,92.172-38.303,140.568c0,48.396,18.24,61.894,21.888,100.198c3.648,38.303-21.528,75.918-19.699,116.491
+				c1.361,30.188,9.85,52.775,9.85,129.747c0,59.104,13.133,113.448,13.133,196.622c0,35.834-5.467,69.677-9.272,100.439
+				c-5.258,42.515-9.333,79.144-9.333,107.013c0,53.746,12.346,86.949,18.605,139.108c8.755,72.959-7.576,146.766-11.673,197.476
+				c-3.439,42.561,0.427,108.59-2.5,148.837c-2.942,40.442-13.159,58.248-13.159,111.507c0,31.765-1.797,1512.204-1.797,1586.743
+				c0,74.54-10.998,103.724-8.444,156.254c2.553,52.531,27.784,120.691,27.359,162.334c-0.365,35.75-29.312,95.952-29.312,159.422
+				c0,63.468,10.652,150.423,10.652,190.302c0,39.877,0.473,835.134,0.473,865.959c0,30.824,1.223,47.24,5.354,62.745
+				c4.056,15.223,3.283,70.245,3.283,70.245"/>
+			</svg>
 		</div>
-		<div id="rocket">
-			<img src="images/car.png" alt="" class="car">
-		</div>
+	<div class="roadBgWrap">
 	</div>
-	<!-- <div id="container">
-		<div id="slider"></div>
-
-		<div class="svgwrapper">
-
-		</div>
-
-		<div class="rocketspace">
-			<div id="rocket">
-				<div class="inner">
-					<div class="half car"><img src="./images/car.png"></div>
-					<div class="half trailer">trailer</div>
-				</div>
-			</div>
-		</div>
-	</div> -->
-	<svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="764px" height="7350px" viewBox="0 0 764 7350" enable-background="new 0 0 764 7350" xml:space="preserve" style="position:absolute; top:0; left:0; z-index:0;">
-		<!-- <path id="mycurve" fill="none" stroke="#000000" stroke-miterlimit="10" d="M57,58c0,0,0,208,0,313s58,169.5,169.5,169.5s155.5,0,155.5,0"/> -->
-		<!-- <path id="mycurve" d="M766,0v3607c0,0,5.5,250.3-52,410c-60.6,168.2-59,568-59,568v802 c0,0-15,364.6,195,500c60.8,57.3,331,46,331,46h4621" stroke-miterlimit="10" stroke-width="1" stroke="#EEE" fill="none"/> -->
-		<!-- <path id="mycurve" d="M339-4616c0,0,0,542.8,0,926.8s-65.5,519-94.9,654c-29.4,135-17.1,279-17.1,279s0,1529.9,0,2026.4
-			c0,621,112,352.5,112,991.5c0,609.8,0,1204.4,0,1204.4s-67.9,319.5,466.1,691.5c412.5,343.5,388.5,838.5,388.5,838.5
-			s61.4,504-522,877.5c-378.7,242.4-345,721.5-345,721.5l-1.5,789.1" stroke-width="1" stroke="#000" fill="none"/> -->
-		<path id="mycurve" d="M-14-1325c0,0,0,542.8,0,926.8s-65.5,519-94.9,654s-17.1,279-17.1,279s0,1529.9,0,2026.4
-	c0,621,112,352.5,112,991.5c0,609.8,0,1204.4,0,1204.4s-67.9,319.5,466.1,691.5C864.6,5792,840.6,6287,840.6,6287
-	s61.4,504-522,877.5c-378.7,242.4-345,721.5-345,721.5l-1.5,789.1" stroke-width="1" stroke="#000" fill="none"/>
-	</svg>
+	<div id="rocket">
+		<img src="images/car.png" alt="" class="car" id="car">
+	</div>
 
 	<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-	<!-- <script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js'></script> -->
-	<!-- <script src='http://dropthebit.com/demos/pathAnimator/js/pathAnimator.js'></script> -->
-	<script src="js/index1.js"></script>
+	<script src="js/index1.js?v=5"></script>
 </body>
 </html>

@@ -1,0 +1,347 @@
+html {
+	-ms-content-zooming: none;
+}
+
+body {
+	width:100%;
+	/* height:100%; */
+	margin:0;
+	overflow:auto;
+	/* -webkit-overflow-scrolling:touch; */
+	-ms-content-zooming:none;
+}
+
+.scrollWrap {
+	/* height:8550px; */
+	height:100%;
+	width:100%;
+	overflow:hidden;
+	position: absolute;
+}
+
+.roadwrap{
+	height:100%;
+	width:100%;
+	overflow:hidden;
+	position:fixed;
+	top:0;
+	left:0;
+}
+
+.roadBgWrap {
+	height:100%;
+	width:100%;
+	position: absolute;
+	overflow: hidden;
+}
+
+.roadBg {
+	/* height:11400px;
+	width:1920px; */
+	/* height:11400px; */
+	width:100%;
+	position: absolute;
+	top: 0;
+	overflow: hidden;
+	/* transform: translateX(-50%) translateY(-50%);
+	transform-origin: 50% 50%; */
+}
+
+.roadBg .bg {
+	/* height:3800px;
+	width:1920px; */
+	/* height:3800px; */
+	width:100%;
+	position:relative;
+	background-size:100%;
+}
+
+.bg .flag {
+	width:50%;
+	height:50%;
+	position:absolute;
+	background:url('../images/flag.png');
+	background-size:cover;
+	bottom:5%;
+	margin:0 auto;
+}
+
+#roadBg1 {
+	background-image: url('../images/coss_1.jpg');
+}
+
+#roadBg2 {
+	/* background-image: url('../images/011.jpg'); */
+}
+
+#roadBg3 {
+	/* background-image: url('../images/012.jpg'); */
+}
+
+#car {
+	/* border:1px solid #CC0000; */
+	position:fixed;
+	width:100%;
+	height:auto;
+	transform-origin: 50% 50%;
+	background:url('../images/testdrive_car.png');
+	background-size:cover;
+	z-index:6;
+	top:0;
+	/* height:250px; */
+	/* width:300px;
+	height:300px;
+	border:1px solid #000; */
+	/* transform-origin: 50% 50%; */
+	/* transform: translateX(-50%) translateY(-50%); */
+}
+
+.svgwrapper {
+	width:100%;
+	height: 100%;
+	position: absolute;
+	overflow: hidden;
+}
+
+svg {
+	position:absolute;
+}
+
+.point {
+	position:fixed;
+	z-index:8;
+	bottom:0;
+	width:100%;
+	height:35%;
+	background:#000;
+	opacity:0;
+	display:none;
+	color:#FFF;
+}
+
+.popup {
+	position:fixed;
+	z-index:9;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background:#000;
+	display:none;
+	color:#FFF;
+	clear: both;
+}
+
+.popup .popupDesc {
+	clear: both;
+	position:absolute;
+}
+
+.popup .popupNaviWrap {
+	clear:both;
+	bottom:0;
+	position:fixed;
+}
+
+.popup .popupNaviWrap > div {
+	float: left;
+}
+
+.popup .popupNavi span.on {
+	font-size:20pt;
+}
+
+.popup .popupDesc > div {
+	float:left;
+}
+
+@-webkit-keyframes bounce {
+	25% { margin-top: 0; }
+	50% { margin-top: -10px; }
+	75% { margin-top: 0; }
+	100% { margin-top: -10px; }
+}
+
+@-moz-keyframes bounce {
+	25% { margin-top: 0; }
+	50% { margin-top: -10px; }
+	75% { margin-top: 0; }
+	100% { margin-top: -10px; }
+}
+
+@-o-keyframes bounce {
+	25% { margin-top: 0; }
+	50% { margin-top: -10px; }
+	75% { margin-top: 0; }
+	100% { margin-top: -10px; }
+}
+
+@keyframes bounce {
+	25% { margin-top: 0; }
+	50% { margin-top: -10px; }
+	75% { margin-top: 0; }
+	100% { margin-top: -10px; }
+}
+
+@-webkit-keyframes bottom_bounce {
+	25% { margin-bottom: -10px; }
+	50% { margin-bottom: 0; }
+	75% { margin-bottom: -10px; }
+	100% { margin-bottom: 0; }
+}
+
+@-moz-keyframes bottom_bounce {
+	25% { margin-bottom: -10px; }
+	50% { margin-bottom: 0; }
+	75% { margin-bottom: -10px; }
+	100% { margin-bottom: 0; }
+}
+
+@-o-keyframes bottom_bounce {
+	25% { margin-bottom: -10px; }
+	50% { margin-bottom: 0; }
+	75% { margin-bottom: -10px; }
+	100% { margin-bottom: 0; }
+}
+
+@keyframes bottom_bounce {
+	25% { margin-bottom: -10px; }
+	50% { margin-bottom: 0; }
+	75% { margin-bottom: -10px; }
+	100% { margin-bottom: 0; }
+}
+
+.bottom_bounce {
+	-webkit-animation: bottom_bounce 2s infinite ease-in-out;
+	-moz-animation:    bottom_bounce 2s infinite ease-in-out;
+	-o-animation:      bottom_bounce 2s infinite ease-in-out;
+	animation:         bottom_bounce 2s infinite ease-in-out;
+}
+
+
+.cloud {
+	width:100%;
+	height:400px;
+	overflow:hidden;
+	position:absolute;
+	z-index:7;
+}
+
+.cloud1 {
+	background:url('../images/cloud_1.png') no-repeat;
+	background-size:cover;
+}
+
+.cloud2 {
+	background:url('../images/cloud_2.png') no-repeat;
+	background-size:cover;
+}
+
+.cloud3 {
+	background:url('../images/cloud_3.png') no-repeat;
+	background-size:cover;
+}
+
+
+@-webkit-keyframes moveLeft {
+	0% { left: 100%; }
+	/* 25% { left: 25%; }
+	50% { left: 50%; } */
+	100% { left: -50%; }
+}
+
+@-moz-keyframes moveLeft {
+	0% { left: 100%; }
+	/* 25% { left: 25%; }
+	50% { left: 50%; } */
+	100% { left: -50%; }
+}
+
+@-o-keyframes moveLeft {
+	0% { left:100%; }
+	/* 25% { left: 25%; }
+	50% { left: 50%; } */
+	100% { left:-50%; }
+}
+
+@keyframes moveLeft {
+	0% { left: 100%; }
+	/* 25% { left: 25%; }
+	50% { left: 50%; } */
+	100% { left: -50%; }
+}
+
+@-webkit-keyframes moveRight {
+	0% { left: -50%; }
+	/* 25% { left: 25%; }
+	50% { left: 50%; } */
+	100% { left: 100%; }
+}
+
+@-moz-keyframes moveRight {
+	0% { left: -50%; }
+	/* 25% { left: 25%; }
+	50% { left: 50%; } */
+	100% { left: 100%; }
+}
+
+@-o-keyframes moveRight {
+	0% { left:-50%; }
+	/* 25% { left: 25%; }
+	50% { left: 50%; } */
+	100% { left: 100%; }
+}
+
+@keyframes moveRight {
+	0% { left: -50%; }
+	/* 25% { left: 25%; }
+	50% { left: 50%; } */
+	100% { left: 100%; }
+}
+
+.cloudMove1 {
+	-webkit-animation: moveLeft 30s infinite linear;
+	-moz-animation:    moveLeft 30s infinite linear;
+	-o-animation:      moveLeft 30s infinite linear;
+	animation:         moveLeft 30s infinite linear;
+}
+
+.cloudMove2 {
+	-webkit-animation: moveRight 30s infinite linear;
+	-moz-animation:    moveRight 30s infinite linear;
+	-o-animation:      moveRight 30s infinite linear;
+	animation:         moveRight 30s infinite linear;
+}
+
+
+
+@-webkit-keyframes blink {
+	0% { opacity: 0; }
+	100% { opacity:1; }
+}
+
+@-moz-keyframes blink {
+	0% { opacity: 0; }
+	100% { opacity:1; }
+}
+
+@-o-keyframes blink {
+	0% { opacity: 0; }
+	100% { opacity:1; }
+}
+
+@keyframes blink {
+	0% { opacity: 0; }
+	100% { opacity:1; }
+}
+
+.blink {
+	-webkit-animation: blink 2s infinite ease-in-out;
+	-moz-animation:    blink 2s infinite ease-in-out;
+	-o-animation:      blink 2s infinite ease-in-out;
+	animation:         blink 2s infinite ease-in-out;
+}
+
+.loading { width:100%; height:100%; background:#000; color:#FFF; position: fixed; z-index:10; }
+
+.opponentCar { position:absolute; }

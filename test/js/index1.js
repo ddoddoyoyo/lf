@@ -1,115 +1,134 @@
-a = document.getElementById("mycurve");
-len = a.getTotalLength();
+var a = document.getElementById("mycurve");
+var len = a.getTotalLength();
+var carHeight = $("#car").height();
 updatePosition = function(element, path, value){
-	/*
-	element = jquery object;
-	path = svg path element;
-	value = from 0 - 1;
-	*/
 	var car = $('.car', element);
-	/*var trailer = $('.trailer', element);*/
-
+	var obj = $('.roadBg').width();
 	var svg = $(path).closest('svg');
 	var svgWidth = svg.width();
 	var svgHeight = svg.height();
 	var pathLength = path.getTotalLength();
-
-	var newpoint = path.getPointAtLength((pathLength * value) + 50);
+	var newpoint = path.getPointAtLength((pathLength * value) + (carHeight * .5));
+	//var newpoint = path.getPointAtLength((pathLength * value) + 150);
 	var middlepoint = path.getPointAtLength(pathLength * value);
-	var oldpoint = path.getPointAtLength((pathLength * value) - 50);
-
 	var bbox = path.getBBox();
-	//console.log(bbox);
 	var newYPercent = ((newpoint.y - bbox.y) / (bbox.height)) * 100;
 	var newXPercent = ((newpoint.x - bbox.x) / bbox.width) * 100;
-
-	/*var trailerAngle = (Math.atan2(oldpoint.y - newpoint.y, oldpoint.x - newpoint.x) * 180 / Math.PI) - 90;*/
 	var carAngle = (Math.atan2(middlepoint.y - newpoint.y, middlepoint.x - newpoint.x) * 180 / Math.PI) + 90;
-	//var carAngle = (Math.atan2(middlepoint.y - newpoint.y, middlepoint.x - newpoint.x) * 180 / Math.PI) + 90;
-
 	var newYpx = newpoint.y;
 	var newXpx = newpoint.x;
 
-	/*element.css({*/
+	/*console.log(svgWidth);
+	console.log(svgHeight);
+	console.log(pathLength);
+	console.log("carHeight : "+ carHeight);
+	console.log("scroll : "+ _scroll);
+	console.log("newpoint.x : "+ newpoint.x);
+	console.log("bbox.x : "+ bbox.x);
+	console.log("bbox.width : "+ bbox.width);
+	console.log("newpoint.x - bbox.x : "+ (newpoint.x - bbox.x));
+	console.log("( -(obj / 2) + (newpoint.x - bbox.x) ) : "+ ( -(obj / 2) + (newpoint.x - bbox.x) ) );
+	console.log("newXPercent : "+ newXPercent);*/
+	console.log("===================================");
+
 	$('.roadBg').css({
-		left:-(newXPercent)+'%',
-		//top:-(newYPercent)+'%'
-		top:-scroll
-		/*,
-		transform:'translateX(-50%) translateY(-50%) rotate('+newAngle+'deg)'
-		*/
+		//left:( -(obj / 2) + (newpoint.x - bbox.x)) - 50 +'px',
+		/*left:( -(obj / 2) - (newpoint.x - bbox.x) + 500 ) + 'px',*/
+		/*left:-( (svgWidth / 2) + (newXPercent * svgWidth / 100) ) + 'px',*/
+		//top:-_scroll
 	});
 
-	/*element.css({*/
 	car.css({
+		//left : -(newpoint.x - bbox.x),
+		left:(newpoint.x - bbox.x) * 4,
 		transform:'rotate('+carAngle+'deg)'
 	});
-	/*trailer.css({
-		transform:'rotate('+trailerAngle+'deg)'
-	});*/
-//console.log(len, ui.value, newpoint.x,newpoint.y);
 }
 
 updatePosition($('#rocket'), document.getElementById("mycurve"), 0);
 
-// --- jQueryUI Controls --- //
-
-/*$("#slider").slider({
-	range: false,
-	min: 0,
-	max: 1,
-	step:0.001,
-	slide: function ( event, ui ) {
-		console.log(ui.value);
-		updatePosition($('#rocket'), document.getElementById("mycurve"), ui.value);
-		//adjust the timeline's progress() based on slider value
-		//console.log( ui.value);
-	}
-});*/
-
-
+var _popup = false;
 var _angle = 0;
 var _angleBg = 0;
-var scroll;
-/*var _height = $('body').height();*/
-var _bodyHeight = $('.body').height();
-var _height = $('.roadBg').height();
+var _scroll;
+var _bodyHeight = $('body').height();
+var _bodyWidth = $('body').width();
+var _scrollHeight = $('.scrollWrap').height();
 var _left;
 var _top;
 var n = 0;
-$(window).on('scroll',function() {
-	if (scroll < $(this).scrollTop())
+var _height = $(window).width() * 5000 / 640;
+var _stop = _height - _scrollHeight - 100;
+console.log(_stop);
+$(window).on('scroll', function(e) {
+	/*e.preventDefault();
+	e.stopPropagation();
+	return;*/
+	onScroll(e);
+});
+
+function onScroll(e) {
+	if (_popup) {
+		$(window).scrollTop((_stop + (n*_height)));
+		return;
+	}
+
+
+	if (_scroll < $(window).scrollTop())
 		_scrollTo = 1;
 	else
 		_scrollTo = -1;
 
-	scroll = $(this).scrollTop();
+	_scroll = $(window).scrollTop();
 
-	var _tmp = (scroll+600) / _height;
+	//var _tmp = (_scroll + (_scrollHeight * .33) + (carHeight / 2)) / (_height*7);
+	var _tmp = (_scroll + 0) / (_height*7);
 
 	updatePosition($('#rocket'), document.getElementById("mycurve"), _tmp);
+	console.log(_scroll);
+	console.log(_tmp);
+	console.log(_scrollHeight);
+	console.log(_stop);
+	console.log(n);
+	console.log(_stop + (n*_height));
 
-	var st = $(this).scrollTop();
-	console.log(st);
-
-	if (st >= 3000 && n ==0) {
-		$("#popup1").fadeIn(500);
-		$(this).scrollTop(3000);
+	if (_scroll >= (_stop + (n*_height))) {
+		$("#popup"+ (n+1)).fadeIn(500);
 		$('body').css({'overflow':'hidden'});
+		$(window).scrollTop((_stop + (n*_height)));
+		$('#roadBg'+ (n+2)).css({'background-image':'url("./images/coss_'+ (n+2) +'.jpg")'});
+		$('.popup').css({'width':$(window).width(), 'height':$(window).height()});
+		_popup = true;
 	}
-	else if(st >= 6000 && n==1) {
+	/*else if(_scroll >= (_stop + (n*_height)) && n == 1) {
 		$("#popup2").fadeIn(500);
-		$(this).scrollTop(6000);
 		$('body').css({'overflow':'hidden'});
+		$(window).scrollTop((_stop + (n*_height)));
+		$('#roadBg3').css({'background-image':'url("./images/2_3.jpg")'});
+		$('.popup').css({'width':$(window).width(), 'height':$(window).height()});
+		_popup = true;
 	}
-});
+	else if(_scroll >= (_stop + (n*_height)) && n == 2) {
+		$("#popup3").fadeIn(500);
+		$(window).scrollTop((_stop + (n*_height)));
+		$('body').css({'overflow':'hidden'});
+		$('.popup').css({'width':$(window).width(), 'height':$(window).height()});
+		_popup = true;
+	}*/
+}
 
 
+$(document).ready(function() {
+	$('.roadBg > div').css({'height':_height});
+	$('#car').css({'width':_bodyWidth / 4, 'height':'auto'});
+	//$('.roadBg').css({'height':_height});
 
-$(document).ready(function(){
-	$("#popup1, #popup2").click(function(){
-		$('body').css({'overflow':'auto'});
-		$("#popup1, #popup2").fadeOut(500);
+	$(".popup").click(function(){
+		$('body').css({'overflow-y':'auto', 'overflow-x':'hidden'});
+		//$('body').css({'overflow':'auto'});
+		$(".popup").fadeOut(500);
+		_popup = false;
 		n++;
 	});
 });
+

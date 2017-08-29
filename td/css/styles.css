@@ -412,64 +412,120 @@ video {
   #tdIntro .wrap .imgwrap .requestBox p {
     opacity: 0.5; }
 
-#application .ui-content {
-  background-color: #000; }
+#application {
+  background-color: #ffffff; }
   #application .ui-content .formwrap {
     position: relative;
     height: 100%;
-    padding: 5%;
     box-sizing: border-box; }
-    #application .ui-content .formwrap h1 {
-      font-size: 18px; }
+    #application .ui-content .formwrap .title {
+      width: 100%;
+      margin-top: -2%;
+      padding-top: 14%;
+      background-image: url("../images/intro/000_01_icon_03_requestfordrive.png");
+      background-repeat: no-repeat;
+      background-size: 11%;
+      background-position: center top;
+      text-align: center; }
+      #application .ui-content .formwrap .title h1 {
+        font-size: 21px;
+        color: #59a9d4;
+        line-height: 115%; }
+        #application .ui-content .formwrap .title h1 span {
+          display: block;
+          font-size: 21px;
+          color: #59a9d4;
+          font-family: "HyundaiSansHeadMedium", Arial, sans-serif; }
     #application .ui-content .formwrap .tab {
       float: left;
-      font-size: 16px;
-      border: 1px solid #f8c9aa;
-      padding: 2%;
+      font-size: 14px;
+      font-family: "HyundaiSansHeadRegular", Arial, sans-serif;
+      border-top: 1px solid #aaa;
+      padding: 3% 0 2% 0;
       position: relative;
-      top: 5%; }
+      top: 5%;
+      width: 50%;
+      box-sizing: border-box;
+      text-align: center; }
       #application .ui-content .formwrap .tab:before, #application .ui-content .formwrap .tab:after {
         content: "";
         display: table; }
       #application .ui-content .formwrap .tab:after {
         clear: both; }
     #application .ui-content .formwrap .tab#questionTab {
-      margin-right: 2%; }
+      background-color: #252525; }
     #application .ui-content .formwrap .tab#testDriveTab {
-      background-color: #f8c9aa; }
+      color: #252525; }
     #application .ui-content .formwrap .form {
       position: absolute;
-      top: 22%;
-      padding: 2%; }
-      #application .ui-content .formwrap .form div label {
-        color: #f8c9aa; }
-      #application .ui-content .formwrap .form div .ui-input-text {
-        display: inline-block;
-        border-radius: initial;
-        background: none;
-        border: none;
-        border-bottom: 1px solid #fff;
-        box-shadow: none;
-        font-size: 14px;
-        color: #ffffff; }
+      top: 30%;
+      padding: 7%;
+      width: 100%;
+      box-sizing: border-box; }
+      #application .ui-content .formwrap .form div {
+        margin-bottom: 5%; }
+        #application .ui-content .formwrap .form div label {
+          color: #59a9d4;
+          margin: 0; }
+          #application .ui-content .formwrap .form div label span {
+            color: #aaa; }
+        #application .ui-content .formwrap .form div label + select, #application .ui-content .formwrap .form div label + .ui-input-text {
+          margin-left: 5px; }
+        #application .ui-content .formwrap .form div span {
+          color: #252525; }
+        #application .ui-content .formwrap .form div select.bSelect {
+          width: 22%;
+          display: inline-block !important;
+          border: none;
+          outline: none;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
+          border-bottom: 1px solid #aaa;
+          padding: 2px;
+          background-image: url("../images/common/p18_btn_select.png");
+          background-repeat: no-repeat;
+          background-position: center right;
+          background-size: 16px auto;
+          margin-right: 2px;
+          font-size: 15px;
+          text-align: center; }
+        #application .ui-content .formwrap .form div select.bSelect#bMonth, #application .ui-content .formwrap .form div select.bSelect#bDay, #application .ui-content .formwrap .form div select.bSelect#bHour, #application .ui-content .formwrap .form div select.bSelect#bMin {
+          width: 15%; }
+        #application .ui-content .formwrap .form div select.bSelect#bYear {
+          margin-right: 10px; }
+        #application .ui-content .formwrap .form div .ui-selectmenu-text {
+          display: none !important; }
+        #application .ui-content .formwrap .form div .ui-input-text {
+          display: inline-block;
+          border-radius: initial;
+          background: none;
+          border: none;
+          border-bottom: 1px solid #aaa;
+          box-shadow: none;
+          font-size: 14px;
+          color: #252525;
+          margin: 0; }
     #application .ui-content .formwrap .form#questionForm {
       display: none; }
     #application .ui-content .formwrap .btnwrap {
       position: absolute;
       bottom: 5%;
-      width: 100%; }
+      width: 100%;
+      text-align: center; }
       #application .ui-content .formwrap .btnwrap .button {
-        float: left;
-        border: 1px solid #f8c9aa;
-        padding: 2%; }
-        #application .ui-content .formwrap .btnwrap .button:before, #application .ui-content .formwrap .btnwrap .button:after {
-          content: "";
-          display: table; }
-        #application .ui-content .formwrap .btnwrap .button:after {
-          clear: both; }
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        border: 1px solid #59a9d4;
+        padding: 2%;
+        color: #252525 !important;
+        width: 20%;
+        display: block; }
+    #application .ui-content .formwrap .button#btn_home {
+      left: 35%; }
     #application .ui-content .formwrap .button#btn_send {
-      margin-right: 4%;
-      margin-left: 28%; }
+      left: 65%; }
 
 .content {
   background-color: #000; }

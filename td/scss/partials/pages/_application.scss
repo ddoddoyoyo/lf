@@ -1,48 +1,108 @@
 #application{
+	background-color:$white;
 	.ui-content{
-		background-color: $black;
 		.formwrap{
 			position: relative;
 			height: 100%;
-			padding:5%;
 			box-sizing:border-box;
-			h1{
-				font-size: $mid-font-smaller;
+			.title{
+				width: 100%;
+				margin-top: -2%;
+				padding-top:14%;
+				background-image: url('../images/intro/000_01_icon_03_requestfordrive.png');
+				background-repeat: no-repeat;
+				background-size: 11%;
+				background-position: center top;
+				text-align: center;
+				h1{
+					font-size: $mid-font;
+					color:$point_color_bright;
+					line-height: 115%;
+					span{
+						display: block;
+						font-size: $mid-font;
+						color:$point_color_bright;
+						font-family: $header_m;
+					}
+				}
 			}
+			
 			.tab{
 				@include clearfix;
 				float:left;
-				font-size: 16px;
-				border: 1px solid #f8c9aa;
-				padding:2%;
-				//background-color: #faccfa;
+				font-size: 14px;
+				font-family: $header_r;
+				border-top: 1px solid $gray;
+				padding:3% 0 2% 0;
 				position: relative;
 				top:5%;
+				width: 50%;
+				box-sizing:border-box;
+				text-align: center;
 			}
 			.tab#questionTab{
-				margin-right: 2%;
+				background-color: $dark_gray;
 			}
 			.tab#testDriveTab{
-				background-color: #f8c9aa;
+				color: $dark_gray;
 			}
 			.form{
 				position: absolute;
-				top:22%;
-				padding:2%;
+				top:30%;
+				padding:7%;
+				width: 100%;
+				box-sizing:border-box;
 				//background-color: #fabcdf;
 				div{
+					margin-bottom: 5%;
 					label{
-						color:#f8c9aa;
+						color:$point_color_bright;
+						margin:0;
+						span{color:$gray}
+					}
+					label+select, label+.ui-input-text{
+						margin-left: 5px;
+					}
+					span{
+						color:$dark_gray;
+					}
+					select.bSelect{
+						width: 22%;
+						display: inline-block !important;
+						border:none;
+						outline:none;
+						-webkit-appearance: none; 
+   						-moz-appearance: none;
+   						appearance: none;
+						border-bottom:1px solid $gray;
+						padding:2px;
+						background-image: url('../images/common/p18_btn_select.png');
+						background-repeat: no-repeat;
+						background-position: center right;
+    					background-size: 16px auto;
+    					margin-right:2px;
+    					font-size: 15px;
+    					text-align: center;    					
+					}
+					select.bSelect#bMonth,select.bSelect#bDay,select.bSelect#bHour,select.bSelect#bMin{
+						width: 15%;
+					}
+					select.bSelect#bYear{
+						margin-right:10px;
+					}
+					.ui-selectmenu-text{
+						display: none!important;
 					}
 					.ui-input-text{
 						display: inline-block;
 						border-radius: initial;
 						background:none;
 						border:none;
-						border-bottom:1px solid #fff;
+						border-bottom:1px solid #aaa;
 						box-shadow: none;
 						font-size: 14px;
-						color:$white;
+						color:$dark_gray;
+						margin:0;
 					}
 				}				
 
@@ -55,16 +115,25 @@
 				position: absolute;
 				bottom:5%;
 				width: 100%;
+				text-align: center;
 				.button{
-					@include clearfix;
-					float: left;
-					border: 1px solid #f8c9aa;
+					// @include clearfix;
+					// float: left;
+					position: absolute;
+					left:50%;
+					transform:translateX(-50%);
+					border: 1px solid $point_color_bright;
 					padding: 2%;
+					color:$dark_gray !important;
+					width: 20%;
+					display: block;
 				}
 			}
+			.button#btn_home{
+				left:35%;
+			}
 			.button#btn_send{
-				margin-right: 4%;
-				margin-left:28%;
+				left:65%;
 			}
 		}
 	}
