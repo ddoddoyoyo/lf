@@ -1,0 +1,47 @@
+.dealerPage{
+	background-image: url("../images/login_bg.png");
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	.ui-content{
+		padding:0;
+		background-image: url("../images/login_logo.png");
+		background-repeat: no-repeat;
+		background-size: 80% auto;
+		background-position: center 14%;
+		form{
+			margin-top:47%;
+			p{
+				padding: 0 10% 5% 10%;
+				color:$point_color_bright;
+				text-align: center;
+			}
+			.inputwrap{
+				padding:0 10%;
+				margin-bottom:3%;
+				.ui-input-text{
+					border-radius: initial;
+					background:none;
+					border:none;
+					border:1px solid $point_color_bright;
+					box-shadow: none;
+					color:$dark_gray;
+					margin:0;
+					border-radius: 7px;
+					input{
+						text-align: center;
+					}
+				}
+			}
+			
+			.btn_login{
+				width: 30%;
+				border-radius: 7px;
+				text-align: center;
+				padding:3% 0 2% 0;
+				margin-left: 60%;
+				background-color: $point_color_bright;
+			}
+		}
+	}
+		
+}

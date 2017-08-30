@@ -846,3 +846,41 @@ video {
     background-image: url("../images/testdrive/002_02_01_05.png"); }
   .popPage .popLayer.imgbox#pop_parking {
     background-image: url("../images/testdrive/002_02_01_06.png"); }
+
+.dealerPage {
+  background-image: url("../images/login_bg.png");
+  background-repeat: no-repeat;
+  background-size: 100% auto; }
+  .dealerPage .ui-content {
+    padding: 0;
+    background-image: url("../images/login_logo.png");
+    background-repeat: no-repeat;
+    background-size: 80% auto;
+    background-position: center 14%; }
+    .dealerPage .ui-content form {
+      margin-top: 47%; }
+      .dealerPage .ui-content form p {
+        padding: 0 10% 5% 10%;
+        color: #59a9d4;
+        text-align: center; }
+      .dealerPage .ui-content form .inputwrap {
+        padding: 0 10%;
+        margin-bottom: 3%; }
+        .dealerPage .ui-content form .inputwrap .ui-input-text {
+          border-radius: initial;
+          background: none;
+          border: none;
+          border: 1px solid #59a9d4;
+          box-shadow: none;
+          color: #252525;
+          margin: 0;
+          border-radius: 7px; }
+          .dealerPage .ui-content form .inputwrap .ui-input-text input {
+            text-align: center; }
+      .dealerPage .ui-content form .btn_login {
+        width: 30%;
+        border-radius: 7px;
+        text-align: center;
+        padding: 3% 0 2% 0;
+        margin-left: 60%;
+        background-color: #59a9d4; }

@@ -25,7 +25,7 @@
 		<script>
 			$(document).ready(function(){
 				$('#td04 .btn_nextPage').click(function(){
-					//location.href="testdrive.php";
+					location.href="application.php";
 				});
 			})
 		</script>

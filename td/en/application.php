@@ -1,3 +1,6 @@
+<?php
+	include_once ($_SERVER[DOCUMENT_ROOT]."/common/commonFunction.php");
+?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -38,13 +41,131 @@
 					$('#application .form#questionForm,#application .btnwrap.question').hide();
 				});
 				$("#application .question .btn_send").click(function(){
-					$('#application .pop_question').show();
+					console.log("question");
+					if($("input[name=QUESTION_NAME]").val() == ""){
+						alert("Please enter your name.");
+						$("input[name=QUESTION_NAME]").focus();
+						return; 
+					}
+
+					if($("input[name=QUESTION_EMAIL]").val() == ""){
+						alert("Please enter your e-mail.");
+						$("input[name=QUESTION_EMAIL]").focus();
+						return; 
+					}
+
+					if($("textarea[name=QUESTION_MEMO]").val() == ""){
+						alert("Please enter your content.");
+						$("textarea[name=QUESTION_MEMO]").focus();
+						return; 
+					}
+
+					$("input[name=TAB_GB]").val("QUESTION");
+
+					$.ajax({
+						url:"../common/application_action.php",
+						type: "POST",
+						dataType: "json",
+						data:{
+							QUESTION_NAME: $("input[name=QUESTION_NAME]").val(),
+							QUESTION_EMAIL: $("input[name=QUESTION_EMAIL]").val(),
+							QUESTION_MEMO: $("input[name=QUESTION_MEMO]").val(),
+							TAB_GB: $("input[name=TAB_GB]").val(),
+							TEST_DRIVE_CAR_CODE: $("input[name=TEST_DRIVE_CAR_CODE]").val(),
+						},
+						success:  function(json){
+							console.log(json.result);
+							if(json.result == "QUESTION_EMAIL"){
+								alert("잘못된 이메일 주소");
+								$("input[name=QUESTION_EMAIL]").focus();
+								return false;
+							}
+
+							if(json.result = "success"){
+								$("input[name=QUESTION_NAME]").val("");
+								$("input[name=QUESTION_EMAIL]").val("");
+								$("textarea[name=QUESTION_MEMO]").val("");
+								$('#application .pop_question').show();
+							}else{
+								alert("Fail");
+							}
+						},
+					   error : function(xhr, status, error) {
+							console.log(error);
+					   }
+					});
+
+
+					//
 				});
 				$("#application .question .btn_home,#application .bookTestDrive .btn_home").click(function(){
 					location.href="index.php";
 				});
 				$("#application .bookTestDrive .btn_send").click(function(){
-					$('#application .pop_bookTestDrive').show();
+					console.log("TestDrive");
+					var TEST_DRIVE_DATE;
+					if($("input[name=TEST_DRIVE_NAME]").val() == ""){
+						alert("Please enter your name.");
+						$("input[name=TEST_DRIVE_NAME]").focus();
+						return; 
+					}
+
+					if($("input[name=TEST_DRIVE_EMAIL]").val() == ""){
+						alert("Please enter your e-mail.");
+						$("input[name=TEST_DRIVE_EMAIL]").focus();
+						return; 
+					}
+
+					if($("input[name=TEST_DRIVE_NUMBER]").val() == ""){
+						alert("Please enter your number.");
+						$("input[name=TEST_DRIVE_NUMBER]").focus();
+						return; 
+					}
+					
+					//시간
+					TEST_DRIVE_DATE = $("select[name=TEST_DRIVE_M]").val()+"/ " + $("select[name=TEST_DRIVE_D]").val() +"/ " + $("select[name=TEST_DRIVE_Y]").val() +" " + $("select[name=TEST_DRIVE_TH]").val() +":" + $("select[name=TEST_DRIVE_TM]").val()
+
+					$("input[name=TAB_GB]").val("TEST_DRIVE");
+					console.log(TEST_DRIVE_DATE);
+					$.ajax({
+						url:"../common/application_action.php",
+						type: "POST",
+						dataType: "json",
+						data:{
+							TEST_DRIVE_NAME: $("input[name=TEST_DRIVE_NAME]").val(),
+							TEST_DRIVE_EMAIL: $("input[name=TEST_DRIVE_EMAIL]").val(),
+							TEST_DRIVE_NUMBER: $("input[name=TEST_DRIVE_NUMBER]").val(),
+							TEST_DRIVE_DATE: TEST_DRIVE_DATE,
+							TAB_GB: $("input[name=TAB_GB]").val(),
+							TEST_DRIVE_CAR_CODE: $("input[name=TEST_DRIVE_CAR_CODE]").val(),
+						},
+						success:  function(json){
+							console.log(json.result);
+							if(json.result == "TEST_DRIVE_EMAIL"){
+								alert("잘못된 이메일 주소");
+								$("input[name=TEST_DRIVE_EMAIL]").focus();
+								return false;
+							}
+
+							if(json.result = "success"){
+								$("input[name=TEST_DRIVE_NAME]").val("");
+								$("input[name=TEST_DRIVE_EMAIL]").val("");
+								$("input[name=TEST_DRIVE_NUMBER]").val("");
+								$("select[name=TEST_DRIVE_M]").val("01");
+								$("select[name=TEST_DRIVE_D]").val("01");
+								$("select[name=TEST_DRIVE_Y]").val("2017");
+								$("select[name=TEST_DRIVE_TH]").val("09");
+								$("select[name=TEST_DRIVE_TM]").val("00");
+								$('#application .pop_bookTestDrive').show();
+							}else{
+								alert("Fail");
+							}
+						},
+					   error : function(xhr, status, error) {
+							console.log(error);
+					   }
+					});
+					//
 				});
 				$("#application .popLayer .btn_ok").click(function(){
 					$('#application .popLayer').hide();
@@ -56,8 +177,7 @@
 		<script src="../js/jquery.ui.touch-punch.min.js"></script>
 		<script src="../js/device.js"></script>
 		<script src="../js/menu.js"></script>
-
-		
+		<script src="../js/common.js"></script>
 	</head>
 	<body>
 		<div id="wrap">
@@ -65,97 +185,81 @@
 			<section data-role="page" id="application" class="container">
 				<div data-role="main" class="ui-content">
 					<form action="" class="formwrap">
+						<input type="hidden" name="TAB_GB" value=""/>
+						<input type="hidden" name="TEST_DRIVE_CAR_CODE" value="LF"/>
 						<div class="title">
 							<h1>REQUEST FOR <span>REAL TEST DRIVE</span></h1>
 						</div>
 						<h2 class="tab" id="questionTab">QUESTION</h2>
 						<div id="questionForm" class="form">
-							<div><label for="qname">NAME</label><input type="text" id="uname"></div>
-							<div><label for="qemail">E-MAIL</label> <input type="text" id="qemail"></div>
-							<div><label for="inquiry">INQUIRY CONTENTS</label> <textarea name="" id="inquiry"></textarea></div>
+							<div><label for="qname">NAME</label><input type="text" id="uname" name="QUESTION_NAME"></div>
+							<div><label for="qemail">E-MAIL</label> <input type="text" id="qemail" name="QUESTION_EMAIL"></div>
+							<div><label for="inquiry">INQUIRY CONTENTS</label> <textarea id="inquiry" name="QUESTION_MEMO"></textarea></div>
 						</div>
 
 						<h2 class="tab" id="testDriveTab">BOOK A TEST DRIVE</h2>
 						<div id="testDriveForm" class="form">
 							<div>
 								<label for="bYear">DATE <span>(M / D / Y / T)</span></label>
-								<select name="" id="bMonth" class="bSelect">
-									<option value="01">1</option>
-									<option value="02">2</option>
-									<option value="03">3</option>
-									<option value="04">4</option>
-									<option value="05">5</option>
-									<option value="06">6</option>
-									<option value="07">7</option>
-									<option value="08">8</option>
-									<option value="09">9</option>
-									<option value="10">10</option>
-									<option value="11">11</option>
-									<option value="12">12</option>
+								<select name="TEST_DRIVE_M" id="bMonth" class="bSelect">
+									<?
+										for($i=1; $i < 13; $i++){
+											if($i < 10){
+												$M_NO = "0".$i;
+											}else{
+												$M_NO = $i;
+											}
+									?>
+										<option value="<?=$M_NO?>"><?=$M_NO?></option>
+									<?}?>
 								</select>
-								<select name="" id="bDay" class="bSelect">
-									<option value="01">1</option>
-									<option value="02">2</option>
-									<option value="03">3</option>
-									<option value="04">4</option>
-									<option value="05">5</option>
-									<option value="06">6</option>
-									<option value="07">7</option>
-									<option value="08">8</option>
-									<option value="09">9</option>
-									<option value="10">10</option>
-									<option value="11">11</option>
-									<option value="12">12</option>
-									<option value="13">13</option>
-									<option value="14">14</option>
-									<option value="15">15</option>
-									<option value="16">16</option>
-									<option value="17">17</option>
-									<option value="18">18</option>
-									<option value="19">19</option>
-									<option value="20">20</option>
-									<option value="21">21</option>
-									<option value="22">22</option>
-									<option value="23">23</option>
-									<option value="24">24</option>
-									<option value="25">25</option>
-									<option value="26">26</option>
-									<option value="27">27</option>
-									<option value="28">28</option>
-									<option value="29">29</option>
-									<option value="30">30</option>
-									<option value="31">31</option>
+								<select name="TEST_DRIVE_D" id="bDay" class="bSelect">
+									<?
+										for($i=1; $i < 32; $i++){
+											if($i < 10){
+												$D_NO = "0".$i;
+											}else{
+												$D_NO = $i;
+											}
+									?>
+										<option value="<?=$D_NO?>"><?=$D_NO?></option>
+									<?}?>
+									
 								</select>
-								<select name="" id="bYear" class="bSelect">
-									<option value="">2017</option>
-									<option value="">2018</option>
+								<select name="TEST_DRIVE_Y" id="bYear" class="bSelect">
+									<?
+										for($i=2017; $i < 2021; $i++){
+									?>
+										<option value="<?=$i?>"><?=$i?></option>
+									<?}?>
 								</select>
-								<select name="" id="bHour" class="bSelect">
-									<option value="09">09</option>
-									<option value="10">10</option>
-									<option value="11">11</option>
-									<option value="12">12</option>
-									<option value="13">13</option>
-									<option value="14">14</option>
-									<option value="15">15</option>
-									<option value="16">16</option>
-									<option value="17">17</option>
+								<select name="TEST_DRIVE_TH" id="bHour" class="bSelect">
+									<?
+										for($i=9; $i < 18; $i++){
+											if($i < 10){
+												$H_NO = "0".$i;
+											}else{
+												$H_NO = $i;
+											}
+									?>
+										<option value="<?=$H_NO?>"><?=$H_NO?></option>
+									<?}?>
 								</select>
 								<span>:</span>
-								<select name="" id="bMin" class="bSelect">
+								<select name="TEST_DRIVE_TM" id="bMin" class="bSelect">
 									<option value="00">00</option>
 									<option value="30">30</option>
 								</select>
 							</div>
-							<div><label for="bookName">NAME</label><input type="text" id="bookName"></div>
-							<div><label for="bookEmail">E-MAIL</label> <input type="email" id="bookEmail"></div>
-							<div><label for="bookPhone">NUMBER</label> <input type="tel" id="bookPhone"></div>
+							<div><label for="bookName">NAME</label><input type="text" id="bookName" name="TEST_DRIVE_NAME"></div>
+							<div><label for="bookEmail">E-MAIL</label> <input type="email" id="bookEmail" name="TEST_DRIVE_EMAIL"></div>
+							<div><label for="bookPhone">NUMBER</label> <input type="tel" id="bookPhone" name="TEST_DRIVE_NUMBER"></div>
 						</div>
 						<div class="btnwrap question">
-							<a href="javascript:;" class="button btn_home">HOME</a><a href="javascript:;" class="button btn_send">SEND</a>
+							<a href="javascript:;" id="question" class="button btn_home">HOME</a><a href="javascript:;" class="button btn_send">SEND</a>
 						</div>
 						<div class="btnwrap bookTestDrive">
-							<a href="javascript:;" class="button btn_home">HOME</a><a href="javascript:;" class="button btn_send">SEND</a>
+							<a href="javascript:;" id="bookTestDrive" class="button btn_home">HOME</a><a href="javascript:;" class="button btn_send">SEND</a>
 						</div>
 						<div class="popLayer pop_question">
 							<div class="textbox">

@@ -1,3 +1,56 @@
+<?php
+	include_once ($_SERVER[DOCUMENT_ROOT]."/common/commonFunction.php");
+	include_once ($_SERVER[DOCUMENT_ROOT]."/lib/aes256.php");
+	
+	if($_GET["v"]){
+		$CODES = base64_decode($_GET["v"]);
+
+		$KEY_ENC = hex2bin("LmsPassword20179jekviae3iblx5lz");
+		$KEY = hex2bin($KEY_ENC);
+		$IV = hex2bin("asdf43kljgo32orjbr1jvi5ylbjzf9l3");
+		$DECODE_USER_ID = decrypt($KEY, $IV, $CODES);
+
+		$sql = "
+				SELECT 
+					A.LMS_NAME, 
+					A.LMS_ID,
+					B.CTCODE,
+					B.ENG
+				FROM 
+					LMS_MEMBER A
+				LEFT JOIN SPK_COUNTRY B ON B.ENG = A.LMS_CONTRY
+				WHERE
+					A.LMS_ID = :LMS_ID
+				AND
+					A.LMS_GB = 'hyundai'
+				AND
+					A.LMS_STATUS = 'Y'
+		";
+
+		$stmt = $dbh->prepare($sql);
+		$stmt->bindParam(':LMS_ID',$DECODE_USER_ID);
+		$stmt->execute();
+		$row_cnt = $stmt->rowCount();
+		$row = $stmt->fetchAll(PDO::FETCH_ASSOC);
+		$stmt->closeCursor();
+		if($row_cnt > 0){
+			$LF_TD_DEALER_NAME = $row[0]["LMS_NAME"];
+			$LF_TD_DEALER_ID = $row[0]["LMS_ID"];
+			$LF_TD_DEALER_REGION = $row[0]["CTCODE"];
+			$LF_TD_DEALER_COUNTRY = $row[0]["ENG"];
+			@session_register("LF_TD_DEALER_NAME")	or die("session_register err");
+			@session_register("LF_TD_DEALER_ID")	or die("session_register err");
+			@session_register("LF_TD_DEALER_REGION")	or die("session_register err");
+			@session_register("LF_TD_DEALER_COUNTRY")	or die("session_register err");
+		}else{
+			echo "에러에러";
+		}
+		
+	}else{
+		echo "에러에러";
+	}
+
+?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -10,11 +63,11 @@
 		<link rel="stylesheet" href="../css/styles.css">
 		<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 		 <script>
-			//  $(document).on("mobileinit", function () {
-			// 	 $.mobile.hashListeningEnabled = false;
-			// 	 $.mobile.pushStateEnabled = false;
-			// 	 $.mobile.changePage.defaults.changeHash = false;
-			// });
+			  $(document).on("mobileinit", function () {
+			 	 $.mobile.hashListeningEnabled = false;
+			 	 $.mobile.pushStateEnabled = false;
+			 	 $.mobile.changePage.defaults.changeHash = false;
+			 });
 		</script>
 		<script>
 			$(document).ready(function(){
@@ -46,7 +99,7 @@
 			<section data-role="page" id="intro0" class="container cover">
 				<div data-role="main" class="ui-content">
 					<div class="titlewrap">
-						<div class="title"><h1>Sonata New Rise</h1></div>
+						<div class="title"><h1>Sonata New Rise </h1></div>
 						<p>VIRTUAL EXPERIENCE</p>
 					</div>
 				</div>
