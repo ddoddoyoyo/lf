@@ -9,6 +9,7 @@ $(document).ready(function(){
 	} 
 	else {
 		$("body").css({"background":"#fff"});
+		$("#pageMap .wrap").css({"overflow":"scroll"});
 		// layout
 		// if(ios && navigator.userAgent.indexOf("KAKAOTALK") < 0){
 		// 	function vh(){

@@ -209,6 +209,9 @@
                         <h1>Sonata New Rise</h1>
                     </div>
                 </div>
+                <div data-role="footer" >
+                    <a href="#pageMap">RETURN</a>
+                </div>
                 <div data-role="main" id="fullpage" class="ui-content">
                     <div class="popLayer" id="scroll"></div>
                     <!-- exterior -->

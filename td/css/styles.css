@@ -414,118 +414,159 @@ video {
 
 #application {
   background-color: #ffffff; }
-  #application .ui-content .formwrap {
-    position: relative;
-    height: 100%;
-    box-sizing: border-box; }
-    #application .ui-content .formwrap .title {
-      width: 100%;
-      margin-top: -2%;
-      padding-top: 14%;
-      background-image: url("../images/intro/000_01_icon_03_requestfordrive.png");
-      background-repeat: no-repeat;
-      background-size: 11%;
-      background-position: center top;
-      text-align: center; }
-      #application .ui-content .formwrap .title h1 {
-        font-size: 21px;
-        color: #59a9d4;
-        line-height: 115%; }
-        #application .ui-content .formwrap .title h1 span {
-          display: block;
+  #application .ui-content {
+    padding-top: 0; }
+    #application .ui-content .formwrap {
+      position: relative;
+      height: 100%;
+      box-sizing: border-box; }
+      #application .ui-content .formwrap .title {
+        width: 100%;
+        padding-top: 26%;
+        background-image: url("../images/intro/000_01_icon_03_requestfordrive.png");
+        background-repeat: no-repeat;
+        background-size: 11%;
+        background-position: center 42%;
+        text-align: center; }
+        #application .ui-content .formwrap .title h1 {
           font-size: 21px;
           color: #59a9d4;
-          font-family: "HyundaiSansHeadMedium", Arial, sans-serif; }
-    #application .ui-content .formwrap .tab {
-      float: left;
-      font-size: 14px;
-      font-family: "HyundaiSansHeadRegular", Arial, sans-serif;
-      border-top: 1px solid #aaa;
-      padding: 3% 0 2% 0;
-      position: relative;
-      top: 5%;
-      width: 50%;
-      box-sizing: border-box;
-      text-align: center; }
-      #application .ui-content .formwrap .tab:before, #application .ui-content .formwrap .tab:after {
-        content: "";
-        display: table; }
-      #application .ui-content .formwrap .tab:after {
-        clear: both; }
-    #application .ui-content .formwrap .tab#questionTab {
-      background-color: #252525; }
-    #application .ui-content .formwrap .tab#testDriveTab {
-      color: #252525; }
-    #application .ui-content .formwrap .form {
-      position: absolute;
-      top: 30%;
-      padding: 7%;
-      width: 100%;
-      box-sizing: border-box; }
-      #application .ui-content .formwrap .form div {
-        margin-bottom: 5%; }
-        #application .ui-content .formwrap .form div label {
-          color: #59a9d4;
-          margin: 0; }
-          #application .ui-content .formwrap .form div label span {
-            color: #aaa; }
-        #application .ui-content .formwrap .form div label + select, #application .ui-content .formwrap .form div label + .ui-input-text {
-          margin-left: 5px; }
-        #application .ui-content .formwrap .form div span {
-          color: #252525; }
-        #application .ui-content .formwrap .form div select.bSelect {
-          width: 22%;
-          display: inline-block !important;
-          border: none;
-          outline: none;
-          -webkit-appearance: none;
-          -moz-appearance: none;
-          appearance: none;
-          border-bottom: 1px solid #aaa;
-          padding: 2px;
-          background-image: url("../images/common/p18_btn_select.png");
-          background-repeat: no-repeat;
-          background-position: center right;
-          background-size: 16px auto;
-          margin-right: 2px;
-          font-size: 15px;
-          text-align: center; }
-        #application .ui-content .formwrap .form div select.bSelect#bMonth, #application .ui-content .formwrap .form div select.bSelect#bDay, #application .ui-content .formwrap .form div select.bSelect#bHour, #application .ui-content .formwrap .form div select.bSelect#bMin {
-          width: 15%; }
-        #application .ui-content .formwrap .form div select.bSelect#bYear {
-          margin-right: 10px; }
-        #application .ui-content .formwrap .form div .ui-selectmenu-text {
-          display: none !important; }
-        #application .ui-content .formwrap .form div .ui-input-text {
-          display: inline-block;
-          border-radius: initial;
-          background: none;
-          border: none;
-          border-bottom: 1px solid #aaa;
-          box-shadow: none;
-          font-size: 14px;
-          color: #252525;
-          margin: 0; }
-    #application .ui-content .formwrap .form#questionForm {
-      display: none; }
-    #application .ui-content .formwrap .btnwrap {
-      position: absolute;
-      bottom: 5%;
-      width: 100%;
-      text-align: center; }
-      #application .ui-content .formwrap .btnwrap .button {
+          line-height: 115%; }
+          #application .ui-content .formwrap .title h1 span {
+            display: block;
+            font-size: 21px;
+            color: #59a9d4;
+            font-family: "HyundaiSansHeadMedium", Arial, sans-serif; }
+      #application .ui-content .formwrap .tab {
+        float: left;
+        font-size: 14px;
+        font-family: "HyundaiSansHeadRegular", Arial, sans-serif;
+        border-top: 1px solid #aaa;
+        padding: 3% 0 2% 0;
+        position: relative;
+        top: 5%;
+        width: 50%;
+        box-sizing: border-box;
+        text-align: center;
+        cursor: pointer; }
+        #application .ui-content .formwrap .tab:before, #application .ui-content .formwrap .tab:after {
+          content: "";
+          display: table; }
+        #application .ui-content .formwrap .tab:after {
+          clear: both; }
+      #application .ui-content .formwrap .tab#questionTab {
+        background-color: #252525; }
+      #application .ui-content .formwrap .tab#testDriveTab {
+        color: #252525; }
+      #application .ui-content .formwrap .form {
         position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        border: 1px solid #59a9d4;
-        padding: 2%;
-        color: #252525 !important;
-        width: 20%;
-        display: block; }
-    #application .ui-content .formwrap .button#btn_home {
-      left: 35%; }
-    #application .ui-content .formwrap .button#btn_send {
-      left: 65%; }
+        top: 34%;
+        padding: 7%;
+        width: 100%;
+        box-sizing: border-box; }
+        #application .ui-content .formwrap .form div {
+          margin-bottom: 5%; }
+          #application .ui-content .formwrap .form div label {
+            color: #59a9d4;
+            margin: 0; }
+            #application .ui-content .formwrap .form div label span {
+              color: #aaa; }
+          #application .ui-content .formwrap .form div label + select, #application .ui-content .formwrap .form div label + .ui-input-text {
+            margin-left: 5px; }
+          #application .ui-content .formwrap .form div span {
+            color: #252525; }
+          #application .ui-content .formwrap .form div select.bSelect {
+            width: 22%;
+            display: inline-block !important;
+            border: none;
+            outline: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            border-bottom: 1px solid #aaa;
+            padding: 2px;
+            background-image: url("../images/common/p18_btn_select.png");
+            background-repeat: no-repeat;
+            background-position: center right;
+            background-size: 16px auto;
+            margin-right: 2px;
+            font-size: 15px;
+            text-align: center; }
+          #application .ui-content .formwrap .form div select.bSelect#bMonth, #application .ui-content .formwrap .form div select.bSelect#bDay, #application .ui-content .formwrap .form div select.bSelect#bHour, #application .ui-content .formwrap .form div select.bSelect#bMin {
+            width: 15%; }
+          #application .ui-content .formwrap .form div select.bSelect#bYear {
+            margin-right: 10px; }
+          #application .ui-content .formwrap .form div .ui-selectmenu-text {
+            display: none !important; }
+          #application .ui-content .formwrap .form div .ui-input-text {
+            display: inline-block;
+            border-radius: initial;
+            background: none;
+            border: none;
+            border-bottom: 1px solid #aaa;
+            box-shadow: none;
+            font-size: 14px;
+            color: #252525;
+            margin: 0; }
+          #application .ui-content .formwrap .form div textarea {
+            resize: none;
+            height: 60px !important; }
+      #application .ui-content .formwrap .form#questionForm {
+        display: none; }
+      #application .ui-content .formwrap .btnwrap {
+        position: absolute;
+        bottom: 5%;
+        width: 100%; }
+        #application .ui-content .formwrap .btnwrap .button {
+          position: absolute;
+          transform: translateX(-50%);
+          padding: 3% 0 2% 0;
+          width: 35%;
+          display: block;
+          border-radius: 50px;
+          box-sizing: border-box; }
+        #application .ui-content .formwrap .btnwrap .button.btn_home {
+          left: 30%;
+          background-image: url("../images/common/p18_icon_btn_home.png");
+          background-repeat: no-repeat;
+          background-size: 20px auto;
+          background-position: 17% center;
+          border: 1px solid #aaa;
+          color: #aaa !important;
+          padding-left: 12.5%; }
+        #application .ui-content .formwrap .btnwrap .button.btn_send {
+          left: 70%;
+          text-align: center;
+          background-color: #59a9d4;
+          border: 1px solid #59a9d4;
+          color: #59a9d4; }
+      #application .ui-content .formwrap .popLayer {
+        background-color: rgba(0, 0, 0, 0.5);
+        height: 100%;
+        width: 100%;
+        top: 0; }
+        #application .ui-content .formwrap .popLayer .textbox {
+          width: 90%;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          background-color: #ffffff;
+          background-image: url("../images/common/p18_icon_check_1.png");
+          background-repeat: no-repeat;
+          background-size: 20% auto;
+          background-position: center 21%;
+          padding-top: 30%; }
+          #application .ui-content .formwrap .popLayer .textbox p {
+            color: #323232;
+            text-align: center;
+            padding: 0 10% 6% 10%;
+            border-bottom: 1px solid #aaa; }
+          #application .ui-content .formwrap .popLayer .textbox a {
+            text-align: center;
+            display: block;
+            color: #323232 !important;
+            padding: 2.5% 0; }
 
 .content {
   background-color: #000; }

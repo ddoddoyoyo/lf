@@ -15,34 +15,49 @@
 			// 	 $.mobile.changePage.defaults.changeHash = false;
 			// });
 		</script>
-		<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-		<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
-		<script src="../js/jquery.ui.touch-punch.min.js"></script>
-		<script src="../js/device.js"></script>
-		<script src="../js/menu.js"></script>
-
 		<script>
 			$(document).ready(function(){
+				$('#application').on({
+					"pagebeforeshow": function(){
+						$("#application .btnwrap.question, #application .popLayer").hide();
+					}
+				});
 				$('#application .tab#questionTab').click(function(){
 					$(this).css({'background':'none'});
 					$(this).css({'color':'#252525'});
 					$('#application .tab#testDriveTab').css({'background-color':"#252525","color":"#fff"});
-					$('#application .form#questionForm').show();
-					$('#application .form#testDriveForm').hide();
+					$('#application .form#questionForm,#application .btnwrap.question').show();
+					$('#application .form#testDriveForm,#application .btnwrap.bookTestDrive').hide();
 				});
 
 				$('#application .tab#testDriveTab').click(function(){
 					$(this).css({'background':'none'});
 					$(this).css({'color':'#252525'});
 					$('#application .tab#questionTab').css({'background-color':"#252525","color":"#fff"});
-					$('#application .form#testDriveForm').show();
-					$('#application .form#questionForm').hide();
+					$('#application .form#testDriveForm, #application .btnwrap.bookTestDrive').show();
+					$('#application .form#questionForm,#application .btnwrap.question').hide();
 				});
-				$("#application #btn_send").click(function(){
-					//$('.popLayer').show();
+				$("#application .question .btn_send").click(function(){
+					$('#application .pop_question').show();
+				});
+				$("#application .question .btn_home,#application .bookTestDrive .btn_home").click(function(){
+					location.href="index.php";
+				});
+				$("#application .bookTestDrive .btn_send").click(function(){
+					$('#application .pop_bookTestDrive').show();
+				});
+				$("#application .popLayer .btn_ok").click(function(){
+					$('#application .popLayer').hide();
 				});
 			});
 		</script>
+		<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+		<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+		<script src="../js/jquery.ui.touch-punch.min.js"></script>
+		<script src="../js/device.js"></script>
+		<script src="../js/menu.js"></script>
+
+		
 	</head>
 	<body>
 		<div id="wrap">
@@ -57,7 +72,7 @@
 						<div id="questionForm" class="form">
 							<div><label for="qname">NAME</label><input type="text" id="uname"></div>
 							<div><label for="qemail">E-MAIL</label> <input type="text" id="qemail"></div>
-							<div><label for="inquiry">INQUIRY CONTENTS</label> <input type="text" id="inquiry"></div>
+							<div><label for="inquiry">INQUIRY CONTENTS</label> <textarea name="" id="inquiry"></textarea></div>
 						</div>
 
 						<h2 class="tab" id="testDriveTab">BOOK A TEST DRIVE</h2>
@@ -86,10 +101,25 @@
 							<div><label for="bookEmail">E-MAIL</label> <input type="email" id="bookEmail"></div>
 							<div><label for="bookPhone">NUMBER</label> <input type="tel" id="bookPhone"></div>
 						</div>
-						<div class="btnwrap">
-							<a href="#" class="button" id="btn_home">HOME</a><a href="#" class="button" id="btn_send">SEND</a>
+						<div class="btnwrap question">
+							<a href="javascript:;" class="button btn_home">HOME</a><a href="javascript:;" class="button btn_send">SEND</a>
 						</div>
-										
+						<div class="btnwrap bookTestDrive">
+							<a href="javascript:;" class="button btn_home">HOME</a><a href="javascript:;" class="button btn_send">SEND</a>
+						</div>
+						<div class="popLayer pop_question">
+							<div class="textbox">
+								<p>Your enquiry has been registered.</p>
+								<a href="#" class="btn_ok">OK</a>
+							</div>
+						</div>
+
+						<div class="popLayer pop_bookTestDrive">
+							<div class="textbox">
+								<p>The application for test drive has been completed.</p>
+								<a href="#" class="btn_ok">OK</a>
+							</div>
+						</div>				
 					</form>
 				</div>
 				

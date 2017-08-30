@@ -145,6 +145,11 @@ video{
 		height: $header_height;
 		min-height: $header_height;
 	}
+	.ui-footer{
+		position: absolute;
+		bottom:0;
+		z-index: 10;
+	}
 	.contentPageHeader {
 	  position: absolute !important;
 	}
