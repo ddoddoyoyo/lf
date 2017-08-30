@@ -1,5 +1,10 @@
 <?php
 	include_once ($_SERVER[DOCUMENT_ROOT]."/common/commonFunction.php");
+
+	if($_SESSION["LF_TD_DEALER_ID"]){
+	}else{
+		//$tools->alertJavaGo("Faild.","error.php");
+	}
 ?>
 <!DOCTYPE html>
 <html>
@@ -28,7 +33,7 @@
 				$('#application .tab#questionTab').click(function(){
 					$(this).css({'background':'none'});
 					$(this).css({'color':'#252525'});
-					$('#application .tab#testDriveTab').css({'background-color':"#252525","color":"#fff"});
+					$('#application .tab#testDriveTab').css({'background-color':"#aaa","color":"#fff"});
 					$('#application .form#questionForm,#application .btnwrap.question').show();
 					$('#application .form#testDriveForm,#application .btnwrap.bookTestDrive').hide();
 				});
@@ -36,7 +41,7 @@
 				$('#application .tab#testDriveTab').click(function(){
 					$(this).css({'background':'none'});
 					$(this).css({'color':'#252525'});
-					$('#application .tab#questionTab').css({'background-color':"#252525","color":"#fff"});
+					$('#application .tab#questionTab').css({'background-color':"#aaa","color":"#fff"});
 					$('#application .form#testDriveForm, #application .btnwrap.bookTestDrive').show();
 					$('#application .form#questionForm,#application .btnwrap.question').hide();
 				});
@@ -183,6 +188,9 @@
 		<div id="wrap">
 			<div id="contBox">
 			<section data-role="page" id="application" class="container">
+				<div data-role="header" class="header">
+					<a href="#" class="ui-btn btn_sidePanel ui-btn-right"><img src="../images/common/btn_menu.png" alt=""></a>
+				</div>
 				<div data-role="main" class="ui-content">
 					<form action="" class="formwrap">
 						<input type="hidden" name="TAB_GB" value=""/>
@@ -190,13 +198,7 @@
 						<div class="title">
 							<h1>REQUEST FOR <span>REAL TEST DRIVE</span></h1>
 						</div>
-						<h2 class="tab" id="questionTab">QUESTION</h2>
-						<div id="questionForm" class="form">
-							<div><label for="qname">NAME</label><input type="text" id="uname" name="QUESTION_NAME"></div>
-							<div><label for="qemail">E-MAIL</label> <input type="text" id="qemail" name="QUESTION_EMAIL"></div>
-							<div><label for="inquiry">INQUIRY CONTENTS</label> <textarea id="inquiry" name="QUESTION_MEMO"></textarea></div>
-						</div>
-
+						
 						<h2 class="tab" id="testDriveTab">BOOK A TEST DRIVE</h2>
 						<div id="testDriveForm" class="form">
 							<div>
@@ -254,6 +256,12 @@
 							<div><label for="bookName">NAME</label><input type="text" id="bookName" name="TEST_DRIVE_NAME"></div>
 							<div><label for="bookEmail">E-MAIL</label> <input type="email" id="bookEmail" name="TEST_DRIVE_EMAIL"></div>
 							<div><label for="bookPhone">NUMBER</label> <input type="tel" id="bookPhone" name="TEST_DRIVE_NUMBER"></div>
+						</div>
+						<h2 class="tab" id="questionTab">QUESTION</h2>
+						<div id="questionForm" class="form">
+							<div><label for="qname">NAME</label><input type="text" id="uname" name="QUESTION_NAME"></div>
+							<div><label for="qemail">E-MAIL</label> <input type="text" id="qemail" name="QUESTION_EMAIL"></div>
+							<div><label for="inquiry">INQUIRY CONTENTS</label> <textarea id="inquiry" name="QUESTION_MEMO"></textarea></div>
 						</div>
 						<div class="btnwrap question">
 							<a href="javascript:;" id="question" class="button btn_home">HOME</a><a href="javascript:;" class="button btn_send">SEND</a>

@@ -1,18 +1,17 @@
 #application{
 	background-color:$white;
 	.ui-content{
-		padding-top: 0;
 		.formwrap{
 			position: relative;
 			height: 100%;
 			box-sizing:border-box;
 			.title{
 				width: 100%;
-				padding-top:26%;
+				padding-top:24%;
 				background-image: url('../images/intro/000_01_icon_03_requestfordrive.png');
 				background-repeat: no-repeat;
 				background-size: 11%;
-				background-position: center 42%;
+				background-position: center 30%;
 				text-align: center;
 				h1{
 					font-size: $mid-font;
@@ -42,7 +41,7 @@
 				cursor: pointer;
 			}
 			.tab#questionTab{
-				background-color: $dark_gray;
+				background-color: $gray;
 			}
 			.tab#testDriveTab{
 				color: $dark_gray;

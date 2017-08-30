@@ -8,6 +8,7 @@ $(document).ready(function(){
 	$('#drivingMap').on({
 		"pagebeforeshow" : function(){
 			$('#drivingMap .popLayer.imgbox').hide();
+			$('#drivingMap .imgbox.map img').removeClass('twinkle');
 			$('#drivingMap .imgbox.map img:first-child').addClass('twinkle');
 		},
 		"pageshow" :function(){
@@ -16,23 +17,26 @@ $(document).ready(function(){
 
 	$('#drivingMap .imgbox.map img').each(function(){
 		$(this).click(function(){
-			getClassName = $(this).attr('class').split(' ');
-			$(this).removeClass('twinkle');
-			$(this).next().addClass('twinkle');
-			$('#drivingMap .popLayer.imgbox#pop_'+getClassName[1]).fadeIn(500);	
-		});
+			if($(this).hasClass('twinkle')){
+				getClassName = $(this).attr('class').split(' ');
+				$('#drivingMap .imgbox.map img').removeClass('twinkle');
+				$(this).next().addClass('twinkle');
+				$('#drivingMap .popLayer.imgbox#pop_'+getClassName[1]).fadeIn(500);
+			}
+
+		});		
 	});
 	//showroom
 	var imgW,marginR,move,imgLength,totalW,pos;
 	$('#exColor').on({
 		"pagebeforeshow" : function(){
 			pos=$('#exColor .colorPick').css('left').slice(0,-2);
-			//console.log(pos);
+			//console.log($(this).width());
 			imgW = $('#exColor .colorPick img').width();
 			imgLength = $('#exColor .colorPick img').length;
-			marginR = 14;
+			marginR = 16;
 			move = 50;
-			totalW = imgW * imgLength + marginR*imgLength + 20;
+			totalW = imgW * imgLength + marginR*imgLength;
 			$('#exColor .colorPick').css({'width':totalW});
 			$('#exColor .imgwrap .imgText p,#exColor .imgwrap img').hide();
 			$('#exColor .imgwrap .imgText p:first-child,#exColor .imgwrap img:first-child').show();
@@ -47,11 +51,16 @@ $(document).ready(function(){
 
 	$('#exColor .colorBox .btn_next').click(function(){
 		pos=$('#exColor .colorPick').css('left').slice(0,-2);
-		$('#exColor .colorPick').css({'left':-move+parseInt(pos)});
+		var tmpW = totalW - $('#exColor .colorLayout').width();
+		if(pos > - tmpW){
+			$('#exColor .colorPick').css({'left':-move+parseInt(pos)});
+		}		
 	});
 	$('#exColor .colorBox .btn_prev').click(function(){
 		pos=$('#exColor .colorPick').css('left').slice(0,-2);
-		$('#exColor .colorPick').css({'left': move+parseInt(pos)});
+		if(pos<0){
+			$('#exColor .colorPick').css({'left': move+parseInt(pos)});
+		}	
 	});
 
 	$('#exColor .colorBox .colorPick img').each(function(){

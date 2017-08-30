@@ -1,12 +1,6 @@
 <?
-
 $hostname=$_SERVER["HTTP_HOST"]; //도메인명(호스트)명을 구합니다.
-//$uri= $_SERVER['REQUEST_URI']; //uri를 구합니다.
 $query_string=getenv("QUERY_STRING"); // Get값으로 넘어온 값들을 구합니다.
-//$phpself=$_SERVER["PHP_SELF"]; //현재 실행되고 있는 페이지의 url을 구합니다. 
-//$basename=basename($_SERVER["PHP_SELF"]); //현재 실행되고 있는 페이지명만 구합니다.
-
-
 
 ?>
 
@@ -39,7 +33,7 @@ $query_string=getenv("QUERY_STRING"); // Get값으로 넘어온 값들을 구합
 	        var clipboard = new Clipboard('.clipboard');
 
 	        $('#addr_copy .btn_nextPage').click(function(){
-	        	location.href="index.php";
+	        	location.href="index.php?<?=$query_string?>";
 	        })
 	    });
 	};	 
@@ -63,10 +57,3 @@ $query_string=getenv("QUERY_STRING"); // Get값으로 넘어온 값들을 구합
 	</div>
 </body>
 
-
-
- 
-<!-- <input type = "text" id = "copy" value="http://<?=$hostname?>/lf/td/en/index.php?<?=$query_string?>">
-<button class="clipboard" data-clipboard-target="#copy"> COPY </button>
-<br>
-<a href="/lf/td/en/index.php?<?=$query_string?>">NEXT</a> -->

@@ -43,11 +43,11 @@
 			@session_register("LF_TD_DEALER_REGION")	or die("session_register err");
 			@session_register("LF_TD_DEALER_COUNTRY")	or die("session_register err");
 		}else{
-			echo "에러에러";
+			//$tools->alertJavaGo("Faild.","error.php");
 		}
 		
 	}else{
-		echo "에러에러";
+		//$tools->alertJavaGo("Faild.","error.php");
 	}
 
 ?>

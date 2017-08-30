@@ -1,3 +1,11 @@
+<?php
+	include_once ($_SERVER[DOCUMENT_ROOT]."/common/commonFunction.php");
+
+	if($_SESSION["LF_TD_DEALER_ID"]){
+	}else{
+		//$tools->alertJavaGo("Faild.","error.php");
+	}
+?>
 <!DOCTYPE html>
 <html>
 	<head>

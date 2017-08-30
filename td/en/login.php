@@ -22,17 +22,18 @@
 	<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 	<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
 	<script src="../js/device.js"></script>
+	<script src="../js/common.js"></script>
 </head>
 <body>
 	<div id="wrap">
 			<div id="contBox">
 			<section data-role="page" id="login" class="container dealerPage">
 				<div data-role="main" class="ui-content">
-					<form id="Form" name="Form" method="post" action="../common/login_action.php">
+					<form id="Form" name="frm" method="post" action="../common/login_action.php">
 						<div class="inputwrap"><input type="text" name="LMS_ID"  placeholder="E-MAIL ID" /></div><!--value="youn9804@deoham.com"-->
-						<div class="inputwrap"><input type="text" name="LMS_PASSWORD" placeholder="PASSWORD" /></div>
+						<div class="inputwrap"><input type="password" name="LMS_PASSWORD" placeholder="PASSWORD" /></div>
 						<!-- value="123456"-->
-						<a href="javascript:;" class="btn_login">LOGIN</a>
+						<a href="javascript:;" id="LoginAction" class="btn_login">LOGIN</a>
 						<input type="hidden" name="RETURN" value="../../td/en/addr_copy.php"/>
 						<input type="hidden" name="LANGUAGE" value="en"/>
 						<input type="hidden" name="LMS_GB" value="hyundai"/>
