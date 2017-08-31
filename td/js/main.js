@@ -53,13 +53,13 @@ $(document).ready(function(){
 		pos=$('#exColor .colorPick').css('left').slice(0,-2);
 		var tmpW = totalW - $('#exColor .colorLayout').width();
 		if(pos > - tmpW){
-			$('#exColor .colorPick').css({'left':-move+parseInt(pos)});
+			$('#exColor .colorPick').animate({'left':-move+parseInt(pos)});
 		}		
 	});
 	$('#exColor .colorBox .btn_prev').click(function(){
 		pos=$('#exColor .colorPick').css('left').slice(0,-2);
 		if(pos<0){
-			$('#exColor .colorPick').css({'left': move+parseInt(pos)});
+			$('#exColor .colorPick').animate({'left': move+parseInt(pos)});
 		}	
 	});
 
@@ -77,8 +77,6 @@ $(document).ready(function(){
 
 	$('#inColor').on({
 		"pagebeforeshow" : function(){
-			pos=$('#inColor .colorPick').css('left').slice(0,-2);
-			//console.log(pos);
 			imgW = $('#inColor .colorPick img').width();
 			imgLength = $('#inColor .colorPick img').length;
 			marginR = 14;

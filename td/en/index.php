@@ -92,6 +92,7 @@
 		<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 		<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
 		<script src="../js/device.js"></script>
+		<script src="../js/menu.js"></script>
 	</head>
 	<body>
 		<div id="wrap">

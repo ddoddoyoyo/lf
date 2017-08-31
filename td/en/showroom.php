@@ -393,11 +393,11 @@
 				<div data-role="main" class="ui-content">
 					<div class="imgwrap">
 						<img src="../images/showroom/001_03_02_black.jpg" class="black" alt="">
-						<img src="../images/showroom/001_03_02_white.jpg" class="white" alt="">
+						<img src="../images/showroom/001_03_02_beige.jpg" class="beige" alt="">
 						<img src="../images/showroom/001_03_02_gray.jpg" class="gray" alt="">
 						<div class="imgText">
 							<p class='black'>Black</p>
-							<p class='white'>White</p>
+							<p class='beige'>Beige</p>
 							<p class='gray'>Gray</p>
 						</div>
 					</div>
@@ -405,7 +405,7 @@
 						<div class="colorLayout">
 							<div class="colorPick">
 								<img src="../images/showroom/001_03_02_btn_black.png"  class="black" alt="">
-								<img src="../images/showroom/001_03_02_btn_white.png" class="white" alt="">
+								<img src="../images/showroom/001_03_02_btn_beige.png" class="beige" alt="">
 								<img src="../images/showroom/001_03_02_btn_gray.png" class="gray" alt="">
 							</div>
 						</div>
@@ -422,9 +422,9 @@
 					<a href="#" class="ui-btn btn_sidePanel ui-btn-right"><img src="../images/common/btn_menu.png" alt=""></a>
 				</div>
 				<div data-role="main" class="ui-content">
-					<div class="imgwrap">
+					<!-- <div class="imgwrap">
 						<img src="../images/showroom/001_03_03_bg.jpg" alt="">
-					</div>
+					</div> -->
 					<div class="textwrap">
 						<p>Next, Try driving at the driving course.</p>
 					</div>

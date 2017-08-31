@@ -76,10 +76,13 @@
 
 #driveGo{
 	background-color: $white;
-	.imgwrap{
-
-	}
+	background-image: url("../images/showroom/001_03_03_bg.jpg");
+	background-position: center $header_height;
+	background-repeat: no-repeat;
+	background-size: 100% auto;
 	.textwrap{
+		position: absolute;
+		top:77%;
 		text-align: center;
 		padding: 4% 27% 0 27%;
 		p{

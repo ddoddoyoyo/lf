@@ -323,8 +323,14 @@ video {
       width: 31%; }
 
 #driveGo {
-  background-color: #ffffff; }
+  background-color: #ffffff;
+  background-image: url("../images/showroom/001_03_03_bg.jpg");
+  background-position: center 45px;
+  background-repeat: no-repeat;
+  background-size: 100% auto; }
   #driveGo .textwrap {
+    position: absolute;
+    top: 77%;
     text-align: center;
     padding: 4% 27% 0 27%; }
     #driveGo .textwrap p {
@@ -380,7 +386,7 @@ video {
         width: 31px;
         height: 10px; }
     .subcover .wrap .textwrap {
-      margin-top: 10%;
+      margin-top: 7%;
       padding: 0 10%; }
       .subcover .wrap .textwrap p {
         color: #323232;
