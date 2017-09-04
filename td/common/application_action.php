@@ -1,5 +1,8 @@
 <?php 
 	include_once ($_SERVER[DOCUMENT_ROOT]."/common/commonFunction.php");
+	include_once ($_SERVER[DOCUMENT_ROOT]."/lib/mail_class.php");
+
+	$mail = new my_mime_mail();
 	
 	$TEST_DRIVE_NAME = $_POST["TEST_DRIVE_NAME"];
 
@@ -23,11 +26,13 @@
 
 	
 	
-	$DEALER_ID = "youn9804@deoham.com";
+	$DEALER_ID = $_SESSION["LF_TD_DEALER_ID"];
 
-	$DEALER_REGION = "Asia & Pacific";
+	$DEALER_REGION = $_SESSION["LF_TD_DEALER_REGION"];
 
-	$DEALER_COUNTRY = "Korea";
+	$DEALER_COUNTRY = $_SESSION["LF_TD_DEALER_COUNTRY"];
+
+	
 
 	
 	try 
@@ -67,9 +72,6 @@
 							NOW()
 						)";
 				$stmt = $dbh->prepare($sql);
-				/*$stmt->bindParam(':REQ_DEALER_ID',$_SESSION["LF_TD_DEALER_ID"]);
-				$stmt->bindParam(':REQ_DEALER_REGION',$_SESSION["LF_TD_DEALER_REGION"]);
-				$stmt->bindParam(':REQ_DEALER_COUNTRY',$_SESSION["LF_TD_DEALER_COUNTRY"]);*/
 				$stmt->bindParam(':REQ_DEALER_ID',$DEALER_ID);
 				$stmt->bindParam(':REQ_DEALER_REGION',$DEALER_REGION);
 				$stmt->bindParam(':REQ_DEALER_COUNTRY',$DEALER_COUNTRY);	
@@ -81,7 +83,27 @@
 				$stmt->bindParam(':REQ_NUMBER',$TEST_DRIVE_NUMBER);
 
 				if($stmt->execute()){
-					$dbh->commit();	
+					$dbh->commit();
+					
+					
+					//사용자 메일폼
+					$mail->to = $TEST_DRIVE_EMAIL; //받는사람
+					$mail->from = $DEALER_ID; //보내는 사람
+					$mail->subject = "[구매자]테스트 메일 보내기"; //제목
+
+					$mail->body = "테스트 메일";
+					$mail->send();
+
+					//딜러 메일폼
+					$mail->to = $DEALER_ID; //받는사람
+					$mail->from = $TEST_DRIVE_EMAIL; //보내는 사람
+					$mail->subject = "[딜러]테스트 메일 보내기"; //제목
+
+					$mail->body = "테스트 메일";
+					$mail->send();
+
+
+
 					$json["result"] = "success";
 				}else{
 					$dbh->rollBack();

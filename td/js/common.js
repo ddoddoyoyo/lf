@@ -1,5 +1,19 @@
 $(document).ready(function(){
-	
+	$("#LoginAction").click(function(){
+		if($("input[name=LMS_ID]").val() == ""){
+			alert("Please enter your id.");
+			$("input[name=LMS_ID]").focus();
+			return; 
+		}
+		if($("input[name=LMS_PASSWORD]").val() == ""){
+			alert("Please enter your password.");
+			$("input[name=LMS_PASSWORD]").focus();
+			return; 
+		}
+
+
+		frm.submit();
+	});
 });
 
 function like_add(DEALER_ID,DEALER_REGION,DEALER_COUNTRY,PART,BRAND,CAR_GB){
