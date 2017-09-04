@@ -31,7 +31,7 @@
 				float:left;
 				font-size: 14px;
 				font-family: $header_r;
-				border-top: 1px solid $gray;
+				border-top: 1px solid $gray_140;
 				padding:3% 0 2% 0;
 				position: relative;
 				top:5%;
@@ -41,10 +41,10 @@
 				cursor: pointer;
 			}
 			.tab#questionTab{
-				background-color: $gray;
+				background-color: $gray_140;
 			}
 			.tab#testDriveTab{
-				color: $dark_gray;
+				color: $text_50;
 			}
 			.form{
 				position: absolute;
@@ -58,13 +58,13 @@
 					label{
 						color:$point_color_bright;
 						margin:0;
-						span{color:$gray}
+						span{color:$gray_140}
 					}
 					label+select, label+.ui-input-text{
 						margin-left: 5px;
 					}
 					span{
-						color:$dark_gray;
+						color:$text_50;
 					}
 					select.bSelect{
 						width: 22%;
@@ -74,7 +74,7 @@
 						-webkit-appearance: none; 
    						-moz-appearance: none;
    						appearance: none;
-						border-bottom:1px solid $gray;
+						border-bottom:1px solid $gray_140;
 						padding:2px;
 						background-image: url('../images/common/p18_btn_select.png');
 						background-repeat: no-repeat;
@@ -102,7 +102,7 @@
 						border-bottom:1px solid #aaa;
 						box-shadow: none;
 						font-size: 14px;
-						color:$dark_gray;
+						color:$text_50;
 						margin:0;
 					}
 					textarea{
@@ -137,8 +137,8 @@
 					background-repeat: no-repeat;
 					background-size: 20px auto;
 					background-position: 17% center;
-					border: 1px solid $gray;
-					color:$gray !important;
+					border: 1px solid $gray_140;
+					color:$gray_140 !important;
 					padding-left: 12.5%;
 
 				}
@@ -171,12 +171,12 @@
 						color: $text_50;
 						text-align: center;
 						padding: 0 10% 6% 10%;
-						border-bottom: 1px solid $gray;
+						border-bottom: 1px solid $gray_140;
 					}
 					a{
 						text-align: center;
 						display: block;
-						color: $text_50 !important;
+						color: $gray_140 !important;
 						padding:2.5% 0;
 					}
 				}

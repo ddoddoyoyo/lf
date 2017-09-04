@@ -32,16 +32,16 @@
 				});
 				$('#application .tab#questionTab').click(function(){
 					$(this).css({'background':'none'});
-					$(this).css({'color':'#252525'});
-					$('#application .tab#testDriveTab').css({'background-color':"#aaa","color":"#fff"});
+					$(this).css({'color':'rgb(50,50,50)'});
+					$('#application .tab#testDriveTab').css({'background-color':"rgb(140,140,140)","color":"#fff"});
 					$('#application .form#questionForm,#application .btnwrap.question').show();
 					$('#application .form#testDriveForm,#application .btnwrap.bookTestDrive').hide();
 				});
 
 				$('#application .tab#testDriveTab').click(function(){
 					$(this).css({'background':'none'});
-					$(this).css({'color':'#252525'});
-					$('#application .tab#questionTab').css({'background-color':"#aaa","color":"#fff"});
+					$(this).css({'color':'rgb(50,50,50)'});
+					$('#application .tab#questionTab').css({'background-color':"rgb(140,140,140)","color":"#fff"});
 					$('#application .form#testDriveForm, #application .btnwrap.bookTestDrive').show();
 					$('#application .form#questionForm,#application .btnwrap.question').hide();
 				});

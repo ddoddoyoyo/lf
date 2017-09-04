@@ -12,7 +12,7 @@
 			margin-top:47%;
 			p{
 				padding: 0 10% 5% 10%;
-				color:$point_color_bright;
+				color:$dark_gray;
 				text-align: center;
 			}
 			.inputwrap{
@@ -22,7 +22,7 @@
 					border-radius: initial;
 					background:none;
 					border:none;
-					border:1px solid $point_color_bright;
+					border:1px solid $blue;
 					box-shadow: none;
 					color:$dark_gray;
 					margin:0;
@@ -39,7 +39,7 @@
 				text-align: center;
 				padding:3% 0 2% 0;
 				margin-left: 60%;
-				background-color: $point_color_bright;
+				background-color: $blue;
 			}
 		}
 	}

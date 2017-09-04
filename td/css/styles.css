@@ -130,7 +130,7 @@ ul {
     text-align: center;
     border: 1px solid #fff;
     padding: 2.5% 5% 2% 5%;
-    background-color: rgba(0, 0, 0, 0.5); }
+    background-color: rgba(30, 30, 30, 0.5); }
 
 a {
   color: #ffffff !important;
@@ -275,7 +275,7 @@ video {
   .cover .titlewrap .title {
     width: auto;
     display: inline-block;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #646464;
     margin-bottom: 2%;
     padding: 0 2%; }
   .cover .titlewrap p {
@@ -389,7 +389,7 @@ video {
       margin-top: 7%;
       padding: 0 10%; }
       .subcover .wrap .textwrap p {
-        color: #323232;
+        color: #505050;
         margin-bottom: 5%; }
 
 #intro1 .wrap .imgwrap .showroomBox {
@@ -445,7 +445,7 @@ video {
       float: left;
       font-size: 14px;
       font-family: "HyundaiSansHeadRegular", Arial, sans-serif;
-      border-top: 1px solid #aaa;
+      border-top: 1px solid #8c8c8c;
       padding: 3% 0 2% 0;
       position: relative;
       top: 5%;
@@ -459,9 +459,9 @@ video {
       #application .ui-content .formwrap .tab:after {
         clear: both; }
     #application .ui-content .formwrap .tab#questionTab {
-      background-color: #aaa; }
+      background-color: #8c8c8c; }
     #application .ui-content .formwrap .tab#testDriveTab {
-      color: #252525; }
+      color: #323232; }
     #application .ui-content .formwrap .form {
       position: absolute;
       top: 34%;
@@ -474,11 +474,11 @@ video {
           color: #59a9d4;
           margin: 0; }
           #application .ui-content .formwrap .form div label span {
-            color: #aaa; }
+            color: #8c8c8c; }
         #application .ui-content .formwrap .form div label + select, #application .ui-content .formwrap .form div label + .ui-input-text {
           margin-left: 5px; }
         #application .ui-content .formwrap .form div span {
-          color: #252525; }
+          color: #323232; }
         #application .ui-content .formwrap .form div select.bSelect {
           width: 22%;
           display: inline-block !important;
@@ -487,7 +487,7 @@ video {
           -webkit-appearance: none;
           -moz-appearance: none;
           appearance: none;
-          border-bottom: 1px solid #aaa;
+          border-bottom: 1px solid #8c8c8c;
           padding: 2px;
           background-image: url("../images/common/p18_btn_select.png");
           background-repeat: no-repeat;
@@ -495,7 +495,8 @@ video {
           background-size: 16px auto;
           margin-right: 2px;
           font-size: 15px;
-          text-align: center; }
+          border-radius: initial;
+          box-shadow: none; }
         #application .ui-content .formwrap .form div select.bSelect#bMonth, #application .ui-content .formwrap .form div select.bSelect#bDay, #application .ui-content .formwrap .form div select.bSelect#bHour, #application .ui-content .formwrap .form div select.bSelect#bMin {
           width: 15%; }
         #application .ui-content .formwrap .form div select.bSelect#bYear {
@@ -510,7 +511,7 @@ video {
           border-bottom: 1px solid #aaa;
           box-shadow: none;
           font-size: 14px;
-          color: #252525;
+          color: #323232;
           margin: 0; }
         #application .ui-content .formwrap .form div textarea {
           resize: none;
@@ -535,8 +536,8 @@ video {
         background-repeat: no-repeat;
         background-size: 20px auto;
         background-position: 17% center;
-        border: 1px solid #aaa;
-        color: #aaa !important;
+        border: 1px solid #8c8c8c;
+        color: #8c8c8c !important;
         padding-left: 12.5%; }
       #application .ui-content .formwrap .btnwrap .button.btn_send {
         left: 70%;
@@ -565,11 +566,11 @@ video {
           color: #323232;
           text-align: center;
           padding: 0 10% 6% 10%;
-          border-bottom: 1px solid #aaa; }
+          border-bottom: 1px solid #8c8c8c; }
         #application .ui-content .formwrap .popLayer .textbox a {
           text-align: center;
           display: block;
-          color: #323232 !important;
+          color: #8c8c8c !important;
           padding: 2.5% 0; }
 
 .content {
@@ -780,7 +781,7 @@ video {
   background-size: cover; }
 
 #inColor .colorBox {
-  background-color: #252525; }
+  background-color: #3c3c41; }
   #inColor .colorBox .colorLayout .colorPick {
     left: 53%;
     transform: translate(-50%, -50%); }
@@ -866,7 +867,7 @@ video {
       margin-top: 47%; }
       .dealerPage .ui-content form p {
         padding: 0 10% 5% 10%;
-        color: #59a9d4;
+        color: #3c3c41;
         text-align: center; }
       .dealerPage .ui-content form .inputwrap {
         padding: 0 10%;
@@ -875,9 +876,9 @@ video {
           border-radius: initial;
           background: none;
           border: none;
-          border: 1px solid #59a9d4;
+          border: 1px solid #0072bc;
           box-shadow: none;
-          color: #252525;
+          color: #3c3c41;
           margin: 0;
           border-radius: 7px; }
           .dealerPage .ui-content form .inputwrap .ui-input-text input {
@@ -888,7 +889,7 @@ video {
         text-align: center;
         padding: 3% 0 2% 0;
         margin-left: 60%;
-        background-color: #59a9d4; }
+        background-color: #0072bc; }
 
 .sidePanel_wrap {
   position: absolute;
