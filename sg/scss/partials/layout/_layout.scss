@@ -312,10 +312,10 @@ video{
 				transform:translateY(-50%);
 				width: 2%;
 				cursor: pointer;
-				&:nth-child(1){
+				&.prevImg{
 					left:5%;
 				}
-				&:nth-child(2){
+				&.nextImg{
 					right:5%;
 				}
 			}

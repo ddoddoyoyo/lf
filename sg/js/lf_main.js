@@ -1,22 +1,22 @@
 var totalSlides,slideWidth;
 var pos,loc=0;
 $(document).ready(function(){
-	$('#pageMap p').click(function(){
-		location.href = "#contentPage";
-		setTimeout(function(){
-				$.fn.fullpage.moveTo(3,1);
-		},500);
-	});
+	// $('#pageMap p').click(function(){
+	// 	location.href = "#contentPage";
+	// 	setTimeout(function(){
+	// 			$.fn.fullpage.moveTo(3,1);
+	// 	},500);
+	// });
 	$('#pageMap').on({
 		"pagebeforeshow": function(){
 			loc=0;
 			console.log(loc);
+			//$.fn.fullpage.setAutoScrolling(true);
 			$.fn.fullpage.destroy('all');
 		}
 	})
 	$('#contentPage').on({
 		"pagebeforeshow": function(){
-
 			$('#fullpage').fullpage({
 				verticalCentered: false,
 				'onLeave' :function(anchorLink, index){//beforePage
@@ -191,12 +191,31 @@ function slidePrevImg(pageId,totalSlides,slideWidth,pos){//fullpage.js
 }
 
 function fnAfterSlideLoad (direction) { //fullpage.js : afterSlideLoads에서 call
-	if (direction == 'right' || typeof direction === 'undefined') {
+	//console.log('_tmpIndex1 : '+ _tmpIndex);
+	//if (_tmpIndex == 0)
+
+	if (typeof direction === 'undefined') {
+		console.log(_tmpIndex);
+		if (_tmpIndex === 0) {
+			console.log('und1');
+			_index[_slide] = 1;
+		}
+		else {
+			console.log('und2');
+			_index[_slide] = (_tmpIndex) ? _tmpIndex + 1 : _index[_slide] + 1;	
+		}
+		
+		_tmpIndex = 0;
+		slideNextImg(_slide, totalSlides, slideWidth, _index[_slide]);
+	}
+	else if (direction == 'right') {
+		console.log('right');
 		_index[_slide] = (_tmpIndex) ? _tmpIndex + 1 : _index[_slide] + 1;
 		_tmpIndex = 0;
 		slideNextImg(_slide, totalSlides, slideWidth, _index[_slide]);
 	}
-	if (direction == 'left') {
+	else if (direction == 'left') {
+		console.log('left');
 		_index[_slide] = _index[_slide] - 1;
 		slidePrevImg(_slide, totalSlides, slideWidth, _index[_slide]);
 	}

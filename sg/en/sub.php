@@ -61,6 +61,9 @@
                     }//if
                     reader.readAsDataURL(input.files[0]);
                 }
+                // $('#contentPage .footer').click(function(){
+                //     location.href="#pageMap";
+                // })
             });
         </script>
 
@@ -209,7 +212,7 @@
                         <h1>Sonata New Rise</h1>
                     </div>
                 </div>
-                <div data-role="footer" >
+                <div data-role="footer" class="footer">
                     <a href="#pageMap">RETURN</a>
                 </div>
                 <div data-role="main" id="fullpage" class="ui-content">

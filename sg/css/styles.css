@@ -294,9 +294,9 @@ video {
       transform: translateY(-50%);
       width: 2%;
       cursor: pointer; }
-      .slidePage .textwrap .slideControler > img:nth-child(1) {
+      .slidePage .textwrap .slideControler > img.prevImg {
         left: 5%; }
-      .slidePage .textwrap .slideControler > img:nth-child(2) {
+      .slidePage .textwrap .slideControler > img.nextImg {
         right: 5%; }
     .slidePage .textwrap .slideControler .indicator {
       position: absolute;

@@ -50,13 +50,13 @@ $(document).ready(function(){
 
 
 
-function pageMapNav(pageN){
+function pageMapNav(pageN){ //menu
 	//console.log(window.location.href.search('#pageMap'));
 	console.log(loc);
 	//if(window.location.href.search('#pageMap') > -1){
 	if(loc == 0) {
 		//location.href = "#contentPage";
-		$.mobile.changePage('#contentPage');
+		//$.mobile.changePage('#contentPage');
 		setTimeout(function(){
 			$.fn.fullpage.moveTo(pageN);
 		},500);
@@ -67,15 +67,16 @@ function pageMapNav(pageN){
 }
 
 
-function pageMapNav1(pageN, nbhnn){
+function pageMapNav1(pageN, nbhnn){ //pageMap 
 	//console.log(window.location.href.search('#pageMap'));
-	console.log(loc);
 	$('#pageMap .close').click();
 	//if(window.location.href.search('#pageMap') > -1){
 	if(loc == 0) {
 		$('#btnPageMove').click();
 		//location.href = "#contentPage";
 		setTimeout(function(){
+			$('.slideControler .fp-controlArrow').remove();
+			$('.slideControler').append('<img src="../images/button/indicator_btn_right.png" class="nextImg fp-controlArrow  fp-next" alt=""><img src="../images/button/indicator_btn_left.png" class="prevImg fp-controlArrow  fp-prev" alt="">');
 			$.fn.fullpage.moveTo(pageN, nbhnn);
 		},500);
 	}

@@ -13,7 +13,7 @@ var arr3 = [
 				"Cascading grille","Chrome Garnish","Front hood","Chrome Molding"
 			],
 			[	//링크, 호출 방식 arr3[0][1][1]
-				"3","3,1","3,2","3,4"
+				"3,0","3,1","3,2","3,4"
 			]
 		],
 		[	//FRONT 하위의 S, 호출 방식 arr3[0][2]

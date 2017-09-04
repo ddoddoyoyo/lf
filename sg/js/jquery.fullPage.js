@@ -422,7 +422,7 @@
 		*/
 		function moveTo(sectionAnchor, slideAnchor){
 			var destiny = getSectionByAnchor(sectionAnchor);
-
+			console.log(slideAnchor);
 			if (typeof slideAnchor !== 'undefined'){
 				 _tmpIndex = slideAnchor;
 				scrollPageAndSlide(sectionAnchor, slideAnchor);
