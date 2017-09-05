@@ -85,7 +85,7 @@
 					location.href="showroom.php";
 				});
 				$("#intro2 .btn_testdrive").click(function(){
-					location.href="testdrive.php";
+					location.href="testdriveIntro.php";
 				});
 			})
 		</script>
@@ -128,8 +128,8 @@
 						</div>
 						<div class="textwrap">	
 							<p>Nice meet to you!</p>
-							<p>Thank you for visiting KONA’s virtual driving experience service.</p>
-							<p>Through the virtual experience, you can enjoy the attractive features of KONA.</p>
+							<p>Thank you for visiting Sonata New Rise's virtual driving experience service.</p>
+							<p>Through the virtual experience, you can enjoy the attractive features of Sonata New Rise.</p>
 							<p>After it is finished, an actual driving session will be arranged for you.</p>
 						</div>
 						<div class="button">

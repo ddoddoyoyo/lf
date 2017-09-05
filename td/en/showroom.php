@@ -24,16 +24,18 @@
 			// 	 $.mobile.changePage.defaults.changeHash = false;
 			// });
 		</script>
+		<script src="../js/jquery.reel.js"></script>
 		<script src="../js/device.js"></script>
 		<script src="../js/menu.js"></script>
 		<script src="../js/main.js"></script>
 		<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 		<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+		<script src="../js/jquery.ui.touch-punch.min.js"></script>
 		
 		<script>
 			$(document).ready(function(){
 				$('#driveGo .btn_box').click(function(){
-					location.href="testdrive.php";
+					location.href="testdriveIntro.php";
 				});
 			})
 		</script>
@@ -337,25 +339,22 @@
 				</div>
 				<div data-role="main" class="ui-content">
 					<div class="imgwrap">
+						<!-- <img src="../images/sonata_360VR/WhiteCream/00001.jpg" class="reel" id="ex_a" data-images="../images/sonata_360VR/WhiteCream/#####.jpg" data-frames="60" data-frame="1" data-rows="1" data-row="1"> -->
 						<img src="../images/showroom/001_03_01_WhiteCream.jpg" class="WhiteCream" alt="">
-						<img src="../images/showroom/001_03_01_IronSilver.jpg" class="IonSilver" alt="">
 						<img src="../images/showroom/001_03_01_LunaGray.jpg" class="LunaGray" alt="">
 						<img src="../images/showroom/001_03_01_MidnightBlack.jpg" class="MidnightBlack" alt="">
 						<img src="../images/showroom/001_03_01_ValentineRed.jpg" class="ValentineRed" alt="">
 						<img src="../images/showroom/001_03_01_PanteraGray.jpg" class="PanteraGray" alt="">
 						<img src="../images/showroom/001_03_01_GrandBlue.jpg" class="GrandBlue" alt="">
-						<img src="../images/showroom/001_03_01_LuminousBeige.jpg" class="LuminousBeige" alt="">
 						<img src="../images/showroom/001_03_01_ShadeBronze.jpg" class="ShadeBronze" alt="">
 						<img src="../images/showroom/001_03_01_BlueSapphire.jpg" class="BlueSapphire" alt="">
 						<div class="imgText">
 							<p class="WhiteCream">White Cream</p>
-							<p class="IonSilver">Ion Silver</p>
 							<p class="LunaGray">Luna Gray</p>
 							<p class="MidnightBlack">Midnight Black</p>
 							<p class="ValentineRed">Valentine Red</p>
 							<p class="PanteraGray">Pantera Gray</p>
 							<p class="GrandBlue">Grand Blue</p>
-							<p class="LuminousBeige">Luminous Beige</p>
 							<p class="ShadeBronze">Shade Bronze</p>
 							<p class="BlueSapphire">Blue Sapphire</p>
 						</div>
@@ -366,13 +365,11 @@
 						<div class="colorLayout">
 							<div class="colorPick">
 								<img src="../images/showroom/001_03_01_btn_WhiteCream.png"  class="WhiteCream" alt="">
-								<img src="../images/showroom/001_03_01_btn_IonSilver.png" class="IonSilver" alt="">
 								<img src="../images/showroom/001_03_01_btn_LunaGray.png"  class="LunaGray" alt="">
 								<img src="../images/showroom/001_03_01_btn_MidnightBlack.png" class="MidnightBlack"  alt="">
 								<img src="../images/showroom/001_03_01_btn_ValentineRed.png" class="ValentineRed"  alt="">
 								<img src="../images/showroom/001_03_01_btn_PanteraGray.png" class="PanteraGray"  alt="">
 								<img src="../images/showroom/001_03_01_btn_GrandBlue.png" class="GrandBlue"  alt="">
-								<img src="../images/showroom/001_03_01_btn_LuminousBeige.png" class="LuminousBeige"  alt="">
 								<img src="../images/showroom/001_03_01_btn_ShadeBronze.png" class="ShadeBronze"  alt="">
 								<img src="../images/showroom/001_03_01_btn_BlueSapphire.png" class="BlueSapphire"  alt="">
 							</div>

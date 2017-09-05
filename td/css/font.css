@@ -1,0 +1,17 @@
+@font-face {
+  font-family: "HyundaiSansHeadRegular";
+  text-transform: normal;
+  font-weight: normal;
+  src: url("../../fonts/HyundaiSansHead.eot") format("eot"), url("../../fonts/HyundaiSansHead.woff2") format("woff2"), url("../../fonts/HyundaiSansHead.woff") format("woff"), url("../../fonts/HyundaiSansHead.ttf") format("truetype"), url("../../fonts/HyundaiSansHead.otf") format("opentype"); }
+
+@font-face {
+  font-family: "HyundaiSansHeadMedium";
+  text-transform: normal;
+  font-weight: normal;
+  src: url("../../fonts/HyundaiSansHeadMedium.eot") format("eot"), url("../../fonts/HyundaiSansHeadMedium.woff2") format("woff2"), url("../../fonts/HyundaiSansHeadMedium.woff") format("woff"), url("../../fonts/HyundaiSansHeadMedium.ttf") format("truetype"), url("../../fonts/HyundaiSansHeadMedium.otf") format("opentype"); }
+
+@font-face {
+  font-family: "HyundaiSansHeadLight";
+  text-transform: normal;
+  font-weight: normal;
+  src: url("../../fonts/HyundaiSansHead-Light.eot") format("eot"), url("../../fonts/HyundaiSansHead-Light.woff2") format("woff2"), url("../../fonts/HyundaiSansHead-Light.woff") format("woff"), url("../../fonts/HyundaiSansHead-Light.ttf") format("truetype"), url("../../fonts/HyundaiSansHead-Light.otf") format("opentype"); }

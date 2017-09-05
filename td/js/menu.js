@@ -22,7 +22,7 @@ $(document).ready(function(){
 		location.href="../en/showroom.php";
 	});
 	$('a#m_testdrive').click(function(){
-		location.href="../en/testdrive.php";
+		location.href="../en/testdriveIntro.php";
 	});
 	$('a#m_request').click(function(){
 		location.href="../en/application.php";

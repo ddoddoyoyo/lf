@@ -1,0 +1,105 @@
+<?
+
+include_once ($_SERVER[DOCUMENT_ROOT]."/common/commonFunction.php");
+
+$DEALER_ID = $_SESSION["LF_TD_DEALER_ID"]; //딜러 아이디
+$DEALER_REGION = $_SESSION["LF_TD_DEALER_REGION"]; // 딜러 대륙
+$DEALER_COUNTRY = $_SESSION["LF_TD_DEALER_COUNTRY"]; //딜러 국가
+
+?>
+<!DOCTYPE html>
+<html >
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<title>test</title>
+<!-- <link rel="stylesheet" href="css/font.css"> -->
+<link rel="stylesheet" href="../css/menu.css">
+<link rel="stylesheet" href="../css/testdrive.css">
+<link rel="stylesheet" href="../css/testdrive_animate.css">
+</head>
+
+<body class="tdBody">
+	<div class="loading">
+		<div class="loadingImg"><img src="../images/testdrive/icon_loading_gif.gif" alt="loading SONATA" /></div>
+		<h1>Loading...</h1>
+		<p>SONATA's virtual driving service<br>is being prepared.</p>
+	</div>
+	<div class="menuWrap"></div>
+	<div class="popup">
+		<div class="popupWrap">
+			<div class="popupHead">
+				<div class="popupClose"></div>
+				<div class="popupTitle">
+					<div class="popupPhoto" style="background:url('../images/testdrive/profile_defalt.png') center; background-size:cover;"></div>
+					<div class="popupTitleTxt">
+						<span>DEALER</span>'S<br>COMMENTS
+					</div>
+				</div>
+			</div>
+			<div class="popupDesc el"></div>
+			<div class="popupNaviWrap">
+				<div class="popupNaviPrev"><a href="#">prev</a></div>
+				<div class="popupNavi el"></div>
+				<div class="popupNaviNext"><a href="#">next</a></div>
+			</div>
+		</div>
+	</div>
+	<div class="point">
+		<div class="pointHead">
+			<div class="pointHeart"></div>
+			<div class="pointClose"></div>
+		</div>
+		<div class="pointWrap">
+			<div class="pointTitle el"></div>
+			<div class="pointDesc el"></div>
+			<div class="pointBtn">VIEW MORE</div>
+		</div>
+	</div>
+	<div class="scrollWrap">
+		<div id="car">
+			<img src="../images/testdrive/car_glow_1.png" class="carGlow carGlow1" />
+			<img src="../images/testdrive/car_glow_2.png" class="carGlow carGlow2" />
+			<img src="../images/testdrive/car_glow_3.png" class="carGlow carGlow3" />
+			<img src="../images/testdrive/finger_sliding.png" class="carFinger" />
+			<p>Please proceed with<br>the test drive via <strong>the slide.</strong></p>
+			<img src="../images/testdrive/car.png" class="car" alt="SONATA" />
+		</div>
+	</div>
+	<div class="roadBg">
+		<div id="roadBg1" class="bg"></div>
+		<div id="roadBg2" class="bg"></div>
+		<div id="roadBg3" class="bg"></div>
+		<div id="roadBg4" class="bg"></div>
+		<div id="roadBg5" class="bg"></div>
+		<div id="roadBg6" class="bg"></div>
+		<div id="roadBg7" class="bg"></div>
+		<div id="roadBg8" class="bg"></div>
+		<div id="roadBg9" class="bg"></div>
+		<div id="roadBg10" class="bg"></div>`
+		<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="180px" height="16000px" viewBox="0 0 180 16000" enable-background="new 0 0 180 16000" xml:space="preserve">
+			<path id="mycurve" fill="none" d="M111.2,0v687.5v5071c0,0,0.3,100.7,10.3,206s18,190,18,238s-4.7,141.3-31.3,256.7
+	c-26.7,115.3-28.7,212.7-26,258s11.3,163.3,19.3,224.7c8,61.3,25.7,262.7,13.7,414.7s-38.4,374.1-21.9,564.6s17.1,275.4,17.1,346.4
+	s0,1405,0,1405s-0.5,35.3,4.5,74s32.3,218.5,32.3,321s1,124.3-13.7,243s-22,216-22,264.7s0,535.3,0,535.3s0.4,35.3-2.8,59
+	s-32,204-35.5,272s-5.5,150.5,3,191.5s25,115.5,44,190.5s29.5,151,29.5,179.5s1.8,106.2-19.5,209.5s-61,247.3-61,284
+	s4.3,86.7,11.7,121.3c7.3,34.7,30.3,139.9,30.3,223.2s0,983.8,0,983.8v81.2v71.8v31.2c0,0-0.3,32-2.8,45.7s-20.8,103.8-22.8,122.6
+	s-2.8,37.3-2.8,51.3s0,458.8,0,458.8s1.2,125,21.2,154s19,156.7,19,156.7s-2.3,34.7,8.7,46.3s48.3,48.7,48.3,48.7" />
+		</svg>
+	</div>
+
+<script>
+var dealerId = "<?= $DEALER_ID ?>";
+var dealerRegion = "<?= $DEALER_REGION ?>";
+var dealerCountry = "<?= $DEALER_COUNTRY ?>";
+var brand = "hyundai";
+var carGb = "LF";
+</script>
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="../js/menu.js"></script>
+<script src="../js/testdrive.js"></script>
+<script src="../js/testdrive_en.js"></script>
+
+</body>
+</html>
