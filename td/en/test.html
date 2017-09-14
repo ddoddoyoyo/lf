@@ -16,6 +16,7 @@
 			// 	 $.mobile.changePage.defaults.changeHash = false;
 			// });
 		</script>
+		<script src="../js/jquery.reel.js"></script>
 		<script src="../js/device.js"></script>
 		<script src="../js/menu.js"></script>
 		<script src="../js/main.js"></script>
@@ -23,7 +24,6 @@
 		<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
 		<script src="../js/jquery.ui.touch-punch.min.js"></script>
 		
-		<script src="../js/jquery.reel.js"></script>
 		<script>
 			$(document).ready(function(){
 				$('#driveGo .btn_box').click(function(){
@@ -35,25 +35,6 @@
 	<body>
 		<div id="wrap">
 			<div id="contBox">
-			<div class="vr colorPage">
-				<div class="textwrap">
-					<p>Turn the image <span>left or right.</span></p>
-				</div>
-				<div class="imgwrap vrwrap">
-					<img src="../images/sonata_360VR/WhiteCream/00001.jpg" class="reel" id="ex_color" data-images="../images/sonata_360VR/WhiteCream/#####.jpg" data-frames="60" data-frame="4" data-rows="1" data-row="1">
-					<div class="imgText">
-						<p class="WhiteCream">White Cream</p>
-						<p class="LunaGray">Luna Gray</p>
-						<p class="MidnightBlack">Midnight Black</p>
-						<p class="ValentineRed">Valentine Red</p>
-						<p class="PanteraGray">Pantera Gray</p>
-						<p class="GrandBlue">Grand Blue</p>
-						<p class="ShadeBronze">Shade Bronze</p>
-						<p class="BlueSapphire">Blue Sapphire</p>
-					</div>
-				</div>				
-			</div>
-			<div class="blackBG"></div>
 			<section data-role="page" id="showroom" class="container cover">
 				<div data-role="header" class="header">
 					<a href="#" class="ui-btn btn_sidePanel ui-btn-right"><img src="../images/common/btn_menu.png" alt=""></a>
@@ -351,6 +332,27 @@
 					<h1>Exterior Color</h1>
 				</div>
 				<div data-role="main" class="ui-content">
+					<div class="imgwrap">
+						<!-- <img src="../images/sonata_360VR/WhiteCream/00001.jpg" class="reel" id="ex_a" data-images="../images/sonata_360VR/WhiteCream/#####.jpg" data-frames="60" data-frame="1" data-rows="1" data-row="1"> -->
+						<img src="../images/showroom/001_03_01_WhiteCream.jpg" class="WhiteCream" alt="">
+						<img src="../images/showroom/001_03_01_LunaGray.jpg" class="LunaGray" alt="">
+						<img src="../images/showroom/001_03_01_MidnightBlack.jpg" class="MidnightBlack" alt="">
+						<img src="../images/showroom/001_03_01_ValentineRed.jpg" class="ValentineRed" alt="">
+						<img src="../images/showroom/001_03_01_PanteraGray.jpg" class="PanteraGray" alt="">
+						<img src="../images/showroom/001_03_01_GrandBlue.jpg" class="GrandBlue" alt="">
+						<img src="../images/showroom/001_03_01_ShadeBronze.jpg" class="ShadeBronze" alt="">
+						<img src="../images/showroom/001_03_01_BlueSapphire.jpg" class="BlueSapphire" alt="">
+						<div class="imgText">
+							<p class="WhiteCream">White Cream</p>
+							<p class="LunaGray">Luna Gray</p>
+							<p class="MidnightBlack">Midnight Black</p>
+							<p class="ValentineRed">Valentine Red</p>
+							<p class="PanteraGray">Pantera Gray</p>
+							<p class="GrandBlue">Grand Blue</p>
+							<p class="ShadeBronze">Shade Bronze</p>
+							<p class="BlueSapphire">Blue Sapphire</p>
+						</div>
+					</div>
 					<div class="colorBox">
 						<div class="btn_prev btn"></div>
 						<div class="btn_next btn"></div>

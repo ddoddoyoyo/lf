@@ -45,13 +45,3 @@
 	</div>
 </body>
 </html>
-<!-- <h3>Login</h3>
-<form id="Form" name="Form" method="post" action="../common/login_action.php">
-	I  D : <input type="text" name="LMS_ID" value="youn9804@deoham.com" /><br/>
-	PASS : <input type="text" name="LMS_PASSWORD" value="123456" /><br/>
-	<input type="submit" /><br/>
-	<input type="hidden" name="RETURN" value="../../td/en/addr_copy.php"/>
-	<input type="hidden" name="LANGUAGE" value="en"/>
-	<input type="hidden" name="LMS_GB" value="hyundai"/>
-	<input type="hidden" name="TYPE" value="td"/>
-</form> -->

@@ -141,9 +141,6 @@
 							NOW()
 						)";
 				$stmt = $dbh->prepare($sql);
-				/*$stmt->bindParam(':REQ_DEALER_ID',$_SESSION["LF_TD_DEALER_ID"]);
-				$stmt->bindParam(':REQ_DEALER_REGION',$_SESSION["LF_TD_DEALER_REGION"]);
-				$stmt->bindParam(':REQ_DEALER_COUNTRY',$_SESSION["LF_TD_DEALER_COUNTRY"]);*/
 				$stmt->bindParam(':REQ_DEALER_ID',$DEALER_ID);
 				$stmt->bindParam(':REQ_DEALER_REGION',$DEALER_REGION);
 				$stmt->bindParam(':REQ_DEALER_COUNTRY',$DEALER_COUNTRY);	

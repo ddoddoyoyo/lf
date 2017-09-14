@@ -1,10 +1,18 @@
+* {
+	-ms-user-select: none; 
+	-moz-user-select: -moz-none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
+}
+
 body { background-color:#1A1A1A; }
 
 body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, form, fieldset, p, blockquote, button, th, td, textarea, input, header, nav, section, article, aside, footer, hgroup  { margin:0; padding:0; }
 hr, legend, caption { display:none; }
 img, fieldset { border:0 none;}
-body, h1, h2, h3, h4, h5, dl, dt, dd, th, td, p, form, fieldset, legend, input, select, div, textarea, address { font-size:16pt; font-family:'HyundaiSansHead-Light', Arial, sans-serif; color:#000; font-style:normal; }
-.ie8 body, .ie8 h1, .ie8 h2, .ie8 h3, .ie8 h4, .ie8 h5, .ie8 dl, .ie8 dt, .ie8 dd, .ie8 th, .ie8 td, .ie8 p, .ie8 form, .ie8 fieldset, .ie8 legend, .ie8 input, .ie8 select, .ie8 div, .ie8 textarea, .ie8 address { font-size:11pt; font-family:'HyundaiSansHead-Light'; color:#000; font-style:normal; }
+body, h1, h2, h3, h4, h5, dl, dt, dd, th, td, p, form, fieldset, legend, input, select, div, textarea, address { font-size:16pt; font-family:'HyundaiSansText', Arial, sans-serif; color:#000; font-style:normal; }
+.ie8 body, .ie8 h1, .ie8 h2, .ie8 h3, .ie8 h4, .ie8 h5, .ie8 dl, .ie8 dt, .ie8 dd, .ie8 th, .ie8 td, .ie8 p, .ie8 form, .ie8 fieldset, .ie8 legend, .ie8 input, .ie8 select, .ie8 div, .ie8 textarea, .ie8 address { font-size:11pt; font-family:'HyundaiSansText'; color:#000; font-style:normal; }
 input[type='password'] { font-family:arial; }
 ul, ol, li { list-style:none; }
 img, input, select, textarea, label { vertical-align:middle; }
@@ -44,7 +52,7 @@ body {
 	overflow:hidden;
 	position:absolute;
 	background:rgba(0, 0, 0, .75);
-	z-index:6;
+	z-index:2;
 }
 
 .scrollWrapBgHide {
@@ -110,11 +118,12 @@ body {
 	position:fixed;
 	width:100%;
 	height:auto;
-	transform-origin:50% 50%;
+	transform-origin:50% 30%;
 	/* background:url('../images/testdrive/testdrive_car.png');
 	background-size:cover; */
-	z-index:6;
+	z-index:2;
 	top:0;
+	left:-11.79%;
 	/* height:250px; */
 	/* width:300px;
 	height:300px;
@@ -123,14 +132,30 @@ body {
 	/* transform:translateX(-50%) translateY(-50%); */
 }
 
+
 #car .car {
 	width:100%;
 	position:absolute;
 }
+#car .carNight {
+	width:100%;
+	position:absolute;
+	opacity:0;
+}
+
+.loadingText {
+	position:fixed;
+	width:100%;
+	height:auto;
+	z-index:7;
+}
+.loadingText > p { bottom:20%; position:absolute; text-align:center; width:100%; color:#FFF; font-size:14pt; }
+.loadingText > p > strong { font-weight:400; color:#3CB4EB; }
 
 svg {
 	position:absolute;
 }
+
 
 .point {
 	position:fixed;
@@ -143,13 +168,12 @@ svg {
 	/* opacity:0; */
 	display:none;
 }
-
 .point .pointHead {
 	padding-bottom:10px;
 }
-
 .point .pointHeart {
 	float: left;
+	font-family:'HyundaiSansHeadRegular';
 	background:url(../images/testdrive/icon_testdrive_count.png) no-repeat;
 	background-size:contain;
 	padding:5px 0 0 35px;
@@ -159,7 +183,6 @@ svg {
 	font-size:14pt;
 	height:26px;
 }
-
 .point .pointClose {
 	background:url(../images/testdrive/course_popup_btn_close_01.png) no-repeat center;
 	width:30px;
@@ -168,7 +191,6 @@ svg {
 	float: right;
 	cursor:pointer;
 }
-
 .point .pointWrap {
 	background: #FFF;
 	/* bottom: 0; */
@@ -177,33 +199,61 @@ svg {
 	width:100%;
 	border-radius: 5px 5px 0 0;
 }
-
 .point .pointTitle {
+	font-family:'HyundaiSansHeadMedium';
 	color: #3cb4eb;
 	padding: 5% 0;
 	text-align: center;
 	font-size: 18pt;
 	font-weight: 700;
 }
-
 .point .pointDesc {
 	padding: 0 8%;
 	font-size: 11pt;
 	line-height: 125%;
+	/* color:#606065; */
 }
-
 .point .pointBtn {
+	margin:20px auto;
+	text-align:center;
+}
+.point .pointBtn a {
+	font-family:'HyundaiSansHeadRegular';
 	background: #3c3c41 url(../images/testdrive/icon_testdrive_btn_viewmore.png) no-repeat 12% center;
 	padding: 3% 8% 3% 16%;
 	font-size: 12pt;
 	color: #3CB4EB;
 	border-radius:5px;
 	background-size: 13%;
-	width:35%;
+	display:inline-block;
 	font-weight: 700;
-	margin:20px auto;
-	cursor:pointer;
 }
+
+
+.nextPoint {
+	position:fixed;
+	z-index:8;
+	bottom:0;
+	width:90%;
+	left:5%;
+	display:none;
+}
+.nextPoint .nextPointIcon {
+	background:url(../images/testdrive/icon_testdrive_sign.png) no-repeat center;
+	height:70px;
+	width:100%;
+	background-size:contain;
+}
+.nextPoint .nextPointTitle {
+	font-family:'HyundaiSansHeadMedium';
+	color:#FFF;
+	padding:5% 0;
+	text-align:center;
+	font-size: 18pt;
+	font-weight: 700;
+	text-shadow: 0px 0px 2px #000;
+}
+
 
 .popup {
 	position:fixed;
@@ -217,23 +267,19 @@ svg {
 	color:#FFF;
 	clear:both;
 }
-
 .popup .popupWrap {
 	background: #FFF;
 	width: 90%;
 	left: 5%;
 	border-radius:5px;
 }
-
 .popup .popupHead {
 	background:#252525;
 	padding:10px;
 }
-
 .popup .popupTitle {
 	float:left;
 }
-
 .popup .popupPhoto {
 	width:45px;
 	height:45px;
@@ -262,30 +308,25 @@ svg {
 	background-size: 59%;
 	cursor:pointer;
 }
-
 .popup .popupDesc {
 	clear:both;
 	position:relative;
 }
-
 .popup .popupDesc img {
 	width:90%;
 	margin:0 auto;
 	height:auto;
 	padding-bottom:6%;
 }
-
 .popup .popupDesc > div {
 	/* width:100%; */
 	text-align: center;
 }
-
 .popup .popupDesc > div > p {
 	font-size: 11pt;
 	padding:6% 5% 6% 5%;
 	text-align: left;
 }
-
 .popup .popupNaviWrap {
 	padding:10px 10px 10px 10px;
 	clear:both;
@@ -350,26 +391,26 @@ svg {
 
 
 .cloud {
-	width:150%;
-	height:500px;
+	width:200%;
+	height:400px;
 	overflow:hidden;
 	position:absolute;
-	z-index:7;
+	z-index:6;
 }
 
 .cloud1 {
 	background:url('../images/testdrive/cloud_1.png') no-repeat;
-	background-size:cover;
+	background-size:contain;
 }
 
 .cloud2 {
 	background:url('../images/testdrive/cloud_2.png') no-repeat;
-	background-size:cover;
+	background-size:contain;
 }
 
 .cloud3 {
 	background:url('../images/testdrive/cloud_3.png') no-repeat;
-	background-size:cover;
+	background-size:contain;
 }
 
 .cloudMove1 {
@@ -431,14 +472,54 @@ svg {
 	-o-animation:     bottom_bounce 3s infinite linear;
 	animation:        bottom_bounce 3s infinite linear;
 }
-#car > p { bottom:7%; position:absolute; text-align:center; width:100%; color:#FFF; }
-#car > p > strong { font-weight:400; color:#3CB4EB; }
 
-.loading { width:100%; height:100%; background:#000; color:#FFF; position:fixed; z-index:10; background:#3C3C41; }
-.loading .loadingImg { width:30%; height:20%; top:50%; position:absolute; left:50%; transform:translateX(-50%) translateY(-50%); }
-.loading .loadingImg img { width:100%; }
-.loading h1 { color:#3cb4eb; text-align:center; top:58%; position:absolute; font-weight:400; font-size:15pt; font-family:'HyundaiSansHead-Light'; width:100%; }
-.loading p { text-align:center; bottom:10%; position:absolute; font-weight:400; font-size:15pt; font-family:'HyundaiSansHead-Light'; width:100%; color:#FFF; }
+.accel {
+	position:fixed;
+	width:80px;
+	height:80px;
+	background:url('../images/testdrive/accel_off.png') no-repeat;
+	background-size:cover;
+	overflow:hidden;
+	bottom:3%;
+	right:4%;
+	z-index:8;
+	-moz-user-select: -moz-none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+.accel:active {
+	background:url('../images/testdrive/accel_on.png') no-repeat;
+	background-size:cover;
+}
+
+.truck {
+	width:100%;
+	height:auto;
+	position:absolute;
+	top:0;
+	left:-5%;
+}
+.truck img {
+	width:100%;
+	height:auto;
+}
+
+.roof {
+	width:100%;
+	height:auto;
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:6;
+}
+
+.loading, .ui-loader { width:100%; height:100%; background:#000; color:#FFF; z-index:10; background:#3C3C41; top:0 !important; left:0 !important; }
+.loading .loadingImg, .ui-loader .loadingImg { width:45%; height:45%; top:45%; position:absolute; left:50%; transform:translateX(-50%) translateY(-50%); }
+.loading .loadingImg img, .ui-loader .loadingImg img { width:100%; }
+.loading h1, .ui-loader h1 { color:#3cb4eb; text-align:center; top:58%; position:absolute; font-weight:400; font-size:15pt; width:100%; }
+.loading p, .ui-loader p { text-align:center; bottom:10%; position:absolute; font-weight:400; font-size:15pt; color:#FFF; width:100%; }
 
 .opponentCar { position:absolute; }
 

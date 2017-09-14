@@ -2,7 +2,7 @@ var language = {
 	'point' : [
 		{
 			'title' : 'POWERFUL ENGINE',
-			'desc' : 'Of the engines for the Sonata New Rise, the Nu 2.0 engine has a power of163 PS and a torque of 20 kg.m'
+			'desc' : 'Of the engines for the Sonata New Rise, the Nu 2.0 engine has a power of 163 PS and a torque of 20 kg.m'
 		},
 		{
 			'title' : 'DRM',
@@ -21,7 +21,7 @@ var language = {
 			'desc' : 'Another safety function prevents or reduce the damage of frontal collision.'
 		},
 		{
-			'title' : 'LKAS',
+			'title' : 'Lane Keeping Assist System (LKAS)',
 			'desc' : 'This is an active system that assists the car to keep its lane.'
 		},
 		{
@@ -29,7 +29,7 @@ var language = {
 			'desc' : 'The front and rear suspensions of the Sonata New Rise have improved their structure and rigidity, helping to realize a better driving feel.'
 		},
 		{
-			'title' : 'VSM',
+			'title' : 'Vehicle Stability Management (VSM)',
 			'desc' : 'One of the key contribution of this system is keeping the vehicle stable when cornering at a high speed.'
 		},
 		{

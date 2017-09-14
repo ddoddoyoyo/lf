@@ -1,11 +1,12 @@
 <?
-
-include_once ($_SERVER[DOCUMENT_ROOT]."/common/commonFunction.php");
-
-$DEALER_ID = $_SESSION["LF_TD_DEALER_ID"]; //딜러 아이디
-$DEALER_REGION = $_SESSION["LF_TD_DEALER_REGION"]; // 딜러 대륙
-$DEALER_COUNTRY = $_SESSION["LF_TD_DEALER_COUNTRY"]; //딜러 국가
-
+	include_once ($_SERVER[DOCUMENT_ROOT]."/common/commonFunction.php");
+	header("Content-Type: text/html; charset=UTF-8");
+	
+	if($_SESSION["LF_TD_DEALER_IMAGE"]){
+		$LMS_IMAGE = $IMG_URL."/hyundai/member/".$_SESSION["LF_TD_DEALER_IMAGE"];
+	}else{
+		$LMS_IMAGE = "../images/testdrive/icon_dealer.png";
+	}
 ?>
 <!DOCTYPE html>
 <html >
@@ -14,28 +15,27 @@ $DEALER_COUNTRY = $_SESSION["LF_TD_DEALER_COUNTRY"]; //딜러 국가
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui">
 <meta name="apple-touch-fullscreen" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
-<title>test</title>
-<!-- <link rel="stylesheet" href="css/font.css"> -->
+<title>SONATA NEW RISE VIRTUAL DRIVING EXPERIENCE</title>
+<link rel="stylesheet" href="../css/font.css">
 <link rel="stylesheet" href="../css/menu.css">
 <link rel="stylesheet" href="../css/testdrive.css">
 <link rel="stylesheet" href="../css/testdrive_animate.css">
 </head>
 
 <body class="tdBody">
-	<div class="loading">
+	<!-- <div class="loading">
 		<div class="loadingImg"><img src="../images/testdrive/icon_loading_gif.gif" alt="loading SONATA" /></div>
-		<h1>Loading...</h1>
 		<p>SONATA's virtual driving service<br>is being prepared.</p>
-	</div>
+	</div> -->
 	<div class="menuWrap"></div>
 	<div class="popup">
 		<div class="popupWrap">
 			<div class="popupHead">
 				<div class="popupClose"></div>
 				<div class="popupTitle">
-					<div class="popupPhoto" style="background:url('../images/testdrive/profile_defalt.png') center; background-size:cover;"></div>
+					<div class="popupPhoto" style="background:url('<?= $LMS_IMAGE ?>') center #787878; background-size:cover;"></div>
 					<div class="popupTitleTxt">
-						<span>DEALER</span>'S<br>COMMENTS
+						<span><?= ($_SESSION["LF_TD_DEALER_NAME"]) ? $_SESSION["LF_TD_DEALER_NAME"] : 'DEALER' ?></span>'S<br>COMMENTS
 					</div>
 				</div>
 			</div>
@@ -55,19 +55,23 @@ $DEALER_COUNTRY = $_SESSION["LF_TD_DEALER_COUNTRY"]; //딜러 국가
 		<div class="pointWrap">
 			<div class="pointTitle el"></div>
 			<div class="pointDesc el"></div>
-			<div class="pointBtn">VIEW MORE</div>
+			<div class="pointBtn">
+				<a href="#">VIEW MORE</a>
+			</div>
 		</div>
 	</div>
-	<div class="scrollWrap">
+	<div class="nextPoint">
+		<div class="nextPointIcon"></div>
+		<div class="nextPointTitle"></div>
+	</div>	<div class="scrollWrap">
 		<div id="car">
-			<img src="../images/testdrive/car_glow_1.png" class="carGlow carGlow1" />
-			<img src="../images/testdrive/car_glow_2.png" class="carGlow carGlow2" />
-			<img src="../images/testdrive/car_glow_3.png" class="carGlow carGlow3" />
-			<img src="../images/testdrive/finger_sliding.png" class="carFinger" />
-			<p>Please proceed with<br>the test drive via <strong>the slide.</strong></p>
 			<img src="../images/testdrive/car.png" class="car" alt="SONATA" />
 		</div>
+		<div class="loadingText">
+			<p>Please proceed with<br>the test drive via <strong>the accel button.</strong></p>
+		</div>
 	</div>
+	<div class="accel"></div>
 	<div class="roadBg">
 		<div id="roadBg1" class="bg"></div>
 		<div id="roadBg2" class="bg"></div>
@@ -78,7 +82,8 @@ $DEALER_COUNTRY = $_SESSION["LF_TD_DEALER_COUNTRY"]; //딜러 국가
 		<div id="roadBg7" class="bg"></div>
 		<div id="roadBg8" class="bg"></div>
 		<div id="roadBg9" class="bg"></div>
-		<div id="roadBg10" class="bg"></div>`
+		<div id="roadBg10" class="bg"></div>
+		<div id="roadBg11" class="bg"></div>
 		<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="180px" height="16000px" viewBox="0 0 180 16000" enable-background="new 0 0 180 16000" xml:space="preserve">
 			<path id="mycurve" fill="none" d="M111.2,0v687.5v5071c0,0,0.3,100.7,10.3,206s18,190,18,238s-4.7,141.3-31.3,256.7
 	c-26.7,115.3-28.7,212.7-26,258s11.3,163.3,19.3,224.7c8,61.3,25.7,262.7,13.7,414.7s-38.4,374.1-21.9,564.6s17.1,275.4,17.1,346.4
@@ -89,17 +94,34 @@ $DEALER_COUNTRY = $_SESSION["LF_TD_DEALER_COUNTRY"]; //딜러 국가
 		</svg>
 	</div>
 
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 <script>
+
 var dealerId = "<?= $DEALER_ID ?>";
 var dealerRegion = "<?= $DEALER_REGION ?>";
 var dealerCountry = "<?= $DEALER_COUNTRY ?>";
 var brand = "hyundai";
 var carGb = "LF";
+
+document.body.scrollTop = 0;
+document.documentElement.documentElement = 0;
+
+$(document).bind('mobileinit', function(){
+	$.mobile.loader.prototype.options.text = "";
+	$.mobile.loader.prototype.options.textVisible = true;
+	$.mobile.loader.prototype.options.theme = "a";
+	$.mobile.loader.prototype.options.html = "<div class='loadingImg'><img src='../images/testdrive/icon_loading_gif.gif' alt='loading SONATA' /></div><p>SONATA's virtual driving service<br>is being prepared.</p>";
+	$.event.special.tap.tapholdThreshold = 100;
+});
+
 </script>
-<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<script src="../js/device.js"></script>
 <script src="../js/menu.js"></script>
 <script src="../js/testdrive.js"></script>
 <script src="../js/testdrive_en.js"></script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenLite.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/plugins/CSSPlugin.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/plugins/ScrollToPlugin.min.js"></script>
 </body>
 </html>

@@ -1,6 +1,27 @@
 $(document).ready(function() {
+	$.event.special.tap.tapholdThreshold = 250;
+	document.body.scrollTop = 0;
+	document.documentElement.documentElement = 0;
+	$('body').css({'overflow':'hidden'});
 	testdrive.init();
+	testdrive.load();
 });
+
+var duration = 3;
+
+function scrollToTop() {
+	//alert(1);
+	document.body.scrollTop = 0;
+	document.documentElement.scrollTop = 0;
+	$('html, body').css({'scrollTop':0});
+	$(window).scrollTop(0);
+	//testdrive.scrollAmnt = 0;
+	//testdrive.n = 0;
+}
+
+$('body').on('beforeunload', scrollToTop);
+window.onbeforeunload = scrollToTop();
+
 
 var handler = function(e) { 
 	e.preventDefault();
@@ -8,6 +29,8 @@ var handler = function(e) {
 //$(window).bind('touchmove', handler);
 //$(window).unbind('touchmove', handler);
 
+var tag;
+var carMove;
 var testdrive = {
 	first : true,
 	carHeight : 0,
@@ -26,23 +49,35 @@ var testdrive = {
 	onInit : false,
 	cloudCnt : 10,
 	correction : 80,
+	_oppo : false,
+	scrollAble : true,
+	oppoWidth : 0,
+	oppoHeight : 0,
+	_carEffect : false,
 
 
 	init : function() {
-		this.onInit = true;
-		$('html, body').animate({'scrollTop':0}, function() {
-			testdrive.onInit = false;
-		});
-		$(window).scrollTop(0);
+		this.scrollAmnt = 0;
+
+		/*console.log(document.body.scrollTop);
+		console.log(document.documentElement.scrollTop);
+		console.log($(window).scrollTop());*/
+
+		if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0 || $(window).scrollTop() > 0) {
+			document.body.scrollTop = 0;
+			document.documentElement.scrollTop = 0;
+			$(window).scrollTop(0);
+		}
 
 		this.bodyHeight = $(window).width() * this.bgHeight / this.bgWidth;
+		this.oppoWidth = this.bodyWidth * .205;
+		this.oppoHeight = this.scrollHeight * .224;
 		this.point = this.bodyHeight - this.scrollHeight - this.correction;
 		$('.roadBg .bg').css({'height':this.bodyHeight});
-		$('#car').css({'width':this.bodyWidth, 'height':this.scrollHeight});
-		/*$('.menuWrap').css({'width':this.bodyWidth * 0.09, 'height':this.bodyWidth * 0.09});
-		$('.pointClose').css({'width':this.bodyWidth * 0.068, 'height':this.bodyWidth * 0.068});*/
+		$('#Layer_1').css({'height':this.bodyHeight * this.pointCnt, 'width':this.bodyHeight});
+		$('#car, .loadingText').css({'width':this.bodyWidth, 'height':this.scrollHeight});
 
-		$(".point .pointBtn").click(function(e) {
+		$(".point .pointBtn a").click(function(e) {
 			e.preventDefault();
 			testdrive.showPopup();
 		});
@@ -58,48 +93,50 @@ var testdrive = {
 		});
 
 		this.setCloud();	//구름
-		//this.setFlag();	//포인트 깃발
-		//파도 적용
-		$('#roadBg2 .wave').each(function() {
-			$(this).delay($(this).index() * 500).addClass('wave'+ ($(this).index()+1));
-		});
-
-		this.updatePosition(document.getElementById("mycurve"), 0);
-
-		$(window).on('scroll', function(e) {
-			if (!this.first)
-				testdrive.scrolling(e);
-		});
 
 		$(window).on('resize', function(e) {
 			$('.popup').css({'width':$(window).width(), 'height':$(window).height() * 1.2});
 			$('.scrollWrap').css({'height':$(window).height() * 1.2});
 		});
 
-		$('.loading').delay(500).fadeOut(500, function() {
-			$('.loading').remove();
-			testdrive.load();
+		$('.accel').on('taphold', function(e) {
+			if (testdrive.scrollAble) {
+				if (carMove)
+					carMove.timeScale(1).play();
+				else
+					carMove = TweenLite.to($('.roadBg'), duration, {scrollTo:{y:testdrive.n * testdrive.bodyHeight + (testdrive.bodyHeight * .78)}, ease:Power2.easeInOut, onUpdate:testdrive.scrolling});
+			}
+		});
+
+		$('.accel').on('touchend blur focusout mouseup', function(e) {
+			if (testdrive.scrollAble) {
+				carMove.timeScale(0.33333);
+			}
 		});
 
 		this.getPopupCount(true);	//팝업 카운트 최초 호출
 	},
 	load : function() {
+		/*console.log('loading?');*/
 		$('.carGlow').each(function() {
 			$(this).fadeIn(function() {
-				$(this).addClass('carGlowOn');
+				$(this).delay(250).addClass('carGlowOn');
 			});
 		});
+		$('.ui-loader').hide();
 	},
 	firstJob : function() {
+		$('.loadingText p').remove();
+		$('.carFinger').hide(function() {
+			$(this).remove();
+		});
 		$('.carGlow').each(function() {
 			$(this).fadeOut(function() {
 				$(this).remove();
 			});
 		});
 		$('.scrollWrap').addClass('scrollWrapBgHide');
-		$('#car > p, .carFinger').fadeOut(function() {
-			$(this).remove();
-		});
+		$('.ui-loader').hide();
 	},
 	updatePosition : function(path, value) {
 		var svg = $(path).closest('svg');
@@ -109,92 +146,134 @@ var testdrive = {
 		var newpoint = path.getPointAtLength((pathLength * value) + 50);
 		var middlepoint = path.getPointAtLength(pathLength * value);
 		var bbox = path.getBBox();
-		//var carAngle = (Math.atan2(middlepoint.y - newpoint.y, middlepoint.x - newpoint.x) * 180 / Math.PI) + 90;
 		var carAngle = (Math.atan2(middlepoint.y - newpoint.y, middlepoint.x - newpoint.x) * 180 / Math.PI) + 90;
 
-		$('.roadBg').css({
-		});
-
 		$('#car').css({
-			left:(newpoint.x - bbox.x) - 25,
+			left:(newpoint.x - bbox.x) - ($(window).width() * .23),
 			transform:'rotate('+ carAngle +'deg)'
 		});
 	},
 	scrolling : function(e) {
-		this.scrollAmnt = $(window).scrollTop();
+		testdrive.scrollAmnt = $('.roadBg').scrollTop();
 
-		if (this.scrollAmnt > 20) {
+		if (testdrive.scrollAmnt > 20) {
 			testdrive.firstJob();
 		}
 
-		if (this.onInit || testdrive.onInit)
+		if (testdrive.onInit || testdrive.onInit)
 			return;
 		
 		if (testdrive.popupStat) {
-			/*$(b)*/
-			/*document.body.addEventListener('touchmove', function(e) {
-				e.preventDefault();
-			}, false);*/
-			/*e.stopPropagation();
-			e.preventDefault();
-			$(window).scrollTop((this.point + (this.n * this.bodyHeight)));*/
 			return;
 		}
 
-		var _tmp = (this.scrollAmnt + (this.scrollHeight * .3)) / (this.bodyHeight * this.pointCnt);
-		this.updatePosition(document.getElementById("mycurve"), _tmp);
+		var _tmp = (testdrive.scrollAmnt + (testdrive.scrollHeight * .6)) / (testdrive.bodyHeight * testdrive.pointCnt);
+		/*console.log(_tmp);
+		console.log('testdrive.n : '+ testdrive.n);
+		console.log('testdrive.scrollAmnt : '+ testdrive.scrollAmnt);
+		console.log('testdrive.point : '+ testdrive.point);
+		console.log('testdrive.pointCnt : '+ testdrive.pointCnt);
+		console.log('testdrive.scrollHeight : '+ testdrive.scrollHeight);
+		console.log('testdrive.bodyHeight : '+ testdrive.bodyHeight);
+		console.log('testdrive : '+ (testdrive.n * testdrive.bodyHeight + (testdrive.bodyHeight * .77)));*/
 
-		console.log('this.scrollAmnt : '+ this.scrollAmnt);
-		console.log('this.point : '+ this.point);
-		console.log('this.n : '+ this.n);
-		console.log('this.bodyHeight : '+ this.bodyHeight);
-		console.log('this : '+ (this.point + (this.n * this.bodyHeight - this.correction)));
-		console.log('this : '+ (this.point + (this.n * this.bodyHeight * .8)));
+		testdrive.updatePosition(document.getElementById("mycurve"), _tmp);
 
-
-		if (this.scrollAmnt > (this.point + (this.n * this.bodyHeight * .8))) {
-			this.getNextBg();
+		if (testdrive.scrollAmnt > testdrive.n * testdrive.bodyHeight + (testdrive.bodyHeight * .6)) {
+			testdrive.getNextBg();
 		}
 
-		if (this.scrollAmnt >= (this.point + (this.n * this.bodyHeight - this.correction))) {
-			this.getPoint();
+		var _tmp1 = testdrive.n * testdrive.bodyHeight + (testdrive.bodyHeight * .77);
+		if (testdrive.scrollAmnt >= _tmp1) {
+			console.log('scrollamnt : '+ _tmp1);
+			//$(window).scrollTop(_tmp1);
+			//document.body.scrollTop = _tmp1;
+			//document.documentElement.scrollTop = _tmp1;
+			testdrive.getPoint();
+		}
+
+		if ((testdrive.n == 1 || testdrive.n == 3) && testdrive.scrollAmnt >= (testdrive.bodyHeight * (testdrive.n) + (testdrive.bodyHeight * .65)) && !testdrive._oppo) {
+			if (testdrive.n == 1)
+				testdrive.setOpponentCar('middle', 'down');
+			else if (testdrive.n == 3) {
+				testdrive.setOpponentCar('right', 'down');
+				testdrive.setCarEffect('signal', 'rear_right');
+				testdrive._carEffect = true;
+			}
+		}
+		if (testdrive.n == 2 && testdrive.scrollAmnt >= (testdrive.bodyHeight * (testdrive.n) + (testdrive.bodyHeight * .45)) && !testdrive._oppo) {
+			testdrive.setOpponentCar('middle', 'top');
+		}
+
+		if (testdrive.n == 7 && testdrive.scrollAmnt >= (testdrive.bodyHeight * (testdrive.n) + (testdrive.bodyHeight * .5)) && !testdrive._carEffect) {
+			testdrive.setCarEffect('light');
+			testdrive._carEffect = true;
 		}
 	},
 	getNextBg : function() {
-		$('#roadBg'+ (this.n + 2)).css({'background-image':'url("../images/testdrive/course_'+ (this.n + 2) +'.jpg")'});
+		$('#roadBg'+ (testdrive.n + 2)).css({'background-image':'url("../images/testdrive/course_'+ (testdrive.n + 2) +'.jpg")'});
 	},
 	getPoint : function() {
+		testdrive.getNextBg();
+		carMove = null;
+		testdrive.scrollAble = false;
+		var pointTime = (testdrive.n == 2) ? 500 : 0;
+		$('.accel').fadeOut();
 		$('body').css({'overflow':'hidden'});
-		$('body').bind('touchmove', handler);
+		$('body').bind('scroll touchmove', handler);
 		$(".point .el").empty();
 		$(".point .pointTitle").html(language.point[this.n].title);
 		$(".point .pointDesc").html(language.point[this.n].desc);
-		$(".point").css({'bottom':-$(".point").height()}).show().animate({'bottom':0, 'opacity':1});
-		//$(window).scrollTop((this.point + (this.n * this.bodyHeight - this.correction)));
-		$(window).scrollTop(this.scrollAmnt);
+		$(".point").delay(pointTime).css({'bottom':-$(".point").height()}).show().animate({'bottom':0, 'opacity':1});
 		testdrive.popupStat = true;
 		this.getPopup();
-
-		$('#roadBg'+ (this.n + 1) +' .flag').fadeOut();
 	},
 	closePoint : function() {
-		testdrive.popupStat = false;
-		$('body').unbind('touchmove', handler);
-		/*$('body').on('touchmove', function(e) {
-			alert(1);
-			testdrive.scrolling();
-		});*/
-		$('body').css({'overflow':'auto'});
-		//$('.roadBg').css({'height':'auto'});
-		$('.cloud').css({'display':'block'});
-		$(".point").animate({'bottom':-$(".point").height(), 'opacity':0}).fadeOut();
-		$(".popup .popupDesc").css({'left':0});
-		$(".popup .el").empty();
-		$('.cloud').css({'z-index':7});
+		$(".point").animate({'bottom':-$(".point").height(), 'opacity':0}, function() {
+			testdrive.popupStat = false;
+			$('body').unbind('scroll touchmove', handler);
+			//$('body').css({'overflow':'auto'});
+			$('.cloud').css({'display':'block'});
+			$(".popup .popupDesc").css({'left':0});
+			$(".popup .el").empty();
+			$(this).fadeOut();
+		});//.fadeOut();
+
+
+		if (testdrive.n == 1 || testdrive.n == 3) {	//효과 없애기
+			testdrive.removeOpponentCar('down');
+			if (testdrive.n == 3) {
+				testdrive.removeCarEffect();
+				testdrive._carEffect = false;
+			}
+		}
+		else if (testdrive.n == 2) {	//효과 없애기
+			testdrive.removeOpponentCar('top');
+		}
+
+		if (testdrive.n == 9) {	//시승신청 넘어가기
+			location.href = "./applicationIntro.php";
+		}
+
 		testdrive.n++;
+		if (testdrive.n < testdrive.pointCnt)
+			testdrive.getNextPoint();
+	},
+	getNextPoint : function() {
+		$(".nextPoint").css({'bottom':-$(".nextPoint").height()}).show().animate({'bottom':0, 'opacity':1}, function() {
+			$(this).delay(1000).animate({'bottom':-$(".nextPoint").height(), 'opacity':0}, function() {
+				testdrive.scrollAble = true;
+			});
+			$('.accel').delay(1000).fadeIn();
+		});
+		$(".nextPoint .nextPointTitle").html(language.point[this.n].title);
+	},
+	closeNextPoint : function() {
+		$(".nextPoint").animate({'bottom':-$(".nextPoint").height(), 'opacity':0}).fadeOut();
+		$(".nextPoint .nextPointTitle").empty();
 	},
 	getPopup : function() {
-		$('.cloud').css({'z-index':1});
+		//$('.cloud').css({'z-index':1});
 		$('.popup').css({'width':$(window).width(), 'height':$(window).height() * 1.2});
 		$(".popup .el").empty();
 		testdrive.popupSwipe = 0;
@@ -205,6 +284,12 @@ var testdrive = {
 			$(".popup .popupDesc").append('<div>'+ language.popup[this.n][i].desc +'</div>');
 			$(".popup .popupNavi").append('<span>+</span>');
 		}
+
+		if (this.popupLength == 1)
+			$(".popup .popupNaviWrap").hide();
+		else
+			$(".popup .popupNaviWrap").show();
+
 		$(".popup .popupDesc > div").css({'width':this.bodyWidth * .9});
 		$(".popup .popupNavi > span:first-child").addClass('on');
 	},
@@ -212,6 +297,8 @@ var testdrive = {
 		testdrive.getPopupCount();	//팝업 카운트
 		$(".popup").fadeIn(500);
 		$(".popup .popupWrap").css({'margin-top':(this.scrollHeight - $(".popup .popupWrap").height()) / 2});
+		$(".popup .popupDesc").css({'height':$(".popup .popupDesc > div:nth-child(1)").height()});
+		$(".popup .popupWrap").animate({'margin-top':(testdrive.scrollHeight - $(".popup .popupWrap").height()) / 2}, 500);
 
 		$(".popup .popupNaviPrev, .popup .popupNaviNext").on('click', function(e) {
 			e.preventDefault();
@@ -222,7 +309,6 @@ var testdrive = {
 					testdrive.popupSwipe--;
 				else
 					return;
-
 
 				$(".popup .popupDesc").animate({'left':-testdrive.bodyWidth * .9 * testdrive.popupSwipe, 'height':$(".popup .popupDesc > div:nth-child("+ (testdrive.popupSwipe + 1) +")").height()}, 500, function() {
 					$(".popup .popupNavi > span").removeClass('on');
@@ -273,7 +359,7 @@ var testdrive = {
 		for (var i=1; i<this.cloudCnt; i++) {
 			cloudMove = Math.floor(Math.random() * 2) + 1;
 			cloudNo = Math.floor(Math.random() * 3) + 1;
-			heightPcnt = Math.floor(Math.random() * 100) + 1;
+			heightPcnt = Math.floor(Math.random() * 95) + 1 + 5;
 			$('.roadBg').append('<div class="cloud cloud'+ cloudNo +' cloudMove'+ cloudMove +'" style="top:'+ heightPcnt +'%"></div>');
 			//result = Math.floor(Math.random() * 10) + 1;
 		}
@@ -283,14 +369,20 @@ var testdrive = {
 			$(this).append('<div class="flag bottom_bounce"></div>');
 		}).find('.flag').css({'height':this.bodyWidth*.5});
 	},
-	setCarEffect : function(val, pos='') {
+	setCarEffect : function(val, pos) {
 		var img;
 		if (val == 'light') {
+			var carNight = $('<img />', {
+				class : 'carNight',
+				src : '../images/testdrive/car_night.png'
+			}).appendTo($('#car'));
+			$('.car').animate({'opacity':0});
+			$('.carNight').animate({'opacity':1});
 			img = $('<img />', {
 				id : 'carEffect',
 				class : 'img100',
 				src : '../images/testdrive/headlight_00.png'
-			}).appendTo($('#car'));
+			}).appendTo($('#car')).css({'opacity':0}).animate({'opacity':1});
 		}
 		else if (val == 'signal') {
 			img = $('<img />', {
@@ -301,50 +393,38 @@ var testdrive = {
 		}
 	},
 	removeCarEffect : function(val) {
-		$('#carEffect').fadeOut(function() {
+		$('#carEffect').fadeOut('slow', function() {
 			(this).remove();
 		});
 	},
 	setOpponentCar : function(loc, dir) {
-		var carWidth = this.bodyWidth * .298;
-		var carHeight = this.scrollHeight * .345;
-		console.log(carWidth);
-		console.log(carHeight);
+		testdrive._oppo = true;
 		var _left;
 		if (loc == 'left')
-			_left = '3%';
+			_left = '25%';
 		else if (loc == 'right')
-			_left = '68%';
+			_left = '64%';
 		else if (loc == 'middle')
-			_left = '37%';
+			_left = '41.5%';
 		var img = $('<img />', {
 			id : 'opponentCar',
 			class : 'opponentCar',
 			src : '../images/testdrive/car_oppo.png'
 		}).css({
-			'width':carWidth,
-			'height':carHeight,
-			'top':((dir == 'down') ? -(carHeight) : this.scrollHeight),
+			'width':testdrive.oppoWidth,
+			'height':testdrive.oppoHeight,
+			'top':((dir == 'down') ? -(testdrive.oppoHeight) : testdrive.scrollHeight),
 			'left':_left
-		}).appendTo($('#car')).delay(500).animate({
-			'top':((dir == 'down') ? '-20%' : '70%')
-			//'left':_left
-		}, 2000);
+		}).appendTo($('#car')).animate({
+			'top':((dir == 'down') ? '-4%' : '55%')
+		}, ((dir == 'down') ? 1000 : 1500));
 	},
 	removeOpponentCar : function(dir) {
-		var carWidth = this.bodyWidth * .298;
-		var carHeight = this.scrollHeight * .345;
 		$('#opponentCar').animate({
-			'top':((dir == 'down') ? -(carHeight) : this.scrollHeight)
-		}, 2000, function() {
+			'top':((dir == 'down') ? -(testdrive.oppoHeight) : testdrive.scrollHeight)
+		}, 1000, function() {
+			testdrive._oppo = false;
 			$(this).remove();
 		});
 	}
 }
-/*document.body.addEventListener('touchmove',
-    function(event) {
-        //if($(document).height() <= $(window).height()){
-            event.preventDefault();
-        //}
-    }, false);
-*/
