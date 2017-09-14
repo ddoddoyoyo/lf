@@ -1,3 +1,8 @@
+.menu_list {
+  font-family: "HyundaiSansHeadMedium", Arial, sans-serif;
+  font-size: 16px;
+  color: #000;
+  text-transform: uppercase; }
 .sidePanel_wrap {
   position: absolute;
   left: 0;
@@ -13,7 +18,10 @@
     height: 100%;
     box-shadow: -1px 0 10px 1px #555; }
     .sidePanel_wrap .sidePanel .btn_close {
-      right: 8%; }
+      position: absolute;
+      top:4%;
+      right: 8%;
+      width:  19px }
     .sidePanel_wrap .sidePanel .menu_list {
       height: 100%;
       padding-top: 46%;

@@ -24,8 +24,6 @@
 		<title>Sonata New Rise</title>
 		<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
 		<link rel="stylesheet" href="../css/styles.css">
-		<!-- <link rel="stylesheet" href="../css/jquery.scrollbar.css">
-		<link rel="stylesheet" href="../css/prettify.css"> -->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.8.1/css/perfect-scrollbar.min.css">
 		<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 		 <script>
@@ -43,8 +41,6 @@
 		<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
 		<script src="../js/jquery.ui.touch-punch.min.js"></script>
 		<script src="../js/jquery.reel.js"></script>
-		<!-- <script src="../js/jquery.scrollbar.js"></script>
-		<script src="../js/prettify.js"></script> -->
 
 		<script>
 			$(document).ready(function(){
