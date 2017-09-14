@@ -1,9 +1,17 @@
 <?php
 	include_once ($_SERVER[DOCUMENT_ROOT]."/common/commonFunction.php");
-
-	if($_SESSION["LF_TD_DEALER_ID"]){
+	header("Content-Type: text/html; charset=UTF-8");
+	
+	/*if($_SESSION["LF_TD_DEALER_ID"] > 0 ){
 	}else{
-		//$tools->alertJavaGo("Faild.","error.php");
+		$tools->JavaGo("/os/td/en/");
+	}*/
+	
+	
+	if($_SESSION["LF_TD_DEALER_IMAGE"]){
+		$LMS_IMAGE = $IMG_URL."/hyundai/member/".$_SESSION["LF_TD_DEALER_IMAGE"];
+	}else{
+		$LMS_IMAGE = "../images/common/profile_defalt.png";
 	}
 ?>
 <!DOCTYPE html>
@@ -16,6 +24,9 @@
 		<title>Sonata New Rise</title>
 		<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
 		<link rel="stylesheet" href="../css/styles.css">
+		<!-- <link rel="stylesheet" href="../css/jquery.scrollbar.css">
+		<link rel="stylesheet" href="../css/prettify.css"> -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.8.1/css/perfect-scrollbar.min.css">
 		<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 		 <script>
 			//  $(document).on("mobileinit", function () {
@@ -24,28 +35,53 @@
 			// 	 $.mobile.changePage.defaults.changeHash = false;
 			// });
 		</script>
-		<script src="../js/jquery.reel.js"></script>
 		<script src="../js/device.js"></script>
 		<script src="../js/menu.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.8.1/js/perfect-scrollbar.jquery.min.js"></script>	
 		<script src="../js/main.js"></script>
 		<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 		<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
 		<script src="../js/jquery.ui.touch-punch.min.js"></script>
-		
+		<script src="../js/jquery.reel.js"></script>
+		<!-- <script src="../js/jquery.scrollbar.js"></script>
+		<script src="../js/prettify.js"></script> -->
+
 		<script>
 			$(document).ready(function(){
 				$('#driveGo .btn_box').click(function(){
 					location.href="testdriveIntro.php";
 				});
+				$('.scrollbar').perfectScrollbar(); 
 			})
 		</script>
 	</head>
 	<body>
 		<div id="wrap">
 			<div id="contBox">
+			<div class="vr colorPage">
+				<div class="textwrap">
+					<p>Turn the image <span>left or right.</span></p>
+				</div>
+				<div class="imgwrap vrwrap">
+					<img src="../images/sonata_360VR/WhiteCream/000.jpg" class="reel" id="ex_color" data-images="../images/sonata_360VR/WhiteCream/###.jpg" data-frames="35" data-frame="9" data-rows="1" data-row="1">
+					<div class="imgText">
+						<p class="WhiteCream">White Cream</p>
+						<p class="LunaGray">Luna Gray</p>
+						<p class="MidnightBlack">Midnight Black</p>
+						<p class="ValentineRed">Valentine Red</p>
+						<p class="PanteraGray">Pantera Gray</p>
+						<p class="GrandBlue">Grand Blue</p>
+						<p class="ShadeBronze">Shade Bronze</p>
+						<p class="BlueSapphire">Blue Sapphire</p>
+					</div>
+				</div>				
+			</div>
+			<div class="blackBG"></div>
 			<section data-role="page" id="showroom" class="container cover">
 				<div data-role="header" class="header">
 					<a href="#" class="ui-btn btn_sidePanel ui-btn-right"><img src="../images/common/btn_menu.png" alt=""></a>
+					<a href="#" class="ui-btn ui-btn-left" data-rel="back"><img src="../images/common/btn_backward.png" alt=""></a>
+					<h1>Show Room</h1>
 				</div>
 				<div data-role="main" class="ui-content">
 					<div class="titlewrap">
@@ -66,11 +102,11 @@
 				<div data-role="main" class="ui-content">
 					<div class="textbox">
 						<div class="profilewrap">
-							<div class="profileImg" ></div>
+							<div class="profileImg" style="background-image: url('<?= $LMS_IMAGE ?>');"></div>
 							<p><span class="dName">Jack</span>'s <span class="comt">Comments</span></p>
 						</div>
 						<div class="textwrap">
-							<p>Check out the LF New Rise that has a new style when compared with the existing LF.</p>
+							<p>Before we begin our test drive, let’s first check out the completely new style of the Sonata New Rise.</p>
 						</div>
 					</div>
 					<div>
@@ -89,11 +125,11 @@
 					<h2>Cascading Grille</h2>
 					<div class="textbox">
 						<div class="profilewrap">
-							<div class="profileImg" ></div>
+							<div class="profileImg" style="background-image: url('<?= $LMS_IMAGE ?>');"></div>
 							<p><span class="dName">Jack</span>'s <span class="comt">Comments</span></p>
 						</div>
 						<div class="textwrap">
-							<p>A wider cascading grille is applied to the front. With this in the center, daring lines and a powerful sense of volume are created, giving the car an audacious and sporty look.</p>
+							<p>A wider cascading grille is applied to the front. With the grill in the center, bold lines and a sense of volume give the car powerful and sporty look.</p>
 						</div>
 					</div>
 					<div>
@@ -112,11 +148,11 @@
 					<h2>LED Head Lamp</h2>
 					<div class="textbox">
 						<div class="profilewrap">
-							<div class="profileImg" ></div>
+							<div class="profileImg" style="background-image: url('<?= $LMS_IMAGE ?>');"></div>
 							<p><span class="dName">Jack</span>'s <span class="comt">Comments</span></p>
 						</div>
 						<div class="textwrap">
-							<p>The newly introduced LED bifunctional headlamp is made more aggressive and sleek. The chrome molding covers the bottom of the headlamp, adding luxurious details.</p>
+							<p>The newly introduced LED bifunctional headlamp is made more aggressive looking and sleek. The chrome molding surrounds the headlamp, adding luxurious details.</p>
 						</div>
 					</div>
 					<div>
@@ -135,11 +171,11 @@
 					<h2>Chrome Garnish</h2>
 					<div class="textbox">
 						<div class="profilewrap">
-							<div class="profileImg" ></div>
+							<div class="profileImg" style="background-image: url('<?= $LMS_IMAGE ?>');"></div>
 							<p><span class="dName">Jack</span>'s <span class="comt">Comments</span></p>
 						</div>
 						<div class="textwrap">
-							<p>The cascading grille has different chrome thicknesses between the middle bottom and the outer sections. The lines are drawn in a way that render them to be clearly vivid, creating a swift and youthful feel.</p>
+							<p>The chrome that surrounds the cascading grille is characterized by a difference in thickness between its mid and outer sections.</p>
 						</div>
 					</div>
 					<div>
@@ -158,11 +194,11 @@
 					<h2>Vertical LED DRL</h2>
 					<div class="textbox">
 						<div class="profilewrap">
-							<div class="profileImg" ></div>
+							<div class="profileImg" style="background-image: url('<?= $LMS_IMAGE ?>');"></div>
 							<p><span class="dName">Jack</span>'s <span class="comt">Comments</span></p>
 						</div>
 						<div class="textwrap">
-							<p>Added with a vertical-type DRL arranged together with the air curtain, the front gives the car a swift and sporty feel.</p>
+							<p>The vertical-type DRL integrated with the air adds a swift and sporty feel to the car.</p>
 						</div>
 					</div>
 					<div>
@@ -181,11 +217,11 @@
 					<h2>Trunk Switch</h2>
 					<div class="textbox">
 						<div class="profilewrap">
-							<div class="profileImg" ></div>
+							<div class="profileImg" style="background-image: url('<?= $LMS_IMAGE ?>');"></div>
 							<p><span class="dName">Jack</span>'s <span class="comt">Comments</span></p>
 						</div>
 						<div class="textwrap">
-							<p>The license plate was shifted to the bottom of the bumper, while the trunk switch was combined with the “H” and the “SONATA” logos at the space previously reserved for the license plate.</p>
+							<p>The overall image of the rear part was made more simple by shifting the license plate to the bottom of the bumper and integrating the trunk switch with the Hyundai emblem.</p>
 						</div>
 					</div>
 					<div>
@@ -204,11 +240,11 @@
 					<h2>LED Rear Lamp</h2>
 					<div class="textbox">
 						<div class="profilewrap">
-							<div class="profileImg" ></div>
+							<div class="profileImg" style="background-image: url('<?= $LMS_IMAGE ?>');"></div>
 							<p><span class="dName">Jack</span>'s <span class="comt">Comments</span></p>
 						</div>
 						<div class="textwrap">
-							<p>The new LED rear combi-lamp, based on the same concept for the headlamp, is covered with the chrome garnish at the bottom. The brake lamp has a modern feel that adds a feeling of luxury.</p>
+							<p>The new LED rear combination lamp, also has the chrome garnish at the bottom.</p>
 						</div>
 					</div>
 					<div>
@@ -226,11 +262,11 @@
 				<div data-role="main" class="ui-content">
 					<div class="textbox">
 						<div class="profilewrap">
-							<div class="profileImg" ></div>
+							<div class="profileImg" style="background-image: url('<?= $LMS_IMAGE ?>');"></div>
 							<p><span class="dName">Jack</span>'s <span class="comt">Comments</span></p>
 						</div>
 						<div class="textwrap">
-							<p>Let me show the four important points inside the ergonomically designed interior of the car you will ride.</p>
+							<p>There are four important points to note in the ergonomically designed interior.</p>
 						</div>
 					</div>
 					<div>
@@ -249,11 +285,11 @@
 					<h2>8 inch Navigation</h2>
 					<div class="textbox">
 						<div class="profilewrap">
-							<div class="profileImg" ></div>
+							<div class="profileImg" style="background-image: url('<?= $LMS_IMAGE ?>');"></div>
 							<p><span class="dName">Jack</span>'s <span class="comt">Comments</span></p>
 						</div>
 						<div class="textwrap">
-							<p>The center fascia, which is the axis, has a large 8-inch navigation system and operating buttons in metallic silver on the audio operating section, making it easy to operate.</p>
+							<p>The center fascia is equipped with,a large 8-inch navigation system and metallic silver operating buttons.</p>
 						</div>
 					</div>
 					<div>
@@ -272,11 +308,11 @@
 					<h2>Supervision Cluster</h2>
 					<div class="textbox">
 						<div class="profilewrap">
-							<div class="profileImg" ></div>
+							<div class="profileImg" style="background-image: url('<?= $LMS_IMAGE ?>');"></div>
 							<p><span class="dName">Jack</span>'s <span class="comt">Comments</span></p>
 						</div>
 						<div class="textwrap">
-							<p>For the user’s convenience, the cluster screen is made larger and the operating systems are arranged in a way that maintains consistency and harmony.</p>
+							<p>For the user’s convenience, the visibility of the cluster screen has been improved.</p>
 						</div>
 					</div>
 					<div>
@@ -295,11 +331,11 @@
 					<h2>Air Clean Mode</h2>
 					<div class="textbox">
 						<div class="profilewrap">
-							<div class="profileImg" ></div>
+							<div class="profileImg" style="background-image: url('<?= $LMS_IMAGE ?>');"></div>
 							<p><span class="dName">Jack</span>'s <span class="comt">Comments</span></p>
 						</div>
 						<div class="textwrap">
-							<p>This is the first time that a one-touch air purification mode is mounted. This mode makes it possible to make the air clean and fresh by removing micro dusts through forced air circulation with a press of the button.</p>
+							<p>The one-touch air purification mode was applied for the first time With just a press of a button, this mode makes the air inside clean and fresh by removing micro dusts through forced air circulation.</p>
 						</div>
 					</div>
 					<div>
@@ -318,11 +354,11 @@
 					<h2>Wireless Charging</h2>
 					<div class="textbox">
 						<div class="profilewrap">
-							<div class="profileImg" ></div>
+							<div class="profileImg" style="background-image: url('<?= $LMS_IMAGE ?>');"></div>
 							<p><span class="dName">Jack</span>'s <span class="comt">Comments</span></p>
 						</div>
 						<div class="textwrap">
-							<p>A wireless charge system is added for the comfort and convenience of the driver and passengers.</p>
+							<p>A wireless charging system is added for the convenience of the driver and passengers.</p>
 						</div>
 					</div>
 					<div>
@@ -338,8 +374,7 @@
 					<h1>Exterior Color</h1>
 				</div>
 				<div data-role="main" class="ui-content">
-					<div class="imgwrap">
-						<!-- <img src="../images/sonata_360VR/WhiteCream/00001.jpg" class="reel" id="ex_a" data-images="../images/sonata_360VR/WhiteCream/#####.jpg" data-frames="60" data-frame="1" data-rows="1" data-row="1"> -->
+					<!-- <div class="imgwrap">
 						<img src="../images/showroom/001_03_01_WhiteCream.jpg" class="WhiteCream" alt="">
 						<img src="../images/showroom/001_03_01_LunaGray.jpg" class="LunaGray" alt="">
 						<img src="../images/showroom/001_03_01_MidnightBlack.jpg" class="MidnightBlack" alt="">
@@ -358,11 +393,11 @@
 							<p class="ShadeBronze">Shade Bronze</p>
 							<p class="BlueSapphire">Blue Sapphire</p>
 						</div>
-					</div>
+					</div> -->
 					<div class="colorBox">
 						<div class="btn_prev btn"></div>
 						<div class="btn_next btn"></div>
-						<div class="colorLayout">
+						<div class="colorLayout scrollbar">
 							<div class="colorPick">
 								<img src="../images/showroom/001_03_01_btn_WhiteCream.png"  class="WhiteCream" alt="">
 								<img src="../images/showroom/001_03_01_btn_LunaGray.png"  class="LunaGray" alt="">
@@ -417,16 +452,18 @@
 			<section data-role="page" id="driveGo" class="container">
 				<div data-role="header" class="header">
 					<a href="#" class="ui-btn btn_sidePanel ui-btn-right"><img src="../images/common/btn_menu.png" alt=""></a>
+					<a href="#" class="ui-btn ui-btn-left" data-rel="back"><img src="../images/common/btn_backward.png" alt=""></a>
+					<h1>Test Drive</h1>
 				</div>
 				<div data-role="main" class="ui-content">
-					<!-- <div class="imgwrap">
+					<div class="imgwrap">
 						<img src="../images/showroom/001_03_03_bg.jpg" alt="">
-					</div> -->
+					</div>
 					<div class="textwrap">
 						<p>Next, Try driving at the driving course.</p>
 					</div>
 					<div class="button">
-						<a class="btn_box" href="#javascript:;">DRIVING GO</a>
+						<a class="btn_box" href="#javascript:;">START TEST DRIVE</a>
 					</div>
 				</div>
 			</section>

@@ -4,8 +4,16 @@ $(document).ready(function(){
 	$('.popLayer .btn_close').click(function(){
 		$('.popLayer').hide();
 	});
-
+	// $('section').on({
+	// 	"pageshow":function(){
+	// 		if($('#exColor').hasClass('ui-page-active')){
+	// 			$('#exColor .imgwrap').append('<img src="../sonata_360VR/BlueSapphire/00001.jpg" class="reel" id="ex_color" data-images="../sonata_360VR/BlueSapphire/#####.jpg" data-frames="60" data-frame="9" data-rows="1" data-row="1">');
+	// 		}
+			
+	// 	}
+	// })
 	
+
 	//testdrive
 	$('#drivingMap').on({
 		"pagebeforeshow" : function(){
@@ -21,9 +29,14 @@ $(document).ready(function(){
 		$(this).click(function(){
 			if($(this).hasClass('twinkle')){
 				getClassName = $(this).attr('class').split(' ');
-				$('#drivingMap .imgbox.map img').removeClass('twinkle');
+				//$('#drivingMap .imgbox.map img').removeClass('twinkle');
+				$(this).removeClass('twinkle');
 				$(this).next().addClass('twinkle');
 				$('#drivingMap .popLayer.imgbox#pop_'+getClassName[1]).fadeIn(500);
+				//console.log(this);
+			}
+			else{
+				return;
 			}
 
 		});		
@@ -31,7 +44,7 @@ $(document).ready(function(){
 	//showroom
 	var imgW,marginR,move,imgLength,totalW,pos;
 	$('#exColor').on({
-		"pagebeforeshow" : function(){
+		"pagebeforeshow" : function(){	
 			pos=$('#exColor .colorPick').css('left').slice(0,-2);
 			//console.log($(this).width());
 			imgW = $('#exColor .colorPick img').width();
@@ -40,43 +53,57 @@ $(document).ready(function(){
 			move = 50;
 			totalW = imgW * imgLength + marginR*imgLength;
 			$('#exColor .colorPick').css({'width':totalW});
-			$('#exColor .imgwrap .imgText p,#exColor .imgwrap img').hide();
-			$('#exColor .imgwrap .imgText p:first-child,#exColor .imgwrap img:first-child').show();
+			// $('#exColor .imgwrap .imgText p,#exColor .imgwrap img').hide();
+			// $('#exColor .imgwrap .imgText p:first-child,#exColor .imgwrap img:first-child').show();
+			$('.vr .imgwrap .imgText p').hide();
+			$('.vr .imgwrap .imgText p:first-child').show();
 			$('#exColor .colorBox .colorPick img').siblings().removeClass('active');
 			$('#exColor .colorBox .colorPick img:first-child').addClass("active");
-			//$("#ex_img").reel("images", "../images/sonata_360VR/WhiteCream/#####.jpg");
+			$(".vr img#ex_color").reel("images", "../images/sonata_360VR/WhiteCream/###.jpg");
+			$(".scrollbar").addClass('ps--active-x');
+			$(".ps__scrollbar-x-rail").css({"width":$('#exColor').width()});
+			$(".ps__scrollbar-x").css({"width":$('#exColor').width() / 2});
+			//vr
+			setTimeout(function(){
+				$('.vr').css({"z-index":"10"});
+			},200);		
+			
 		},
 		"pageshow" :function(){
 
 		}
 	});
 
-	$('#exColor .colorBox .btn_next').click(function(){
-		pos=$('#exColor .colorPick').css('left').slice(0,-2);
-		var tmpW = totalW - $('#exColor .colorLayout').width();
-		if(pos > - tmpW){
-			$('#exColor .colorPick').animate({'left':-move+parseInt(pos)});
-		}		
-	});
-	$('#exColor .colorBox .btn_prev').click(function(){
-		pos=$('#exColor .colorPick').css('left').slice(0,-2);
-		if(pos<0){
-			$('#exColor .colorPick').animate({'left': move+parseInt(pos)});
-		}	
-	});
+	// $('#exColor .colorBox .btn_next').click(function(){
+	// 	pos=$('#exColor .colorPick').css('left').slice(0,-2);
+	// 	var tmpW = totalW - $('#exColor .colorLayout').width();
+	// 	if(pos > - tmpW){
+	// 		$('#exColor .colorPick').animate({'left':-move+parseInt(pos)});
+	// 	}		
+	// });
+	// $('#exColor .colorBox .btn_prev').click(function(){
+	// 	pos=$('#exColor .colorPick').css('left').slice(0,-2);
+	// 	if(pos<0){
+	// 		$('#exColor .colorPick').animate({'left': move+parseInt(pos)});
+	// 	}	
+	// });
 
 	$('#exColor .colorBox .colorPick img').each(function(){
 		$(this).click(function(){
-			getClassName = $(this).attr('class');
-			//console.log(getClassName);
+			getClassName = $(this).attr('class').split(" ")[0];
+			console.log(getClassName);
 			$(this).addClass('active');
 			$(this).siblings().removeClass('active');
-			//$("#exColor .imgwrap img#ex_img").reel("images", "../images/sonata_360VR/"+getClassName+"/#####.jpg");
-			$('#exColor .imgwrap .imgText p,#exColor .imgwrap img').hide();
-			$('#exColor .imgwrap .imgText p.'+getClassName).show();
-			$('#exColor .imgwrap img.'+getClassName).show();
+			$(".vr img#ex_color").reel("images", "../images/sonata_360VR/"+getClassName+"/###.jpg");
+			$('.vr .imgwrap .imgText p').hide();
+			$('.vr .imgwrap .imgText p.'+getClassName).show();
+			//$('#exColor .imgwrap img.'+getClassName).show();
 		})
-	})
+	});
+
+	$('#exColor .btn_nextPage, #exColor .btn_back').click(function(){
+		$('.vr,#exColor').css({"z-index":"0"});		
+	});
 
 	$('#inColor').on({
 		"pagebeforeshow" : function(){
@@ -107,35 +134,5 @@ $(document).ready(function(){
 			$('#inColor .imgwrap img.'+getClassName).show();
 		})
 	})
-
-	//3d
-	// $("#btn_ex_color_wrap").each(function(){
-	// 	if($(this).parents("li").attr("id") == "btn_ex_color01"){
-	// 		$("#ex_color").reel("images", "../images/sonata_360VR/WhiteCream/#####.png");
-	// 		$("#back_img").attr("src","../images/002_01.png"); 
-	// 	} else if($(this).parents("li").attr("id") == "btn_ex_color02"){
-	// 		$("#ex_color").reel("images", "../VR/AE_HEV_Phantom_Black/###.png");
-	// 		$("#back_img").attr("src","../images/002_02.png"); 
-	// 	} else if($(this).parents("li").attr("id") == "btn_ex_color03"){
-	// 		$("#ex_color").reel("images", "../VR/AE_HEV_Platinum_Silver/###.png");
-	// 		$("#back_img").attr("src","../images/002_03.png"); 
-	// 	} else if($(this).parents("li").attr("id") == "btn_ex_color04"){
-	// 		$("#ex_color").reel("images", "../VR/AE_HEV_Iron_Gray/###.png");
-	// 		$("#back_img").attr("src","../images/002_04.png"); 
-	// 	} else if($(this).parents("li").attr("id") == "btn_ex_color05"){
-	// 		$("#ex_color").reel("images", "../VR/AE_HEV_Aurora_Silver/###.png");
-	// 		$("#back_img").attr("src","../images/002_05.png"); 
-	// 	} else if($(this).parents("li").attr("id") == "btn_ex_color06"){
-	// 		$("#ex_color").reel("images", "../VR/AE_HEV_Demitasse_Brown/###.png");
-	// 		$("#back_img").attr("src","../images/002_06.png"); 
-	// 	} else if($(this).parents("li").attr("id") == "btn_ex_color07"){
-	// 		$("#ex_color").reel("images", "../VR/AE_HEV_Marina_Blue/###.png");
-	// 		$("#back_img").attr("src","../images/002_07.png"); 
-	// 	} else if($(this).parents("li").attr("id") == "btn_ex_color08"){
-	// 		$("#ex_color").reel("images", "../VR/AE_HEV_Phoenix_Orange/###.png");
-	// 		$("#back_img").attr("src","../images/002_08.png"); 
-	// 	}
-	// });
-
 
 });//ready

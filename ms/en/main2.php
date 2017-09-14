@@ -611,7 +611,7 @@
 						</div>
 						<div class="textwrap">
 							<h2>LKAS <span>(Lane Keeping Assist System)</span></h2>
-							<p>LDWS from the previous LF Sonata only sounded an alert for a lane departure. However, the new LKAS detects the road lanes through the front camera and assists in controlling the steering wheel to ensure that the car stays within lanes.</p>
+							<p>LDWS from the previous LF Sonata only sounded an alert for a lane departure. However, the new LKAS (Lane Keeping Assist System) detects the road lanes through the front camera and assists in controlling the steering wheel to ensure that the car stays within lanes.</p>
 						</div>
 						<div class="btn_close">
 							<img src="../images/button/btn_close.png" alt="">
@@ -740,7 +740,7 @@
 					</div>
 					<div class="textwrap">
 						<h2>2.0Turbo-GDI</h2>
-						<p>With the Sonata Elite and Premium variants, you’ll enjoy the 2.0L Turbocharged GDI engine that delivers a satisfying 180 kW of power (at 6,000 RPM) and 350 Nm of torque (at 1,400 – 4,000 RPM).</p>
+						<p>The 2.0L Turbocharged GDI engine delivers a satisfying 180 kW of power (at 6,000 RPM) and 350 Nm of torque (at 1,400 – 4,000 RPM).</p>
 					</div>
 					<a href="#" class="btn_back" data-rel="back"><img src="../images/button/next btn_alt.png" alt=""></a>
 					<a href="#engine02" class="btn_nextPage">

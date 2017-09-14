@@ -1,3 +1,17 @@
+#applicationIntro{
+	background-image: url('../images/002_05_01_bg.jpg');
+	background-repeat: no-repeat;
+	background-size: 101% auto;
+    background-position: bottom;
+	.textwrap{
+		width: 80%;
+    	margin: 20% auto 0;
+    	p{
+    		margin-bottom: 4%;
+    		color:$text_50;
+    	}
+	}
+}
 #application{
 	background-color:$white;
 	.ui-content{
@@ -82,8 +96,10 @@
     					background-size: 16px auto;
     					margin-right:2px;
     					font-size: 15px;
-    					border-radius: initial;
     					box-shadow: none;    					
+					}
+					select::-ms-expand {//IE select appearance
+    					display: none;
 					}
 					select.bSelect#bMonth,select.bSelect#bDay,select.bSelect#bHour,select.bSelect#bMin{
 						width: 15%;
@@ -96,7 +112,7 @@
 					}
 					.ui-input-text{
 						display: inline-block;
-						border-radius: initial;
+						border-radius: inherit;
 						background:none;
 						border:none;
 						border-bottom:1px solid #aaa;
@@ -108,6 +124,7 @@
 					textarea{
 						resize:none;
 						height: 60px !important;
+						width: 90%;
 					}
 				}				
 
@@ -118,7 +135,7 @@
 			
 			.btnwrap{
 				position: absolute;
-				bottom:5%;
+				bottom:2%;
 				width: 100%;
 				.button{
 					// @include clearfix;

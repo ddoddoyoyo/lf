@@ -27,5 +27,15 @@ $(document).ready(function(){
 	$('a#m_request').click(function(){
 		location.href="../en/application.php";
 	});
+	if(!mobile){
+		$('#exColor .btn_sidePanel').click(function(){
+			$(".vr").css({"z-index":"1"});
+		});
+		$('.sidePanel_wrap').click(function(){
+			setTimeout(function(){
+				$(".vr").css({"z-index":"10"});
+			},500);			
+		})
+	}
 })
 

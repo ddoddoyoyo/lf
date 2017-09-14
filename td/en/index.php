@@ -15,7 +15,8 @@
 					A.LMS_NAME, 
 					A.LMS_ID,
 					B.CTCODE,
-					B.ENG
+					B.ENG,
+					A.LMS_IMAGE
 				FROM 
 					LMS_MEMBER A
 				LEFT JOIN SPK_COUNTRY B ON B.ENG = A.LMS_CONTRY
@@ -38,10 +39,12 @@
 			$LF_TD_DEALER_ID = $row[0]["LMS_ID"];
 			$LF_TD_DEALER_REGION = $row[0]["CTCODE"];
 			$LF_TD_DEALER_COUNTRY = $row[0]["ENG"];
+			$LF_TD_DEALER_IMAGE = $row[0]["LMS_IMAGE"];
 			@session_register("LF_TD_DEALER_NAME")	or die("session_register err");
 			@session_register("LF_TD_DEALER_ID")	or die("session_register err");
 			@session_register("LF_TD_DEALER_REGION")	or die("session_register err");
 			@session_register("LF_TD_DEALER_COUNTRY")	or die("session_register err");
+			@session_register("LF_TD_DEALER_IMAGE")	or die("session_register err");
 		}else{
 			//$tools->alertJavaGo("Faild.","error.php");
 		}
@@ -109,6 +112,7 @@
 			<section data-role="page" id="intro1" class="container subcover">
 				<div data-role="header" class="header">
 					<a href="#" class="ui-btn btn_sidePanel ui-btn-right"><img src="../images/common/btn_menu.png" alt=""></a>
+					<h1>Sonata New Rise</h1>
 				</div>
 				<div data-role="main" class="ui-content">
 					<div class="wrap">
@@ -143,6 +147,8 @@
 			<section data-role="page" id="intro2" class="container cover">
 				<div data-role="header" class="header">
 					<a href="#" class="ui-btn btn_sidePanel ui-btn-right"><img src="../images/common/btn_menu.png" alt=""></a>
+					<a href="#" class="ui-btn ui-btn-left" data-rel="back"><img src="../images/common/btn_backward.png" alt=""></a>
+					<h1>Sonata New Rise</h1>
 				</div>
 				<div data-role="main" class="ui-content">
 					<div class="titlewrap">
