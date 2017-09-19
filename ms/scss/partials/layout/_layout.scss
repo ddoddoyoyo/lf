@@ -60,6 +60,9 @@ ul{
 .btn_back{
 	@include btn_back;
 }
+.ui-page-thema-a .ui-focus{
+	box-shadow: none;
+}
 // .btn_scroll{
 // 	@include btn_scroll;
 // }
