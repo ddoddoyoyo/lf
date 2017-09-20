@@ -62,7 +62,7 @@ html, body {
   margin: 0;
   padding: 0;
   height: 100% !important;
-  background-color: #ffffff;
+  background-color: #000;
   background-size: cover;
   background-attachment: fixed;
   overflow: hidden; }
@@ -118,6 +118,9 @@ ul {
   width: 4%;
   transform: rotate(-180deg);
   line-height: 0; }
+
+.ui-page-thema-a .ui-focus {
+  box-shadow: none; }
 
 a {
   color: #323232 !important;

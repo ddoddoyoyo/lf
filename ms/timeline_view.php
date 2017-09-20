@@ -66,17 +66,24 @@
 					<article class="article">
 						<div class="photo">
 							<?php if($ls["LMS_CON_TITLE_IMG"]) { ?>
-								<img src="<?=$IMG_URL?>/hyundai/lf/<?=$ls["LMS_CON_TITLE_IMG"]?>" alt="">
+								<!-- <img src="<?=$IMG_URL?>/hyundai/lf/<?=$ls["LMS_CON_TITLE_IMG"]?>" alt=""> -->
+								<div class="img" style="background-image : url('<?=$IMG_URL?>/hyundai/lf/<?=$ls["LMS_CON_TITLE_IMG"]?>');"></div>
 							<?php } else { ?>
-								<img src="" alt="">
+								<!-- <img src="" alt=""> -->
 							<?php } ?>
 						</div>
 						<div class="profile_wrap">
 							<div class="userPix_wrap">
 								<?php if($ls["LMS_IMAGE"]) { ?>
-									<div class="userPix"><img src="<?=$IMG_URL?>/hyundai/member/<?=$ls["LMS_IMAGE"]?>" alt=""></div>
+									<div class="userPix">
+										 <!-- <img src="<?=$IMG_URL?>/hyundai/member/<?=$ls["LMS_IMAGE"]?>" alt=""> -->
+										<div class="img" style="background-image : url('<?=$IMG_URL?>/hyundai/member/<?=$ls["LMS_IMAGE"]?>');"></div>
+									</div>
 								<?php } else { ?>
-									<div class="userPix"><img src="images/timeline/profile_basic_@3x.png" alt=""></div>
+									<div class="userPix">
+										<!-- <img src="images/timeline/profile_basic_@3x.png" alt=""> -->
+										<div class="img" style="background-image : url('images/timeline/profile_basic_@3x.png');"></div>
+									</div>
 								<?php } ?>
 							</div>
 							<div class="userProfile">
