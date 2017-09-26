@@ -125,7 +125,7 @@
 							<p><span class="dName">Jack</span>'s <span class="comt">Comments</span></p>
 						</div>
 						<div class="textwrap">
-							<p>A wider cascading grille is applied to the front. With the grill in the center, bold lines and a sense of volume give the car powerful and sporty look.</p>
+							<p>A wider cascading grille is applied to the front. With the grille in the center, bold lines and a sense of volume give the car a powerful and sporty look.</p>
 						</div>
 					</div>
 					<div>
@@ -194,7 +194,7 @@
 							<p><span class="dName">Jack</span>'s <span class="comt">Comments</span></p>
 						</div>
 						<div class="textwrap">
-							<p>The vertical-type DRL integrated with the air adds a swift and sporty feel to the car.</p>
+							<p>The vertical-type DRL integrated with the air curtain adds a sporty feel to the car.</p>
 						</div>
 					</div>
 					<div>
@@ -354,7 +354,7 @@
 							<p><span class="dName">Jack</span>'s <span class="comt">Comments</span></p>
 						</div>
 						<div class="textwrap">
-							<p>A wireless charging system is added for the convenience of the driver and passengers.</p>
+							<p>The wireless charging system for smart phones has been added for the convenience of the driver and passengers.</p>
 						</div>
 					</div>
 					<div>

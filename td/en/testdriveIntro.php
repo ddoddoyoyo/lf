@@ -59,12 +59,12 @@
 				<div data-role="header" class="header">
 					<a href="#" class="ui-btn btn_sidePanel ui-btn-right"><img src="../images/common/btn_menu.png" alt=""></a>
 					<a href="#" class="ui-btn ui-btn-left" data-rel="back"><img src="../images/common/btn_backward.png" alt=""></a>
-					<h1>Test Drive</h1>
+					<h1>VIRTUAL EXPERIENCE</h1>
 				</div>
 				<div data-role="main" class="ui-content">
 					<div class="titlewrap">
 						<div class="title"><h1>Sonata New Rise</h1></div>
-						<p>TEST DRIVE</p>
+						<p>VIRTUAL EXPERIENCE</p>
 					</div>
 					<div class="button">
 						<a href="#tdIntro">
@@ -79,7 +79,7 @@
 				<div data-role="header" class="header">
 					<a href="#" class="ui-btn btn_sidePanel ui-btn-right"><img src="../images/common/btn_menu.png" alt=""></a>
 					<a href="#" class="ui-btn ui-btn-left" data-rel="back"><img src="../images/common/btn_backward.png" alt=""></a>
-					<h1>Test Drive</h1>
+					<h1>VIRTUAL EXPERIENCE</h1>
 				</div>
 				<div data-role="main" class="ui-content">
 					<div class="wrap">
@@ -98,8 +98,8 @@
 							</div>
 						</div>
 						<div class="textwrap">	
-							<p>The Virtual Test Drive will help you indirectly experience the features and feelings of the car. After this, you can also request an actual test drive .</p>
-							<p>Enjoy the Sonata New Rise as you drive through the city using your smartphone.</p>
+							<p>The Virtual Test Drive will help you indirectly experience the features and feelings of the car. After this, you can also request an actual test drive.</p>
+							<p>Enjoy the Sonata New Rise as you drive through the city using your smartphone!</p>
 						</div>
 						<div class="button">
 							<a class="btn_box btn_showroom" href="#drivingMap">VISIT</a>
@@ -112,10 +112,10 @@
 			<section data-role="page" id="drivingMap" class="container popPage">
 				<div data-role="header" class="header">
 					<a href="#" class="ui-btn btn_sidePanel ui-btn-right"><img src="../images/common/btn_menu.png" alt=""></a>
-					<h1>Test Drive</h1>
+					<h1>VIRTUAL EXPERIENCE</h1>
 				</div>
 				<div data-role="main" class="ui-content">
-					<h2>Virtual Test Drive Map</h2>
+					<h2>COURSE MAP</h2>
 					<div class="imgbox map">
 						<!-- <img src="../images/testdrive/002_02_00_btn_01.png" class="mapIcon showroom" alt=""> -->
 						<img src="../images/testdrive/002_02_00_btn_02.png" class="mapIcon beforeDriving" alt="">
@@ -140,36 +140,36 @@
 					</div> -->
 					<div class="popLayer imgbox" id="pop_beforeDriving">
 						<div class="textwrap">
-							<h3>Start Point</h3>
-							<p>First, let’s go through the initial settings you need.<br><br>Adjust the side mirrors, seat position, and steering wheel position, and finally wear your seat belt.</p>
+							<h3>Preparation</h3>
+							<p>Initial settings for the test drive will be introduced.</p>
 						</div>
 						<div class="btn_close"><img src="../images/common/btn_close.png" alt=""></div>
 					</div>
 					<div class="popLayer imgbox" id="pop_straight">
 						<div class="textwrap">
 							<h3>Straight Section</h3>
-							<p>In this section, you will get to know about engines, transmissions, as well as safety features available for the Sonata New Rise.</p>
+							<p>You will experience the performance of the engines, transmissions, and some safety features that the Sonata New Rise has.</p>
 						</div>
 						<div class="btn_close"><img src="../images/common/btn_close.png" alt=""></div>
 					</div>
 					<div class="popLayer imgbox" id="pop_cornering">
 						<div class="textwrap">
 							<h3>Cornering Section</h3>
-							<p>In this section you will see how the suspensions and an advanced system contribute to stable driving.</p>
+							<p>You will experience how the suspensions and an advanced system(VSM) contribute to stable driving.</p>
 						</div>
 						<div class="btn_close"><img src="../images/common/btn_close.png" alt=""></div>
 					</div>
 					<div class="popLayer imgbox" id="pop_lakeChange">
 						<div class="textwrap">
-							<h3>Lane-changing section</h3>
-							<p>In this section, you will be introduced more Smart Sense functions (ASCC, BSD) available for safe driving.</p>
+							<h3>Lane changing section</h3>
+							<p>You will  experience more Smart Sense functions (ASCC, BSD) available for safe driving.</p>
 						</div>
 						<div class="btn_close"><img src="../images/common/btn_close.png" alt=""></div>
 					</div>
 					<div class="popLayer imgbox" id="pop_parking">
 						<div class="textwrap">
 							<h3>Parking</h3>
-							<p>AVM function that provides a 360-degree view of your surroundings while parking will be demonstrated.</p>
+							<p>You will experience how parking assist systems of Sonata New Rise help you park easily and safely.</p>
 						</div>
 						<div class="btn_close"><img src="../images/common/btn_close.png" alt=""></div>
 					</div>
@@ -189,7 +189,7 @@
 							<p><span class="dName">Jack</span>'s <span class="comt">Comments</span></p>
 						</div>
 						<div class="textwrap">
-							<p>Adjust the seat first to set the most comfortable position for driving before starting.</p>
+							<p>Adjust the seat first to set the most comfortable position for driving before you start.</p>
 						</div>
 					</div>
 					<div>
@@ -212,7 +212,7 @@
 							<p><span class="dName">Jack</span>'s <span class="comt">Comments</span></p>
 						</div>
 						<div class="textwrap">
-							<p>Check whether you can see the side and behind well and adjust the rearview mirror for the best view.</p>
+							<p>Check whether you can see the side and behind well and adjust the side view and rear view mirrors.</p>
 						</div>
 					</div>
 					<div>
@@ -235,7 +235,7 @@
 							<p><span class="dName">Jack</span>'s <span class="comt">Comments</span></p>
 						</div>
 						<div class="textwrap">
-							<p>Adjust the steering wheel to you comfortable position by tilting and telescoping it.</p>
+							<p>Adjust the steering wheel to your comfortable position by tilting and telescoping it.</p>
 						</div>
 					</div>
 					<div>
