@@ -1,5 +1,5 @@
 * {
-	-ms-user-select: none; 
+	-ms-user-select: none;
 	-moz-user-select: -moz-none;
 	-khtml-user-select: none;
 	-webkit-user-select: none;
@@ -39,7 +39,7 @@ body {
 	width:100%;
 	/* height:100%; */
 	margin:0;
-	overflow:auto;
+	overflow:hidden;
 	/* -webkit-overflow-scrolling:touch; */
 	-ms-content-zooming:none;
 }
@@ -112,18 +112,48 @@ body {
 #roadBg1 {
 	background-image:url('../images/testdrive/course_1.jpg');
 }
+#roadBg2 {
+	background-image:url('../images/testdrive/course_2.jpg');
+}
+#roadBg3 {
+	background-image:url('../images/testdrive/course_3.jpg');
+}
+#roadBg4 {
+	background-image:url('../images/testdrive/course_4.jpg');
+}
+#roadBg5 {
+	background-image:url('../images/testdrive/course_5.jpg');
+}
+#roadBg6 {
+	background-image:url('../images/testdrive/course_6.jpg');
+}
+#roadBg7 {
+	background-image:url('../images/testdrive/course_7.jpg');
+}
+#roadBg8 {
+	background-image:url('../images/testdrive/course_8.jpg');
+}
+#roadBg9 {
+	background-image:url('../images/testdrive/course_9.jpg');
+}
+#roadBg10 {
+	background-image:url('../images/testdrive/course_10.jpg');
+}
+#roadBg11 {
+	background-image:url('../images/testdrive/course_11.jpg');
+}
 
 #car {
 	/* border:1px solid #CC0000; */
 	position:fixed;
 	width:100%;
 	height:auto;
-	transform-origin:50% 30%;
-	/* background:url('../images/testdrive/testdrive_car.png');
+	transform-origin:50% 44%;
+	/* background:url('../images/testdrive/car.png');
 	background-size:cover; */
 	z-index:2;
 	top:0;
-	left:-11.79%;
+	left:-14.47%;
 	/* height:250px; */
 	/* width:300px;
 	height:300px;
@@ -184,7 +214,7 @@ svg {
 	height:26px;
 }
 .point .pointClose {
-	background:url(../images/testdrive/course_popup_btn_close_01.png) no-repeat center;
+	background:url(../images/testdrive/btn_viewdetail_close.png) no-repeat center #606065;
 	width:30px;
 	height:31px;
 	background-size:cover;
@@ -197,21 +227,25 @@ svg {
 	/* position: absolute; */
 	/* height: 85%; */
 	width:100%;
-	border-radius: 5px 5px 0 0;
+	/* left: 5%; */
 }
 .point .pointTitle {
 	font-family:'HyundaiSansHeadMedium';
 	color: #3cb4eb;
 	padding: 5% 0;
 	text-align: center;
-	font-size: 18pt;
+	font-size: 17pt;
 	font-weight: 700;
+}
+.point .pointTitle .pointTitleSub {
+	font-size: 12pt;
+    font-family: 'HyundaiSansHeadRegular';
 }
 .point .pointDesc {
 	padding: 0 8%;
 	font-size: 11pt;
 	line-height: 125%;
-	/* color:#606065; */
+	color:#606065;
 }
 .point .pointBtn {
 	margin:20px auto;
@@ -219,24 +253,27 @@ svg {
 }
 .point .pointBtn a {
 	font-family:'HyundaiSansHeadRegular';
-	background: #3c3c41 url(../images/testdrive/icon_testdrive_btn_viewmore.png) no-repeat 12% center;
-	padding: 3% 8% 3% 16%;
-	font-size: 12pt;
-	color: #3CB4EB;
-	border-radius:5px;
-	background-size: 13%;
+	background:#454550 url(../images/testdrive/icon_testdrive_btn_viewmore.png) no-repeat 15px center;
+	padding:10px 15px 7px 49px;
+	font-size:12pt;
+	color:#3CB4EB;
+	border-radius:20px;
+	background-size:16%;
 	display:inline-block;
-	font-weight: 700;
+	font-weight:700;
 }
 
 
 .nextPoint {
 	position:fixed;
 	z-index:8;
-	bottom:0;
-	width:90%;
-	left:5%;
+	top:2%;
+	width:80%;
+	left:0;
 	display:none;
+	height:40px;
+	background:url(../images/testdrive/bg_title_text40pt_1line.png) no-repeat;
+	background-size:contain;
 }
 .nextPoint .nextPointIcon {
 	background:url(../images/testdrive/icon_testdrive_sign.png) no-repeat center;
@@ -247,11 +284,15 @@ svg {
 .nextPoint .nextPointTitle {
 	font-family:'HyundaiSansHeadMedium';
 	color:#FFF;
-	padding:5% 0;
-	text-align:center;
-	font-size: 18pt;
-	font-weight: 700;
-	text-shadow: 0px 0px 2px #000;
+	padding:4% 0 0 3%;
+	font-size:12pt;
+	/* font-weight: 700; */
+	/* text-shadow: 0px 0px 2px #000; */
+}
+.nextPoint.doubleline {
+	background:url(../images/testdrive/bg_title_text40pt_2lines.png) no-repeat center;
+	/*height:63px;*/
+	height:57px;
 }
 
 
@@ -271,10 +312,9 @@ svg {
 	background: #FFF;
 	width: 90%;
 	left: 5%;
-	border-radius:5px;
 }
 .popup .popupHead {
-	background:#252525;
+	background: #3c3c41;
 	padding:10px;
 }
 .popup .popupTitle {
@@ -285,13 +325,14 @@ svg {
 	height:45px;
 	background-size: cover;
 	border-radius:45px;
-	border: 2px solid #787878;
+	background-color:#787878;
+	/* border: 2px solid #787878; */
 	float: left;
 }
 
 .popup .popupTitleTxt {
 	float: left;
-	color:#A1A1A1;
+	color:#FFF;
 	font-size: 12pt;
 	padding: 5px 0 0 10px;
 	line-height: 125%;
@@ -299,36 +340,35 @@ svg {
 
 .popup .popupClose {
 	float: right;
-	background:url(../images/testdrive/icon_viewdetail_close.png) no-repeat center;
-	line-height:999;
-	overflow:hidden;
-	border: 1px solid #FFF;
-	width: 27px;
-	height: 27px;
-	background-size: 59%;
+	background:url(../images/testdrive/btn_viewdetail_close.png) no-repeat center;
+	width:30px;
+	height:31px;
+	background-size:cover;
 	cursor:pointer;
 }
+
 .popup .popupDesc {
 	clear:both;
 	position:relative;
+	padding-bottom:20px;
 }
+
 .popup .popupDesc img {
-	width:90%;
-	margin:0 auto;
+	width:100%;
 	height:auto;
-	padding-bottom:6%;
 }
+
 .popup .popupDesc > div {
-	/* width:100%; */
-	text-align: center;
+	width:100%;
 }
+
 .popup .popupDesc > div > p {
 	font-size: 11pt;
-	padding:6% 5% 6% 5%;
-	text-align: left;
+	padding:20px 20px 0 20px;
 }
+
 .popup .popupNaviWrap {
-	padding:10px 10px 10px 10px;
+	padding:0 10px 10px 10px;
 	clear:both;
 }
 
@@ -337,23 +377,25 @@ svg {
 }
 
 .popup .popupNaviWrap .popupNaviPrev a {
-	background: url('../images/testdrive/course_popup_btn_left.png') no-repeat center;
+	background: url('../images/testdrive/p11_arrow_back.png') no-repeat center;
 	width: 26px;
 	height: 26px;
 	line-height: 999;
 	overflow: hidden;
 	display: inline-block;
+	border:1px solid #B4B4B4;
 	background-size: 38%;
 	cursor:pointer;
 }
 
 .popup .popupNaviWrap .popupNaviNext a {
-	background: url('../images/testdrive/course_popup_btn_right.png') no-repeat center;
+	background: url('../images/testdrive/p11_arrow_next.png') no-repeat center;
 	width: 26px;
 	height: 26px;
 	line-height: 999;
 	overflow: hidden;
 	display: inline-block;
+	border:1px solid #B4B4B4;
 	background-size: 38%;
 	cursor:pointer;
 }
@@ -440,6 +482,18 @@ svg {
 	-o-animation:     blink1 2s infinite ease-in-out;
 	animation:        blink1 2s infinite ease-in-out;
 }
+.blink2 {
+	-webkit-animation:blink2 1s infinite ease-in-out;
+	-moz-animation:   blink2 1s infinite ease-in-out;
+	-o-animation:     blink2 1s infinite ease-in-out;
+	animation:        blink2 1s infinite ease-in-out;
+}
+.blink3 {
+	-webkit-animation:blink2 1s 2 ease-in-out;
+	-moz-animation:   blink2 1s 2 ease-in-out;
+	-o-animation:     blink2 1s 2 ease-in-out;
+	animation:        blink2 1s 2 ease-in-out;
+}
 
 .wave {
 	position: absolute;
@@ -458,7 +512,28 @@ svg {
 	animation:        wave2 3s infinite ease-in-out;
 }
 
-.carGlow { position:absolute; top:0; display:none; opacity:0; width:100%; }
+.carGlow {
+	position:fixed;
+	top:0;
+	/* display:none; */
+	opacity:0;
+	width:100%;
+	animation-name:fadeInOut3;
+	animation-timing-function:ease-in-out;
+	animation-iteration-count:infinite;
+	animation-duration:3s;
+}
+.carGlow3 {
+  animation-delay:2s;
+}
+.carGlow2 {
+  animation-delay:1s;
+}
+.carGlow1 {
+  animation-delay:0s;
+}
+
+
 .carGlowOn {
 	-webkit-animation:blink1 3s infinite ease-in-out;
 	-moz-animation:   blink1 3s infinite ease-in-out;
@@ -494,6 +569,113 @@ svg {
 	background-size:cover;
 }
 
+.gaugeWrap {
+	position:fixed;
+	display:none;
+	bottom:3%;
+	left:4%;
+	background: url(../images/testdrive/gauge.png) no-repeat;
+	background-size: contain;
+	width:90%;
+	height:75px;
+	z-index:7;
+}
+.gaugeWrap > div {
+	float:left;
+}
+.gaugeMode {
+	color:#FFF;
+	margin:27px 0 0 5px;
+	font-size:14pt;
+	font-weight:700;
+	width:200px;
+	height: 30px;
+}
+.gaugeMode span{
+	font-family: 'DSDIGI';
+}
+.gaugeText {
+	color:#FFF;
+	font-style:italic;
+	margin:23px 0 0 0;
+	font-size:20pt;
+	font-weight:700;
+	width:75px;
+	text-align:center;
+	font-family:'DSDIGI';
+}
+.gaugeText > span {
+	display:inline-block;
+	padding:0 1px 0 0;
+}
+.gaugeGreen {
+	color:#00FFF0;
+}
+.gaugeRed {
+	color:#E63200;
+}
+.gaugeWhite {
+	color:#FFF;
+}
+
+.carEffect {
+	width:100%;
+	height:auto;
+	position:absolute;
+	top:0;
+}
+
+.sign {
+	width:68%;
+	height:auto;
+	position:fixed;
+	top:60%;
+	left:50%;
+	transform:translateX(-50%) translateY(-50%);
+	display:none;
+	z-index:10;
+}
+
+.daw {
+	width:60%;
+	top:50%;
+	left:50%;
+}
+
+/* .offroadWrap {
+	display:none;
+	position:fixed;
+	z-index:8;
+}
+.offroad {
+	opacity:1;
+	animation-name:fadeInOut4;
+	position: absolute;
+	animation-timing-function:ease-in-out;
+	animation-iteration-count:infinite;
+	animation-duration:4s;
+}
+.offroadWrap img:nth-child(1) {
+  animation-delay:3s;
+}
+.offroadWrap img:nth-child(2) {
+  animation-delay:2s;
+}
+.offroadWrap img:nth-child(3) {
+  animation-delay:1s;
+}
+.offroadWrap img:nth-child(4) {
+  animation-delay:0;
+} */
+
+.lamp {
+	top: 50%;
+	left: 0;
+	display:none;
+	position: fixed;
+	width: 56%;
+}
+
 .truck {
 	width:100%;
 	height:auto;
@@ -519,21 +701,51 @@ svg {
 .loading .loadingImg, .ui-loader .loadingImg { width:45%; height:45%; top:45%; position:absolute; left:50%; transform:translateX(-50%) translateY(-50%); }
 .loading .loadingImg img, .ui-loader .loadingImg img { width:100%; }
 .loading h1, .ui-loader h1 { color:#3cb4eb; text-align:center; top:58%; position:absolute; font-weight:400; font-size:15pt; width:100%; }
-.loading p, .ui-loader p { text-align:center; bottom:10%; position:absolute; font-weight:400; font-size:15pt; color:#FFF; width:100%; }
+/*.loading p, .ui-loader p { text-align:center; bottom:10%; position:absolute; font-weight:400; font-size:15pt; color:#FFF; width:100%; }*/
 
 .opponentCar { position:absolute; }
 
 .menuWrap {
 	position:fixed;
-	width:30px;
-	height:30px;
-	background:url('../images/common/btn_menu.png') no-repeat;
-	background-size:100% auto;
+	width:40px;
+	height:40px;
+	background:url('../images/testdrive/btn_menu.png') no-repeat;
+	background-size:cover;
 	overflow:hidden;
 	top:2%;
 	right:3.5%;
 	z-index:7;
-	cursor: pointer;
+	cursor:pointer;
+}
+
+#media {
+	z-index:10;
+	/* position:absolute; */
+	width:100px;
+	height:100px;
+	overflow:hidden;
+	clear: both;
+}
+
+.movieWrap {
+	display:block;
+	position:fixed;
+	z-index:9;
+	height:100%;
+	width:100%;
+	display:none;
+}
+.movieWrap video {
+	width:47%;
+	height:auto;
+	top:76%;
+	left:50%;
+	transform:translateX(-50%) translateY(-50%);
+	position:absolute;
+}
+.rearCameraBg {
+	width:100%;
+	position:absolute;
 }
 
 
@@ -544,3 +756,125 @@ svg {
 .sidePanel_wrap a { display:block; }
 
 .avoidScroll { width:100%; height:100%; overflow:hidden; z-index:1000; position:fixed; }
+
+
+
+
+
+.offroadWrap {
+	display:none;
+	position:absolute;
+	width:100%;
+	height:100%;
+}
+.offroadWrap img {
+	position:absolute;
+	width:100%;
+}
+
+.offroadWrap img {
+	-webkit-animation-name: fadeInOut;
+	-webkit-animation-timing-function: ease-in-out;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-duration: 4s;
+
+	-moz-animation-name: fadeInOut;
+	-moz-animation-timing-function: ease-in-out;
+	-moz-animation-iteration-count: infinite;
+	-moz-animation-duration: 4s;
+
+	-o-animation-name: fadeInOut;
+	-o-animation-timing-function: ease-in-out;
+	-o-animation-iteration-count: infinite;
+	-o-animation-duration: 4s;
+
+	animation-name: fadeInOut;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-duration: 4s;
+}
+.offroadWrap img:nth-of-type(1) {
+	-webkit-animation-delay: 3s;
+	-moz-animation-delay: 3s;
+	-o-animation-delay: 3s;
+	animation-delay: 3s;
+}
+.offroadWrap img:nth-of-type(2) {
+	-webkit-animation-delay: 2s;
+	-moz-animation-delay: 2s;
+	-o-animation-delay: 2s;
+	animation-delay: 2s;
+}
+.offroadWrap img:nth-of-type(3) {
+	-webkit-animation-delay: 1s;
+	-moz-animation-delay: 1s;
+	-o-animation-delay: 1s;
+	animation-delay: 1s;
+}
+.offroadWrap img:nth-of-type(4) {
+	-webkit-animation-delay: 0;
+	-moz-animation-delay: 0;
+	-o-animation-delay: 0;
+	animation-delay: 0;
+}
+.letterSpacing{
+	letter-spacing: -1px;
+}
+
+#page8 {
+  background-image: url("../images/testdrive/p15_bg_1.jpg");
+  background-size: cover; 
+  position: absolute;
+}
+  #page8 .bg{
+  	overflow: visible;
+  }
+  #page8 .bg img {
+    position: absolute;
+    top: 0;
+    left: 0; 
+	width: 100%}
+  #page8 .title {
+    text-align: center;
+    width: 65%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 15%; }
+    #page8 .title  img{width: 100%;}
+    #page8 .title .heart {
+      margin-top: 15px; }
+      #page8 .title .heart img, #page8 .title .heart p {
+        display: inline-block; }
+      #page8 .title .heart img {
+        width: 25px; }
+      #page8 .title .heart p {
+        /*vertical-align: super;*/
+        color: #3cb4eb;
+        margin-left: 5px; }
+  #page8 .start {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 30px;
+    width: 160px;
+    height: 160px; }
+    #page8 .start:hover {
+      cursor: pointer; }
+    #page8 .start img, #page8 .start div {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
+    #page8 .start > img {
+      width: 130px;
+      height: 130px; }
+    #page8 .start .glow {
+      width: 100%;
+      height: 100%; }
+      #page8 .start .glow img:first-child {
+        width: 140px;
+        height: 140px; }
+      #page8 .start .glow img:last-child {
+        width: 160px;
+        height: 160px; }

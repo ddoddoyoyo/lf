@@ -1,7 +1,7 @@
-<?
+<?php
 	include_once ($_SERVER[DOCUMENT_ROOT]."/common/commonFunction.php");
 	header("Content-Type: text/html; charset=UTF-8");
-	
+
 	if($_SESSION["LF_TD_DEALER_IMAGE"]){
 		$LMS_IMAGE = $IMG_URL."/hyundai/member/".$_SESSION["LF_TD_DEALER_IMAGE"];
 	}else{
@@ -15,7 +15,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui">
 <meta name="apple-touch-fullscreen" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
-<title>SONATA NEW RISE VIRTUAL DRIVING EXPERIENCE</title>
+<title>KONA Virtual Drive Experience</title>
 <link rel="stylesheet" href="../css/font.css">
 <link rel="stylesheet" href="../css/menu.css">
 <link rel="stylesheet" href="../css/testdrive.css">
@@ -23,10 +23,43 @@
 </head>
 
 <body class="tdBody">
-	<!-- <div class="loading">
-		<div class="loadingImg"><img src="../images/testdrive/icon_loading_gif.gif" alt="loading SONATA" /></div>
-		<p>SONATA's virtual driving service<br>is being prepared.</p>
-	</div> -->
+	<div id="media">
+		<audio id="engine_sound" autoplay muted preload>
+			<source src="../sound/engine.mp3" type="audio/mpeg">
+		</audio>
+		<audio id="lka_sound" autoplay muted preload>
+			<source src="../sound/lka.mp3" type="audio/mpeg">
+		</audio>
+		<audio id="fca_sound_2" autoplay muted preload>
+			<source src="../sound/warn2.mp3" type="audio/mpeg">
+		</audio>
+		<audio id="fca_sound_3" autoplay muted preload>
+			<source src="../sound/warn3.mp3" type="audio/mpeg">
+		</audio>
+	</div>
+	<div class="loading" id="page8">
+		<div class="bg">
+			<img src="../images/testdrive/p15_bg_2.jpg" class="bgImg" alt="">
+			<img src="../images/testdrive/p15_bg_3.jpg" class="bgImg" alt="">
+			<img src="../images/testdrive/p15_bg_4.jpg" class="bgLast" alt="">
+		</div>
+		<div class="title">
+			<img src="../images/testdrive/p15_title.png" alt="">
+			<div class="heart">
+				<img src="../images/button/p15_icon_count.png" alt="">
+				<p class="h_num"></p>
+			</div>
+		</div>
+		<a href="javascript:;" class="start">
+			<img src="../images/testdrive/p15_btn_start_basic.png" alt="">
+			<div class="glow">
+				<img src="../images/testdrive/p15_btn_start_effect_1.png" alt="">
+				<img src="../images/testdrive/p15_btn_start_effect_2.png" alt="">
+			</div>
+		</a>
+		<!-- <div class="loadingImg"><img src="../images/testdrive/icon_loading_gif.gif" alt="loading KONA" /></div>
+		<p>KONA's virtual driving service<br>is being prepared.</p> -->
+	</div>
 	<div class="menuWrap"></div>
 	<div class="popup">
 		<div class="popupWrap">
@@ -61,17 +94,29 @@
 		</div>
 	</div>
 	<div class="nextPoint">
-		<div class="nextPointIcon"></div>
+		<!-- <div class="nextPointIcon"></div> -->
 		<div class="nextPointTitle"></div>
-	</div>	<div class="scrollWrap">
+	</div>
+	<div class="scrollWrap">
 		<div id="car">
-			<img src="../images/testdrive/car.png" class="car" alt="SONATA" />
+			<img src="../images/testdrive/car_glow_1.png" class="carGlow carGlow1" />
+			<img src="../images/testdrive/car_glow_2.png" class="carGlow carGlow2" />
+			<img src="../images/testdrive/car_glow_3.png" class="carGlow carGlow3" />
+			<img src="../images/testdrive/car.png" class="car" alt="sonata new rise" />
 		</div>
 		<div class="loadingText">
-			<p>Please proceed with<br>the test drive via <strong>the accel button.</strong></p>
+			<p>Now press <strong>the accel button.</strong></p>
 		</div>
 	</div>
-	<div class="accel"></div>
+	<div class="gaugeWrap">
+		<div class="gaugeText"><span class="gaugeWhite"></span></div>
+		<div class="gaugeMode"><span></span></div>
+	</div>
+	<div class="accel blink1"></div>
+	<div class="movieWrap">
+		<video src="../movie/rear_camera.mp4" autoplay muted playsinline loop id="rear_camera"></video>
+		<img src="../images/testdrive/video_frame.png" class="rearCameraBg" />
+	</div>
 	<div class="roadBg">
 		<div id="roadBg1" class="bg"></div>
 		<div id="roadBg2" class="bg"></div>
@@ -85,7 +130,7 @@
 		<div id="roadBg10" class="bg"></div>
 		<div id="roadBg11" class="bg"></div>
 		<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="180px" height="16000px" viewBox="0 0 180 16000" enable-background="new 0 0 180 16000" xml:space="preserve">
-			<path id="mycurve" fill="none" d="M111.2,0v687.5v5071c0,0,0.3,100.7,10.3,206s18,190,18,238s-4.7,141.3-31.3,256.7
+			<path id="carPath" fill="none" d="M111.2,0v687.5v5071c0,0,0.3,100.7,10.3,206s18,190,18,238s-4.7,141.3-31.3,256.7
 	c-26.7,115.3-28.7,212.7-26,258s11.3,163.3,19.3,224.7c8,61.3,25.7,262.7,13.7,414.7s-38.4,374.1-21.9,564.6s17.1,275.4,17.1,346.4
 	s0,1405,0,1405s-0.5,35.3,4.5,74s32.3,218.5,32.3,321s1,124.3-13.7,243s-22,216-22,264.7s0,535.3,0,535.3s0.4,35.3-2.8,59
 	s-32,204-35.5,272s-5.5,150.5,3,191.5s25,115.5,44,190.5s29.5,151,29.5,179.5s1.8,106.2-19.5,209.5s-61,247.3-61,284
@@ -103,20 +148,69 @@ var dealerCountry = "<?= $DEALER_COUNTRY ?>";
 var brand = "hyundai";
 var carGb = "LF";
 
+var url = "<?= $_SESSION['LF_TD_DEALER_URL'] ?>";
+
 document.body.scrollTop = 0;
 document.documentElement.documentElement = 0;
+function getPopupCount() {
+	$.ajax({
+		url : "/lf/td/common/get_like_action.php",
+		type : "POST",
+		dataType : "json",
+		data : {
+			BRAND : "hyundai"
+			, CAR_GB : "LF"
+		},
+		success : function(json) {
+			console.log(json);
+			if (json.CNT == 0)
+				$('#page8 .h_num').text(0);
+			else { 
+				var reg = /(^[+-]?\d+)(\d{3})/;
+				var num = (json.CNT + '');
+				while (reg.test(num)) num = num.replace(reg, '$1' + ',' + '$2');
+				$('#page8 .h_num').text(num);
+			}
+		},
+		error : function(xhr, status, error) {
+			console.log(error);
+		}
+	});
+}
+$(document).ready(function(){
+	$('#page8 .bg img, #page8 .glow img').hide();
+	$('#page8 .title').show();
+	getPopupCount();
+	$('#page8 .bg img.bgImg').each(function(index, elem) {
+    	setTimeout(function () {
+        	$(elem).delay(500).fadeIn(500);
+    	}, index * 500);
+	});
+
+	$('#page8 .glow').delay(1000).show();
+
+	setInterval(function(){
+		$('#page8 .glow img:first-child').fadeIn();
+		$('#page8 .glow img:last-child').delay(500).fadeIn();
+		$('#page8 .glow img:first-child').delay(1000).fadeOut();
+		$('#page8 .glow img:last-child').delay(500).fadeOut();
+	});
+
+	
+});
 
 $(document).bind('mobileinit', function(){
 	$.mobile.loader.prototype.options.text = "";
-	$.mobile.loader.prototype.options.textVisible = true;
-	$.mobile.loader.prototype.options.theme = "a";
-	$.mobile.loader.prototype.options.html = "<div class='loadingImg'><img src='../images/testdrive/icon_loading_gif.gif' alt='loading SONATA' /></div><p>SONATA's virtual driving service<br>is being prepared.</p>";
+	$.mobile.loader.prototype.options.textVisible = false;
+	//$.mobile.loader.prototype.options.theme = "a";
+	//$.mobile.loader.prototype.options.html = "<div class='loadingImg'><img src='../images/testdrive/icon_loading_gif.gif' alt='loading KONA' /></div><p>1irtual experience is being prepared.</p>";
 	$.event.special.tap.tapholdThreshold = 100;
 });
 
 </script>
 <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 <script src="../js/device.js"></script>
+<script src="https://cdn.jsdelivr.net/clipboard.js/1.5.3/clipboard.min.js"></script>
 <script src="../js/menu.js"></script>
 <script src="../js/testdrive.js"></script>
 <script src="../js/testdrive_en.js"></script>
