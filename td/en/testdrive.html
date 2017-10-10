@@ -38,24 +38,16 @@
 		</audio>
 	</div>
 	<div class="loading" id="page8">
-		<div class="bg">
-			<img src="../images/testdrive/p15_bg_2.jpg" class="bgImg" alt="">
-			<img src="../images/testdrive/p15_bg_3.jpg" class="bgImg" alt="">
-			<img src="../images/testdrive/p15_bg_4.jpg" class="bgLast" alt="">
-		</div>
-		<div class="title">
-			<img src="../images/testdrive/p15_title.png" alt="">
+		<div class="titlewrap">
+			<div class="title"><h1>Sonata New Rise</h1></div>
+			<p>VIRTUAL EXPERIENCE</p>
 			<div class="heart">
-				<img src="../images/button/p15_icon_count.png" alt="">
+				<img src="../images/testdrive/icon_testdrive_btn_viewmore.png" alt="">
 				<p class="h_num"></p>
 			</div>
 		</div>
 		<a href="javascript:;" class="start">
-			<img src="../images/testdrive/p15_btn_start_basic.png" alt="">
-			<div class="glow">
-				<img src="../images/testdrive/p15_btn_start_effect_1.png" alt="">
-				<img src="../images/testdrive/p15_btn_start_effect_2.png" alt="">
-			</div>
+			<img src="../images/testdrive/002_00_03_btn_02.png" alt="">
 		</a>
 		<!-- <div class="loadingImg"><img src="../images/testdrive/icon_loading_gif.gif" alt="loading KONA" /></div>
 		<p>KONA's virtual driving service<br>is being prepared.</p> -->
@@ -178,23 +170,23 @@ function getPopupCount() {
 	});
 }
 $(document).ready(function(){
-	$('#page8 .bg img, #page8 .glow img').hide();
-	$('#page8 .title').show();
+	//$('#page8 .bg img, #page8 .glow img').hide();
+	//$('#page8 .title').show();
 	getPopupCount();
-	$('#page8 .bg img.bgImg').each(function(index, elem) {
-    	setTimeout(function () {
-        	$(elem).delay(500).fadeIn(500);
-    	}, index * 500);
-	});
+	// $('#page8 .bg img.bgImg').each(function(index, elem) {
+ //    	setTimeout(function () {
+ //        	$(elem).delay(500).fadeIn(500);
+ //    	}, index * 500);
+	// });
 
-	$('#page8 .glow').delay(1000).show();
+	// $('#page8 .glow').delay(1000).show();
 
-	setInterval(function(){
-		$('#page8 .glow img:first-child').fadeIn();
-		$('#page8 .glow img:last-child').delay(500).fadeIn();
-		$('#page8 .glow img:first-child').delay(1000).fadeOut();
-		$('#page8 .glow img:last-child').delay(500).fadeOut();
-	});
+	// setInterval(function(){
+	// 	$('#page8 .glow img:first-child').fadeIn();
+	// 	$('#page8 .glow img:last-child').delay(500).fadeIn();
+	// 	$('#page8 .glow img:first-child').delay(1000).fadeOut();
+	// 	$('#page8 .glow img:last-child').delay(500).fadeOut();
+	// });
 
 	
 });

@@ -22,3 +22,10 @@
   text-transform: normal;
   font-weight: normal;
   src: url("../../fonts/HyundaiSansText.eot") format("eot"), url("../../fonts/HyundaiSansText.woff2") format("woff2"), url("../../fonts/HyundaiSansText.woff") format("woff"), url("../../fonts/HyundaiSansText.ttf") format("truetype"), url("../../fonts/HyundaiSansText.otf") format("opentype"); }
+
+  @font-face {
+  font-family: "DSDIGI";
+  text-transform: normal;
+  font-weight: normal;
+  src: url("../../fonts/DSDIGI.eot") format("eot"), url("../../fonts/DSDIGI.woff") format("woff"), url("../../fonts/DSDIGI.ttf") format("truetype");
+}

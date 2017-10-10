@@ -138,12 +138,12 @@ var testdrive = {
 		});
 
 		$('#page8 .start').click(function(){ //testdrive start page
-			$('#page8 .glow').hide();
-			$('#page8 .start >img').prop('src', '../images/testdrive/p15_btn_start_active.png');
-			$('#page8 .start >img').animate({'width':'145px', 'height':'145px'},500);
-			$('#page8 .start >img').animate({'width':'130px', 'height':'130px'},100);
-			$('#page8 .bg img.bgLast').fadeIn(500);
-			$('#page8 .title').delay(500).fadeOut(500);
+			// $('#page8 .glow').hide();
+			 $('#page8 .start >img').prop('src', '../images/testdrive/002_00_03_btn_01.png');
+			// $('#page8 .start >img').animate({'width':'145px', 'height':'145px'},500);
+			// $('#page8 .start >img').animate({'width':'130px', 'height':'130px'},100);
+			// $('#page8 .bg img.bgLast').fadeIn(500);
+			// $('#page8 .title').delay(500).fadeOut(500);
 			if (!testdrive.audioLoad) {
 				engineAudio.play();
 				lkaAudio.play();
@@ -154,7 +154,7 @@ var testdrive = {
 			}
 			setTimeout(function(){
 				$('#page8').fadeOut(500);
-			},1500);
+			},500);
 		});
 		$('.accel').on('taphold', function(e) {
 			testdrive.onEvent();
