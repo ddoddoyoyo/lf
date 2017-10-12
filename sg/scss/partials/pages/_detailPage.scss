@@ -149,8 +149,9 @@
 	}
 	.textwrap{
 		padding:5%;
+		padding-top: 2%;
 		p{
-			font-size: $small-font;
+			font-size: 12px;
 			color:$sub_text_50;
 		}
 	}
@@ -158,14 +159,27 @@
 
 #transmissionDetail{
 	background-color: $black;
-	.imgwrap{
-		margin:4% auto;
-		padding:0 8%;
-		p{
-			text-align: center;
-			color:$white;
+	.wrap{
+		position: relative;
+		left: 50%;
+		top:45%;
+		transform: translate(-50%,-50%);
+		.imgwrap{
+			margin:4% auto;
+			padding:0 8%;
+			img{
+				width: 85%;
+		    	position: relative;
+		    	left: 50%;
+		    	transform: translateX(-50%);
+			}
+			p{
+				text-align: center;
+				color:$white;
+			}
 		}
 	}
+	
 }
 
 #suspensionDetail{

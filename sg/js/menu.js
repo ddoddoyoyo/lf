@@ -56,7 +56,7 @@ function pageMapNav(pageN){ //menu
 	//if(window.location.href.search('#pageMap') > -1){
 	if(loc == 0) {
 		//location.href = "#contentPage";
-		//$.mobile.changePage('#contentPage');
+		$.mobile.changePage('#contentPage');
 		setTimeout(function(){
 			$.fn.fullpage.moveTo(pageN);
 		},500);

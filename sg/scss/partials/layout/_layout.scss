@@ -55,6 +55,9 @@ ul{
 .twinkle{
 	animation: twinkle 2s infinite;
 }
+.twinkleSlow{
+	animation: twinkle 3s infinite;
+}
 // .btn_scroll{
 // 	@include btn_scroll;
 // }
@@ -147,8 +150,26 @@ video{
 	}
 	.ui-footer{
 		position: absolute;
-		bottom:0;
+		bottom:1%;
+		left:2%;
 		z-index: 10;
+		background: none;
+		border: none;
+		background-image: url('../images/button/btn_return_arrow.png');
+		background-size: 17px;
+		background-repeat: no-repeat;
+		background-position: 10px center;
+		background-color: rgba($white,0.6);
+		box-shadow: 0 0 3px 0 $black;
+		border-radius: 3px;
+		a{
+			border:none;
+			margin:0;
+			padding: 10px 10px 10px 30px;
+			text-shadow:none !important;
+			color: $black !important;
+			font-size: 13px;
+		}
 	}
 	.contentPageHeader {
 	  position: absolute !important;

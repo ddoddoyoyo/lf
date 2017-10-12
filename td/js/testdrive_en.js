@@ -5,23 +5,23 @@ var language = {
 			'desc' : 'Of the engines for the Sonata New Rise, the Nu 2.0 engine has a power of 163 PS and a torque of 20 kg.m'
 		},
 		{
-			'title' : 'DRM',
+			'title' : 'DRM<br><span class="pointTitleSub">(Driving Rear Veiw Monitoring)</span>',
 			'desc' : 'Rear view can be displayed on the navigation as well  while driving.'
 		},
 		{
-			'title' : 'ASCC',
+			'title' : 'ASCC<br><span class="pointTitleSub">(Advanced Smart Cruise Control)</span>',
 			'desc' : 'Do you get stressed when you repeat the stop-and-go in a traffic jam? ASCC minimizes this stress by automatically controlling the acceleration and brake systems at a preset level.'
 		},
 		{
-			'title' : 'BSD',
+			'title' : 'BSD<br><span class="pointTitleSub">(Blind Spot Detection)</span>',
 			'desc' : 'The radar mounted on the rear bumper detects any car approaching the driver’s blind spot and gives a warning.'
 		},
 		{
-			'title' : 'AEB',
+			'title' : 'AEB<br><span class="pointTitleSub">(Autonomous Emergency Braking)</span>',
 			'desc' : 'Another safety function prevents or reduces the damage of frontal collisions.'
 		},
 		{
-			'title' : 'Lane Keeping Assist System (LKAS)',
+			'title' : 'LKAS<br><span class="pointTitleSub">(Lane Keeping Assist System)<span>',
 			'desc' : 'This is an active system that assists the car to keep its lane.'
 		},
 		{
@@ -29,7 +29,7 @@ var language = {
 			'desc' : 'The front and rear suspensions of the Sonata New Rise have improved structure and rigidity, helping to realize a better driving feel.'
 		},
 		{
-			'title' : 'Vehicle Stability Management (VSM)',
+			'title' : 'VSM<br><span class="pointTitleSub">(Vehicle Stability Management)<span>',
 			'desc' : 'The key benefit of this system is keeping the vehicle stable when cornering at a high speed.'
 		},
 		{
@@ -37,7 +37,7 @@ var language = {
 			'desc' : 'Visibility is a very essential element when driving. Especially at night, front lights are crucial for  maintaining the visibility.'
 		},
 		{
-			'title' : 'AVM',
+			'title' : 'AVM<br><span class="pointTitleSub">(Around View Monitor)<span>',
 			'desc' : 'Four HD cameras are installed at the front, rear, and sides of the car to monitor the surroundings of the car, including the blind spots.'
 		}
 	],

@@ -20,11 +20,11 @@
         <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
         <script src="../common/js/common.js"></script>
          <script>
-              $(document).on("mobileinit", function () {
-                 $.mobile.hashListeningEnabled = false;
-                 $.mobile.pushStateEnabled = false;
-                 $.mobile.changePage.defaults.changeHash = false;
-             });
+            // $(document).on("mobileinit", function () {
+            //      $.mobile.hashListeningEnabled = false;
+            //      $.mobile.pushStateEnabled = false;
+            //      $.mobile.changePage.defaults.changeHash = false;
+            //  });
         </script>
         <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
         <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
@@ -61,9 +61,6 @@
                     }//if
                     reader.readAsDataURL(input.files[0]);
                 }
-                // $('#contentPage .footer').click(function(){
-                //     location.href="#pageMap";
-                // })
             });
         </script>
 
@@ -212,7 +209,7 @@
                         <h1>Sonata New Rise</h1>
                     </div>
                 </div>
-                <div data-role="footer" class="footer">
+                <div data-role="footer" class="footer twinkleSlow">
                     <a href="#pageMap">RETURN</a>
                 </div>
                 <div data-role="main" id="fullpage" class="ui-content">
@@ -563,14 +560,17 @@
                         </div>
                     </article>
                     <article class="section" id="transmissionDetail">
-                        <div class="imgwrap">
-                            <img src="../images/performance/403_img_01.png" alt="">
-                            <p>8-speed automatic transmission<br>(2.0 T-Gdi)</p>
+                        <div class="wrap">
+                           <div class="imgwrap">
+                                <img src="../images/performance/403_img_01.png" alt="">
+                                <p>8-speed automatic transmission<br>(2.0 T-Gdi)</p>
+                            </div>
+                            <div class="imgwrap">
+                                <img src="../images/performance/403_img_02.png" alt="">
+                                <p>6-speed automatic transmission</p>
+                            </div> 
                         </div>
-                        <div class="imgwrap">
-                            <img src="../images/performance/403_img_02.png" alt="">
-                            <p>6-speed automatic transmission</p>
-                        </div>
+                        
                     </article>
                     <!-- Suspension -->
                     <article class="sub_cover section" id="suspension">

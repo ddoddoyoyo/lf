@@ -166,17 +166,10 @@ var testdrive = {
 				testdrive.targetSpeed = 10;
 				testdrive.tweenSpeed();
 			}
-
-			if(testdrive.n == 2 || testdrive.n == 1){
-				//$('#engine_sound').prop('muted', false);
-				//engineAudio.play();
-			}
-			else{
-				engineAudio.pause();
-				engineAudio.currentTime = 0;
-				engineAudio.volume = 0;
-				$('#engine_audio').prop('muted', true);
-			}
+			engineAudio.pause();
+			engineAudio.currentTime = 0;
+			engineAudio.volume = 0;
+			$('#engine_audio').prop('muted', true);
 		});
 
 		this.getPopupCount(true);	//팝업 카운트 최초 호출
@@ -430,13 +423,14 @@ var testdrive = {
 		$(".nextPoint .nextPointTitle").html(language.point[this.n].title);*/
 		$(".nextPoint").css({'top':-$(".nextPoint").height()}).show().animate({'top':'2%', 'opacity':1});
 		//$(".nextPoint .nextPointTitle").html(language.point[this.n].title.replace(/(<([^>]+)>)/gi, ""));
-		if (this.n >= 5 && this.n <= 9){
-			$(".nextPoint .nextPointTitle").html(language.point[this.n].title).parent().addClass("doubleline");
-			if(this.n == 7)
-				$(".nextPoint .nextPointTitle .pointTitleSub").addClass('letterSpacing');
-		}
-		else
+		if (this.n == 0 || this.n == 6 || this.n == 8){
 			$(".nextPoint .nextPointTitle").html(language.point[this.n].title.replace(/(<([^>]+)>)/gi, "")).parent().removeClass("doubleline");
+		}
+		else{
+			$(".nextPoint .nextPointTitle").html(language.point[this.n].title).parent().addClass("doubleline");
+			if(this.n == 4)
+				$(".nextPoint .nextPointTitle .pointTitleSub").addClass('letterSpacing');			
+		}
 	},
 	closeNextPoint : function() {
 		$(".nextPoint").animate({'top':-$(".nextPoint").height(), 'opacity':0}).fadeOut();
