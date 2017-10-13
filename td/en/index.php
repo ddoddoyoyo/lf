@@ -117,7 +117,7 @@
 				<div data-role="main" class="ui-content">
 					<div class="wrap">
 						<div class="titlewrap">
-							<h1>How to Test Driving</h1>
+							<!-- <h1>How to Test Driving</h1> -->
 						</div>
 						<div class="imgwrap">
 							<div class="imgbox showroomBox">
@@ -127,14 +127,13 @@
 								<p>TEST <span>DRIVE</span></p>
 							</div>
 							<div class="imgbox requestBox">
-								<p>REQUEST <span>FOR DRIVE</span></p>
+								<p>REQUEST <span>ACTUAL TEST </span><span>DRIVE</span></p>
 							</div>
 						</div>
 						<div class="textwrap">	
-							<p>Nice meet to you!</p>
-							<p>Thank you for visiting Sonata New Rise's virtual driving experience service.</p>
-							<p>Through the virtual experience, you can enjoy the attractive features of Sonata New Rise.</p>
-							<p>After it is finished, an actual driving session will be arranged for you.</p>
+							<p>Welcome to the virtual test drive for Sonata New Rise!</p>
+							<p>Through the virtual experience, you will enjoy the attractive features of Sonata New Rise.</p>
+							<p>After the experience is over, an actual driving session will also be available upon your request.</p>
 						</div>
 						<div class="button">
 							<a class="btn_box btn_showroom" href="#intro2">OK</a>

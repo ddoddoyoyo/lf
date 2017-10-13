@@ -429,16 +429,17 @@ video {
         color: #505050;
         margin-bottom: 5%; }
 
-#intro1 .wrap .imgwrap .showroomBox {
-  background-image: url("../images/intro/000_01_icon_01_showroom.png");
-  margin-right: 2%; }
-
-#intro1 .wrap .imgwrap .driveBox {
-  background-image: url("../images/intro/000_01_icon_02_testdrive.png");
-  margin-right: 2%; }
-
-#intro1 .wrap .imgwrap .requestBox {
-  background-image: url("../images/intro/000_01_icon_03_requestfordrive.png"); }
+#intro1 .wrap .imgwrap {
+  height: 120px; }
+  #intro1 .wrap .imgwrap .showroomBox {
+    background-image: url("../images/intro/000_01_icon_01_showroom.png");
+    margin-right: 2%; }
+  #intro1 .wrap .imgwrap .driveBox {
+    background-image: url("../images/intro/000_01_icon_02_testdrive.png");
+    margin-right: 2%; }
+  #intro1 .wrap .imgwrap .requestBox {
+    background-image: url("../images/intro/000_01_icon_03_requestfordrive.png");
+    top: 12.5%; }
 
 #tdIntro .wrap .imgwrap .showroomBox {
   background-image: url("../images/testdrive/002_01_icon_01_showroom.png");
