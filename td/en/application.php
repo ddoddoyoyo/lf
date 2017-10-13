@@ -147,7 +147,7 @@
 						success:  function(json){
 							console.log(json.result);
 							if(json.result == "TEST_DRIVE_EMAIL"){
-								alert("잘못된 이메일 주소");
+								alert("Please enter a valid email address.");
 								$("input[name=TEST_DRIVE_EMAIL]").focus();
 								return false;
 							}

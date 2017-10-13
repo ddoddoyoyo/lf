@@ -11,6 +11,14 @@
     		color:$text_50;
     	}
 	}
+	.button{
+		top:50%;
+		.btn_box{
+			border:none;
+			background-color: $point_color_bright;
+		}
+	}
+
 }
 #application{
 	background-color:$white;

@@ -1,0 +1,225 @@
+<?php
+	include_once ($_SERVER[DOCUMENT_ROOT]."/common/commonFunction.php");
+	header("Content-Type: text/html; charset=UTF-8");
+
+	if($_SESSION["LF_TD_DEALER_IMAGE"]){
+		$LMS_IMAGE = $IMG_URL."/hyundai/member/".$_SESSION["LF_TD_DEALER_IMAGE"];
+	}else{
+		$LMS_IMAGE = "../images/testdrive/icon_dealer.png";
+	}
+?>
+<!DOCTYPE html>
+<html >
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<title>Sonata New Rise Virtual Drive Experience</title>
+<link rel="stylesheet" href="../css/font.css">
+<link rel="stylesheet" href="../css/menu.css">
+<link rel="stylesheet" href="../css/testdrive.css">
+<link rel="stylesheet" href="../css/testdrive_animate.css">
+</head>
+
+<body class="tdBody">
+	<div id="media">
+		<audio id="engine_sound" autoplay muted preload>
+			<source src="../sound/engine.mp3" type="audio/mpeg">
+		</audio>
+		<audio id="lka_sound" autoplay muted preload>
+			<source src="../sound/lka.mp3" type="audio/mpeg">
+		</audio>
+		<audio id="fca_sound_2" autoplay muted preload>
+			<source src="../sound/warn2.mp3" type="audio/mpeg">
+		</audio>
+		<audio id="fca_sound_3" autoplay muted preload>
+			<source src="../sound/warn3.mp3" type="audio/mpeg">
+		</audio>
+	</div>
+<!-- 	<div class="loading">
+		<img src="../images/testdrive/icon_loading_gif.gif" alt="">	
+	</div> -->
+	<div class="" id="page8">
+		<div class="titlewrap">
+			<div class="title"><h1>Sonata New Rise</h1></div>
+			<p>VIRTUAL EXPERIENCE</p>
+			<div class="heart">
+				<img src="../images/testdrive/icon_testdrive_btn_viewmore.png" alt="">
+				<p class="h_num"></p>
+			</div>
+		</div>
+		<a href="javascript:;" class="start">
+			<img src="../images/testdrive/002_00_03_btn_02.png" alt="">
+		</a>
+		<!-- <div class="loadingImg"><img src="../images/testdrive/icon_loading_gif.gif" alt="loading KONA" /></div>
+		<p>KONA's virtual driving service<br>is being prepared.</p> -->
+	</div>
+	 <div class="menuWrap"></div>
+	<div class="popup">
+		<div class="popupWrap">
+			<div class="popupHead">
+				<div class="popupClose"></div>
+				<div class="popupTitle">
+					<div class="popupPhoto" style="background:url('<?= $LMS_IMAGE ?>') center #787878; background-size:cover;"></div>
+					<div class="popupTitleTxt">
+						<span><?= ($_SESSION["LF_TD_DEALER_NAME"]) ? $_SESSION["LF_TD_DEALER_NAME"] : 'DEALER' ?></span>'S<br>COMMENTS
+					</div>
+				</div>
+			</div>
+			<div class="popupDesc el"></div>
+			<div class="popupNaviWrap">
+				<div class="popupNaviPrev"><a href="#">prev</a></div>
+				<div class="popupNavi el"></div>
+				<div class="popupNaviNext"><a href="#">next</a></div>
+			</div>
+		</div>
+	</div>
+	<div class="point">
+		<div class="pointHead">
+			<div class="pointHeart"></div>
+			<div class="pointClose"></div>
+		</div>
+		<div class="pointWrap">
+			<div class="pointTitle el"></div>
+			<div class="pointDesc el"></div>
+			<div class="pointBtn">
+				<a href="#">VIEW MORE</a>
+			</div>
+		</div>
+	</div>
+	<div class="nextPoint">
+		<!-- <div class="nextPointIcon"></div> -->
+		<div class="nextPointTitle"></div>
+	</div>
+	<div class="scrollWrap">
+		<div id="car">
+			<img src="../images/testdrive/car_glow_1.png" class="carGlow carGlow1" />
+			<img src="../images/testdrive/car_glow_2.png" class="carGlow carGlow2" />
+			<img src="../images/testdrive/car_glow_3.png" class="carGlow carGlow3" />
+			<img src="../images/testdrive/car.png" class="car" alt="sonata new rise" />
+		</div>
+		<div class="loadingText">
+			<p>Now press <strong>the accelerator.</strong></p>
+		</div>
+	</div>
+	<div class="gaugeWrap">
+		<div class="gaugeText"><span class="gaugeWhite"></span></div>
+		<div class="gaugeMode"><span></span></div>
+	</div>
+	<div class="accel blink1"></div>
+	<div class="movieWrap">
+		<video src="../movie/rear_camera.mp4" autoplay muted playsinline loop id="rear_camera"></video>
+		<!-- <img src="../images/testdrive/video_frame.png" class="rearCameraBg" /> -->
+	</div>
+	<div class="roadBg">
+		<div id="roadBg1" class="bg"></div>
+		<div id="roadBg2" class="bg"></div>
+		<div id="roadBg3" class="bg"></div>
+		<div id="roadBg4" class="bg"></div>
+		<div id="roadBg5" class="bg"></div>
+		<div id="roadBg6" class="bg"></div>
+		<!-- <div id="roadBg7" class="bg"></div> -->
+		<div id="roadBg8" class="bg"></div>
+		<div id="roadBg9" class="bg"></div>
+		<div id="roadBg10" class="bg"></div>
+		<div id="roadBg11" class="bg"></div>
+		<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="180px" height="16000px" viewBox="0 0 180 16000" enable-background="new 0 0 180 16000" xml:space="preserve">
+			<path id="carPath" fill="none" d="M33.6,0c0,0,0,4185.8,0,4232.8s-3.6,131-9.8,187
+	s-10.4,145.8-7.9,183.5S25,4670,37.3,4726s15,129.8,16,170.8s-2,87.3-3.5,115.3s-3.6,81-8.5,118.6c-5.1,38.8-12.8,78.3-16.8,114
+	c-3.4,30.2-5.3,68.6-4,102.1S30.3,5455,32.1,5468c1.8,13,4.6,44.3,5.6,78.5s3.6,35-3.9,95.8c0,0-10.3,61.5-13.3,87.3
+	s-7,109.2-7,175.2s4.5,103.6,17.8,178.6s15.3,144.4-3.8,273c-19.1,128.7-9.9,204.4-1.3,295.1c8.7,90.7,7.5,172.6,7.5,172.6v159
+	c0,2.2,0.1,4.4,0.2,6.7l1.1,14.7c0.8,10.7,0.8,21.4,0.1,32l-0.9,13.3c-0.3,4.5-0.5,9-0.5,13.5v14.5c0,3,0.1,6,0.4,9.1l0.2,1.9
+	c1.9,19,1.9,38.2,0.2,57.2l-0.4,4.7c-0.3,2.8-0.4,5.6-0.4,8.5v360.4c0,2.1,0.1,4.2,0.2,6.3l0.7,10.2c4,57.7,4.3,115.6,0.9,173.3
+	l-1.7,29.3c-0.1,1.8-0.2,20.4-0.2,22.2v11.8c0,2.9,0.1,27.4,0.4,30.3l1.5,15.3c2.9,30.4,3.1,61,0.8,91.4l-2.4,30
+	c-0.2,2.4-0.3,52.6-0.3,54.9v94.2c0,0-0.3,40.4,4.2,78.8c3.2,27.2,28,160.3,0.7,314c-6.9,51.7-3.6,47.2-4.9,69.2
+	c-1.3,22.1-2.8,28.7-7.3,60.8c-4.4,31.7-17,108.9-4,155.2c21.5,76.3,35.2,144,30.9,221.5c-4.3,77.4-7.4,161-14.4,202.5
+	S33.8,9381,33.8,9409s0,89.3,0,104.5c0,61.2,2.7,91.5,10.2,124s11.5,54.9-17.5,134.4s-6.9,112.6,7.3,192.6s26.2,115,19.7,173
+	s-18.8,126.8-32.1,177.5c-6.1,23.1-21.9,71.9-1.3,145c13.3,47.3,40.7,106,31.3,170.7c-9.3,64.7-20,84.7-28.7,122
+	c-8.7,37.3-17.3,58.7-7.3,111.3s17.6,106,17.6,213.3c0,107.3,0,1794,0,1794s1,30.7-5.6,68c-6.7,37.3-10.3,69.3-10.3,98
+	c0,28.7,0,85.7,0,85.7v168c0,18.6,18.3,51.6,38.1,62c40.2,21.2,49.7,45.1,49.7,91.3v64.1"/>
+		</svg>
+	</div>
+
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script>
+
+var dealerId = "<?= $DEALER_ID ?>";
+var dealerRegion = "<?= $DEALER_REGION ?>";
+var dealerCountry = "<?= $DEALER_COUNTRY ?>";
+var brand = "hyundai";
+var carGb = "LF";
+
+var url = "<?= $_SESSION['LF_TD_DEALER_URL'] ?>";
+var dealerUrl = "<?= $_SESSION['SESSION_DEALER_URL'] ?>";
+
+document.body.scrollTop = 0;
+document.documentElement.documentElement = 0;
+function getPopupCount() {
+	$.ajax({
+		url : "/lf/td/common/get_like_action.php",
+		type : "POST",
+		dataType : "json",
+		data : {
+			BRAND : "hyundai"
+			, CAR_GB : "LF"
+		},
+		success : function(json) {
+			console.log(json);
+			if (json.CNT == 0)
+				$('#page8 .h_num').text(0);
+			else { 
+				var reg = /(^[+-]?\d+)(\d{3})/;
+				var num = (json.CNT + '');
+				while (reg.test(num)) num = num.replace(reg, '$1' + ',' + '$2');
+				$('#page8 .h_num').text(num);
+			}
+		},
+		error : function(xhr, status, error) {
+			console.log(error);
+		}
+	});
+}
+$(document).ready(function(){
+	 $('#page8').css({'opacity':1});
+	//$('#page8 .bg img, #page8 .glow img').hide();
+	//$('#page8 .title').show();
+	getPopupCount();
+	// $('#page8 .bg img.bgImg').each(function(index, elem) {
+ //    	setTimeout(function () {
+ //        	$(elem).delay(500).fadeIn(500);
+ //    	}, index * 500);
+	// });
+
+	// $('#page8 .glow').delay(1000).show();
+
+	// setInterval(function(){
+	// 	$('#page8 .glow img:first-child').fadeIn();
+	// 	$('#page8 .glow img:last-child').delay(500).fadeIn();
+	// 	$('#page8 .glow img:first-child').delay(1000).fadeOut();
+	// 	$('#page8 .glow img:last-child').delay(500).fadeOut();
+	// });
+
+	
+});
+
+$(document).bind('mobileinit', function(){
+	$.mobile.loader.prototype.options.text = "";
+	$.mobile.loader.prototype.options.textVisible = false;
+	//$.mobile.loader.prototype.options.theme = "a";
+	$.mobile.loader.prototype.options.html = "<div class='loadingImg'><img src='../images/testdrive/icon_loading_gif.gif' alt='loading KONA' /></div><p>Virtual experience is being prepared.</p>";
+	$.event.special.tap.tapholdThreshold = 100;
+});
+
+</script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<script src="../js/device.js"></script>
+<script src="https://cdn.jsdelivr.net/clipboard.js/1.5.3/clipboard.min.js"></script>
+<script src="../js/menu.js"></script>
+<script src="../js/testdrive1.js"></script>
+<script src="../js/testdrive_en.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenLite.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/plugins/CSSPlugin.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/plugins/ScrollToPlugin.min.js"></script>
+</body>
+</html>

@@ -132,6 +132,45 @@ ul {
     padding: 2.5% 5% 2% 5%;
     background-color: rgba(30, 30, 30, 0.5); }
 
+.loading, .ui-loader {
+  width: 100%;
+  height: 100%;
+  background: #000;
+  color: #FFF;
+  z-index: 10;
+  background: #3C3C41;
+  top: 0 !important;
+  left: 0 !important; }
+
+.loading .loadingImg, .ui-loader .loadingImg {
+  width: 45%;
+  height: 45%;
+  top: 45%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%); }
+
+.loading .loadingImg img, .ui-loader .loadingImg img {
+  width: 100%; }
+
+.loading h1, .ui-loader h1 {
+  color: #3cb4eb;
+  text-align: center;
+  top: 58%;
+  position: absolute;
+  font-weight: 400;
+  font-size: 15pt;
+  width: 100%; }
+
+.loading p, .ui-loader p {
+  text-align: center;
+  bottom: 10%;
+  position: absolute;
+  font-weight: 400;
+  font-size: 15pt;
+  color: #FFF;
+  width: 100%; }
+
 a {
   color: #ffffff !important;
   text-decoration: none;
@@ -306,7 +345,7 @@ video {
 
 #testdrive {
   background-image: url("../images/testdrive/002_00_03_bg.jpg");
-  background-size: cover;
+  background-size: 100% auto;
   background-position: bottom;
   background-repeat: no-repeat; }
   #testdrive .titlewrap h1 {
@@ -325,7 +364,8 @@ video {
 #driveGo {
   background-color: #ffffff; }
   #driveGo .imgwrap {
-    height: 70%;
+    height: calc(100% - 45px);
+    position: absolute;
     overflow: hidden; }
   #driveGo .textwrap {
     text-align: center;
@@ -426,6 +466,11 @@ video {
     #applicationIntro .textwrap p {
       margin-bottom: 4%;
       color: #323232; }
+  #applicationIntro .button {
+    top: 50%; }
+    #applicationIntro .button .btn_box {
+      border: none;
+      background-color: #59a9d4; }
 
 #application {
   background-color: #ffffff; }

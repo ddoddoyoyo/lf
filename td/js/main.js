@@ -1,5 +1,6 @@
 var cnt;
 var getClassName;
+var _clickPop;
 $(document).ready(function(){
 	$('.popLayer .btn_close').click(function(){
 		$('.popLayer').hide();
@@ -28,18 +29,27 @@ $(document).ready(function(){
 	$('#drivingMap .imgbox.map img').each(function(){
 		$(this).click(function(){
 			if($(this).hasClass('twinkle')){
+				_clickPop = $(this).attr('alt');
+				//console.log($(this)[0]);
+				//console.log($(this).attr('alt'));
 				getClassName = $(this).attr('class').split(' ');
 				//$('#drivingMap .imgbox.map img').removeClass('twinkle');
 				$(this).removeClass('twinkle');
 				$(this).next().addClass('twinkle');
 				$('#drivingMap .popLayer.imgbox#pop_'+getClassName[1]).fadeIn(500);
 				//console.log(this);
+				//console.log(_clickPop);
+			}
+			else if ($(this).attr('alt') <= _clickPop) {
+				//console.log(_clickPop);
+				var tmpImgId = $('#mapIcon'+ $(this).attr('alt')).attr('class').split(' ');
+				//console.log(tmpImgId);
+				$('#drivingMap .popLayer.imgbox#pop_'+ tmpImgId[1]).fadeIn(500);
 			}
 			else{
 				return;
 			}
-
-		});		
+		});
 	});
 	//showroom
 	var imgW,marginR,move,imgLength,totalW,pos;

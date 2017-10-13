@@ -9,7 +9,10 @@
 	
 	
 	if($_SESSION["LF_TD_DEALER_IMAGE"]){
-		$LMS_IMAGE = $IMG_URL."/hyundai/member/".$_SESSION["LF_TD_DEALER_IMAGE"];
+		if (strpos($_SESSION["LF_TD_DEALER_IMAGE"], 'hyundai/member') !== false)
+			$LMS_IMAGE = $_SESSION["LF_TD_DEALER_IMAGE"];
+		else
+			$LMS_IMAGE = $IMG_URL."/hyundai/member/".$_SESSION["LF_TD_DEALER_IMAGE"];
 	}else{
 		$LMS_IMAGE = "../images/common/profile_defalt.png";
 	}
@@ -85,7 +88,7 @@
 						<p>SHOW ROOM</p>
 					</div>
 					<div class="button">
-						<a class="btn_box" href="#exterior01">VISIT</a>
+						<a class="btn_box" href="#exterior01">OK</a>
 					</div>
 				</div>
 			</section>
@@ -99,7 +102,7 @@
 					<div class="textbox">
 						<div class="profilewrap">
 							<div class="profileImg" style="background-image: url('<?= $LMS_IMAGE ?>');"></div>
-							<p><span class="dName">Jack</span>'s <span class="comt">Comments</span></p>
+							<p><span class="dName"><?= ($_SESSION["LF_TD_DEALER_NAME"]) ? $_SESSION["LF_TD_DEALER_NAME"] : 'DEALER' ?>'s</span> <span class="comt">Comments</span></p>
 						</div>
 						<div class="textwrap">
 							<p>Before we begin our test drive, let’s first check out the completely new style of the Sonata New Rise.</p>
@@ -122,7 +125,7 @@
 					<div class="textbox">
 						<div class="profilewrap">
 							<div class="profileImg" style="background-image: url('<?= $LMS_IMAGE ?>');"></div>
-							<p><span class="dName">Jack</span>'s <span class="comt">Comments</span></p>
+							<p><span class="dName"><?= ($_SESSION["LF_TD_DEALER_NAME"]) ? $_SESSION["LF_TD_DEALER_NAME"] : 'DEALER' ?>'s</span> <span class="comt">Comments</span></p>
 						</div>
 						<div class="textwrap">
 							<p>A wider cascading grille is applied to the front. With the grille in the center, bold lines and a sense of volume give the car a powerful and sporty look.</p>
@@ -145,7 +148,7 @@
 					<div class="textbox">
 						<div class="profilewrap">
 							<div class="profileImg" style="background-image: url('<?= $LMS_IMAGE ?>');"></div>
-							<p><span class="dName">Jack</span>'s <span class="comt">Comments</span></p>
+							<p><span class="dName"><?= ($_SESSION["LF_TD_DEALER_NAME"]) ? $_SESSION["LF_TD_DEALER_NAME"] : 'DEALER' ?>'s</span> <span class="comt">Comments</span></p>
 						</div>
 						<div class="textwrap">
 							<p>The newly introduced LED bifunctional headlamp is made more aggressive looking and sleek. The chrome molding surrounds the headlamp, adding luxurious details.</p>
@@ -168,7 +171,7 @@
 					<div class="textbox">
 						<div class="profilewrap">
 							<div class="profileImg" style="background-image: url('<?= $LMS_IMAGE ?>');"></div>
-							<p><span class="dName">Jack</span>'s <span class="comt">Comments</span></p>
+							<p><span class="dName"><?= ($_SESSION["LF_TD_DEALER_NAME"]) ? $_SESSION["LF_TD_DEALER_NAME"] : 'DEALER' ?>'s</span> <span class="comt">Comments</span></p>
 						</div>
 						<div class="textwrap">
 							<p>The chrome that surrounds the cascading grille is characterized by a difference in thickness between its mid and outer sections.</p>
@@ -191,7 +194,7 @@
 					<div class="textbox">
 						<div class="profilewrap">
 							<div class="profileImg" style="background-image: url('<?= $LMS_IMAGE ?>');"></div>
-							<p><span class="dName">Jack</span>'s <span class="comt">Comments</span></p>
+							<p><span class="dName"><?= ($_SESSION["LF_TD_DEALER_NAME"]) ? $_SESSION["LF_TD_DEALER_NAME"] : 'DEALER' ?>'s</span> <span class="comt">Comments</span></p>
 						</div>
 						<div class="textwrap">
 							<p>The vertical-type DRL integrated with the air curtain adds a sporty feel to the car.</p>
@@ -214,7 +217,7 @@
 					<div class="textbox">
 						<div class="profilewrap">
 							<div class="profileImg" style="background-image: url('<?= $LMS_IMAGE ?>');"></div>
-							<p><span class="dName">Jack</span>'s <span class="comt">Comments</span></p>
+							<p><span class="dName"><?= ($_SESSION["LF_TD_DEALER_NAME"]) ? $_SESSION["LF_TD_DEALER_NAME"] : 'DEALER' ?>'s</span> <span class="comt">Comments</span></p>
 						</div>
 						<div class="textwrap">
 							<p>The overall image of the rear part was made more simple by shifting the license plate to the bottom of the bumper and integrating the trunk switch with the Hyundai emblem.</p>
@@ -237,7 +240,7 @@
 					<div class="textbox">
 						<div class="profilewrap">
 							<div class="profileImg" style="background-image: url('<?= $LMS_IMAGE ?>');"></div>
-							<p><span class="dName">Jack</span>'s <span class="comt">Comments</span></p>
+							<p><span class="dName"><?= ($_SESSION["LF_TD_DEALER_NAME"]) ? $_SESSION["LF_TD_DEALER_NAME"] : 'DEALER' ?>'s</span> <span class="comt">Comments</span></p>
 						</div>
 						<div class="textwrap">
 							<p>The new LED rear combination lamp, also has the chrome garnish at the bottom.</p>
@@ -259,7 +262,7 @@
 					<div class="textbox">
 						<div class="profilewrap">
 							<div class="profileImg" style="background-image: url('<?= $LMS_IMAGE ?>');"></div>
-							<p><span class="dName">Jack</span>'s <span class="comt">Comments</span></p>
+							<p><span class="dName"><?= ($_SESSION["LF_TD_DEALER_NAME"]) ? $_SESSION["LF_TD_DEALER_NAME"] : 'DEALER' ?>'s</span> <span class="comt">Comments</span></p>
 						</div>
 						<div class="textwrap">
 							<p>There are four important points to note in the ergonomically designed interior.</p>
@@ -282,7 +285,7 @@
 					<div class="textbox">
 						<div class="profilewrap">
 							<div class="profileImg" style="background-image: url('<?= $LMS_IMAGE ?>');"></div>
-							<p><span class="dName">Jack</span>'s <span class="comt">Comments</span></p>
+							<p><span class="dName"><?= ($_SESSION["LF_TD_DEALER_NAME"]) ? $_SESSION["LF_TD_DEALER_NAME"] : 'DEALER' ?>'s</span> <span class="comt">Comments</span></p>
 						</div>
 						<div class="textwrap">
 							<p>The center fascia is equipped with,a large 8-inch navigation system and metallic silver operating buttons.</p>
@@ -305,7 +308,7 @@
 					<div class="textbox">
 						<div class="profilewrap">
 							<div class="profileImg" style="background-image: url('<?= $LMS_IMAGE ?>');"></div>
-							<p><span class="dName">Jack</span>'s <span class="comt">Comments</span></p>
+							<p><span class="dName"><?= ($_SESSION["LF_TD_DEALER_NAME"]) ? $_SESSION["LF_TD_DEALER_NAME"] : 'DEALER' ?>'s</span> <span class="comt">Comments</span></p>
 						</div>
 						<div class="textwrap">
 							<p>For the user’s convenience, the visibility of the cluster screen has been improved.</p>
@@ -328,7 +331,7 @@
 					<div class="textbox">
 						<div class="profilewrap">
 							<div class="profileImg" style="background-image: url('<?= $LMS_IMAGE ?>');"></div>
-							<p><span class="dName">Jack</span>'s <span class="comt">Comments</span></p>
+							<p><span class="dName"><?= ($_SESSION["LF_TD_DEALER_NAME"]) ? $_SESSION["LF_TD_DEALER_NAME"] : 'DEALER' ?>'s</span> <span class="comt">Comments</span></p>
 						</div>
 						<div class="textwrap">
 							<p>The one-touch air purification mode was applied for the first time With just a press of a button, this mode makes the air inside clean and fresh by removing micro dusts through forced air circulation.</p>
@@ -351,7 +354,7 @@
 					<div class="textbox">
 						<div class="profilewrap">
 							<div class="profileImg" style="background-image: url('<?= $LMS_IMAGE ?>');"></div>
-							<p><span class="dName">Jack</span>'s <span class="comt">Comments</span></p>
+							<p><span class="dName"><?= ($_SESSION["LF_TD_DEALER_NAME"]) ? $_SESSION["LF_TD_DEALER_NAME"] : 'DEALER' ?>'s</span> <span class="comt">Comments</span></p>
 						</div>
 						<div class="textwrap">
 							<p>The wireless charging system for smart phones has been added for the convenience of the driver and passengers.</p>
@@ -449,14 +452,11 @@
 				<div data-role="header" class="header">
 					<a href="#" class="ui-btn btn_sidePanel ui-btn-right"><img src="../images/common/btn_menu.png" alt=""></a>
 					<a href="#" class="ui-btn ui-btn-left" data-rel="back"><img src="../images/common/btn_backward.png" alt=""></a>
-					<h1>Test Drive</h1>
+					<h1>VIRTUAL EXPERIENCE</h1>
 				</div>
 				<div data-role="main" class="ui-content">
 					<div class="imgwrap">
 						<img src="../images/showroom/001_03_03_bg.jpg" alt="">
-					</div>
-					<div class="textwrap">
-						<p>Next, Try driving at the driving course.</p>
 					</div>
 					<div class="button">
 						<a class="btn_box" href="#javascript:;">START TEST DRIVE</a>

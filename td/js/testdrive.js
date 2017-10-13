@@ -40,8 +40,8 @@ var handler = function(e) {
 }
 
 var testdrive = {
-	svgWidth : 169.139,
-	svgHeight : 13033.721,
+	svgWidth : 96.279,
+	svgHeight : 13508.399,
 	first : true,
 	carHeight : 0,
 	popupStat : false,
@@ -50,8 +50,8 @@ var testdrive = {
 	n : 0,
 	bgStopPosition : 0,
 	bgHeight : 10000,	//포인트 간 거리 = BG 이미지 높이
-	totalBgHeight : 110000,	//총 배경 길이 ㅠ
-	pointCnt : 11,	//포인트 갯수
+	totalBgHeight : 100000,	//총 배경 길이 ㅠ
+	pointCnt : 10,	//포인트 갯수
 	bgWidth : 640,
 	bodyHeight : 0,
 	orgBodyHeight : 0,
@@ -112,7 +112,7 @@ var testdrive = {
 		this.oppoHeight = this.scrollHeight * .224;
 		this.point = this.bodyHeight - this.scrollHeight - this.correction;
 		$('.roadBg .bg').css({'height':this.bodyHeight});
-		$('svg').css({'height':this.bodyHeight * 11, 'width':this.svgWidth * this.bodyHeight * 11 / this.svgHeight});	//코나만 특이하게 -1
+		$('svg').css({'height':this.bodyHeight * 10, 'width':this.svgWidth * this.bodyHeight * 10 / this.svgHeight});	//코나만 특이하게 -1
 		$('#car, .loadingText').css({'width':this.bodyWidth, 'height':this.scrollHeight});
 
 		$(".point .pointBtn a").click(function(e) {
@@ -182,17 +182,18 @@ var testdrive = {
 		//$('#engine_sound')[0].play();
 
 		if (testdrive.scrollAble) {
-			testdrive.bgStopPosition = (testdrive.n == 10) ? .875 : .89 ;
+			testdrive.bgStopPosition = (testdrive.n == 9) ? .85 : .89 ;
+			console.log(testdrive.n);
+			console.log(testdrive.bgStopPosition);
 
 			if (testdrive.carMove) {
 				testdrive.carMove.timeScale(1).play();
 			}
 			else {
-				testdrive.carMove = TweenLite.to($('.roadBg'), testdrive.duration, {scrollTo:{y:testdrive.accumBodyHeight + (testdrive.bodyHeight * (testdrive.bgStopPosition + .001))}, ease:Power0.easeInOut, onUpdate:testdrive.scrolling, onComplete:function() {
-						if (testdrive.n == 10)
+				testdrive.carMove = TweenLite.to($('.roadBg'), testdrive.duration, {scrollTo:{y:testdrive.accumBodyHeight + (testdrive.bodyHeight * (testdrive.bgStopPosition))}, ease:Power0.easeInOut, onUpdate:testdrive.scrolling, onComplete:function() {
+						if (testdrive.n == 9)
+							//return;
 							testdrive.setParking();
-						else if (testdrive.n == 9)
-							return;
 						else
 							testdrive.getPoint();
 					}
@@ -201,9 +202,9 @@ var testdrive = {
 					testdrive.carMove.timeScale(1.25).play();
 			}
 
-			if (testdrive.n == 0)
-				testdrive.targetSpeed = 100;
-			else
+			// if (testdrive.n == 0)
+			// 	testdrive.targetSpeed = 100;
+			// else
 				testdrive.targetSpeed = 80;
 				testdrive.tweenSpeed();
 
@@ -236,62 +237,15 @@ var testdrive = {
 		testdrive.getNextPoint();
 	},
 	updatePosition : function(value) {
-		newpoint = path.getPointAtLength((pathLength * value) + 5);
+		newpoint = path.getPointAtLength((pathLength * value) + 1);
 		middlepoint = path.getPointAtLength(pathLength * value);
 		carAngle = (Math.atan2(middlepoint.y - newpoint.y, middlepoint.x - newpoint.x) * 180 / Math.PI) + 90;
 
-		//7 DCT 깜빡이 및 속도 변환
-		if (testdrive.n == 1) {
-			if (carAngle < 1 && $('.carEffect').hasClass('turnsignalleft')) {
-				testdrive.carEffect = false;
-				testdrive.targetSpeed = 80;
-				testdrive.tweenSpeed();
-				testdrive.removeCarEffect();
-				//testdrive.carMove.timeScale((testdrive.oldTargetSpeed == 80) ? 1 : 0.125);
-				testdrive.carMove.timeScale(1);
-				testdrive.scrollAble = true;
-			}
-			else if (carAngle > -1 && $('.carEffect').hasClass('turnsignalright')) {
-				testdrive.carEffect = false;
-				testdrive.removeCarEffect();
-			}
-
-			if (carAngle > 1) {
-				testdrive.setCarEffect('turnsignal', 'left');
-			}
-			else if (carAngle < -1) {
-				testdrive.setCarEffect('turnsignal', 'right');
-				testdrive.oldTargetSpeed = testdrive.preTargetSpeed;
-				testdrive.targetSpeed = 120;
-				testdrive.tweenSpeed();
-				testdrive.carMove.timeScale(1.25);
-				testdrive.scrollAble = false;
-			}
-		}
-
-		// cornering performance 좌우 화살표
-		if (testdrive.n == 3 && testdrive.cornering) {
-			if (carAngle < 1 && $('.carEffect').hasClass('turnleft')) {
-				testdrive.carEffect = false;
-				testdrive.removeCarEffect();
-			}
-			else if (carAngle > -1 && $('.carEffect').hasClass('turnright')) {
-				testdrive.carEffect = false;
-				testdrive.removeCarEffect();
-			}
-
-			if (carAngle > 1) {
-				testdrive.setCarEffect('turn', 'left');
-			}
-			else if (carAngle < -1) {
-				testdrive.setCarEffect('turn', 'right');
-			}
-		}
 
 		$('#car').css({
 			//left:(newpoint.x - bbox.x) - ($(window).width() * .185),
 			//left:(2.5 * (newpoint.x - bbox.x)),
-			left:(testdrive.pcMobileLeft * (newpoint.x - bbox.x)) - ($(window).width() * .33),
+			left:(testdrive.pcMobileLeft * (newpoint.x - bbox.x)) - ($(window).width() * .3),
 			transform:'rotate('+ carAngle +'deg)'
 		});
 		$('.roadBg').css({
@@ -310,22 +264,54 @@ var testdrive = {
 			return;
 		}
 
-		testdrive.updatePosition( ((testdrive.scrollAmnt + (testdrive.scrollHeight * .4)) / (testdrive.orgBodyHeight * 11)) );
-
-		if ((testdrive.n == 1 || testdrive.n == 3) && testdrive.scrollAmnt >= (testdrive.bodyHeight * (testdrive.n) + (testdrive.bodyHeight * .65)) && !testdrive._oppo) {
-			if (testdrive.n == 1)
-				testdrive.setOpponentCar('middle', 'down');
-			else if (testdrive.n == 3) {
-				testdrive.setOpponentCar('right', 'down');
-				testdrive.setCarEffect('signal', 'rear_right');
-				testdrive._carEffect = true;
+		testdrive.updatePosition( ((testdrive.scrollAmnt + (testdrive.scrollHeight * .4)) / (testdrive.orgBodyHeight * 10)) );
+		//engine
+		if (testdrive.n == 0) {
+			if (testdrive.scrollAmnt >= (testdrive.accumBodyHeight + (testdrive.bodyHeight * .35))) {
+				testdrive.setCarEffect('engine');
 			}
 		}
-		if (testdrive.n == 2 && testdrive.scrollAmnt >= (testdrive.bodyHeight * (testdrive.n) + (testdrive.bodyHeight * .45)) && !testdrive._oppo) {
+		//drm
+		if (testdrive.n == 1 && testdrive.scrollAmnt >= (testdrive.bodyHeight * (testdrive.n) + (testdrive.bodyHeight * .35)) && !testdrive._oppo) {
+			testdrive.setOpponentCar('middle', 'down');
+			testdrive.setCarEffect('drm');
+		}
+		//ascc
+		if (testdrive.n == 2 && testdrive.scrollAmnt >= (testdrive.bodyHeight * (testdrive.n) + (testdrive.bodyHeight * .35)) && !testdrive._oppo) {
 			testdrive.setOpponentCar('middle', 'top');
+			testdrive.setCarEffect('signal', 'front');
+			testdrive._carEffect = true;
+		}
+		//bsd
+		if (testdrive.n == 3 && testdrive.scrollAmnt >= (testdrive.bodyHeight * (testdrive.n) + (testdrive.bodyHeight * .35)) && !testdrive._oppo) {
+			testdrive.setOpponentCar('right', 'down');
+			testdrive.setCarEffect('signal', 'rear_right');
+			testdrive._carEffect = true;
+		}
+		//aeb truck effect
+		if (testdrive.n == 4 && testdrive.scrollAmnt >= (testdrive.accumBodyHeight + (testdrive.bodyHeight * .75))) {
+			testdrive.setTruck();
+		}
+		//lkas
+		if (testdrive.n == 5) {
+			if(testdrive.scrollAmnt >= (testdrive.bodyHeight * (testdrive.n) + (testdrive.bodyHeight * .13)) && testdrive.scrollAmnt <= (testdrive.bodyHeight * (testdrive.n) + (testdrive.bodyHeight * .2))){
+				testdrive._carEffect = true;
+				//testdrive.setCarEffect('signal', 'front_right');
+				testdrive.setCarEffect('lkas');
+			}
+			else if(testdrive.scrollAmnt >= (testdrive.bodyHeight * (testdrive.n) + (testdrive.bodyHeight * .3))){
+				testdrive._carEffect = true;
+				//testdrive.setCarEffect('signal', 'front_right');
+				testdrive.setCarEffect('lkas');
+			}
+			else{
+				testdrive.removeCarEffect();
+			}
+
 		}
 
-		if (testdrive.n == 7 && testdrive.scrollAmnt >= (testdrive.bodyHeight * (testdrive.n) + (testdrive.bodyHeight * .5)) && !testdrive._carEffect) {
+
+		if (testdrive.n == 7  && testdrive.scrollAmnt >= (testdrive.bodyHeight * (testdrive.n) + (testdrive.bodyHeight * .7)) && !testdrive._carEffect) {
 			testdrive.setCarEffect('light');
 			testdrive._carEffect = true;
 		}
@@ -341,14 +327,13 @@ var testdrive = {
 				$(this).remove();
 			});
 		}
-		else if (testdrive.n == 7) {		// lka 일 때 사운드 제거, 이펙트 제거
-			testdrive.removeTruck();
+		else if (testdrive.n == 1) {
+			$('.signBottom').fadeOut(function() {
+				$(this).remove();
+			});
 		}
-		else if (testdrive.n == 8) {		// lka 일 때 사운드 제거, 이펙트 제거
-			lkaAudio.pause();
-			$('#lka_sound').prop('muted', true);
-			lkaAudio.currentTime = 0;
-			testdrive.removeCarEffect();
+		else if (testdrive.n == 4) {
+			testdrive.removeTruck();
 		}
 		testdrive.targetSpeed = 0;
 		testdrive.tweenSpeed();
@@ -359,10 +344,8 @@ var testdrive = {
 		testdrive.carMove = null;
 		testdrive.scrollAble = false;
 		var pointTime;
-		if (testdrive.n == 7)
-			pointTime = 750;
-		/*else if (testdrive.n == 9)
-			pointTime = 1000*/
+		if (testdrive.n == 4)
+			pointTime = 750;//delay
 		else
 			pointTime = 0;
 		$('.accel').fadeOut();
@@ -390,19 +373,36 @@ var testdrive = {
 		testdrive.accumBodyHeight += testdrive.bodyHeight;
 
 		//car effect remove
-		if (testdrive.n == 1 || testdrive.n == 3) {	//효과 없애기
+		if(testdrive.n==0){
+			testdrive.removeCarEffect();
+		}
+		else if (testdrive.n == 1 || testdrive.n == 3) {	//효과 없애기
 			testdrive.removeOpponentCar('down');
-			if (testdrive.n == 3) {
-				testdrive.removeCarEffect();
-				testdrive._carEffect = false;
-			}
+			testdrive.removeCarEffect();
+			testdrive._carEffect = false;
 		}
 		else if (testdrive.n == 2) {	//효과 없애기
 			testdrive.removeOpponentCar('top');
+			testdrive.removeCarEffect();
+			testdrive._carEffect = false;
 		}
-		
-		if (testdrive.n == 10) {	//시승신청 넘어가기
-			location.href = "./applicationIntro.php";
+		else if (testdrive.n == 4) {	//효과 없애기
+			testdrive.removeCarEffect();
+			testdrive.removeTruck();
+			testdrive._carEffect = false;
+		}
+		else if (testdrive.n == 5) {	//효과 없애기
+			testdrive.removeCarEffect();
+			testdrive._carEffect = false;
+		}
+
+		if (testdrive.n == 9) {	//시승신청 넘어가기
+			// if (url)
+			// 	location.href = "./applicationIntro.php";
+			// // else if (dealerUrl)
+			// // 	location.href = "./applicationDealer.php";
+			// else
+				parent.location.href = "./applicationIntro.php";
 		}
 
 		testdrive.scrollAble = true;
@@ -429,7 +429,7 @@ var testdrive = {
 		else{
 			$(".nextPoint .nextPointTitle").html(language.point[this.n].title).parent().addClass("doubleline");
 			if(this.n == 4)
-				$(".nextPoint .nextPointTitle .pointTitleSub").addClass('letterSpacing');			
+				$(".nextPoint .nextPointTitle .pointTitleSub").addClass('letterSpacing');
 		}
 	},
 	closeNextPoint : function() {
@@ -569,11 +569,14 @@ var testdrive = {
 			testdrive.carEffect = true;
 			img = $('<img />', {
 				id : 'carEffect',
-				class : 'img100 carEffect',
-				src : '../images/testdrive/testdrive_car_resource_engine_01.png'
-			}).appendTo($('#car')).delay(500).parent().append('<img src="../images/testdrive/testdrive_car_resource_engine_02.png" class="carEffect img100 engine blink1">');
-			$('.scrollWrap').append('<img src="../images/testdrive/sign_01.png" class="sign blink1">').find('.sign').fadeIn();
-			$('.car').fadeOut();
+				class : 'img100 carEffect blink1',
+				src : '../images/testdrive/car_engine.png'
+			}).appendTo($('#car'));
+			$('.scrollWrap').append('<img src="../images/testdrive/engine.gif" class="sign">').find('.sign').fadeIn();
+		}
+		else if (val == 'drm') {
+			testdrive.carEffect = true;
+			$('.scrollWrap').append('<img src="../images/testdrive/drm_img.png" class="signBottom">').find('.signBottom').fadeIn();
 		}
 		else if (val == 'turnsignal') {		// 7 dct
 			$('.turnsignal').remove();
@@ -642,39 +645,15 @@ var testdrive = {
 
 			$('.scrollWrap').append('<img src="../images/testdrive/sign_03.png" class="sign blink1">').find('.sign').fadeIn();
 		}
-		else if (val == 'lka') {
+		else if (val == 'aeb' || val =='lkas') {
 			testdrive.carEffect = true;
-			$('#lka_sound').prop('muted', false);
-			$('#lka_sound').prop('loop', true);
-			lkaAudio.play();
-
 			img = $('<img />', {
 				id : 'carEffect',
 				class : 'img100 carEffect',
-				src : '../images/testdrive/lka.png'
+				src : '../images/testdrive/rador.png'
 			}).appendTo($('#car'));
 		}
-		else if (val == 'daw') {
-			$('.daw'+ (pos-1)).fadeOut(function() {
-				$(this).remove();
-			});
-			testdrive.daw = pos;
-			img = $('<img />', {
-				id : 'carEffect',
-				class : 'carEffect sign daw daw'+ pos,
-				src : '../images/testdrive/popup_daw_0'+ pos +'.png'
-			}).appendTo($('.scrollWrap')).fadeIn(function() {
-				if (pos == 5) {
-					$(this).delay(500).fadeOut(function() {
-						$(this).remove();
-						$('.scrollWrap').append('<img src="../images/testdrive/popup_daw_06.png" class="sign daw">').find('.sign').fadeIn().addClass('blink3').delay(2000).fadeOut(function() {
-							testdrive.getPoint();
-							$(this).remove();
-						});
-					});
-				}
-			});
-		}
+
 		else if (val == 'light') {
 			var carNight = $('<img />', {
 				class : 'carNight',
@@ -698,7 +677,7 @@ var testdrive = {
 		}
 	},
 	removeCarEffect : function(val) {
-		$('.carEffect, .sign').fadeOut(function() {
+		$('.carEffect, .sign, .signBottom').fadeOut(function() {
 			$(this).remove();
 		});
 		$('.car').fadeIn();
@@ -706,39 +685,22 @@ var testdrive = {
 	},
 	setTruck : function() {
 		if (!testdrive._truck) {
-			$('#fca_sound_3').prop('muted', false);
-			$('#fca_sound_3').prop('loop', true);
-			fcaAudio3.play();
-
-			$('#roadBg7').append('<div class="truck"><img src="../images/testdrive/truck.png"></div>');
+			$('#roadBg5').append('<div class="truck"><img src="../images/testdrive/truck1.png"></div>');
 			$('.truck').animate({'left':0});
 			testdrive._truck = true;
-			testdrive.setCarEffect('signal', 'front_left');
+			testdrive.setCarEffect('aeb');
+			//testdrive.setCarEffect('signal', 'front_left');
 		}
 	},
 	removeTruck : function() {
-		$('#roadBg7 .truck').animate({'left':'-5%', 'opacity':0}, function() {
+		$('#roadBg5 .truck').animate({'left':'-5%', 'opacity':0}, function() {
 			$(this).remove();
 		});
-		fcaAudio3.pause();
-		$('#fca_sound_3').prop('muted', true);
-		fcaAudio3.currentTime = 0;
 		testdrive.removeCarEffect();
 	},
 	setParking : function() {
-		testdrive.carMove = TweenLite.to($('#car'), 2, {left:'70%', rotation:-90, transformOrigin:"50% 43%", onComplete:function() {
-			$('.accel').css({'background-image':'url(../images/testdrive/btn_rear.png)'}).addClass('blink1').on('click taphold touchstart', function() {
-				$(this).removeClass('blink1');
-				$('.movieWrap').css({'height':$(window).height()}).fadeIn();
-				TweenLite.to($('#car'), 5, {left:((!mobile) ? '5%' : '3.5%'), onComplete:function() {
-					$('.movieWrap').fadeOut(function() {
-						testdrive.getPoint();
-						$(this).remove();
-					});
-				}});
-			});
-
-			//testdrive.carMove = testdrive.carMove = TweenLite.to($('#car'), 2, {left:'80%', rotation:-90, transformOrigin:"50% 43%"});
+		testdrive.carMove = TweenLite.to($('#car'), 2, {left:'60%', top:'15%', onComplete:function() {
+			testdrive.getPoint();
 		}});
 	},
 	setOpponentCar : function(loc, dir) {
@@ -747,7 +709,7 @@ var testdrive = {
 		if (loc == 'left')
 			_left = '25%';
 		else if (loc == 'right')
-			_left = '64%';
+			_left = '62%';
 		else if (loc == 'middle')
 			_left = '41.5%';
 		var img = $('<img />', {
@@ -760,7 +722,7 @@ var testdrive = {
 			'top':((dir == 'down') ? -(testdrive.oppoHeight) : testdrive.scrollHeight),
 			'left':_left
 		}).appendTo($('#car')).animate({
-			'top':((dir == 'down') ? '-4%' : '55%')
+			'top':((dir == 'down') ? '-4%' : '62%')
 		}, ((dir == 'down') ? 1000 : 1500));
 	},
 	removeOpponentCar : function(dir) {
@@ -777,13 +739,9 @@ var testdrive = {
 				$('.gaugeText > span').text(testdrive.carSpeed.score.toFixed(0));
 				if (testdrive.carSpeed.score.toFixed(0) > 0 && testdrive.carSpeed.score.toFixed(0) <= 10)
 					$('.gaugeText > span, .gaugeMode > span').removeClass().addClass('gaugeWhite');
-				else if (testdrive.carSpeed.score.toFixed(0) <= 60 && testdrive.n == 2)
+				else if (testdrive.carSpeed.score.toFixed(0) > 10 && testdrive.carSpeed.score.toFixed(0) <= 80)
 					$('.gaugeText > span, .gaugeMode > span').removeClass().addClass('gaugeGreen');
-				else if (testdrive.carSpeed.score.toFixed(0) > 60 && testdrive.n == 2)
-					$('.gaugeText > span, .gaugeMode > span').removeClass().addClass('gaugeRed');
-				else if (testdrive.carSpeed.score.toFixed(0) > 10 && testdrive.carSpeed.score.toFixed(0) <= 80 && testdrive.n != 2)
-					$('.gaugeText > span, .gaugeMode > span').removeClass().addClass('gaugeGreen');
-				else if (testdrive.carSpeed.score.toFixed(0) > 80 && testdrive.n != 2)
+				else if (testdrive.carSpeed.score.toFixed(0) > 80)
 					$('.gaugeText > span, .gaugeMode > span').removeClass().addClass('gaugeRed');
 			}, ease:Linear.easeNone});
 		testdrive.preTargetSpeed = testdrive.targetSpeed;

@@ -9,7 +9,10 @@
 	
 	
 	if($_SESSION["LF_TD_DEALER_IMAGE"]){
-		$LMS_IMAGE = $IMG_URL."/hyundai/member/".$_SESSION["LF_TD_DEALER_IMAGE"];
+		if (strpos($_SESSION["LF_TD_DEALER_IMAGE"], 'hyundai/member') !== false)
+			$LMS_IMAGE = $_SESSION["LF_TD_DEALER_IMAGE"];
+		else
+			$LMS_IMAGE = $IMG_URL."/hyundai/member/".$_SESSION["LF_TD_DEALER_IMAGE"];
 	}else{
 		$LMS_IMAGE = "../images/common/profile_defalt.png";
 	}
@@ -102,7 +105,7 @@
 							<p>Enjoy the Sonata New Rise as you drive through the city using your smartphone!</p>
 						</div>
 						<div class="button">
-							<a class="btn_box btn_showroom" href="#drivingMap">VISIT</a>
+							<a class="btn_box btn_showroom" href="#drivingMap">OK</a>
 						</div>
 					</div>
 					
@@ -118,11 +121,11 @@
 					<h2>COURSE MAP</h2>
 					<div class="imgbox map">
 						<!-- <img src="../images/testdrive/002_02_00_btn_01.png" class="mapIcon showroom" alt=""> -->
-						<img src="../images/testdrive/002_02_00_btn_02.png" class="mapIcon beforeDriving" alt="">
-						<img src="../images/testdrive/002_02_00_btn_03.png" class="mapIcon straight"  alt="">
-						<img src="../images/testdrive/002_02_00_btn_04.png" class="mapIcon cornering" alt="">
-						<img src="../images/testdrive/002_02_00_btn_05.png" class="mapIcon lakeChange" alt="">
-						<img src="../images/testdrive/002_02_00_btn_06.png" class="mapIcon parking"  alt="">
+						<img src="../images/testdrive/002_02_00_btn_02.png" class="mapIcon beforeDriving" alt="1" id="mapIcon1">
+						<img src="../images/testdrive/002_02_00_btn_03.png" class="mapIcon straight"  alt="2" id="mapIcon2">
+						<img src="../images/testdrive/002_02_00_btn_04.png" class="mapIcon cornering" alt="3" id="mapIcon3">
+						<img src="../images/testdrive/002_02_00_btn_05.png" class="mapIcon lakeChange" alt="4" id="mapIcon4">
+						<img src="../images/testdrive/002_02_00_btn_06.png" class="mapIcon parking"  alt="5" id="mapIcon5">
 					</div>
 					<div class="imgText">
 						<p>Features of the Sonata New Rise</p>
@@ -179,14 +182,14 @@
 			<section data-role="page" id="td01" class="container content">
 				<div data-role="header" class="header">
 					<a href="#" class="ui-btn btn_sidePanel ui-btn-right"><img src="../images/common/btn_menu.png" alt=""></a>
-					<h1>Test Drive</h1>
+					<h1>VIRTUAL EXPERIENCE</h1>
 				</div>
 				<div data-role="main" class="ui-content">
 					<h2>Seat Position</h2>
 					<div class="textbox">
 						<div class="profilewrap">
 							<div class="profileImg" style="background-image: url('<?= $LMS_IMAGE ?>');"></div>
-							<p><span class="dName">Jack</span>'s <span class="comt">Comments</span></p>
+							<p><span class="dName"><?= ($_SESSION["LF_TD_DEALER_NAME"]) ? $_SESSION["LF_TD_DEALER_NAME"] : 'DEALER' ?>'s</span> <span class="comt">Comments</span></p>
 						</div>
 						<div class="textwrap">
 							<p>Adjust the seat first to set the most comfortable position for driving before you start.</p>
@@ -202,14 +205,14 @@
 			<section data-role="page" id="td02" class="container content">
 				<div data-role="header" class="header">
 					<a href="#" class="ui-btn btn_sidePanel ui-btn-right"><img src="../images/common/btn_menu.png" alt=""></a>
-					<h1>Test Drive</h1>
+					<h1>VIRTUAL EXPERIENCE</h1>
 				</div>
 				<div data-role="main" class="ui-content">
 					<h2>Outside Mirror</h2>
 					<div class="textbox">
 						<div class="profilewrap" >
 							<div class="profileImg" style="background-image: url('<?= $LMS_IMAGE ?>');"></div>
-							<p><span class="dName">Jack</span>'s <span class="comt">Comments</span></p>
+							<p><span class="dName"><?= ($_SESSION["LF_TD_DEALER_NAME"]) ? $_SESSION["LF_TD_DEALER_NAME"] : 'DEALER' ?>'s</span> <span class="comt">Comments</span></p>
 						</div>
 						<div class="textwrap">
 							<p>Check whether you can see the side and behind well and adjust the side view and rear view mirrors.</p>
@@ -225,14 +228,14 @@
 			<section data-role="page" id="td03" class="container content">
 				<div data-role="header" class="header">
 					<a href="#" class="ui-btn btn_sidePanel ui-btn-right"><img src="../images/common/btn_menu.png" alt=""></a>
-					<h1>Test Drive</h1>
+					<h1>VIRTUAL EXPERIENCE</h1>
 				</div>
 				<div data-role="main" class="ui-content">
 					<h2>Steering Wheel</h2>
 					<div class="textbox">
 						<div class="profilewrap">
 							<div class="profileImg" style="background-image: url('<?= $LMS_IMAGE ?>');"></div>
-							<p><span class="dName">Jack</span>'s <span class="comt">Comments</span></p>
+							<p><span class="dName"><?= ($_SESSION["LF_TD_DEALER_NAME"]) ? $_SESSION["LF_TD_DEALER_NAME"] : 'DEALER' ?>'s</span> <span class="comt">Comments</span></p>
 						</div>
 						<div class="textwrap">
 							<p>Adjust the steering wheel to your comfortable position by tilting and telescoping it.</p>
@@ -248,14 +251,14 @@
 			<section data-role="page" id="td04" class="container content">
 				<div data-role="header" class="header">
 					<a href="#" class="ui-btn btn_sidePanel ui-btn-right"><img src="../images/common/btn_menu.png" alt=""></a>
-					<h1>Test Drive</h1>
+					<h1>VIRTUAL EXPERIENCE</h1>
 				</div>
 				<div data-role="main" class="ui-content">
 					<h2>Seat Belt</h2>
 					<div class="textbox">
 						<div class="profilewrap">
 							<div class="profileImg" style="background-image: url('<?= $LMS_IMAGE ?>');"></div>
-							<p><span class="dName">Jack</span>'s <span class="comt">Comments</span></p>
+							<p><span class="dName"><?= ($_SESSION["LF_TD_DEALER_NAME"]) ? $_SESSION["LF_TD_DEALER_NAME"] : 'DEALER' ?>'s</span> <span class="comt">Comments</span></p>
 						</div>
 						<div class="textwrap">
 							<p>When everything has been set please wear the seat belt.</p>

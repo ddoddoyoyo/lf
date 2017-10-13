@@ -5,7 +5,7 @@ var language = {
 			'desc' : 'Of the engines for the Sonata New Rise, the Nu 2.0 engine has a power of 163 PS and a torque of 20 kg.m'
 		},
 		{
-			'title' : 'DRM<br><span class="pointTitleSub">(Driving Rear Veiw Monitoring)</span>',
+			'title' : 'DRM<br><span class="pointTitleSub">(Driving Rear View Monitoring)</span>',
 			'desc' : 'Rear view can be displayed on the navigation as well  while driving.'
 		},
 		{
@@ -33,7 +33,7 @@ var language = {
 			'desc' : 'The key benefit of this system is keeping the vehicle stable when cornering at a high speed.'
 		},
 		{
-			'title' : 'DBL+HBA',
+			'title' : 'DBL , HBA',
 			'desc' : 'Visibility is a very essential element when driving. Especially at night, front lights are crucial for  maintaining the visibility.'
 		},
 		{
@@ -84,7 +84,7 @@ var language = {
 				'desc' : '<p>The Lane Keeping Assist System (LKAS) is a function for ensuring that a car deviating from its lane returns to its original lane. It automatically turns the steering wheel into the correct position when departure from a lane is detected.</p><img src="../images/testdrive/002_04_06_01.png">'
 			},
 			{
-				'desc' : '<p>TThe Driver Attention Alert (DAA) function generates a pop-up message and a warning sound to suggest that the driver take a rest when a driving pattern from fatigue or carelessness is detected.</p><img src="../images/testdrive/002_04_06_02.png">'
+				'desc' : '<p>The Driver Attention Alert (DAA) function generates a pop-up message and a warning sound to suggest that the driver take a rest when a driving pattern from fatigue or carelessness is detected.</p><img src="../images/testdrive/002_04_06_02.png">'
 			}
 		],
 		[//SUSPENSION
@@ -97,7 +97,7 @@ var language = {
 				'desc' : '<p>Minor vibrations, which otherwise could be transferred to the steering wheel when accelerating or driving on a rough road, are completely eliminated. Braking stability certainly has been enhanced as well.</p><img src="../images/testdrive/002_04_08_01.png">'
 			},
 			{
-				'desc' : '<p>the Vehicle Stability Management (VSM) prevents the car from being pushed outwards, making it possible to handle with stability and agility.</p><img src="../images/testdrive/002_04_08_02.png"><p>Vehicle Stability Management <br>A total system that optimizes engine, braking and steering systems for maintaining vehicle stability when braking or cornering at high speeds.</p>'
+				'desc' : '<p>The Vehicle Stability Management (VSM) prevents the car from being pushed outwards, making it possible to handle with stability and agility.</p><img src="../images/testdrive/002_04_08_02.png"><p>Vehicle Stability Management <br>A total system that optimizes engine, braking and steering systems for maintaining vehicle stability when braking or cornering at high speeds.</p>'
 			}
 		],
 		[//DBL+HBA

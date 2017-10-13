@@ -26,7 +26,7 @@
 		</script>
 		<script>
 			$(document).ready(function(){
-				$('#applicationIntro .btn_nextPage').click(function(){
+				$('#applicationIntro .btn_box').click(function(){
 					location.href="application.php";
 				});
 			});
@@ -51,8 +51,10 @@
 					<div class="textwrap">
 						<p>How did you like the driving simulation of Sonata New Rise?</p> <p>Would you like to test drive the actual car.</p><p>If you press Next, you will be assisted in scheduling your own driving experience.</p>
 					</div>
-					<a href="javascript:;" class="btn_nextPage"><img src="../images/common/btn_next_black.png" alt=""></a>
-
+					<!-- <a href="javascript:;" class="btn_nextPage"><img src="../images/common/btn_next_black.png" alt=""></a> -->
+					<div class="button">
+						<a class="btn_box" href="javascript:;">REQUEST FOR DRIVE</a>
+					</div>
 				</div>		
 			</section>				
 			</div>

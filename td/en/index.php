@@ -137,7 +137,7 @@
 							<p>After it is finished, an actual driving session will be arranged for you.</p>
 						</div>
 						<div class="button">
-							<a class="btn_box btn_showroom" href="#intro2">VISIT</a>
+							<a class="btn_box btn_showroom" href="#intro2">OK</a>
 						</div>
 					</div>
 					
