@@ -191,14 +191,14 @@
 				<div data-role="header" class="header">
 					<a href="#" class="ui-btn btn_sidePanel ui-btn-right"><img src="../images/common/btn_menu.png" alt=""></a>
 					<a href="#" class="ui-btn ui-btn-left" data-rel="back"><img src="../images/common/btn_backward.png" alt=""></a>
-					<h1>Request for Drive</h1>
+					<h1>Sonata New Rise</h1>
 				</div>
 				<div data-role="main" class="ui-content">
 					<form action="" class="formwrap">
 						<input type="hidden" name="TAB_GB" value=""/>
 						<input type="hidden" name="TEST_DRIVE_CAR_CODE" value="LF"/>
 						<div class="title">
-							<h1>REQUEST FOR <span>REAL TEST DRIVE</span></h1>
+							<h1>REQUEST AN <span>ACTUAL TEST DRIVE</span></h1>
 						</div>
 						
 						<h2 class="tab" id="testDriveTab">BOOK A TEST DRIVE</h2>
@@ -259,11 +259,11 @@
 							<div><label for="bookEmail">E-MAIL</label> <input type="email" id="bookEmail" name="TEST_DRIVE_EMAIL"></div>
 							<div><label for="bookPhone">NUMBER</label> <input type="tel" id="bookPhone" name="TEST_DRIVE_NUMBER"></div>
 						</div>
-						<h2 class="tab" id="questionTab">QUESTION</h2>
+						<h2 class="tab" id="questionTab">INQUIRY</h2>
 						<div id="questionForm" class="form">
 							<div><label for="qname">NAME</label><input type="text" id="uname" name="QUESTION_NAME"></div>
 							<div><label for="qemail">E-MAIL</label> <input type="text" id="qemail" name="QUESTION_EMAIL"></div>
-							<div><label for="inquiry">INQUIRY CONTENTS</label> <textarea id="inquiry" name="QUESTION_MEMO"></textarea></div>
+							<div><label for="inquiry">INQUIRY</label> <textarea id="inquiry" name="QUESTION_MEMO"></textarea></div>
 						</div>
 						<div class="btnwrap question">
 							<a href="javascript:;" id="question" class="button btn_home">HOME</a><a href="javascript:;" class="button btn_send">SEND</a>

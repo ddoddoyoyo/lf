@@ -3,7 +3,7 @@ $(document).ready(function(){
 	var sidePanel ='<div class="sidePanel_wrap"><div class="sidePanel"><a href="#" class="btn_close"><img src="../images/common/btn_menu_close.png" alt=""></a><ul class="menu_list">';
 	sidePanel +='<li><a id="m_showroom" href="javascript:;">SHOW <span>ROOM</a></li>';
 	sidePanel +='<li><a id="m_testdrive" href="javascript:;">TEST <span>DRIVE</span></a></li>';
-	sidePanel +='<li><a id="m_request" href="javascript:;">REQUEST <span>FOR DRIVE</span></a></li>';
+	sidePanel +='<li><a id="m_request" href="javascript:;">REQUEST <span>ACTUAL TEST </span><span>DRIVE</span></a></li>';
 	sidePanel +='</ul></div></div>';
 
 	$(".container, .tdBody").append(sidePanel);
