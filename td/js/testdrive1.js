@@ -40,8 +40,8 @@ var handler = function(e) {
 }
 
 var testdrive = {
-	svgWidth : 94.133,
-	svgHeight : 13508.417,
+	svgWidth : 96.497,
+	svgHeight : 13508.5,
 	first : true,
 	carHeight : 0,
 	popupStat : false,
@@ -84,6 +84,7 @@ var testdrive = {
 	trafficLight : false,
 	daw : 0,
 	pcMobileLeft : 3,
+	deviceAdj : 0,
 
 	init : function() {
 		this.scrollAmnt = 0;
@@ -150,7 +151,7 @@ var testdrive = {
 				fcaAudio2.play();
 				fcaAudio3.play();
 				testdrive.audioLoad = true;
-				rearCameraMovie.play();
+				//rearCameraMovie.play();
 			}
 			setTimeout(function(){
 				$('#page8').fadeOut(500);
@@ -173,6 +174,8 @@ var testdrive = {
 		});
 
 		this.getPopupCount(true);	//팝업 카운트 최초 호출
+
+		testdrive.deviceAdj = (/samsungbrowser/i.test(navigator.userAgent.toLowerCase())) ? -0.08 : 0;
 	},
 	onEvent : function() {
 		$('#engine_sound').prop('muted', false);
@@ -182,14 +185,15 @@ var testdrive = {
 		//$('#engine_sound')[0].play();
 
 		if (testdrive.scrollAble) {
-			testdrive.bgStopPosition = .88 ;
+			testdrive.bgStopPosition = (testdrive.n == 9) ? .86 : .89 ;
 
 			if (testdrive.carMove) {
 				testdrive.carMove.timeScale(1).play();
 			}
 			else {
 				testdrive.carMove = TweenLite.to($('.roadBg'), testdrive.duration, {scrollTo:{y:testdrive.accumBodyHeight + (testdrive.bodyHeight * (testdrive.bgStopPosition))}, ease:Power0.easeInOut, onUpdate:testdrive.scrolling, onComplete:function() {
-						if (testdrive.n == 10)
+						if (testdrive.n == 9)
+							//return;
 							testdrive.setParking();
 						else
 							testdrive.getPoint();
@@ -242,7 +246,8 @@ var testdrive = {
 		$('#car').css({
 			//left:(newpoint.x - bbox.x) - ($(window).width() * .185),
 			//left:(2.5 * (newpoint.x - bbox.x)),
-			left:(testdrive.pcMobileLeft * (newpoint.x - bbox.x)) - ($(window).width() * .3),
+			//left:(testdrive.pcMobileLeft * (newpoint.x - bbox.x)) - ($(window).width() * .3),
+			left : (((newpoint.x - bbox.x) / bbox.width) - 0.38 + testdrive.deviceAdj) * 100 +'%',
 			transform:'rotate('+ carAngle +'deg)'
 		});
 		$('.roadBg').css({
@@ -290,7 +295,7 @@ var testdrive = {
 			testdrive.setTruck();
 		}
 		//lkas
-		if (testdrive.n == 5) {			
+		if (testdrive.n == 5) {
 			if(testdrive.scrollAmnt >= (testdrive.bodyHeight * (testdrive.n) + (testdrive.bodyHeight * .13)) && testdrive.scrollAmnt <= (testdrive.bodyHeight * (testdrive.n) + (testdrive.bodyHeight * .2))){
 				testdrive._carEffect = true;
 				//testdrive.setCarEffect('signal', 'front_right');
@@ -303,10 +308,10 @@ var testdrive = {
 			}
 			else{
 				testdrive.removeCarEffect();
-			}	
-			
+			}
+
 		}
-		
+
 
 		if (testdrive.n == 7  && testdrive.scrollAmnt >= (testdrive.bodyHeight * (testdrive.n) + (testdrive.bodyHeight * .7)) && !testdrive._carEffect) {
 			testdrive.setCarEffect('light');
@@ -392,14 +397,14 @@ var testdrive = {
 			testdrive.removeCarEffect();
 			testdrive._carEffect = false;
 		}
-		
+
 		if (testdrive.n == 9) {	//시승신청 넘어가기
 			// if (url)
 			// 	location.href = "./applicationIntro.php";
 			// // else if (dealerUrl)
 			// // 	location.href = "./applicationDealer.php";
 			// else
-				location.href = "./applicationIntro.php";
+				parent.location.href = "./applicationIntro.php";
 		}
 
 		testdrive.scrollAble = true;
@@ -426,7 +431,7 @@ var testdrive = {
 		else{
 			$(".nextPoint .nextPointTitle").html(language.point[this.n].title).parent().addClass("doubleline");
 			if(this.n == 4)
-				$(".nextPoint .nextPointTitle .pointTitleSub").addClass('letterSpacing');			
+				$(".nextPoint .nextPointTitle .pointTitleSub").addClass('letterSpacing');
 		}
 	},
 	closeNextPoint : function() {
@@ -564,6 +569,11 @@ var testdrive = {
 		}
 		else if (val == 'engine') {		// engine
 			testdrive.carEffect = true;
+			img = $('<img />', {
+				id : 'carEffect',
+				class : 'img100 carEffect blink1',
+				src : '../images/testdrive/car_engine.png'
+			}).appendTo($('#car'));
 			$('.scrollWrap').append('<img src="../images/testdrive/engine.gif" class="sign">').find('.sign').fadeIn();
 		}
 		else if (val == 'drm') {
@@ -690,20 +700,25 @@ var testdrive = {
 		});
 		testdrive.removeCarEffect();
 	},
+	/*setParking : function() {
+		testdrive.carMove = TweenLite.to($('#car'), 2, {left:'50%', top:'15%', onComplete:function() {
+			testdrive.getPoint();
+		}});
+	},*/
 	setParking : function() {
-		testdrive.carMove = TweenLite.to($('#car'), 2, {left:'70%', rotation:-90, transformOrigin:"50% 43%", onComplete:function() {
+		console.log("parking");
+		testdrive.carMove = TweenLite.to($('#car'), 2, {left:'60%', rotation:-90, transformOrigin:"50% 43%", onComplete:function() {
 			$('.accel').css({'background-image':'url(../images/testdrive/btn_rear.png)'}).addClass('blink1').on('click taphold touchstart', function() {
 				$(this).removeClass('blink1');
-				$('.movieWrap').css({'height':$(window).height()}).fadeIn();
-				TweenLite.to($('#car'), 5, {left:((!mobile) ? '5%' : '3.5%'), onComplete:function() {
-					$('.movieWrap').fadeOut(function() {
+				//$('.movieWrap').css({'height':$(window).height()}).fadeIn();
+				TweenLite.to($('#car'), 4, {left:((!mobile) ? '-5%' : '-5%'), onComplete:function() {
+					testdrive.getPoint();
+					/*$('.movieWrap').fadeOut(function() {
 						testdrive.getPoint();
 						$(this).remove();
-					});
+					});*/
 				}});
 			});
-
-			//testdrive.carMove = testdrive.carMove = TweenLite.to($('#car'), 2, {left:'80%', rotation:-90, transformOrigin:"50% 43%"});
 		}});
 	},
 	setOpponentCar : function(loc, dir) {

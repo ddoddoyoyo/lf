@@ -1,11 +1,13 @@
 #pageMap{
+	overflow: visible !important; 
+	// .ui-content{height: 100vh}
 	.wrap{
 		position: 	relative;
 		top: $header_height;
     width: 100%;
-    height: calc(100% - 60px);
+    height: calc(100% - 60px);	
     background-image: url('../images/map/001_bg.png');
-    background-size: auto 100%;
+    background-size: cover;
     background-position: center 30px;
 
 		h3 {

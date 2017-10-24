@@ -20,6 +20,77 @@
 	}
 
 }
+
+#applicationDealer{
+	background-image: url('../images/002_05_01_bg.jpg');
+	background-repeat: no-repeat;
+	background-size: 101% auto;
+    background-position: bottom;
+	.textwrap{
+		width: 80%;
+    	margin: 12% auto 0;
+    	p{
+    		margin-bottom: 4%;
+    		color:$text_50;
+    	}
+	}
+	.url_box{
+        background-color: $dark_gray;
+        height:  20%;
+        position:   relative;
+        width: 89%;
+    	left: 50%;
+    	top: 4%;
+    	transform: translateX(-50%);
+    	text-align: center;
+        >p{
+          color:$white;
+          padding: 5% 0 3% 0;
+          font-size: 14px;
+          span{
+            color:$point_color;
+            font-family: $header_m;
+            font-size: 14px;
+          }
+        }
+        .ui-input-text{
+          border-radius: initial;
+          background: none;
+          background-color:$white;
+          border:none;
+          box-shadow: none;
+          color:$gray_140;
+          margin:0;
+          font-size: 11px;
+          padding: 1% 1.5% 1.5% 1.5%;
+    	  box-sizing: border-box;
+    	  width: 89%;
+          font-family: $header_r;
+           position: relative;
+    		left: 50%;
+    		transform: translateX(-50%);
+          input{
+            text-align: center;
+          }
+        }
+        .btn_copy{
+          border: 2px solid $point_color;
+          border-radius: 45px;
+          padding: 10px 15px 7px;
+          color: $point_color !important;
+          font-size: 13px;
+          border-radius: 31px;
+          padding: 4px 15px 1px;
+          text-align: center;
+          width: 47px;
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+          top: 72%;
+          cursor:   pointer;
+        }
+      }
+}
 #application{
 	background-color:$white;
 	.ui-content{

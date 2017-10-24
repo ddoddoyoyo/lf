@@ -8,11 +8,11 @@
 	}*/
 	
 	
-	if($_SESSION["LF_TD_DEALER_IMAGE"]){
-		if (strpos($_SESSION["LF_TD_DEALER_IMAGE"], 'hyundai/member') !== false)
-			$LMS_IMAGE = $_SESSION["LF_TD_DEALER_IMAGE"];
+	if($_SESSION["SESSION_LMS_PHOTO"]){
+		if (strpos($_SESSION["SESSION_LMS_PHOTO"], 'hyundai/member') !== false)
+			$LMS_IMAGE = $_SESSION["SESSION_LMS_PHOTO"];
 		else
-			$LMS_IMAGE = $IMG_URL."/hyundai/member/".$_SESSION["LF_TD_DEALER_IMAGE"];
+			$LMS_IMAGE = $IMG_URL."/hyundai/member/".$_SESSION["SESSION_LMS_PHOTO"];
 	}else{
 		$LMS_IMAGE = "../images/common/profile_defalt.png";
 	}
@@ -40,6 +40,7 @@
 		<script src="../js/jquery.ui.touch-punch.min.js"></script>
 		<script src="../js/device.js"></script>
 		<script src="../js/main.js"></script>
+		<script src="https://cdn.jsdelivr.net/clipboard.js/1.5.3/clipboard.min.js"></script>
 		<script src="../js/menu.js"></script>
 		<script>
 			$(document).ready(function(){
@@ -52,7 +53,9 @@
 					}
 					
 				});
-			})
+			});
+			var url = "<?= $_SESSION['LF_TD_DEALER_URL'] ?>";
+			var dealerUrl = "<?= $_SESSION['SESSION_DEALER_URL'] ?>";
 		</script>
 	</head>
 	<body>
@@ -87,7 +90,7 @@
 				<div data-role="main" class="ui-content">
 					<div class="wrap">
 						<div class="titlewrap">
-							<h1>How to Test Driving</h1>
+							<!-- <h1>How to Test Driving</h1> -->
 						</div>
 						<div class="imgwrap">
 							<div class="imgbox showroomBox">
@@ -97,7 +100,7 @@
 								<p>TEST <span>DRIVE</span></p>
 							</div>
 							<div class="imgbox requestBox">
-								<p>REQUEST <span>FOR DRIVE</span></p>
+								<p>REQUEST <span>ACTUAL TEST </span><span>DRIVE</span></p>
 							</div>
 						</div>
 						<div class="textwrap">	
@@ -271,6 +274,17 @@
 				</div>
 			</section>				
 			</div>
+			<!-- <div id="roadBg1" class="bg"></div>
+			<div id="roadBg2" class="bg"></div>
+			<div id="roadBg3" class="bg"></div>
+			<div id="roadBg4" class="bg"></div>
+			<div id="roadBg5" class="bg"></div>
+			<div id="roadBg6" class="bg"></div>
+			<div id="roadBg8" class="bg"></div>
+			<div id="roadBg9" class="bg"></div>
+			<div id="roadBg10" class="bg"></div>
+			<div id="roadBg11" class="bg"></div> -->
+			<div class="ui-loader"><div class="loadingImg"></div></div>
 		<!-- <a href="#page11">이동!!!!!!!!!</a> -->
 		</div>
 	</body>

@@ -22,6 +22,8 @@
 			// 	 $.mobile.hashListeningEnabled = false;
 			// 	 $.mobile.pushStateEnabled = false;
 			// 	 $.mobile.changePage.defaults.changeHash = false;
+			var url = "<?= $_SESSION['LF_TD_DEALER_URL'] ?>";
+			var dealerUrl = "<?= $_SESSION['SESSION_DEALER_URL'] ?>";
 			// });
 		</script>
 		
@@ -29,25 +31,37 @@
 		<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
 		<script src="../js/jquery.ui.touch-punch.min.js"></script>
 		<script src="../js/device.js"></script>
+		<script src="https://cdn.jsdelivr.net/clipboard.js/1.5.3/clipboard.min.js"></script>
 		<script src="../js/menu.js"></script>
 		<script src="../js/common.js"></script>
+		<script>
+			$(document).ready(function(){
+				clipboard = new Clipboard('.btn_copy');
+			});
+			 var url = "<?= $_SESSION['LF_TD_DEALER_URL'] ?>";
+			var dealerUrl = "<?= $_SESSION['SESSION_DEALER_URL'] ?>";
+		</script>
 	</head>
 	<body>
 		<div id="wrap">
 			<div id="contBox">
 			<section data-role="page" id="applicationDealer" class="container application">
 				<div data-role="header" class="header">
-					<a href="#" class="ui-btn ui-btn-inline ui-corner-all ui-shadow btn_sidePanel ui-btn-right"><img src="../images/button/icon_navbar.png" alt=""></a>
+					<div data-role="header" class="header">
+					<a href="#" class="ui-btn btn_sidePanel ui-btn-right"><img src="../images/common/btn_menu.png" alt=""></a>
+					<a href="#" class="ui-btn ui-btn-left" data-rel="back"><img src="../images/common/btn_backward.png" alt=""></a>
+					<h1>Sonata New Rise</h1>
+				</div>
 				</div>
 				<div data-role="main" class="ui-content">
 					<div class="textwrap">
-						<p>KONA's Test Driving simulation is completed.<br>Try share the Test Drive URL to customer.</p>
+						<p>Sonata New Rise's Test Driving simulation is completed.<br>Try share the Test Drive URL to customer.</p>
 						<p>You can receive to your e-mail real Test Drive application and customer suggestion after finished the Test Driving.</p>
 					</div>
 					<div class="url_box">	
 						<p>Copy the Test Drive <span>URL</span> from here.</p>
-						<input type='text' value='http://test.deoham.com/os/td/en/testdriveIntro.php' readonly/>
-						<p class='btn_copy'>COPY</p>
+						<input type='text' id="copy_url" value="http://<?=$_SERVER["HTTP_HOST"]?>/os/td/en/index.php?v=<?= $_SESSION['LF_TD_DEALER_URL'] ?>" readonly/>
+						<p class='btn_copy'  data-clipboard-target="#copy_url">COPY</p>
 					</div>
 				</div>		
 			</section>				

@@ -40,6 +40,7 @@
 		}
 	}
 	.btn_nextPage{
+		height: 0;
 		bottom:9%;
 		left:50%;
 		transform: translateX(-50%);
@@ -58,7 +59,8 @@
 	background-size:100% auto;
 	background-position: bottom;
 	.title{
-		padding:10% 5% 5% 5%;
+		padding:8% 5% 3% 5%;
+		//padding: 30px 15px 10px;
 		p{
 			&:nth-child(1){
 				font-family: $header_r;
@@ -67,11 +69,11 @@
 			}
 			&:nth-child(2){
 				font-family: $header_m;
-				font-size: 60px;
+				font-size: 55px;
 				color:$text_30;
 				span{
 					font-family: $header_m;
-					font-size: 45px;
+					font-size: 40px;
 					color:$text_30;
 				}
 			}
@@ -84,12 +86,14 @@
 		}
 	}
 	.imgwrap{
-		margin:0 3%;
+		margin:0 6%;
+		line-height: 0;
 	}
 	.textwrap{
-		padding:5%;
+		padding:3% 5%;
+		//padding:10px 15px;
 		p{
-			font-size: $small-font;
+			font-size:12px;
 			color:$text_50;
 		}
 	}
@@ -101,7 +105,7 @@
 	background-position: bottom;
 	.textwrap{
 		position: relative;
-		top:6%;
+		top:10%;
 		left:50%;
 		transform:translateX(-50%);
 		width: 84%;

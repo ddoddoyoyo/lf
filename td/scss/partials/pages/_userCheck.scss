@@ -1,0 +1,250 @@
+//usercheck.php & addr_copy.php
+.userCheck{
+	background-color: $white;
+	//background-image: url(../images/login_bg.jpg);
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	background-position: bottom;
+	.header{
+		//background-color: $point_color_bright;
+		background-image: url(../images/email_tap.png);
+		background-repeat: no-repeat;
+		background-size: 100% auto;
+		height: 58px;
+		box-shadow: none;
+		//background-position: center 49%;
+	}
+	.ui-content{
+		padding-top: 58px;
+		.emailwrap{
+			position: relative;
+			width: 100%;
+			box-shadow: 0px 1px 5px 1px $gray_140;
+			.inputwrap{
+				width: 92%;
+    			position: relative;
+    			left: 50%;
+    			transform: translateX(-50%);
+    			>label{
+    				position: absolute;
+    				left:-9999px;
+    			}
+				.ui-input-text{
+			        border-radius: 30px;
+			        background: none;
+			        border:none;
+			        border:1.5px solid $point_color_bright;
+			        box-shadow: none;
+			        color:$text_50;
+			        margin:0;
+			    	box-sizing: border-box;
+			    	width: 82%;
+			     	display: inline-block;
+	    			padding: 1px;
+	    			margin: 12px 8px 12px 0px;
+	    			font-size: 14px;
+
+			         input{
+			            text-align: center;
+			            font-family: $header_r;
+			          }
+			    }
+			    .btn_ok{
+			    	display: inline-block;
+				    background-color: $point_color_bright;
+				    color: $white;
+				    padding: 10px 10px 9px 10px;
+				    font-size: 13px;
+				    border-radius: 50%;
+			    }
+		    }
+		}
+		.textwrap{
+			position: relative;
+			top:5%;
+			padding: 0 5%;
+			p{
+				color:$text_50;
+			}
+		}
+		.formwrap{
+			position: relative;
+			top:10%;
+			left:50%;
+			transform: translateX(-50%);
+			width: 90%;
+			@include clearfix;
+			.profileImg{
+				float:left;
+				width: 95px;
+				height: 95px;
+				border:1px solid $point_color_bright;
+				border-radius: 50%;
+				overflow: hidden;
+				//background-image: url(../images/common/profile_btn_picture.png);
+				//background-size: cover;
+				margin-right:6%;
+				div#current-img{
+					background-repeat: no-repeat;
+					background-size: cover; 
+					width: 100%; 
+					height: 100%;
+					background-position: center;
+				}
+				img#current-img{
+					position: relative;
+    				top: 50%;
+    				left: 50%;
+    				transform: translate(-50%,-50%);
+				}
+				>.ui-input-text{
+					position: absolute;
+				    top: 0;
+				    left:0;
+				    width: 95px;
+				    height: 95px;
+				    margin: 0;
+					opacity: 0;
+					border:none;
+					input{
+						width: 100%;
+						height: 100%;
+						cursor: pointer;
+					}
+				}
+			}
+			
+			.userInfo{
+				float:left;
+				width: 58%;
+				label{position: absolute;
+    				left:-9999px;}
+				.ui-input-text{
+					border-radius: inherit;
+					background:none;
+					border:none;
+					border-bottom:1px solid $gray_140;
+					box-shadow: none;
+					color:$dark_gray;
+					margin:0;
+					margin-bottom: 10px;
+			        input{
+			            font-family: $header_r;
+			        }
+			        ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+					  color: $dark_gray;
+					}
+					::-moz-placeholder { /* Firefox 19+ */
+					  color: $dark_gray;
+					}
+					:-ms-input-placeholder { /* IE 10+ */
+					  color: $dark_gray;
+					}
+					:-moz-placeholder { /* Firefox 18- */
+					  color: $dark_gray;
+					}
+			    }
+			    select{
+					display: inline-block !important;
+					border:none;
+					outline:none;
+					-webkit-appearance: none; 
+					-moz-appearance: none;
+					appearance: none;
+					border-bottom:1px solid $gray_140;
+					padding:2px;
+					background-image: url('../images/common/profile_indicator.png');
+					background-repeat: no-repeat;
+					background-position: center right;
+					background-size: 16px auto;
+					margin-right:2px;
+					box-shadow: none;
+					font-family: $header_r;
+					color:$dark_gray;
+					background-color: transparent;
+	    			padding: .4em;
+	    			width: 100%;    					
+				}
+				select::-ms-expand {//IE select appearance
+					display: none;
+				}
+			}
+			.ui-selectmenu-text{
+				display: none!important;
+			}
+		}
+		.btn_next{
+			display: block;
+			position: absolute;
+			left:50%;
+			transform: translateX(-50%);
+			bottom:5%;
+			width: 34%;
+			text-align: center;
+			background-color:$point_color_bright;
+			border-radius: 23px;
+			padding: 3% 0 2%;
+		}
+	}
+}
+
+#userCheck02{
+	.header{
+		a{
+			width: 11px;
+			margin-top: 12px;
+		}
+	}	
+}
+
+#userCheck03{
+	.formwrap{
+		top:6%;
+	}
+	.textwrap{
+		top:10%;
+	}
+	.urlwrap{
+		position: relative;
+		top:10%;
+		width: 100%;
+		background-color: $white;
+		.inputwrap{
+			width: 92%;
+			position: relative;
+			left: 50%;
+			transform: translateX(-50%);
+			.ui-input-text{
+				border-radius: initial;
+		        background: none;
+		        background-color: $white;
+		        border:1px solid $gray_140;
+		        box-shadow: none;
+		        color:$text_50;
+		        margin:0;
+		    	box-sizing: border-box;
+		    	width: 82%;
+		     	display: inline-block;
+    			padding: 1px;
+    			margin: 12px 10px 12px 0px;
+    			font-size: 14px;
+
+		         input{
+		            text-align: center;
+		            font-family: $header_r;
+		          }
+		    }
+		    .btn_copy{
+		    	width: 33px;
+		    	height: 33px;
+		    	position: relative;
+    			top: 14px;
+		    	display: inline-block;
+			    background-image: url(../images/common/profile_btn_copy.png);
+			    background-repeat: no-repeat;
+			    background-size: 100% auto;
+			    border-radius: 50%;
+		    }
+	    }
+	}	
+}

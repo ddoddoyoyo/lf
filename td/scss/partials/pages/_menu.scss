@@ -9,7 +9,7 @@
 		position: absolute;
 		left:105%;
 		background-color:$white;
-		width: 50%;
+		width: 75%;
 		height: 100%;
 		box-shadow: -1px 0 10px 1px #555;
 		.btn_close{
@@ -17,17 +17,17 @@
 		}
 		.menu_list{
 			height: 100%;
-			padding-top: 46%;
+			padding-top: 30%;
 			box-sizing:border-box;
 			li{
 				text-align: center;
-				margin-bottom: 38%;
+				margin-bottom: 14%;
 				a{
 					box-sizing:border-box;
-					padding-top:30%;
+					padding-top:25%;
 					background-position: center 10%;
 					background-repeat: no-repeat;
-					background-size: 30px;
+					background-size: 39px;
 					display: block;
 					color:$point_color_bright !important;
 					span{
@@ -47,6 +47,59 @@
 				}
 				
 			}
+			#url{
+		        background-color: $dark_gray;
+		        height:  115px;
+		        position:   absolute;
+		        bottom:0;
+		        margin-bottom: 0;
+    			height: 130px;
+			    width: 100%;
+			    padding: 0% 7%;
+			    box-sizing: border-box;
+		        >p{
+		          color:$white;
+		          font-size: 14px;
+		          padding: 12% 0 4% 0;
+    			  text-align: left;
+		          span{
+		            color:$point_color_bright;
+		            font-family: $header_m;
+		            font-size: 14px;
+		          }
+		        }
+		        .ui-input-text{
+		          border-radius: initial;
+		          background: none;
+		          background-color:$white;
+		          border:none;
+		          box-shadow: none;       
+		          margin:0; 
+		          box-sizing: border-box;
+		        }
+		        input{
+		            text-align: center;
+		            font-size: 11px;
+		            color:$gray_140;
+		            width:  100%;
+		            padding: 5px 4px 4px 4px;
+		            font-family: $header_r;
+		          }
+		        .btn_copy{
+		          border: 1.5px solid $point_color_bright;
+		          color: $point_color_bright !important;
+		          font-size: 13px;
+		          border-radius: 31px;
+		          padding: 4px 15px 1px;
+		          text-align: center;
+		          width: 47px;
+		          position: absolute;
+		          left: 50%;
+		          transform: translateX(-50%);
+		          top: 68%;
+		          cursor:   pointer;
+		        }
+		      }
 		}
 	}
 }

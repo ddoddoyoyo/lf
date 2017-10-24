@@ -176,11 +176,14 @@
 					$('#application .popLayer').hide();
 				});
 			});
+			var url = "<?= $_SESSION['LF_TD_DEALER_URL'] ?>";
+			var dealerUrl = "<?= $_SESSION['SESSION_DEALER_URL'] ?>";
 		</script>
 		<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 		<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
 		<script src="../js/jquery.ui.touch-punch.min.js"></script>
 		<script src="../js/device.js"></script>
+		<script src="https://cdn.jsdelivr.net/clipboard.js/1.5.3/clipboard.min.js"></script>
 		<script src="../js/menu.js"></script>
 		<script src="../js/common.js"></script>
 	</head>

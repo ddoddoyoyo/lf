@@ -133,7 +133,7 @@
 						</div>
 						<div class="textwrap">
 							<h2>Hello</h2>
-							<p>Please enter your information</p>
+							<p>Please upload your photo (if available)</p>
 							<div class="inputbox">
 								<!-- <a href="javascript:;"> -->
 									<img id="current-img" src="../images/002_profile_default.png" alt="user image">

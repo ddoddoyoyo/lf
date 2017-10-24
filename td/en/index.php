@@ -40,13 +40,53 @@
 			$LF_TD_DEALER_REGION = $row[0]["CTCODE"];
 			$LF_TD_DEALER_COUNTRY = $row[0]["ENG"];
 			$LF_TD_DEALER_IMAGE = $row[0]["LMS_IMAGE"];
+			if (!$_SESSION["SESSION_DEALER_URL"])
+				$LF_TD_DEALER_URL = $_GET["v"];
 			@session_register("LF_TD_DEALER_NAME")	or die("session_register err");
 			@session_register("LF_TD_DEALER_ID")	or die("session_register err");
 			@session_register("LF_TD_DEALER_REGION")	or die("session_register err");
 			@session_register("LF_TD_DEALER_COUNTRY")	or die("session_register err");
 			@session_register("LF_TD_DEALER_IMAGE")	or die("session_register err");
+			@session_register("LF_TD_DEALER_URL")	or die("session_register err");
 		}else{
 			//$tools->alertJavaGo("Faild.","error.php");
+			
+			$sql = "
+					SELECT 
+						A.TD_DEALER_NAME, 
+						A.TD_DEALER_ID,
+						B.CTCODE,
+						B.ENG,
+						A.TD_DEALER_PHOTO
+					FROM 
+						TD_DEALER_MEMBER A
+					LEFT JOIN SPK_COUNTRY B ON B.ENG = A.TD_DEALER_CONTRY
+					WHERE
+						A.TD_DEALER_ID = :LMS_ID
+					AND
+						A.TD_DEALER_GB = 'hyundai'
+			";
+
+			$stmt = $dbh->prepare($sql);
+			$stmt->bindParam(':LMS_ID',$DECODE_USER_ID);
+			$stmt->execute();
+			$row_cnt = $stmt->rowCount();
+			$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+			$stmt->closeCursor();
+
+			$LF_TD_DEALER_NAME = $rows[0]["TD_DEALER_NAME"];
+			$LF_TD_DEALER_ID = $rows[0]["TD_DEALER_ID"];
+			$LF_TD_DEALER_REGION = $rows[0]["CTCODE"];
+			$LF_TD_DEALER_COUNTRY = $rows[0]["ENG"];
+			$LF_TD_DEALER_IMAGE = $rows[0]["TD_DEALER_PHOTO"];
+			if (!$_SESSION["SESSION_DEALER_URL"])
+				$LF_TD_DEALER_URL = $_GET["v"];
+			@session_register("LF_TD_DEALER_NAME")	or die("session_register err");
+			@session_register("LF_TD_DEALER_ID")	or die("session_register err");
+			@session_register("LF_TD_DEALER_REGION")	or die("session_register err");
+			@session_register("LF_TD_DEALER_COUNTRY")	or die("session_register err");
+			@session_register("LF_TD_DEALER_IMAGE")	or die("session_register err");
+			@session_register("LF_TD_DEALER_URL")	or die("session_register err");
 		}
 		
 	}else{
@@ -65,13 +105,6 @@
 		<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
 		<link rel="stylesheet" href="../css/styles.css">
 		<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-		 <script>
-			  $(document).on("mobileinit", function () {
-			 	 $.mobile.hashListeningEnabled = false;
-			 	 $.mobile.pushStateEnabled = false;
-			 	 $.mobile.changePage.defaults.changeHash = false;
-			 });
-		</script>
 		<script>
 			$(document).ready(function(){
 				$("#intro0").on({
@@ -95,7 +128,17 @@
 		<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 		<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
 		<script src="../js/device.js"></script>
+		<script src="https://cdn.jsdelivr.net/clipboard.js/1.5.3/clipboard.min.js"></script>
 		<script src="../js/menu.js"></script>
+		<script>
+			  $(document).on("mobileinit", function () {
+			 	 $.mobile.hashListeningEnabled = false;
+			 	 $.mobile.pushStateEnabled = false;
+			 	 $.mobile.changePage.defaults.changeHash = false;
+			 });
+			var url = "<?= $_SESSION['LF_TD_DEALER_URL'] ?>";
+			var dealerUrl = "<?= $_SESSION['SESSION_DEALER_URL'] ?>";
+		</script>
 	</head>
 	<body>
 		<div id="wrap">

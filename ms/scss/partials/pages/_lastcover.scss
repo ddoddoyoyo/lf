@@ -7,6 +7,7 @@
 		width: 84%;
 		text-align:center;
 	}
+
 	.carChange{
 		width: 320px;
 		height: 367px;
@@ -83,12 +84,19 @@
 	background-color: $white;
 	background-size: 100% auto;
 	background-position: 0 $header_height;
+	.textwrap{
+		width: 100%;
+	    background: #fff;
+	    padding: 4% 8%;
+	    box-sizing: border-box;
+	    top: 76%;
+	}
 }
 
 #exSideLast{
 	background:url('../images/exterior/side/bg_02.jpg') no-repeat;
-	background-size: 100% auto;
-	background-position: bottom;
+	background-size: cover;
+	background-position: center 5px;
 	p{
 		color:$white;
 	}
@@ -100,6 +108,13 @@
 	background-color: $white;
 	background-size: 100% auto;
 	background-position: 0 $header_height;
+	.textwrap{
+		width: 100%;
+	    background: #fff;
+	    padding: 4% 8%;
+	    box-sizing: border-box;
+	    top: 76%;
+	}
 }
 
 #interiorLast{

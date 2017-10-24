@@ -21,13 +21,16 @@
 		<script src="../js/jquery.ui.touch-punch.min.js"></script>
 		<script src="../js/device.js"></script>
 		<script src="../js/main.js"></script>
+		<script src="https://cdn.jsdelivr.net/clipboard.js/1.5.3/clipboard.min.js"></script>
 		<script src="../js/menu.js"></script>
 		<script>
 			$(document).ready(function(){
 				$('#td04 .btn_nextPage').click(function(){
 					//location.href="testdrive.php";
 				});
-			})
+			});
+			var url = "<?= $_SESSION['LF_TD_DEALER_URL'] ?>";
+			var dealerUrl = "<?= $_SESSION['SESSION_DEALER_URL'] ?>";
 		</script>
 	</head>
 	<body>

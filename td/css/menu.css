@@ -14,27 +14,29 @@
     position: absolute;
     left: 105%;
     background-color: #ffffff;
-    width: 50%;
+    width: 75%;
     height: 100%;
     box-shadow: -1px 0 10px 1px #555; }
-    .sidePanel_wrap .sidePanel .btn_close {
+    .sidePanel_wrap .sidePanel .btn_close {  
       position: absolute;
-      top:4%;
-      right: 8%;
-      width:  19px }
+      top: 4%;
+      right: 8%; 
+      cursor: pointer; }
+    .sidePanel_wrap .sidePanel .btn_close img {
+        width: 19px; }
     .sidePanel_wrap .sidePanel .menu_list {
       height: 100%;
-      padding-top: 46%;
+      padding-top: 30%;
       box-sizing: border-box; }
       .sidePanel_wrap .sidePanel .menu_list li {
         text-align: center;
-        margin-bottom: 38%; }
+        margin-bottom: 14%; }
         .sidePanel_wrap .sidePanel .menu_list li a {
           box-sizing: border-box;
-          padding-top: 30%;
+          padding-top: 25%;
           background-position: center 10%;
           background-repeat: no-repeat;
-          background-size: 30px;
+          background-size: 39px;
           display: block;
           color: #59a9d4 !important; }
           .sidePanel_wrap .sidePanel .menu_list li a span {
@@ -47,3 +49,53 @@
           background-image: url("../images/intro/000_01_icon_02_testdrive.png"); }
         .sidePanel_wrap .sidePanel .menu_list li a#m_request {
           background-image: url("../images/intro/000_01_icon_03_requestfordrive.png"); }
+      .sidePanel_wrap .sidePanel .menu_list #url {
+        background-color: #3c3c41;
+        height: 115px;
+        position: absolute;
+        bottom: 0;
+        margin-bottom: 0;
+        height: 130px;
+        width: 100%;
+        padding: 0% 7%;
+        box-sizing: border-box; }
+        .sidePanel_wrap .sidePanel .menu_list #url > p {
+          color: #ffffff;
+          font-size: 14px;
+          padding: 12% 0 4% 0;
+          text-align: left; }
+          .sidePanel_wrap .sidePanel .menu_list #url > p span {
+            color: #59a9d4;
+            font-family: "HyundaiSansHeadMedium", Arial, sans-serif;
+            font-size: 14px; }
+        .sidePanel_wrap .sidePanel .menu_list #url .ui-input-text {
+          border-radius: initial;
+          background: none;
+          background-color: #ffffff;
+          border: none;
+          box-shadow: none;
+          margin: 0;
+          box-sizing: border-box; }
+        .sidePanel_wrap .sidePanel .menu_list #url input {
+          text-align: center;
+          font-size: 11px;
+          color: #8c8c8c;
+          width: 100%;
+          padding: 5px 4px 4px 4px;
+          font-family: "HyundaiSansHeadRegular", Arial, sans-serif; }
+          .sidePanel_wrap .sidePanel .menu_list #url input:focus{
+            outline: none;
+          }
+        .sidePanel_wrap .sidePanel .menu_list #url .btn_copy {
+          border: 1.5px solid #59a9d4;
+          color: #59a9d4 !important;
+          font-size: 13px;
+          border-radius: 31px;
+          padding: 4px 15px 1px;
+          text-align: center;
+          width: 47px;
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+          top: 68%;
+          cursor: pointer; }

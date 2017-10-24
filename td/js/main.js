@@ -135,8 +135,8 @@ $(document).ready(function(){
 
 	$('#inColor .colorBox .colorPick img').each(function(){
 		$(this).click(function(){
-			getClassName = $(this).attr('class');
-			//console.log(getClassName);
+			getClassName = $(this).attr('class').split(" ")[0];
+			console.log(getClassName);
 			$(this).addClass('active');
 			$(this).siblings().removeClass('active');
 			$('#inColor .imgwrap .imgText p,#inColor .imgwrap img').hide();

@@ -117,15 +117,27 @@
 @mixin btn_nextPage{
     position: absolute;
     right:5%;
-    bottom:2%;
-    width: 4%;
+    bottom:3%;
+    width: 30%;
     line-height: 0;
+    height: 34px;
+    img{
+        width: 12px;
+        position: absolute;
+        right: 0;
+    }
 }
 @mixin btn_back{
     position: absolute;
     left:5%;
-    bottom:2%;
-    width: 4%;
-    transform: rotate(-180deg);
+    bottom:3%;
+    width: 30%;
     line-height: 0;
+    height: 34px;
+    img{
+        width: 12px;
+        position: absolute;
+        left: 0;
+        transform: rotate(-180deg);
+    }
 }

@@ -8,11 +8,11 @@
 	}*/
 	
 	
-	if($_SESSION["LF_TD_DEALER_IMAGE"]){
-		if (strpos($_SESSION["LF_TD_DEALER_IMAGE"], 'hyundai/member') !== false)
-			$LMS_IMAGE = $_SESSION["LF_TD_DEALER_IMAGE"];
+	if($_SESSION["SESSION_LMS_PHOTO"]){
+		if (strpos($_SESSION["SESSION_LMS_PHOTO"], 'hyundai/member') !== false)
+			$LMS_IMAGE = $_SESSION["SESSION_LMS_PHOTO"];
 		else
-			$LMS_IMAGE = $IMG_URL."/hyundai/member/".$_SESSION["LF_TD_DEALER_IMAGE"];
+			$LMS_IMAGE = $IMG_URL."/hyundai/member/".$_SESSION["SESSION_LMS_PHOTO"];
 	}else{
 		$LMS_IMAGE = "../images/common/profile_defalt.png";
 	}
@@ -37,6 +37,7 @@
 			// });
 		</script>
 		<script src="../js/device.js"></script>
+		<script src="https://cdn.jsdelivr.net/clipboard.js/1.5.3/clipboard.min.js"></script>
 		<script src="../js/menu.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.8.1/js/perfect-scrollbar.jquery.min.js"></script>	
 		<script src="../js/main.js"></script>
@@ -51,7 +52,9 @@
 					location.href="testdriveIntro.php";
 				});
 				$('.scrollbar').perfectScrollbar(); 
-			})
+			});
+			 var url = "<?= $_SESSION['LF_TD_DEALER_URL'] ?>";
+			var dealerUrl = "<?= $_SESSION['SESSION_DEALER_URL'] ?>";
 		</script>
 	</head>
 	<body>

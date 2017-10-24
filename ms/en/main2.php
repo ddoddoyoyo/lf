@@ -18,11 +18,11 @@
 		<link rel="stylesheet" href="../css/styles.css">
 		<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 		 <script>
-			//  $(document).on("mobileinit", function () {
-			// 	 $.mobile.hashListeningEnabled = false;
-			// 	 $.mobile.pushStateEnabled = false;
-			// 	 $.mobile.changePage.defaults.changeHash = false;
-			// });
+			 $(document).on("mobileinit", function () {
+				 $.mobile.hashListeningEnabled = false;
+				 $.mobile.pushStateEnabled = false;
+				 $.mobile.changePage.defaults.changeHash = false;
+			});
 		</script>
 		<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 		<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
@@ -37,6 +37,7 @@
 				$('#upload').change(function(){
 					readURL(this);
 				});
+				// $("html,body").css({"background":"#fff","height":"100.1vh"});
 				function readURL(input){
 					if(input.files && input.files[0]) {
 						var reader = new FileReader();
@@ -94,14 +95,14 @@
 						<img src="../images/exterior/front/overlay_05.png" class="headLamp" alt="">
 						<img src="../images/exterior/front/overlay_06.png" class="LEDDRL" alt="">
 					</div>
-					<div class="btn_more">
+					<!-- <div class="btn_more">
 						<img src='../images/button/btn_more.png' class="cascadingGrille">
 						<img src='../images/button/btn_more.png' class="chromeMoling">
 						<img src='../images/button/btn_more.png' class="frontHood">
 						<img src='../images/button/btn_more.png' class="headLamp">
 						<img src='../images/button/btn_more.png' class="LEDDRL">
 						<img src='../images/button/btn_more.png' class="chromeGarnish">
-					</div>
+					</div> -->
 					<div class="btn_turbo">
 						<img src="../images/button/btn_turbo.png" alt="">
 					</div>
@@ -261,10 +262,10 @@
 						<img src="../images/exterior/side/overlay_01.png" class="DLOChromeMolding" alt="">
 						<img src="../images/exterior/side/overlay_02.png" class="SideSillMolding" alt="">
 					</div>
-					<div class="btn_more">
+					<!-- <div class="btn_more">
 						<img src='../images/button/btn_more.png' class="DLOChromeMolding">
 						<img src='../images/button/btn_more.png' class="SideSillMolding">
-					</div>
+					</div> -->
 					<div class="btn_turbo">
 						<img src="../images/button/btn_turbo.png" alt="">
 					</div>
@@ -355,12 +356,12 @@
 						<img src="../images/exterior/rear/overlay_03.png" class="TrunkOpenSwitch" alt="">
 						<img src="../images/exterior/rear/overlay_04.png" class="RearReflector" alt="">
 					</div>
-					<div class="btn_more">
+					<!-- <div class="btn_more">
 						<img src='../images/button/btn_more.png' class="RearCombinationLamp">
 						<img src='../images/button/btn_more.png' class="RearBumper">
 						<img src='../images/button/btn_more.png' class="TrunkOpenSwitch">
 						<img src='../images/button/btn_more.png' class="RearReflector">
-					</div>
+					</div> -->
 					<div class="btn_turbo">
 						<img src="../images/button/btn_turbo.png" alt="">
 					</div>
@@ -477,11 +478,11 @@
 						<img src="../images/interior/overlay_02.png" class="CenterFascia" alt="">
 						<img src="../images/interior/overlay_03.png" class="SupervisionCluster" alt="">
 					</div>
-					<div class="btn_more">
+					<!-- <div class="btn_more">
 						<img src='../images/button/btn_more.png' class="SteeringWheel">
 						<img src='../images/button/btn_more.png' class="CenterFascia">
 						<img src='../images/button/btn_more.png' class="SupervisionCluster">
-					</div>
+					</div> -->
 					<div class="textwrap">
 						<p>There are three areas of change in the interior. Let’s take a close look at each of them.</p>
 					</div>
@@ -793,15 +794,15 @@
 				<div data-role="main" class="ui-content">
 					<div class="img_overlay">
 						<img src="../images/convenience/overlay_01.png" class="WirelessCharging" alt="">
-						<img src="../images/convenience/overlay_02.png" class="WirelessCharging" alt="">
+						<!-- <img src="../images/convenience/overlay_02.png" class="WirelessCharging" alt=""> -->
 						<img src="../images/convenience/overlay_03.png" class="AirClean" alt="">
 						<img src="../images/convenience/overlay_04.png" class="carplay" alt="">
 					</div>
-					<div class="btn_more">
+					<!-- <div class="btn_more">
 						<img src='../images/button/btn_more.png' class="WirelessCharging">
 						<img src='../images/button/btn_more.png' class="AirClean">
 						<img src='../images/button/btn_more.png' class="carplay">
-					</div>
+					</div> -->
 					<a href="#" class="btn_back" data-rel="back"><img src="../images/button/next btn_alt.png" alt=""></a>
 					<a href="#uploadPage" class="btn_nextPage">
 						<img src="../images/button/next btn_alt.png" alt="">

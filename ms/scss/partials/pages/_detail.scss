@@ -1,8 +1,21 @@
 .detail{
 	background-color: $black;
+	.imgwrap{
+		position: relative;
+		height: 62%;
+		overflow: hidden;
+		img{
+			position: absolute;
+			//top:0;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+	}
 	.textwrap{
-		position: absolute;
-		top:64%;
+		//position: absolute;
+		//top:68%;
+		position: relative;
+		top:2%;
 		left:50%;
 		transform:translateX(-50%);
 		width: 84%;

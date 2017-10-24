@@ -21,7 +21,7 @@ var arr3 = [
 				"AEB","LKAS","BSD","ASCC","HBA","DBL","DAA","AVM","DRM"
 			],
 			[	//링크, 호출 방식 arr3[0][2][1]
-				"19","19,1","19,2","19,4","19,5","19,8","19,3","19,6","19,7"
+				"19,0","19,1","19,2","19,4","19,5","19,8","19,3","19,6","19,7"
 			]
 		],
 		[	//FRONT 하위의 C, 호출 방식 arr3[0][3]
@@ -60,20 +60,20 @@ var arr3 = [
 		],
 		[	//DRIVER’S SEAT 하위의 D
 			[	
-				"Steering wheel","Electric parking brake", "8-inch navigation", "IMS", "Heated and ventilated front seat"
+				"Steering wheel", "4.2 inch supervision cluster"
 			],
 			[	
-				"9","9,3","9,1","9,6","9,4"
+				"9,0","9,1"
 			]
 		],
 		[	//DRIVER’S SEAT 하위의 S
 		],
 		[	//DRIVER’S SEAT 하위의 C
 			[	
-				"Air clean mode","Wireless charging", "4.2 inch supervision cluster"
+				"Air clean mode","Wireless charging","Electric parking brake", "8-inch navigation", "IMS", "Ventilated seat"
 			],
 			[	
-				"21,1","21","9,2"
+				"21,1","21,0","21,7","21,6","21,8","21,4"
 			]
 		]
 	],
@@ -92,7 +92,7 @@ var arr3 = [
 				"DLO chrome molding","Wheel & Tires", "Side sill molding"
 			],
 			[	
-				"5","5,2","5,1"
+				"5,0","5,2","5,1"
 			]
 		],
 		[	//PASSENGER SIDE EXTERIOR 하위의 S
@@ -122,28 +122,29 @@ var arr3 = [
 		],
 		[	//REAR INTEROIR 하위의 C
 			[	
-				"Interior space", "Heated seats"
+				"Heated seat"
 			],
 			[	
-				"9","9,5"			]
+				"21,5"
+			]
 		]
 	],
 
 	[	//REAR EXTEROIR 에 대한 하위 배열, 호출 방식 arr3[5]
 		[	//REAR EXTEROIR 하위의 P
 			[	
-				"Twin muffler : 2.0 turbo only", "Trunk open switch in Hyundai logo", "Dual lower arm multi-link suspension"
+				"Dual lower arm multi-link suspension"
 			],
 			[	
-				"7,3","21,2","15"
+				"17"
 			]
 		],
 		[	//REAR EXTEROIR 하위의 D
 			[	
-				"Rear combination lamp", "Rear bumper", "Rear reflector"
+				"Rear combination lamp", "Rear bumper", "Rear reflector","Twin muffler : 2.0 turbo only"
 			],
 			[	
-				"7","7,1","7,2"
+				"7,0","7,1","7,2","7,3"
 			]
 		],
 		[	//REAR EXTEROIR 하위의 S
@@ -156,10 +157,10 @@ var arr3 = [
 		],
 		[	//REAR EXTEROIR 하위의 C
 			[	
-				"Luggage capacity (462ℓ)"
+				"Trunk open switch in Hyundai logo", "Luggage capacity (462ℓ)"
 			],
 			[	
-				"21,3"
+				"21,2","21,3"
 			]
 		]
 	]

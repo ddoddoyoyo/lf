@@ -134,7 +134,7 @@ ul {
 
 .loading, .ui-loader {
   width: 100%;
-  height: 100%;
+  height: 0;
   background: #000;
   color: #FFF;
   z-index: 10;
@@ -144,11 +144,13 @@ ul {
 
 .loading .loadingImg, .ui-loader .loadingImg {
   width: 45%;
-  height: 45%;
+  height: 0;
   top: 45%;
   position: absolute;
   left: 50%;
-  transform: translateX(-50%) translateY(-50%); }
+  transform: translateX(-50%) translateY(-50%);
+  background: url("../images/testdrive/icon_loading_gif.gif") no-repeat;
+  background-size: 100% auto; }
 
 .loading .loadingImg img, .ui-loader .loadingImg img {
   width: 100%; }
@@ -441,20 +443,21 @@ video {
     background-image: url("../images/intro/000_01_icon_03_requestfordrive.png");
     top: 12.5%; }
 
-#tdIntro .wrap .imgwrap .showroomBox {
-  background-image: url("../images/testdrive/002_01_icon_01_showroom.png");
-  margin-right: 2%; }
-  #tdIntro .wrap .imgwrap .showroomBox p {
-    opacity: 0.5; }
-
-#tdIntro .wrap .imgwrap .driveBox {
-  background-image: url("../images/testdrive/002_01_icon_02_testdrive.png");
-  margin-right: 2%; }
-
-#tdIntro .wrap .imgwrap .requestBox {
-  background-image: url("../images/testdrive/002_01_icon_03_requestfordrive.png"); }
-  #tdIntro .wrap .imgwrap .requestBox p {
-    opacity: 0.5; }
+#tdIntro .wrap .imgwrap {
+  height: 120px; }
+  #tdIntro .wrap .imgwrap .showroomBox {
+    background-image: url("../images/testdrive/002_01_icon_01_showroom.png");
+    margin-right: 2%; }
+    #tdIntro .wrap .imgwrap .showroomBox p {
+      opacity: 0.5; }
+  #tdIntro .wrap .imgwrap .driveBox {
+    background-image: url("../images/testdrive/002_01_icon_02_testdrive.png");
+    margin-right: 2%; }
+  #tdIntro .wrap .imgwrap .requestBox {
+    background-image: url("../images/testdrive/002_01_icon_03_requestfordrive.png");
+    top: 12.5%; }
+    #tdIntro .wrap .imgwrap .requestBox p {
+      opacity: 0.5; }
 
 #applicationIntro {
   background-image: url("../images/002_05_01_bg.jpg");
@@ -472,6 +475,68 @@ video {
     #applicationIntro .button .btn_box {
       border: none;
       background-color: #59a9d4; }
+
+#applicationDealer {
+  background-image: url("../images/002_05_01_bg.jpg");
+  background-repeat: no-repeat;
+  background-size: 101% auto;
+  background-position: bottom; }
+  #applicationDealer .textwrap {
+    width: 80%;
+    margin: 12% auto 0; }
+    #applicationDealer .textwrap p {
+      margin-bottom: 4%;
+      color: #323232; }
+  #applicationDealer .url_box {
+    background-color: #3c3c41;
+    height: 20%;
+    position: relative;
+    width: 89%;
+    left: 50%;
+    top: 4%;
+    transform: translateX(-50%);
+    text-align: center; }
+    #applicationDealer .url_box > p {
+      color: #ffffff;
+      padding: 5% 0 3% 0;
+      font-size: 14px; }
+      #applicationDealer .url_box > p span {
+        color: #366b87;
+        font-family: "HyundaiSansHeadMedium", Arial, sans-serif;
+        font-size: 14px; }
+    #applicationDealer .url_box .ui-input-text {
+      border-radius: initial;
+      background: none;
+      background-color: #ffffff;
+      border: none;
+      box-shadow: none;
+      color: #8c8c8c;
+      margin: 0;
+      font-size: 11px;
+      padding: 1% 1.5% 1.5% 1.5%;
+      box-sizing: border-box;
+      width: 89%;
+      font-family: "HyundaiSansHeadRegular", Arial, sans-serif;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%); }
+      #applicationDealer .url_box .ui-input-text input {
+        text-align: center; }
+    #applicationDealer .url_box .btn_copy {
+      border: 2px solid #366b87;
+      border-radius: 45px;
+      padding: 10px 15px 7px;
+      color: #366b87 !important;
+      font-size: 13px;
+      border-radius: 31px;
+      padding: 4px 15px 1px;
+      text-align: center;
+      width: 47px;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 72%;
+      cursor: pointer; }
 
 #application {
   background-color: #ffffff; }
@@ -1038,24 +1103,24 @@ video {
     position: absolute;
     left: 105%;
     background-color: #ffffff;
-    width: 50%;
+    width: 75%;
     height: 100%;
     box-shadow: -1px 0 10px 1px #555; }
     .sidePanel_wrap .sidePanel .btn_close {
       right: 8%; }
     .sidePanel_wrap .sidePanel .menu_list {
       height: 100%;
-      padding-top: 46%;
+      padding-top: 30%;
       box-sizing: border-box; }
       .sidePanel_wrap .sidePanel .menu_list li {
         text-align: center;
-        margin-bottom: 38%; }
+        margin-bottom: 14%; }
         .sidePanel_wrap .sidePanel .menu_list li a {
           box-sizing: border-box;
-          padding-top: 30%;
+          padding-top: 25%;
           background-position: center 10%;
           background-repeat: no-repeat;
-          background-size: 30px;
+          background-size: 39px;
           display: block;
           color: #59a9d4 !important; }
           .sidePanel_wrap .sidePanel .menu_list li a span {
@@ -1068,3 +1133,261 @@ video {
           background-image: url("../images/intro/000_01_icon_02_testdrive.png"); }
         .sidePanel_wrap .sidePanel .menu_list li a#m_request {
           background-image: url("../images/intro/000_01_icon_03_requestfordrive.png"); }
+      .sidePanel_wrap .sidePanel .menu_list #url {
+        background-color: #3c3c41;
+        height: 115px;
+        position: absolute;
+        bottom: 0;
+        margin-bottom: 0;
+        height: 130px;
+        width: 100%;
+        padding: 0% 7%;
+        box-sizing: border-box; }
+        .sidePanel_wrap .sidePanel .menu_list #url > p {
+          color: #ffffff;
+          font-size: 14px;
+          padding: 12% 0 4% 0;
+          text-align: left; }
+          .sidePanel_wrap .sidePanel .menu_list #url > p span {
+            color: #59a9d4;
+            font-family: "HyundaiSansHeadMedium", Arial, sans-serif;
+            font-size: 14px; }
+        .sidePanel_wrap .sidePanel .menu_list #url .ui-input-text {
+          border-radius: initial;
+          background: none;
+          background-color: #ffffff;
+          border: none;
+          box-shadow: none;
+          margin: 0;
+          box-sizing: border-box; }
+        .sidePanel_wrap .sidePanel .menu_list #url input {
+          text-align: center;
+          font-size: 11px;
+          color: #8c8c8c;
+          width: 100%;
+          padding: 5px 4px 4px 4px;
+          font-family: "HyundaiSansHeadRegular", Arial, sans-serif; }
+        .sidePanel_wrap .sidePanel .menu_list #url .btn_copy {
+          border: 1.5px solid #59a9d4;
+          color: #59a9d4 !important;
+          font-size: 13px;
+          border-radius: 31px;
+          padding: 4px 15px 1px;
+          text-align: center;
+          width: 47px;
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+          top: 68%;
+          cursor: pointer; }
+
+.userCheck {
+  background-color: #ffffff;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: bottom; }
+  .userCheck .header {
+    background-image: url(../images/email_tap.png);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    height: 58px;
+    box-shadow: none; }
+  .userCheck .ui-content {
+    padding-top: 58px; }
+    .userCheck .ui-content .emailwrap {
+      position: relative;
+      width: 100%;
+      box-shadow: 0px 1px 5px 1px #8c8c8c; }
+      .userCheck .ui-content .emailwrap .inputwrap {
+        width: 92%;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%); }
+        .userCheck .ui-content .emailwrap .inputwrap > label {
+          position: absolute;
+          left: -9999px; }
+        .userCheck .ui-content .emailwrap .inputwrap .ui-input-text {
+          border-radius: 30px;
+          background: none;
+          border: none;
+          border: 1.5px solid #59a9d4;
+          box-shadow: none;
+          color: #323232;
+          margin: 0;
+          box-sizing: border-box;
+          width: 82%;
+          display: inline-block;
+          padding: 1px;
+          margin: 12px 8px 12px 0px;
+          font-size: 14px; }
+          .userCheck .ui-content .emailwrap .inputwrap .ui-input-text input {
+            text-align: center;
+            font-family: "HyundaiSansHeadRegular", Arial, sans-serif; }
+        .userCheck .ui-content .emailwrap .inputwrap .btn_ok {
+          display: inline-block;
+          background-color: #59a9d4;
+          color: #ffffff;
+          padding: 10px 10px 9px 10px;
+          font-size: 13px;
+          border-radius: 50%; }
+    .userCheck .ui-content .textwrap {
+      position: relative;
+      top: 5%;
+      padding: 0 5%; }
+      .userCheck .ui-content .textwrap p {
+        color: #323232; }
+    .userCheck .ui-content .formwrap {
+      position: relative;
+      top: 10%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 90%; }
+      .userCheck .ui-content .formwrap:before, .userCheck .ui-content .formwrap:after {
+        content: "";
+        display: table; }
+      .userCheck .ui-content .formwrap:after {
+        clear: both; }
+      .userCheck .ui-content .formwrap .profileImg {
+        float: left;
+        width: 95px;
+        height: 95px;
+        border: 1px solid #59a9d4;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-right: 6%; }
+        .userCheck .ui-content .formwrap .profileImg div#current-img {
+          background-repeat: no-repeat;
+          background-size: cover;
+          width: 100%;
+          height: 100%;
+          background-position: center; }
+        .userCheck .ui-content .formwrap .profileImg img#current-img {
+          position: relative;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%); }
+        .userCheck .ui-content .formwrap .profileImg > .ui-input-text {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 95px;
+          height: 95px;
+          margin: 0;
+          opacity: 0;
+          border: none; }
+          .userCheck .ui-content .formwrap .profileImg > .ui-input-text input {
+            width: 100%;
+            height: 100%;
+            cursor: pointer; }
+      .userCheck .ui-content .formwrap .userInfo {
+        float: left;
+        width: 58%; }
+        .userCheck .ui-content .formwrap .userInfo label {
+          position: absolute;
+          left: -9999px; }
+        .userCheck .ui-content .formwrap .userInfo .ui-input-text {
+          border-radius: inherit;
+          background: none;
+          border: none;
+          border-bottom: 1px solid #8c8c8c;
+          box-shadow: none;
+          color: #3c3c41;
+          margin: 0;
+          margin-bottom: 10px; }
+          .userCheck .ui-content .formwrap .userInfo .ui-input-text input {
+            font-family: "HyundaiSansHeadRegular", Arial, sans-serif; }
+          .userCheck .ui-content .formwrap .userInfo .ui-input-text ::-webkit-input-placeholder {
+            /* Chrome/Opera/Safari */
+            color: #3c3c41; }
+          .userCheck .ui-content .formwrap .userInfo .ui-input-text ::-moz-placeholder {
+            /* Firefox 19+ */
+            color: #3c3c41; }
+          .userCheck .ui-content .formwrap .userInfo .ui-input-text :-ms-input-placeholder {
+            /* IE 10+ */
+            color: #3c3c41; }
+          .userCheck .ui-content .formwrap .userInfo .ui-input-text :-moz-placeholder {
+            /* Firefox 18- */
+            color: #3c3c41; }
+        .userCheck .ui-content .formwrap .userInfo select {
+          display: inline-block !important;
+          border: none;
+          outline: none;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
+          border-bottom: 1px solid #8c8c8c;
+          padding: 2px;
+          background-image: url("../images/common/profile_indicator.png");
+          background-repeat: no-repeat;
+          background-position: center right;
+          background-size: 16px auto;
+          margin-right: 2px;
+          box-shadow: none;
+          font-family: "HyundaiSansHeadRegular", Arial, sans-serif;
+          color: #3c3c41;
+          background-color: transparent;
+          padding: .4em;
+          width: 100%; }
+        .userCheck .ui-content .formwrap .userInfo select::-ms-expand {
+          display: none; }
+      .userCheck .ui-content .formwrap .ui-selectmenu-text {
+        display: none !important; }
+    .userCheck .ui-content .btn_next {
+      display: block;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 5%;
+      width: 34%;
+      text-align: center;
+      background-color: #59a9d4;
+      border-radius: 23px;
+      padding: 3% 0 2%; }
+
+#userCheck02 .header a {
+  width: 11px;
+  margin-top: 12px; }
+
+#userCheck03 .formwrap {
+  top: 6%; }
+
+#userCheck03 .textwrap {
+  top: 10%; }
+
+#userCheck03 .urlwrap {
+  position: relative;
+  top: 10%;
+  width: 100%;
+  background-color: #ffffff; }
+  #userCheck03 .urlwrap .inputwrap {
+    width: 92%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%); }
+    #userCheck03 .urlwrap .inputwrap .ui-input-text {
+      border-radius: initial;
+      background: none;
+      background-color: #ffffff;
+      border: 1px solid #8c8c8c;
+      box-shadow: none;
+      color: #323232;
+      margin: 0;
+      box-sizing: border-box;
+      width: 82%;
+      display: inline-block;
+      padding: 1px;
+      margin: 12px 10px 12px 0px;
+      font-size: 14px; }
+      #userCheck03 .urlwrap .inputwrap .ui-input-text input {
+        text-align: center;
+        font-family: "HyundaiSansHeadRegular", Arial, sans-serif; }
+    #userCheck03 .urlwrap .inputwrap .btn_copy {
+      width: 33px;
+      height: 33px;
+      position: relative;
+      top: 14px;
+      display: inline-block;
+      background-image: url(../images/common/profile_btn_copy.png);
+      background-repeat: no-repeat;
+      background-size: 100% auto;
+      border-radius: 50%; }

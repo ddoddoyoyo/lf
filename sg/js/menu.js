@@ -52,35 +52,44 @@ $(document).ready(function(){
 
 function pageMapNav(pageN){ //menu
 	//console.log(window.location.href.search('#pageMap'));
-	console.log(loc);
+	//console.log(loc);
+	_slideInit = true;
+	//slideInit();
 	//if(window.location.href.search('#pageMap') > -1){
-	if(loc == 0) {
+	//if(loc == 0) {
 		//location.href = "#contentPage";
 		$.mobile.changePage('#contentPage');
 		setTimeout(function(){
+			$('.slideControler .fp-controlArrow').remove();
+			$('.slideControler').append('<img src="../images/button/indicator_btn_right.png" class="nextImg fp-controlArrow  fp-next" alt=""><img src="../images/button/indicator_btn_left.png" class="prevImg fp-controlArrow  fp-prev" alt="">');
 			$.fn.fullpage.moveTo(pageN);
 		},500);
-	}
-	else{
-		$.fn.fullpage.moveTo(pageN);
-	}
+	// }
+	// else{
+	// 	$.fn.fullpage.moveTo(pageN);
+	// }
 }
 
 
-function pageMapNav1(pageN, nbhnn){ //pageMap 
+var _slideInit;
+function pageMapNav1(pageN, nbhnn){ //pageMap
 	//console.log(window.location.href.search('#pageMap'));
 	$('#pageMap .close').click();
 	//if(window.location.href.search('#pageMap') > -1){
-	if(loc == 0) {
-		$('#btnPageMove').click();
+
+	_slideInit = true;
+	//slideInit();
+	//if(loc == 0) {
+		$('#btnPageMove').click();//contentPage로 이동
 		//location.href = "#contentPage";
 		setTimeout(function(){
 			$('.slideControler .fp-controlArrow').remove();
 			$('.slideControler').append('<img src="../images/button/indicator_btn_right.png" class="nextImg fp-controlArrow  fp-next" alt=""><img src="../images/button/indicator_btn_left.png" class="prevImg fp-controlArrow  fp-prev" alt="">');
 			$.fn.fullpage.moveTo(pageN, nbhnn);
 		},500);
-	}
-	else{
-		$.fn.fullpage.moveTo(pageN, nbhnn);
-	}
+	// }
+	// else{
+	// 	alert('else');
+	// 	$.fn.fullpage.moveTo(pageN, nbhnn);
+	// }
 }

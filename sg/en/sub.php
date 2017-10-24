@@ -397,30 +397,16 @@
                         <div class="imgwrap_top">
                             <div class="imgTitle">
                                 <p>Steering Wheel</p>
-                                <p>8-inch navigation</p>
-                                <p>Supervision Cluster</p>
-                                <p>Electric Parking Brake(EPB)</p>
-                                <p>Heated Seats</p>
-                                <p>Ventilated Seats</p>
-                                <p>IMS(Integrated Memory System)</p>
+                                <p>Supervision Cluster</p>                               
                             </div>
                             <div class="slideImg">
                                 <img src="../images/interior/203_image_default.png" class="slide" alt="Steering Wheel">
-                                <img src="../images/interior/204_image_default.png" class="slide" alt="8-inch navigation">
-                                <img src="../images/interior/206_image_default.png" class="slide" alt="Supervision Cluster">
-                                <img src="../images/interior/207_image_default.png" class="slide" alt="Electric Parking Brake(EPB)">
-                                <img src="../images/interior/209_image_default.png" class="slide" alt="Heated Seats">
-                                <img src="../images/interior/210_image_default.png" class="slide" alt="Ventilated Seats">
-                                <img src="../images/interior/211_image_default.png" class="slide" alt="IMS(Integrated Memory System)">
+                                <img src="../images/interior/206_image_default.png" class="slide" alt="Supervision Cluster">    
                             </div>
                             <div class=" slideImgOver">
-                                <img src="../images/interior/203_image_overay.png" class="twinkle" alt="Steering Wheel">
-                                <img src="../images/interior/204_image_overay.png" class="twinkle" alt="8-inch navigation">
+                                <img src="../images/interior/203_image_overay.png" class="twinkle" alt="Steering Wheel">                                
                                 <img src="../images/interior/206_image_overay.png" class="twinkle" alt="Supervision Cluster">
-                                <img src="../images/interior/207_image_default.png" class="twinkle" alt="Electric Parking Brake(EPB)">
-                                <img src="../images/interior/209_image_default.png" class="twinkle" alt="Heated Seats">
-                                <img src="../images/interior/210_image_default.png" class="twinkle" alt="Ventilated Seats">
-                                <img src="../images/interior/211_image_overay.png" class="twinkle" alt="IMS(Integrated Memory System)">
+                                
                             </div>
                         </div>
                         <div class="textwrap">
@@ -430,21 +416,11 @@
                                 <div class="indicator">
                                     <img src="../images/button/indicator_active.png" alt="">
                                     <img src="../images/button/indicator_non_active.png" alt="">
-                                    <img src="../images/button/indicator_non_active.png" alt="">
-                                    <img src="../images/button/indicator_non_active.png" alt="">
-                                    <img src="../images/button/indicator_non_active.png" alt="">
-                                    <img src="../images/button/indicator_non_active.png" alt="">
-                                    <img src="../images/button/indicator_non_active.png" alt="">
                                 </div>
                             </div>
                             <div class="textbox">
                                 <p>A sporty design of circular three-spoke type is applied to the steering wheel.</p>
-                                <p>8-Inch Navigation &amp; Phone Connectivity (Apple Car Play, Mirror Link)</p>
-                                <p>Optimized information display function with simple, refined graphics.<br><br>Supervision Cluster 7 Color LCD(Turbo model only).</p>
-                                <p>With Electric Parking Brake(EPB), parking brake can be turned on with a simple switch.</p>
-                                <p>Need minimal adjustment because the temperature is automatically lowered over time to prevent burns.</p>
-                                <p>Always pleasant regardless of the weather condition.</p>
-                                <p>Stores the preferred seat positions for up to two drivers.</p>
+                                <p>Optimized information display function with simple, refined graphics.<br><br>Supervision Cluster 7 Color LCD(Turbo model only).</p>   
                             </div>
                         </div>
                     </article>
@@ -709,12 +685,33 @@
                                 <p>Air clean mode</p>
                                 <p>Emblem Integrated Trunk Switch</p>
                                 <p>Trunk space</p>
+                                <p>Ventilated Seats</p>
+                                <p>Heated Seats</p>
+                                <p>8-inch navigation</p>
+                                <p>Electric Parking Brake(EPB)</p>
+                                <p>IMS(Integrated Memory System)</p>
                             </div>
                             <div class="slideImg">
                                 <img src="../images/convenience/603_image_01.png" class="slide" alt="Wireless charging system for smartpones">
                                 <img src="../images/convenience/603_image_02.png" class="slide" alt="Air clean mode">
                                 <img src="../images/convenience/113_image.png" class="slide" alt="Emblem Integrated Trunk Switch">
                                 <img src="../images/convenience/603_image_03.png" class="slide" alt="Trunk space">
+                                <img src="../images/interior/210_image_default.png" class="slide" alt="Ventilated Seats">
+                                <img src="../images/interior/209_image_default.png" class="slide" alt="Heated Seats">
+                                <img src="../images/interior/204_image_default.png" class="slide" alt="8-inch navigation">
+                                <img src="../images/interior/207_image_default.png" class="slide" alt="Electric Parking Brake(EPB)">
+                                <img src="../images/interior/211_image_default.png" class="slide" alt="IMS(Integrated Memory System)">
+                            </div>
+                            <div class=" slideImgOver">
+                                <img src="../images/convenience/603_image_01.png" class="twinkle" alt="Wireless charging system for smartpones">
+                                <img src="../images/convenience/603_image_02.png" class="twinkle" alt="Air clean mode">
+                                <img src="../images/convenience/113_image.png" class="twinkle" alt="Emblem Integrated Trunk Switch">
+                                <img src="../images/convenience/603_image_03.png" class="twinkle" alt="Trunk space">
+                                <img src="../images/interior/210_image_default.png" class="twinkle" alt="Ventilated Seats">
+                                <img src="../images/interior/209_image_default.png" class="twinkle" alt="Heated Seats">                               
+                                <img src="../images/interior/204_image_overay.png" class="twinkle" alt="8-inch navigation">
+                                <img src="../images/interior/207_image_default.png" class="twinkle" alt="Electric Parking Brake(EPB)">
+                                <img src="../images/interior/211_image_overay.png" class="twinkle" alt="IMS(Integrated Memory System)">
                             </div>
                         </div>
                         <div class="textwrap">
@@ -726,6 +723,11 @@
                                     <img src="../images/button/indicator_non_active.png" alt="">
                                     <img src="../images/button/indicator_non_active.png" alt="">
                                     <img src="../images/button/indicator_non_active.png" alt="">
+                                    <img src="../images/button/indicator_non_active.png" alt="">
+                                    <img src="../images/button/indicator_non_active.png" alt="">
+                                    <img src="../images/button/indicator_non_active.png" alt="">
+                                    <img src="../images/button/indicator_non_active.png" alt="">
+                                    <img src="../images/button/indicator_non_active.png" alt="">
                                 </div>
                             </div>
                             <div class="textbox">
@@ -733,6 +735,11 @@
                                 <p>Applied a high-performance air conditioning filter capable of absorbing basic gas and an one-touch air cleaning mode that foces air circulation in the vehicle to filter microdust.</p>
                                 <p>A hidden switch trunk for both convenience and clean image.</p>
                                 <p>Trunk space has increased, making it larger than that of any other competitiors. Up to 4 golf bags and 4 boston bags can be loaded.</p>
+                                <p>Always pleasant regardless of the weather condition.</p>
+                                <p>Need minimal adjustment because the temperature is automatically lowered over time to prevent burns.</p>
+                                <p>8-Inch Navigation &amp; Phone Connectivity (Apple Car Play, Mirror Link)</p>
+                                <p>With Electric Parking Brake(EPB), parking brake can be turned on with a simple switch.</p>
+                                <p>Stores the preferred seat positions for up to two drivers.</p>
                                 <div class="table" id="trunkSpace">
                                     <img src="../images/convenience/603_graph.png" alt="trunkSpace">
                                 </div>

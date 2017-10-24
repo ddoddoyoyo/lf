@@ -17,7 +17,7 @@
 
 html, body {
 	@include reset-margins; 
-	height:100% !important; 
+	height:100%; 
 	//min-height:558px;
 	//font: sans-serif; 
 	//line-height:130%; 
@@ -138,6 +138,7 @@ video{
 }
 .btn_arrow{
 	position: absolute;
+	cursor:pointer;
 	img{
 		float: left;
 	}
@@ -146,6 +147,10 @@ video{
 	img{
 		@include btn_more;
 	}
+}
+
+.img_overlay{
+	cursor:pointer;
 }
 
 .ui-page-theme-a {

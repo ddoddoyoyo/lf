@@ -40,8 +40,8 @@ var handler = function(e) {
 }
 
 var testdrive = {
-	svgWidth : 96.279,
-	svgHeight : 13508.399,
+	svgWidth : 96.497,
+	svgHeight : 13508.5,
 	first : true,
 	carHeight : 0,
 	popupStat : false,
@@ -84,6 +84,7 @@ var testdrive = {
 	trafficLight : false,
 	daw : 0,
 	pcMobileLeft : 3,
+	deviceAdj : 0,
 
 	init : function() {
 		this.scrollAmnt = 0;
@@ -150,7 +151,7 @@ var testdrive = {
 				fcaAudio2.play();
 				fcaAudio3.play();
 				testdrive.audioLoad = true;
-				rearCameraMovie.play();
+				//rearCameraMovie.play();
 			}
 			setTimeout(function(){
 				$('#page8').fadeOut(500);
@@ -173,6 +174,8 @@ var testdrive = {
 		});
 
 		this.getPopupCount(true);	//팝업 카운트 최초 호출
+
+		testdrive.deviceAdj = (/samsungbrowser/i.test(navigator.userAgent.toLowerCase())) ? -0.08 : 0;
 	},
 	onEvent : function() {
 		$('#engine_sound').prop('muted', false);
@@ -182,7 +185,13 @@ var testdrive = {
 		//$('#engine_sound')[0].play();
 
 		if (testdrive.scrollAble) {
-			testdrive.bgStopPosition = (testdrive.n == 9) ? .85 : .89 ;
+			testdrive.bgStopPosition = (testdrive.n == 9) ? (testdrive.bodyHeight - (testdrive.bodyHeight * 0.0975) - (testdrive.scrollHeight * .4)) / testdrive.bodyHeight : .89 ;
+			//testdrive.bgStopPosition = (testdrive.n == 9) ? .86 : .89 ;
+			/*if (testdrive.n == 9)
+				testdrive.bgStopPosition = testdrive.bodyHeight - (testdrive.bodyHeight * 0.0935) - (testdrive.scrollHeight * .4);		//0.9065
+			else
+				testdrive.bgStopPosition = .89;*/
+
 			console.log(testdrive.n);
 			console.log(testdrive.bgStopPosition);
 
@@ -245,7 +254,8 @@ var testdrive = {
 		$('#car').css({
 			//left:(newpoint.x - bbox.x) - ($(window).width() * .185),
 			//left:(2.5 * (newpoint.x - bbox.x)),
-			left:(testdrive.pcMobileLeft * (newpoint.x - bbox.x)) - ($(window).width() * .3),
+			//left:(testdrive.pcMobileLeft * (newpoint.x - bbox.x)) - ($(window).width() * .3),
+			left : (((newpoint.x - bbox.x) / bbox.width) - 0.38 + testdrive.deviceAdj) * 100 +'%',
 			transform:'rotate('+ carAngle +'deg)'
 		});
 		$('.roadBg').css({
@@ -698,9 +708,30 @@ var testdrive = {
 		});
 		testdrive.removeCarEffect();
 	},
-	setParking : function() {
-		testdrive.carMove = TweenLite.to($('#car'), 2, {left:'60%', top:'15%', onComplete:function() {
+	/*setParking : function() {
+		testdrive.carMove = TweenLite.to($('#car'), 2, {left:'50%', top:'15%', onComplete:function() {
 			testdrive.getPoint();
+		}});
+	},*/
+	setParking : function() {
+		console.log("parking");
+		var _parking;
+		testdrive.carMove = TweenLite.to($('#car'), 1, {left:'60%', rotation:-90, transformOrigin:"50% 43%", onComplete:function() {
+			$('.accel').css({'background-image':'url(../images/testdrive/btn_rear.png)'}).addClass('blink1').on('click taphold touchstart', function() {
+				if (_parking)
+					return;
+				_parking = true;
+				$(this).removeClass('blink1');
+				//$('.movieWrap').css({'height':$(window).height()}).fadeIn();
+				TweenLite.to($('#car'), 4, {left:((!mobile) ? '-5%' : '-5%'), onComplete:function() {
+					$('#carEffect').fadeOut(function() {$(this).remove();});
+					testdrive.getPoint();
+					/*$('.movieWrap').fadeOut(function() {
+						testdrive.getPoint();
+						$(this).remove();
+					});*/
+				}});
+			});
 		}});
 	},
 	setOpponentCar : function(loc, dir) {

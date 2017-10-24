@@ -422,13 +422,20 @@
 		*/
 		function moveTo(sectionAnchor, slideAnchor){
 			var destiny = getSectionByAnchor(sectionAnchor);
-			console.log(slideAnchor);
+			console.log(sectionAnchor+"    "+slideAnchor);
 			if (typeof slideAnchor !== 'undefined'){
 				 _tmpIndex = slideAnchor;
 				scrollPageAndSlide(sectionAnchor, slideAnchor);
 			}else if(destiny.length > 0){
 				scrollPage(destiny);
 			}
+			// if(typeof slideAnchor === 'undefined'){
+			// 	slideAnchor = 0;
+			// 	scrollPageAndSlide(sectionAnchor, slideAnchor);
+			// 	console.log(slideAnchor);
+			// }
+
+
 		}
 
 		/**
@@ -2075,8 +2082,6 @@
 		*/
 		function performHorizontalMove(slides, v, fireCallback){
 			var destinyPos = v.destinyPos;
-
-			//console.log(slides);
 			//var _id = slides.attr('id');
 			slideImgPre(_slide);
 
@@ -2512,15 +2517,25 @@
 			var sectionAnchor = getAnchor(section);
 			var slideAnchor = getAnchor(slide);
 
-			var text = String(sectionAnchor);
+			if (_slideInit) { //슬라이드 이미지 및 텍스트 초기화
+				//console.log(_slideInit);
+				slideInit();
+				slideAnchor = 0;
+				_slideInit = false;
+				$('#fullpage .slidePage#'+ _slide +' .textbox p').hide();
+				$('#fullpage .slidePage#'+ _slide +' .textbox p:nth-child(1)').show();
+			}
 
+			var text = String(sectionAnchor);
+			console.log("text1 " +text);
 			if(slide.length){
 				text = text + '-' + slideAnchor;
+				console.log("text2 " +text);
 			}
 
 			//changing slash for dash to make it a valid CSS style
 			text = text.replace('/', '-').replace('#','');
-
+			console.log("text3 " +text);
 			//removing previous anchor classes
 			var classRe = new RegExp('\\b\\s?' + VIEWING_PREFIX + '-[^\\s]+\\b', "g");
 			$body[0].className = $body[0].className.replace(classRe, '');
