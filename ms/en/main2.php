@@ -24,12 +24,12 @@
 				 $.mobile.changePage.defaults.changeHash = false;
 			});
 		</script>
+		<script src="../js/main.js"></script>
 		<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 		<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
 		<script src="../js/jquery.ui.touch-punch.min.js"></script>
 		<script src="../common/js/common.js"></script>
 		<script src="../js/device.js"></script>
-		<script src="../js/main.js"></script>
 		<script src="../js/menu.js"></script>
 		
 		<script>
@@ -37,6 +37,10 @@
 				$('#upload').change(function(){
 					readURL(this);
 				});
+
+				$('#exFront .btn_back').click(function(){
+					location.href="main.php";
+				})
 				// $("html,body").css({"background":"#fff","height":"100.1vh"});
 				function readURL(input){
 					if(input.files && input.files[0]) {
@@ -68,19 +72,6 @@
 	<body>
 		<div id="wrap">
 			<div id="contBox">
-			<section data-role="page" id="cover" class="container cover">
-				<div data-role="header" class="header">
-					<a href="#" class="ui-btn btn_sidePanel ui-btn-right"><img src="../images/button/btn_menu.png" alt=""></a>
-					<h1>Sonata New Rise</h1>
-				</div>
-				<div data-role="main" class="ui-content">
-					<div class="text_box">
-						<p>The Sonata New Rise has been made more excellent in many respects than the previous LF Sonata. Let’s check them out.</p>
-						<a href="#exFront" class="btn_box">START</a>
-					</div>
-				</div>	
-			</section>
-
 			<section data-role="page" id="exFront" class="container subcover">
 				<div data-role="header" class="header">
 					<a href="#" class="ui-btn btn_sidePanel ui-btn-right"><img src="../images/button/btn_menu.png" alt=""></a>
@@ -109,7 +100,7 @@
 					<div class="textwrap">
 						<p>There are six areas of change on the front part. Let’s take a close look at each of them.</p>
 					</div>
-					<a href="#" class="btn_back" data-rel="back"><img src="../images/button/next btn_default.png" alt=""></a>
+					<a href="javascript:;" class="btn_back" data-rel="back"><img src="../images/button/next btn_default.png" alt=""></a>
 					<a href="#exFrontLast" class="btn_nextPage">
 						<img src="../images/button/next btn_default.png" alt="">
 					</a>

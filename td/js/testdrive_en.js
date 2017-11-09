@@ -33,8 +33,8 @@ var language = {
 			'desc' : 'The key benefit of this system is keeping the vehicle stable when cornering at a high speed.'
 		},
 		{
-			'title' : 'DBL , HBA',
-			'desc' : 'Visibility is a very essential element when driving. Especially at night, front lights are crucial for  maintaining the visibility.'
+			'title' : 'HBA',
+			'desc' : 'When sensors detect the lights of oncoming vehicles or a vehicle in the front, the headlights automatically switch from high beams to low beams.'
 		},
 		{
 			'title' : 'AVM<br><span class="pointTitleSub">(Around View Monitor)<span>',

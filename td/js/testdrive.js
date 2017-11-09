@@ -407,12 +407,12 @@ var testdrive = {
 		}
 
 		if (testdrive.n == 9) {	//시승신청 넘어가기
-			// if (url)
-			// 	location.href = "./applicationIntro.php";
-			// // else if (dealerUrl)
-			// // 	location.href = "./applicationDealer.php";
+			if (url)
+				location.href = "./applicationIntro.php";
+			else if (dealerUrl)
+				location.href = "./applicationDealer.php";
 			// else
-				parent.location.href = "./applicationIntro.php";
+				// parent.location.href = "./applicationIntro.php";
 		}
 
 		testdrive.scrollAble = true;

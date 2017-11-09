@@ -82,6 +82,16 @@
 				<input type="hidden" name="LANGUAGE" value="en"/>
 				<input type="hidden" name="LMS_GB" value="hyundai"/>
 				<input type="hidden" name="TYPE" value="ms"/>
+
+				<section data-role="page" id="intro" class="container">
+					<div data-role="main" class="ui-content" >
+						<div class="title">
+							<p class="text">Dramatic changes</p>
+							<h1>Sonata New Rise</h1>
+						</div>
+					</div>
+					<a href="#page0" id="btn_start">START</a><!--data-transition="none"-->
+				</section>
 				<section data-role="page" id="page0" class="container">
 					<div data-role="header" class="header">
 						<!-- <a href="#" class="ui-btn ui-btn-inline ui-corner-all ui-shadow btn_sidePanel ui-btn-right"><img src="../images/button/btn_menu.png" alt=""></a> -->
@@ -133,7 +143,7 @@
 						</div>
 						<div class="textwrap">
 							<h2>Hello</h2>
-							<p>Please upload your photo (if available)</p>
+							<p>Please upload your photo<br>(if available)</p>
 							<div class="inputbox">
 								<!-- <a href="javascript:;"> -->
 									<img id="current-img" src="../images/002_profile_default.png" alt="user image">
