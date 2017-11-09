@@ -24,12 +24,13 @@
 			// 	 $.mobile.changePage.defaults.changeHash = false;
 			// });
 		</script>
+		<script src="../js/main.js"></script>
 		<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 		<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
 		<script src="../js/jquery.ui.touch-punch.min.js"></script>
 		<script src="../common/js/common.js"></script>
 		<script src="../js/device.js"></script>
-		<script src="../js/main.js"></script>
+		
 		<script src="../js/menu_ar.js"></script>
 		
 		<script>
@@ -71,19 +72,6 @@
 	<body>
 		<div id="wrap">
 			<div id="contBox">
-			<section data-role="page" id="cover" class="container cover">
-				<div data-role="header" class="header">
-					<a href="#" class="ui-btn btn_sidePanel ui-btn-right"><img src="../images/button/btn_menu.png" alt=""></a>
-					<h1>Sonata New Rise</h1>
-				</div>
-				<div data-role="main" class="ui-content">
-					<div class="text_box">
-						<p>لقد أثبتت سيارة سوناتا بالتصميم المطور أنها أكثر من ممتازة في العديد من النواحي مقارنه بموديل إل إف سوناتا. هيا نتحقق من ذلك.</p>
-						<a href="#exFront" class="btn_box">بدء</a>
-					</div>
-				</div>	
-			</section>
-
 			<section data-role="page" id="exFront" class="container subcover">
 				<div data-role="header" class="header">
 					<a href="#" class="ui-btn btn_sidePanel ui-btn-right"><img src="../images/button/btn_menu.png" alt=""></a>

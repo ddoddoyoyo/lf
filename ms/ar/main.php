@@ -33,7 +33,7 @@
 		<script src="../js/menu.js"></script>	
 		<script>
 			$(document).ready(function(){
-				$('#intro #btn_start').click(function(){
+				$('#cover .btn_box').click(function(){
 					location.href = "main2.php";
 				});
 			});
@@ -43,20 +43,23 @@
 	<body>
 		<div id="wrap">
 			<div id="contBox">
-			<section data-role="page" id="intro" class="container">
-				<div data-role="main" class="ui-content" >
-					<div class="title">
-						<p class="text">Dramatic changes</p>
-						<h1>Sonata New Rise</h1>
-					</div>
+			<section data-role="page" id="cover" class="container cover">
+				<div data-role="header" class="header">
+					<a href="#" class="ui-btn btn_sidePanel ui-btn-right"><img src="../images/button/btn_menu.png" alt=""></a>
+					<h1>Sonata New Rise</h1>
 				</div>
-				<a href="#cover" id="btn_start">بدء</a><!--data-transition="none"-->
+				<div data-role="main" class="ui-content">
+					<div class="text_box">
+						<p>لقد أثبتت سيارة سوناتا بالتصميم المطور أنها أكثر من ممتازة في العديد من النواحي مقارنه بموديل إل إف سوناتا. هيا نتحقق من ذلك.</p>
+						<a href="javascript:;" class="btn_box">بدء</a>
+					</div>
+				</div>	
 			</section>
 			<input type="hidden" id="SESSION_LMS_SEQ" name="SESSION_LMS_SEQ" value="<?=$_SESSION["HY_LMS_SEQ"]?>">
 			<input type="hidden" id="LMS_LANGUAGE" name="LMS_LANGUAGE" value="en">
 			<input type="hidden" id="SESSION_APP_GB" name="SESSION_APP_GB" value="<?=$_SESSION["HY_APP_GB"]?>">
 			<input type="hidden" id="LMS_TYPE" name="LMS_TYPE" value="ms">
-
+			
 			
 			</div>
 		<!-- <a href="#page11">이동!!!!!!!!!</a> -->

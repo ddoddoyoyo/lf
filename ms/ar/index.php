@@ -80,10 +80,19 @@
 		<div id="wrap">
 			<div id="contBox" class="container">
 				<form id="Frm" name="Frm" method="post" action="../../common/join_action.php" enctype="multipart/form-data">
-				<input type="hidden" name="RETURN" value="../ms/en/main.php"/>
+				<input type="hidden" name="RETURN" value="../ms/ar/main.php"/>
 				<input type="hidden" name="LANGUAGE" value="en"/>
 				<input type="hidden" name="LMS_GB" value="hyundai"/>
 				<input type="hidden" name="TYPE" value="ms"/>
+				<section data-role="page" id="intro" class="container">
+				<div data-role="main" class="ui-content" >
+					<div class="title">
+						<p class="text">Dramatic changes</p>
+						<h1>Sonata New Rise</h1>
+					</div>
+				</div>
+				<a href="#page0" id="btn_start">بدء</a><!--data-transition="none"-->
+			</section>
 				<section data-role="page" id="page0" class="container">
 					<div data-role="header" class="header">
 						<!-- <a href="#" class="ui-btn ui-btn-inline ui-corner-all ui-shadow btn_sidePanel ui-btn-right"><img src="../images/button/btn_menu.png" alt=""></a> -->
