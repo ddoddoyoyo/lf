@@ -168,7 +168,8 @@ var testdrive = {
 				testdrive.tweenSpeed();
 			}
 			engineAudio.pause();
-			engineAudio.currentTime = 0;
+			if (!isNaN(engineAudio.duration))
+				engineAudio.currentTime = 0;
 			engineAudio.volume = 0;
 			$('#engine_audio').prop('muted', true);
 		});
@@ -179,7 +180,8 @@ var testdrive = {
 	},
 	onEvent : function() {
 		$('#engine_sound').prop('muted', false);
-		engineAudio.currentTime = 0;
+		if (!isNaN(engineAudio.duration))
+			engineAudio.currentTime = 0;
 		engineAudio.volume = 1;
 		engineAudio.play();
 		//$('#engine_sound')[0].play();
@@ -795,7 +797,8 @@ var testdrive = {
 		} else {
 			$(id).prop('muted', true);
 			obj.pause();
-			obj.currentTime = 0;
+			if (!isNaN(obj.duration))
+				obj.currentTime = 0;
 			obj.volume = 1;
 			//(typeof(callback) !== 'function') || callback();
 		}
