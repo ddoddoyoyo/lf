@@ -201,7 +201,7 @@
 						<input type="hidden" name="TAB_GB" value=""/>
 						<input type="hidden" name="TEST_DRIVE_CAR_CODE" value="LF"/>
 						<div class="title">
-							<h1>REQUEST AN <span>ACTUAL TEST DRIVE</span></h1>
+							<h1>REQUEST <span>ACTUAL TEST DRIVE</span></h1>
 						</div>
 						
 						<h2 class="tab" id="testDriveTab">BOOK A TEST DRIVE</h2>
@@ -266,7 +266,7 @@
 						<div id="questionForm" class="form">
 							<div><label for="qname">NAME</label><input type="text" id="uname" name="QUESTION_NAME"></div>
 							<div><label for="qemail">E-MAIL</label> <input type="text" id="qemail" name="QUESTION_EMAIL"></div>
-							<div><label for="inquiry">INQUIRY</label> <textarea id="inquiry" name="QUESTION_MEMO"></textarea></div>
+							<div><label for="inquiry">MESSAGE</label> <textarea id="inquiry" name="QUESTION_MEMO"></textarea></div>
 						</div>
 						<div class="btnwrap question">
 							<a href="javascript:;" id="question" class="button btn_home">HOME</a><a href="javascript:;" class="button btn_send">SEND</a>

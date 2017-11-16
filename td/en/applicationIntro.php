@@ -49,11 +49,11 @@
 				</div>
 				<div data-role="main" class="ui-content">
 					<div class="textwrap">
-						<p>How did you like the driving simulation of Sonata New Rise?</p> <p>Would you like to test drive the actual car.</p><p>If you press Next, you will be assisted in scheduling your own driving experience.</p>
+						<p>How did you like the virtual test drive of Sonata New Rise?</p> <p>Would you like to actually test drive the Sonata New Rise?</p><p>Press the button below to schedule your test drive.</p>
 					</div>
 					<!-- <a href="javascript:;" class="btn_nextPage"><img src="../images/common/btn_next_black.png" alt=""></a> -->
 					<div class="button">
-						<a class="btn_box" href="javascript:;">REQUEST FOR DRIVE</a>
+						<a class="btn_box" href="javascript:;">REQUEST TEST DRIVE</a>
 					</div>
 				</div>		
 			</section>				

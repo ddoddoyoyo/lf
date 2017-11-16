@@ -66,7 +66,7 @@
 						</div>						
 					</div>
 					<div class="textwrap">
-						<p>Please put an e-mail address to receive test drive request emials.<br>If you are a H-LINE user, please make sure to put your H-LINE user ID for you to check the number of views for your own URL.</p>
+						<p>Please put an e-mail address to receive test drive request emails.<br>If you are a H-LINE user, please make sure to put your H-LINE user ID for you to check the number of views for your own URL.</p>
 					</div>					
 				</div>		
 			</section>

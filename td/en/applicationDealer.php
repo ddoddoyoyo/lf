@@ -55,11 +55,11 @@
 				</div>
 				<div data-role="main" class="ui-content">
 					<div class="textwrap">
-						<p>Sonata New Rise's Test Driving simulation is completed.<br>Try share the Test Drive URL to customer.</p>
-						<p>You can receive to your e-mail real Test Drive application and customer suggestion after finished the Test Driving.</p>
+						<p>Virtual test drive is now over. Again, share your own URL with your customers for them to try this content as well.</p>
+						<p>You will receive test drive requests  or other inquires from customers by email.</p>
 					</div>
 					<div class="url_box">	
-						<p>Copy the Test Drive <span>URL</span> from here.</p>
+						<p>Save your own <span>URL</span></p>
 						<input type='text' id="copy_url" value="http://<?=$_SERVER["HTTP_HOST"]?>/os/td/en/index.php?v=<?= $_SESSION['LF_TD_DEALER_URL'] ?>" readonly/>
 						<p class='btn_copy'  data-clipboard-target="#copy_url">COPY</p>
 					</div>
