@@ -43,7 +43,7 @@
 	<body>
 		<div id="wrap">
 			<div id="contBox">
-			<section data-role="page" id="cover" class="container cover">
+			<!-- <section data-role="page" id="cover" class="container cover">
 				<div data-role="header" class="header">
 					<a href="#" class="ui-btn btn_sidePanel ui-btn-right"><img src="../images/button/btn_menu.png" alt=""></a>
 					<h1>Sonata New Rise</h1>
@@ -54,7 +54,7 @@
 						<a href="javascript:;" class="btn_box">بدء</a>
 					</div>
 				</div>	
-			</section>
+			</section> -->
 			<input type="hidden" id="SESSION_LMS_SEQ" name="SESSION_LMS_SEQ" value="<?=$_SESSION["HY_LMS_SEQ"]?>">
 			<input type="hidden" id="LMS_LANGUAGE" name="LMS_LANGUAGE" value="en">
 			<input type="hidden" id="SESSION_APP_GB" name="SESSION_APP_GB" value="<?=$_SESSION["HY_APP_GB"]?>">

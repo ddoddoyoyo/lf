@@ -72,6 +72,18 @@
 	<body>
 		<div id="wrap">
 			<div id="contBox">
+			<section data-role="page" id="cover" class="container cover">
+				<div data-role="header" class="header">
+					<a href="#" class="ui-btn btn_sidePanel ui-btn-right"><img src="../images/button/btn_menu.png" alt=""></a>
+					<h1>Sonata New Rise</h1>
+				</div>
+				<div data-role="main" class="ui-content">
+					<div class="text_box">
+						<p>The Sonata New Rise has been made more excellent in many respects than the previous LF Sonata. Let’s check them out.</p>
+						<a href="#exFront" class="btn_box">NEXT</a>
+					</div>
+				</div>	
+			</section>
 			<section data-role="page" id="exFront" class="container subcover">
 				<div data-role="header" class="header">
 					<a href="#" class="ui-btn btn_sidePanel ui-btn-right"><img src="../images/button/btn_menu.png" alt=""></a>

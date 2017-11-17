@@ -4,7 +4,7 @@
 
 
 	if($_SESSION["HY_LMS_SEQ"] > 0 ){
-		$tools->JavaGo("/lf/ms/ar/main.php");
+		$tools->JavaGo("/lf/ms/ar/main2.php");
 	}
 
 	
@@ -80,7 +80,7 @@
 		<div id="wrap">
 			<div id="contBox" class="container">
 				<form id="Frm" name="Frm" method="post" action="../../common/join_action.php" enctype="multipart/form-data">
-				<input type="hidden" name="RETURN" value="../ms/ar/main.php"/>
+				<input type="hidden" name="RETURN" value="../ms/ar/main2.php"/>
 				<input type="hidden" name="LANGUAGE" value="en"/>
 				<input type="hidden" name="LMS_GB" value="hyundai"/>
 				<input type="hidden" name="TYPE" value="ms"/>
