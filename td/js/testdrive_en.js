@@ -105,7 +105,7 @@ var language = {
 				'desc' : '<p>HBA (High Beam Assist) <br>It automatically turns on and off switches the high beam by sensing the amount of light from an approaching car.</p><img src="../images/testdrive/002_04_09_01.png">'
 			},
 			{
-				'desc' : '<p>DBL (Dynamic Bending Light)<br>Dynamic Bending Light turns the low beam light in the direction  steering wheel is turned in order to provide a better visibility when cornering at night.</p><img src="../images/testdrive/002_04_09_02.png">'
+				'desc' : '<p>DBL (Dynamic Bending Light)<br>When cornering on a dark road, the light will be moved to the direction of steering to secure visibility.</p><img src="../images/testdrive/002_04_09_02.png">'
 			}
 		],
 		[//AVM
