@@ -823,7 +823,7 @@ video {
         font-size: 13px; }
 
 #pageMap {
-  overflow: visible !important; }
+  overflow-y: visible !important; }
   #pageMap .wrap {
     position: relative;
     top: 60px;
