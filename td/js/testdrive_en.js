@@ -44,7 +44,7 @@ var language = {
 	'popup' : [
 		[//ENGINE
 			{
-				'desc' : '<p>You are also driving a model with Nu 2.0, exceeding the performance of its competing model.</p><img src="../images/testdrive/002_04_01_01.png" alt="Engine Detail" />'
+				'desc' : '<p style="margin-bottom: 3%">You are also driving a model with Nu 2.0, exceeding the performance of its competing model.</p><img src="../images/testdrive/002_04_01_01.png" alt="Engine Detail" />'
 			},
 			{
 				'desc' : '<p>The Sonata New Rise is engineered to generates the highest torque at a low-to-mid rpm range of daily driving. As a result, acceleration and engine response are improved, providing an excellent driving performance.</p><img src="../images/testdrive/002_04_01_02.png" alt="Engine Detail" />'
