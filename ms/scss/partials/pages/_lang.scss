@@ -1,0 +1,59 @@
+#lang{
+	display:  block;
+	height: 100%;
+	background:#fff url('../images/languageBG.jpg') no-repeat;
+	background-size: cover;
+	.header{   
+		h1{
+			position: absolute;
+		    left: 50%;
+		    top: 45%;
+		    transform: translateX(-50%);
+		    width: 240px;
+		    span{
+		    	font-size: 30px !important;
+		    	&:nth-child(1){
+		    		color:$text_50;
+		    	}
+		    	&:nth-child(2){
+		    		color:$green;
+		    	}
+		    	&:nth-child(3){
+		    		color:$purple;
+		    	}
+		    }
+		}
+	}
+	.select_box{
+		position: absolute;
+		top: 54%;
+	    left: 50%;
+	    transform: translateX(-50%);
+	    width: 80%;
+	    border: 1px solid $green;
+	    border-radius: 5px;
+	    text-align: center;
+		
+		h2{
+			font-weight: normal;
+			font-family: $header_r;
+			border-bottom: 1px solid #9a88c2;
+		    width: 84%;
+		    margin: 0 auto;
+		    padding: 5%;
+		    color:$text_50;
+		}
+		ul li{   
+			text-align: center;
+		    padding: 5%;
+		    font-size: 18px;
+		    font-family: $header_r;
+		    color:$text_50;
+		    a{
+		    	width: 100%; 
+		    	display: block;
+		    }
+		} 
+	}
+	
+}

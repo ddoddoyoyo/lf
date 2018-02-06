@@ -444,7 +444,7 @@ $("#s3Page35").on({
 
 
 function main_go(language){
-	alert($("input[name=APP_GB]").val());
+	//alert($("input[name=APP_GB]").val());
 	if($("input[name=APP_GB]").val() == "APP"){
 		$("input[name=RETURN]").val("/lf/ms/"+language+"/main.php");
 		$("input[name=LANGUAGE]").val(language);

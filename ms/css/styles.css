@@ -254,7 +254,7 @@ video {
     min-height: 568px; } }
 
 @media only screen and (min-width: 768px) {
-  .pc .ui-page {
+  .pc .ui-page, .container {
     position: absolute !important;
     top: 50% !important;
     left: 50% !important;
@@ -1037,3 +1037,49 @@ video {
     text-align: center; }
     #uploadPage .btn_upload img {
       width: 55%; }
+
+#lang {
+  display: block;
+  height: 100%;
+  background: #fff url("../images/languageBG.jpg") no-repeat;
+  background-size: cover; }
+  #lang .header h1 {
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    transform: translateX(-50%);
+    width: 240px; }
+    #lang .header h1 span {
+      font-size: 30px !important; }
+      #lang .header h1 span:nth-child(1) {
+        color: #323232; }
+      #lang .header h1 span:nth-child(2) {
+        color: #5cba46; }
+      #lang .header h1 span:nth-child(3) {
+        color: #351186; }
+  #lang .select_box {
+    position: absolute;
+    top: 54%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    border: 1px solid #5cba46;
+    border-radius: 5px;
+    text-align: center; }
+    #lang .select_box h2 {
+      font-weight: normal;
+      font-family: "HyundaiSansHeadRegular", Arial, sans-serif;
+      border-bottom: 1px solid #9a88c2;
+      width: 84%;
+      margin: 0 auto;
+      padding: 5%;
+      color: #323232; }
+    #lang .select_box ul li {
+      text-align: center;
+      padding: 5%;
+      font-size: 18px;
+      font-family: "HyundaiSansHeadRegular", Arial, sans-serif;
+      color: #323232; }
+      #lang .select_box ul li a {
+        width: 100%;
+        display: block; }

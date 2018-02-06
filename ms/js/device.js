@@ -4,7 +4,7 @@ $(document).ready(function(){
 	ios =  (/iphone|ipad|ipod/i.test(navigator.userAgent.toLowerCase()));
 	android = (/android/i.test(navigator.userAgent.toLowerCase()));
 	if(!mobile){
-		$("#wrap").addClass("pc");
+		$("body").addClass("pc");
 		$("body").append("<div id='mokup'></div>");
 	} 
 	else {
