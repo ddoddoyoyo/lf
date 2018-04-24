@@ -9,7 +9,8 @@
 		    left: 50%;
 		    top: 45%;
 		    transform: translateX(-50%);
-		    width: 240px;
+		    width: 100%;
+    		text-align: center;
 		    span{
 		    	font-size: 30px !important;
 		    	&:nth-child(1){

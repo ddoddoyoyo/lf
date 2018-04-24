@@ -1048,7 +1048,8 @@ video {
     left: 50%;
     top: 45%;
     transform: translateX(-50%);
-    width: 240px; }
+    width: 100%;
+    text-align: center; }
     #lang .header h1 span {
       font-size: 30px !important; }
       #lang .header h1 span:nth-child(1) {
